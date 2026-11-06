@@ -223,7 +223,7 @@ export const fr = {
     questions: 'Questions fréquentes',
     method: 'Notre méthode',
     methodText:
-      'Nous lisons chaque fait sur la page officielle de l’éditeur et notons la date. Un prix est vérifié tous les 60 jours, une plateforme tous les 120 et un format tous les 180. Les points forts de chaque outil, et à qui il convient, sont notre avis.',
+      'Nous lisons chaque fait sur la page officielle de l’éditeur et notons la date. Un prix est vérifié tous les 60 jours, une plateforme tous les 120, un format ou une mesure tous les 180. Les points forts de chaque outil, et à qui il convient, sont notre avis.',
     methodStudy:
       'Nous avons mesuré des cours publics comme les ouvrent les apprenants, avec la méthode ci-dessus, et donnons chaque chiffre avec ses conditions. Le script et les chiffres bruts sont publics : relancez-les, et dites-nous ce que vous trouvez.',
     methodFix:
@@ -253,6 +253,7 @@ export const fr = {
       localization: 'Traduction',
       accessibility: 'Accessibilité',
       pedagogy: 'Pédagogie',
+      performance: 'Vitesse d’un module publié',
     },
   },
   notFound: {

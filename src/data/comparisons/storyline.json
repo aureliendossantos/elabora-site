@@ -75,6 +75,12 @@
       "fr": "Conçu pour aider à respecter la Section 508 et les WCAG, avec un vérificateur d’accessibilité et des sous-titres.",
       "source": "https://www.articulate.com/360/storyline/",
       "checked": "2026-11-05"
+    },
+    "performance": {
+      "en": "On a slow 4G connection, three public Storyline 360 courses showed their main content after 14.6 to 24.3 s, with 0.8 to 1.2 MB of JavaScript.",
+      "fr": "En 4G lente, trois cours Storyline 360 publics affichent leur contenu principal en 14,6 à 24,3 s, avec 0,8 à 1,2 Mo de JavaScript.",
+      "source": "https://elabora.studio/en/compare/rise-storyline-slow-to-load/",
+      "checked": "2026-11-06"
     }
   }
 }

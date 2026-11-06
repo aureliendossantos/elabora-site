@@ -33,10 +33,11 @@ Ses contrôles pédagogiques appliquent la recherche sur l’apprentissage. Les 
 
 Il convient à un concepteur ou à une petite équipe qui livre des modules à un LMS ou sur le web et veut des écrans riches, des scènes en 3D, des dialogues, des interactions sur mesure et de la narration, réalisés avec l’IA. Il convient aussi à un employé qui anime des formations sans être ingénieur pédagogique de métier : les contrôles guident la conception du module. Pour une équipe qui modifie le même module, les outils ci-dessus le font aujourd’hui.
 
-## Les problèmes fréquents de Storyline, et leurs solutions
+## Études et solutions
 
-Chaque page donne d’abord la solution dans Storyline, puis ce qu’Elabora fait autrement.
+Ce que nous avons mesuré, avec le script et les chiffres bruts, et les solutions aux problèmes fréquents de Storyline. Chaque solution donne d’abord la réponse dans Storyline, puis ce qu’Elabora fait autrement.
 
+- [Pourquoi les cours Rise et Storyline sont-ils lents à charger ?](/fr/comparatif/rise-storyline-lents-a-charger/)
 - [Audio décalé dans Storyline : causes et solutions](/fr/comparatif/storyline-audio-decale/)
 - [Parcourir la chronologie de Storyline : calques, déclencheurs et ce qu’on voit](/fr/comparatif/storyline-chronologie-calques-declencheurs/)
 - [Storyline lent à ouvrir ou à enregistrer un projet : ce qui aide](/fr/comparatif/storyline-lent-a-ouvrir/)

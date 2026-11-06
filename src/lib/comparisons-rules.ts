@@ -11,11 +11,11 @@ export const LANGS = ['en', 'fr'] as const;
 export type FactLang = (typeof LANGS)[number];
 
 /** What a fact can be about, in the order of the tables. */
-export const ATTRIBUTES = ['price', 'platforms', 'delivery', 'files', 'ai', 'agents', 'review', 'collaboration', 'import', 'templates', 'localization', 'accessibility', 'pedagogy'] as const;
+export const ATTRIBUTES = ['price', 'platforms', 'delivery', 'files', 'ai', 'agents', 'review', 'collaboration', 'import', 'templates', 'localization', 'accessibility', 'pedagogy', 'performance'] as const;
 export type Attribute = (typeof ATTRIBUTES)[number];
 
 /** How long a fact stays valid, in days, by what it says (the founder's durations, 5 Nov 2026). */
-export const VALIDITY = { price: 60, platform: 120, format: 180, feature: 120 } as const;
+export const VALIDITY = { price: 60, platform: 120, format: 180, feature: 120, measure: 180 } as const;
 export type Kind = keyof typeof VALIDITY;
 export const KIND: Record<Attribute, Kind> = {
   price: 'price',
@@ -31,6 +31,8 @@ export const KIND: Record<Attribute, Kind> = {
   localization: 'feature',
   accessibility: 'feature',
   pedagogy: 'feature',
+  /** A measurement of ours (research/), made again with its script. */
+  performance: 'measure',
 };
 /** A fact this close to its end is announced by `pnpm test`, without failing. */
 export const WARN_DAYS = 30;
