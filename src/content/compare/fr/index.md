@@ -41,3 +41,4 @@ Ce que nous avons mesuré, avec le script et les chiffres bruts, et les solution
 - [Audio décalé dans Storyline : causes et solutions](/fr/comparatif/storyline-audio-decale/)
 - [Parcourir la chronologie de Storyline : calques, déclencheurs et ce qu’on voit](/fr/comparatif/storyline-chronologie-calques-declencheurs/)
 - [Storyline lent à ouvrir ou à enregistrer un projet : ce qui aide](/fr/comparatif/storyline-lent-a-ouvrir/)
+- [Storyline 360 flou sur un écran haute résolution ou à 150 % : la solution](/fr/comparatif/storyline-flou-haute-resolution/)
