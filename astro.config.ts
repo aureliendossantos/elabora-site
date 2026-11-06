@@ -4,6 +4,7 @@ import { satteri } from '@astrojs/markdown-satteri';
 import { headersFile } from './src/integrations/headers';
 import { sitemapFile } from './src/integrations/sitemap';
 import { coreDocsLinks } from './src/lib/core-docs-links';
+import { speedCharts } from './src/lib/speed-charts';
 
 export default defineConfig({
   site: SITE_URL,
@@ -20,7 +21,7 @@ export default defineConfig({
   markdown: {
     // Prism writes classes, which src/styles/docs.css colours; Shiki's inline styles would break the CSP.
     syntaxHighlight: 'prism',
-    processor: satteri({ mdastPlugins: [coreDocsLinks] }),
+    processor: satteri({ mdastPlugins: [coreDocsLinks, speedCharts] }),
   },
   // Nothing inlined: the CSP allows scripts (the docs' search) and images from files only.
   vite: { build: { assetsInlineLimit: 0 } },

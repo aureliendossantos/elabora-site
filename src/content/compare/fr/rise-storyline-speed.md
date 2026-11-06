@@ -29,6 +29,8 @@ Nous avons ouvert 10 cours publics comme un apprenant les ouvre, avec un cache v
 | JavaScript transféré | 0,84 à 1,21 Mo | 1,45 à 1,67 Mo | 0,14 à 0,38 Mo |
 | Tout ce qui est transféré jusqu’au calme | 2,8 à 10,7 Mo | 3,8 à 4,2 Mo | 0,3 à 0,7 Mo |
 
+<div data-chart="load-time"></div>
+
 Médianes de 3 passages par cours, mesurées depuis la France le 6 novembre 2026. Deux exemples d’Elabora, Clockwork et Medieval charts, ont été mesurés à nouveau l’après-midi, une fois la vitrine dotée d’un lecteur allégé. Servis depuis un même ordinateur, les mêmes paquets gardent le même ordre.
 
 ## Ce que voit l’apprenant
@@ -78,6 +80,8 @@ Médianes de 3 passages. Le premier écran complet de Rise attend l’image de c
 Les deux versions d’Elabora montrent leur premier écran à 3 s. Storyline affiche trois points dès 5 s et sa première diapositive à 13 s. Rise affiche un indicateur de chargement à 13 s et sa page de titre à 20 s, son image de couverture encore en route.
 
 Avant le moindre contenu du module, Rise charge 3,55 Mo (dont 1,9 Mo en 10 fichiers de polices), Storyline 0,78 Mo et Elabora 0,19 Mo. Ce coût fixe accompagne chaque cours que l’outil publie, même le plus petit.
+
+<div data-chart="fixed-cost"></div>
 
 | Outil | Coût fixe | JavaScript | Polices | Feuilles de style |
 |---|---|---|---|---|

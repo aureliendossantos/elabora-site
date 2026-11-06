@@ -29,6 +29,8 @@ We opened 10 public courses as a learner opens them, with an empty cache, on a s
 | JavaScript transferred | 0.84 to 1.21 MB | 1.45 to 1.67 MB | 0.14 to 0.38 MB |
 | Everything transferred until the page is quiet | 2.8 to 10.7 MB | 3.8 to 4.2 MB | 0.3 to 0.7 MB |
 
+<div data-chart="load-time"></div>
+
 Medians of 3 runs per course, measured from France on 6 November 2026. Two Elabora examples, Clockwork and Medieval charts, were measured again that afternoon, once the showcase had a lighter player. Served from one same computer, the same packages kept the same order.
 
 ## What the learner sees
@@ -78,6 +80,8 @@ Medians of 3 runs. Rise’s full first screen waits for the cover image it adds 
 Both Elabora versions show their first screen at 3 s. Storyline shows three dots from 5 s and its first slide at 13 s. Rise shows a spinner at 13 s and its title page at 20 s, its cover image still on its way.
 
 Before any of the module’s own content, Rise loaded 3.55 MB (1.9 MB of it in 10 font files), Storyline 0.78 MB and Elabora 0.19 MB. That fixed cost comes with every course the tool publishes, however small.
+
+<div data-chart="fixed-cost"></div>
 
 | Tool | Fixed cost | JavaScript | Fonts | Stylesheets |
 |---|---|---|---|---|

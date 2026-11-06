@@ -90,3 +90,33 @@
 /* ── The way to try it ── */
 .compare-try { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; padding-top: 32px; border-top: 1px solid var(--line); }
 .compare-try p { font-family: var(--serif); font-size: var(--text-subtitle); }
+
+/* ── The speed study's charts (src/lib/speed-charts.ts): inline SVG, no script. One hue per tool, the same in every
+   chart, validated with the dataviz palette checks on --paper (colour-blind separation, contrast ≥ 3:1). ── */
+.speed-chart { margin: var(--space-6) 0 var(--space-7); --tool-storyline: #eb6834; --tool-rise: #199e70; --tool-elabora: var(--violet); }
+.speed-chart .sc { display: block; height: auto; overflow: visible; font-family: var(--font); }
+.speed-chart .sc text { font-size: 13px; fill: var(--ink-2); }
+.speed-chart .sc .sc-strong { fill: var(--ink); font-weight: 600; }
+.speed-chart .sc .sc-tool { fill: var(--ink); font-weight: 600; font-size: 14px; }
+.speed-chart .sc .sc-value { fill: var(--ink); font-variant-numeric: tabular-nums; }
+.speed-chart .sc .sc-in { fill: var(--ink); font-size: 12px; }
+.speed-chart .t-storyline { fill: var(--tool-storyline); }
+.speed-chart .t-rise { fill: var(--tool-rise); }
+.speed-chart .t-elabora { fill: var(--tool-elabora); }
+.speed-chart .sc-light { fill-opacity: 0.42; }
+.speed-chart .sc-part-1 { fill-opacity: 0.6; }
+.speed-chart .sc-part-2 { fill-opacity: 0.3; }
+.speed-chart .sc-axis { stroke: var(--line); stroke-width: 1; }
+.speed-chart .sc-tick { fill: var(--ink); }
+.speed-chart .sc-row:hover path, .speed-chart .sc-row:hover rect:not(.sc-swatch):not(.sc-tick) { filter: brightness(1.08); }
+.speed-chart .sc-narrow { display: none; }
+.speed-chart .sc-key { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); margin: 0 0 var(--space-4); padding: 0; list-style: none; font-size: var(--text-caption); color: var(--ink-2); }
+.speed-chart .sc-key li { display: flex; align-items: center; gap: var(--space-2); margin: 0; }
+.speed-chart .sc-key-mark { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--ink-2); }
+.speed-chart .sc-key-light, .speed-chart .sc-key-part-1 { opacity: 0.5; }
+.speed-chart .sc-key-part-2 { opacity: 0.25; }
+.speed-chart figcaption { margin-top: var(--space-3); font-size: var(--text-caption); line-height: 1.5; color: var(--ink-3); }
+@media (max-width: 640px) {
+  .speed-chart .sc-wide { display: none; }
+  .speed-chart .sc-narrow { display: block; max-width: 440px; }
+}
