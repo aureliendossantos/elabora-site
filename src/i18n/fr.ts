@@ -206,6 +206,8 @@ export const fr = {
     by: 'Par {author}, fondateur d’Elabora',
     published: 'Publié le {date}',
     checked: 'Faits vérifiés le {date}',
+    checkedStudy: 'Mesuré le {date}',
+    checkedFix: 'Sources lues le {date}',
     atAGlance: 'En un coup d’œil',
     tableNote: 'Chaque valeur vient de la page officielle de l’éditeur, lue à la date indiquée.',
     tableNoteTools: 'Chaque valeur vient de la page officielle de l’éditeur. Le comparatif de chaque outil donne ses sources et le jour où nous les avons lues.',
@@ -222,6 +224,10 @@ export const fr = {
     method: 'Notre méthode',
     methodText:
       'Nous lisons chaque fait sur la page officielle de l’éditeur et notons la date. Un prix est vérifié tous les 60 jours, une plateforme tous les 120 et un format tous les 180. Les points forts de chaque outil, et à qui il convient, sont notre avis.',
+    methodStudy:
+      'Nous avons mesuré des cours publics comme les ouvrent les apprenants, avec la méthode ci-dessus, et donnons chaque chiffre avec ses conditions. Le script et les chiffres bruts sont publics : relancez-les, et dites-nous ce que vous trouvez.',
+    methodFix:
+      'Nous lisons chaque fil et chaque page d’aide d’Articulate à la date indiquée. La solution dans l’autre outil vient d’abord ; ce qu’Elabora fait autrement vient ensuite, avec un lien pour le montrer.',
     correctionsTitle: 'Une erreur ?',
     corrections:
       'Nous faisons Elabora, et nous voulons que ce comparatif soit juste. Si un fait est faux ou daté, écrivez-nous à {email}, ou proposez la correction sur GitHub : chaque outil a son fichier de faits, avec ses sources.',

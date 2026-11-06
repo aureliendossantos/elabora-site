@@ -32,3 +32,11 @@ You save the time of building, with peace of mind: after each change, your AI re
 Its learning-design checks apply research on how people learn. Richard Mayer’s principles of multimedia learning keep cognitive load in check: short segments, bounded text, narration and on-screen text that complement each other. Learners get something to do every few screens, feedback that explains each answer, objectives they can show, and spaced retrieval planned after the course.
 
 It suits a designer or a small team who delivers courses to an LMS or on the web and wants rich screens, 3D scenes, dialogues, custom interactions and narration, built with AI. It also suits an employee who runs training without being an instructional designer: the checks guide the course’s design. For a team editing the same course, the tools above do it today.
+
+## Common Storyline problems, and their fixes
+
+Each page gives the fix in Storyline first, then what Elabora does differently.
+
+- [Storyline audio out of sync: causes and fixes](/en/compare/storyline-audio-out-of-sync/)
+- [Scrubbing the Storyline timeline: layers, triggers and what you see](/en/compare/storyline-timeline-scrubbing-layers-triggers/)
+- [Storyline slow to open or save a project: what helps](/en/compare/storyline-slow-to-open/)

@@ -204,6 +204,8 @@ export const en: Dict = {
     by: 'By {author}, founder of Elabora',
     published: 'Published {date}',
     checked: 'Facts checked {date}',
+    checkedStudy: 'Measured {date}',
+    checkedFix: 'Sources read {date}',
     atAGlance: 'At a glance',
     tableNote: 'Each value comes from the vendor’s official page, read on the date shown.',
     tableNoteTools: 'Each value comes from the vendor’s official page. Each tool’s comparison gives its sources and the day we read them.',
@@ -220,6 +222,10 @@ export const en: Dict = {
     method: 'How we compare',
     methodText:
       'We read each fact on the vendor’s official page and note the date. A price is checked every 60 days, a platform every 120 and a format every 180. Each tool’s strengths, and whom it suits, are our opinion.',
+    methodStudy:
+      'We measured public courses as learners open them, with the method above, and give each figure with its conditions. The script and the raw numbers are public: run them again, and tell us what you find.',
+    methodFix:
+      'We read each thread and each Articulate help page on the date shown. The fix in the other tool comes first; what Elabora does differently comes after, with a link to show it.',
     correctionsTitle: 'Something wrong?',
     corrections:
       'We make Elabora, and we want this comparison to be fair. If a fact is wrong or out of date, write to {email}, or suggest the fix on GitHub: each tool has its own file of facts, with its sources.',

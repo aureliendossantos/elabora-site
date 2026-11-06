@@ -32,3 +32,11 @@ Vous gagnez le temps de la construction, l’esprit tranquille : après chaque 
 Ses contrôles pédagogiques appliquent la recherche sur l’apprentissage. Les principes de l’apprentissage multimédia de Richard Mayer allègent la charge cognitive : des segments courts, des textes mesurés, une narration et un texte à l’écran qui se complètent. L’apprenant a régulièrement quelque chose à faire, un retour qui explique chaque réponse, des objectifs qu’il peut démontrer, et des rappels espacés prévus après le module.
 
 Il convient à un concepteur ou à une petite équipe qui livre des modules à un LMS ou sur le web et veut des écrans riches, des scènes en 3D, des dialogues, des interactions sur mesure et de la narration, réalisés avec l’IA. Il convient aussi à un employé qui anime des formations sans être ingénieur pédagogique de métier : les contrôles guident la conception du module. Pour une équipe qui modifie le même module, les outils ci-dessus le font aujourd’hui.
+
+## Les problèmes fréquents de Storyline, et leurs solutions
+
+Chaque page donne d’abord la solution dans Storyline, puis ce qu’Elabora fait autrement.
+
+- [Audio décalé dans Storyline : causes et solutions](/fr/comparatif/storyline-audio-decale/)
+- [Parcourir la chronologie de Storyline : calques, déclencheurs et ce qu’on voit](/fr/comparatif/storyline-chronologie-calques-declencheurs/)
+- [Storyline lent à ouvrir ou à enregistrer un projet : ce qui aide](/fr/comparatif/storyline-lent-a-ouvrir/)

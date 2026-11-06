@@ -37,6 +37,9 @@ const coreDocs = defineCollection({
  * The comparison pages, written over the facts of src/data/comparisons/ (src/lib/comparisons.ts): `en/<page>.md` and
  * `fr/<page>.md`, the same file name in both languages. The body is the page's own text; the tables, Elabora's gaps,
  * the corrections and the links to the other comparisons are the layout's.
+ *
+ * Two kinds have no table of facts: `study`, a dated measurement with its method (its script and raw numbers sit in
+ * research/), and `fix`, a problem authors meet in another tool, its fix there first, then what Elabora does instead.
  */
 const compare = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/compare', generateId: ({ entry }) => entry.replace(/\.md$/, '') }),
@@ -47,11 +50,15 @@ const compare = defineCollection({
     description: z.string().max(170),
     /** The address in its language, '' for the overview. */
     slug: z.string().regex(/^(|[a-z0-9-]+)$/),
-    kind: z.enum(['overview', 'versus', 'alternative']),
+    kind: z.enum(['overview', 'versus', 'alternative', 'study', 'fix']),
     /** versus: the other tool; its facts and Elabora's make the table. */
     tool: z.string().optional(),
     /** overview and alternative: one row per tool, one column per fact. */
     table: z.object({ tools: z.array(z.string()).min(2), attributes: z.array(z.string()).min(1) }).optional(),
+    /** study and fix: the tools the page speaks about (their facts files in the corrections), and the day its
+     *  sources were read or its measurements made. */
+    tools: z.array(z.string()).optional(),
+    checked: z.coerce.date().optional(),
     /** The short answer, under the title. */
     summary: z.string(),
     published: z.coerce.date(),

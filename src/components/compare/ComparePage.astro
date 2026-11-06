@@ -1,5 +1,6 @@
 ---
-// A comparison page: its title and short answer, who wrote it and when its facts were read, the table of facts, the
+// A comparison page: its title and short answer, who wrote it and when its facts were read, the table of facts (none
+// on a study or a fix, which carry their own day of reading), the
 // page's own text (src/content/compare/), Elabora's limits, who should choose which, the questions, how we compare
 // and how to correct us, and the other comparisons. Structured data: Article, BreadcrumbList, FAQPage.
 import { render } from 'astro:content';
@@ -24,16 +25,19 @@ const all = await comparePages(lang);
 
 // The tools a page shows must exist, and so must the facts its table names (the build stops otherwise).
 if (d.kind === 'versus' && !d.tool) throw new Error(`${page.id}: a versus page names its tool`);
-if (d.kind !== 'versus' && !d.table) throw new Error(`${page.id}: an ${d.kind} page has a table`);
+const tabled = d.kind === 'versus' || d.kind === 'overview' || d.kind === 'alternative';
+if (tabled && d.kind !== 'versus' && !d.table) throw new Error(`${page.id}: an ${d.kind} page has a table`);
+if (!tabled && (!d.checked || !d.tools?.length)) throw new Error(`${page.id}: a ${d.kind} page names its tools and the day it was checked`);
+for (const id of d.tools ?? []) tool(id);
 const attributes = (d.table?.attributes ?? []).map((a) => {
   if (!(ATTRIBUTES as readonly string[]).includes(a)) throw new Error(`${page.id}: "${a}" is not one of ${ATTRIBUTES.join(', ')}`);
   return a as Attribute;
 });
-const shown: Fact[] = d.tool
+const shown: Fact[] = !tabled ? [] : d.tool
   ? attributesOf(d.tool).flatMap((a) => [fact(d.tool!, a), fact('elabora', a)])
   : (d.table?.tools ?? []).flatMap((id) => attributes.map((a) => maybeFact(id, a)).filter((f): f is Fact => !!f));
 const limits = gaps();
-const checked = oldestCheck([...shown, ...limits]);
+const checked = d.checked ? d.checked.toISOString().slice(0, 10) : oldestCheck([...shown, ...limits]);
 const other = d.tool ? tool(d.tool) : undefined;
 
 // Each tool's comparison, for the table's names and the list at the end.
@@ -67,7 +71,7 @@ const graph = [
 ];
 // A data block (not a script the browser runs, so the CSP has nothing to allow); `<` escaped so the JSON cannot end it.
 const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
-const toolsInPage = d.tool ? [d.tool] : (d.table?.tools ?? []).filter((id) => id !== 'elabora');
+const toolsInPage = d.tool ? [d.tool] : (d.tools ?? d.table?.tools ?? []).filter((id) => id !== 'elabora');
 ---
 <Base lang={lang} title={d.seo ?? `${d.title} · Elabora`} description={d.description} paths={paths} path={paths[lang]} mainClass="compare-main">
   <script is:inline type="application/ld+json" set:html={jsonLd} />
@@ -83,15 +87,15 @@ const toolsInPage = d.tool ? [d.tool] : (d.table?.tools ?? []).filter((id) => id
       <p class="byline">
         <span>{fill(t.compare.by, { author: COMPARE_AUTHOR })}</span>
         <span><time datetime={day(d.published)}>{fill(t.compare.published, { date: longDate(lang, day(d.published)) })}</time></span>
-        <span><time datetime={checked}>{fill(t.compare.checked, { date: longDate(lang, checked) })}</time></span>
+        <span><time datetime={checked}>{fill(d.kind === 'study' ? t.compare.checkedStudy : d.kind === 'fix' ? t.compare.checkedFix : t.compare.checked, { date: longDate(lang, checked) })}</time></span>
       </p>
     </header>
 
-    <section class="compare-table" aria-labelledby="glance">
+    {tabled && <section class="compare-table" aria-labelledby="glance">
       <h2 id="glance">{t.compare.atAGlance}</h2>
       {d.tool ? <VersusTable lang={lang} other={d.tool} /> : <ToolsTable lang={lang} tools={d.table!.tools} attributes={attributes} links={links} />}
       <p class="table-note">{d.tool ? t.compare.tableNote : t.compare.tableNoteTools}</p>
-    </section>
+    </section>}
 
     <div class="prose compare-prose"><Content /></div>
 
@@ -132,7 +136,7 @@ const toolsInPage = d.tool ? [d.tool] : (d.table?.tools ?? []).filter((id) => id
         <li><a href={`${SITE_REPO_URL}/tree/main/src/data/comparisons`}>{t.compare.correctionsAll}</a></li>
       </ul>
       <h2 class="method-title">{t.compare.method}</h2>
-      <p>{t.compare.methodText}</p>
+      <p>{d.kind === 'study' ? t.compare.methodStudy : d.kind === 'fix' ? t.compare.methodFix : t.compare.methodText}</p>
     </aside>
 
     <nav class="others" aria-labelledby="others">
