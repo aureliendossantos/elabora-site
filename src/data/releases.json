@@ -1,6 +1,74 @@
 [
   {
     "schemaVersion": 1,
+    "version": "0.6.1",
+    "date": "2026-11-06",
+    "core": {
+      "revision": "099b7ff7b7caf6e2a71df827bc5acd4e92b88776",
+      "version": "0.1.0"
+    },
+    "title": {
+      "en": "Elabora 0.6.1: smoother placing, your language, faster modules",
+      "fr": "Elabora 0.6.1 : placement plus doux, langue au choix, modules rapides"
+    },
+    "highlights": {
+      "en": [
+        "Placing by hand: a smoother, more direct drag",
+        "Choose Elabora’s language in Settings",
+        "Published modules that load faster"
+      ],
+      "fr": [
+        "Placer à la main : un glissé plus doux et plus direct",
+        "Choisissez la langue d’Elabora dans les Réglages",
+        "Des modules publiés plus rapides à charger"
+      ]
+    },
+    "entries": [
+      {
+        "id": "placement",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Placing blocks by hand, refined. A drag starts from any block and selects it on the way. While a block moves, the layout holds still and a soft trace keeps the block’s place; the layout settles once you let go. The places of the flow near the block light up as it comes close. The outline, its handles and the block’s name glide with the block to its new place. In French the gesture is now « Placer à la main ».",
+          "fr": "Le placement à la main, retouché. Un glissé part de n’importe quel bloc et le sélectionne au passage. Pendant le geste, la mise en page reste immobile et une trace douce garde la place du bloc ; elle se réorganise quand vous le lâchez. Les places du flux proches du bloc s’allument à son approche. Le contour, ses poignées et le nom du bloc glissent avec lui jusqu’à sa nouvelle place. Le geste s’appelle maintenant « Placer à la main »."
+        }
+      },
+      {
+        "id": "interface-language",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Réglages › Personnalisation chooses Elabora’s language: Automatique, English or Français. The change applies at once, and the window stays where you were.",
+          "fr": "Réglages › Personnalisation choisit la langue d’Elabora : Automatique, English ou Français. Le changement s’applique tout de suite, et la fenêtre reste où vous étiez."
+        }
+      },
+      {
+        "id": "pictures",
+        "kind": "improvement",
+        "source": "core",
+        "text": {
+          "en": "A published module loads its pictures as the learner comes to them: a scroll page loads those near the window first (the medieval charts example opens with 0.35 MB instead of 6.9 MB), and the next screen’s pictures and narration load ahead, so a slide shows whole and its narration starts at once. Each picture keeps its room, so the page holds still as it arrives.",
+          "fr": "Un module publié charge ses images au fil de la lecture : une page qui défile charge d’abord celles proches de la fenêtre (l’exemple des cartes médiévales s’ouvre avec 0,35 Mo au lieu de 6,9 Mo), et les images et la narration de l’écran suivant se chargent à l’avance, pour qu’une diapositive s’affiche entière et que sa narration démarre aussitôt. Chaque image garde sa place, la page reste immobile à son arrivée."
+        }
+      },
+      {
+        "id": "dialogs",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "Réglages and the other dialogs open without a coloured outline around them; the keyboard’s outline stays on their controls.",
+          "fr": "Les Réglages et les autres fenêtres de dialogue s’ouvrent sans contour coloré autour d’elles ; le contour du clavier reste sur leurs commandes."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
     "version": "0.6.0",
     "date": "2026-11-06",
     "core": {
