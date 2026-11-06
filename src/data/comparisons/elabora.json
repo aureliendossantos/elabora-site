@@ -83,8 +83,8 @@
       "checked": "2026-11-06"
     },
     "performance": {
-      "en": "On the same slow 4G connection, four Elabora examples showed their main content after 2.8 to 3.8 s, with 0.13 to 0.37 MB of JavaScript.",
-      "fr": "Sur la même 4G lente, quatre exemples d’Elabora affichent leur contenu principal en 2,8 à 3,8 s, avec 0,13 à 0,37 Mo de JavaScript.",
+      "en": "On the same slow 4G connection, four Elabora examples showed their main content after 2.8 to 3.6 s, with 0.14 to 0.38 MB of JavaScript.",
+      "fr": "Sur la même 4G lente, quatre exemples d’Elabora affichent leur contenu principal en 2,8 à 3,6 s, avec 0,14 à 0,38 Mo de JavaScript.",
       "source": "https://elabora.studio/en/compare/rise-storyline-slow-to-load/",
       "checked": "2026-11-06"
     }

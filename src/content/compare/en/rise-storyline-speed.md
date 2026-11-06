@@ -6,7 +6,7 @@ slug: rise-storyline-slow-to-load
 kind: study
 tools: [rise, storyline]
 checked: 2026-11-06
-summary: "On a slow 4G connection, three public Storyline courses showed their main content after 14.6 to 24.3 s, three public Rise courses after 14.5 to 23.6 s, and four Elabora examples after 2.8 to 3.8 s. Most of the gap is a fixed cost of each tool: before the first picture, Rise loads 10 font files and 1.5 to 1.7 MB of JavaScript, Storyline 0.8 to 1.2 MB of JavaScript, Elabora 0.13 to 0.37 MB. On fast fibre, every course showed within 5 s."
+summary: "On a slow 4G connection, three public Storyline courses showed their main content after 14.6 to 24.3 s, three public Rise courses after 14.5 to 23.6 s, and four Elabora examples after 2.8 to 3.6 s. Most of the gap is a fixed cost of each tool: before the first picture, Rise loads 10 font files and 1.5 to 1.7 MB of JavaScript, Storyline 0.8 to 1.2 MB of JavaScript, Elabora 0.14 to 0.38 MB. On fast fibre, every course showed within 5 s."
 published: 2026-11-06
 updated: 2026-11-06
 order: 10
@@ -16,7 +16,7 @@ faq:
   - q: Is my LMS the cause, or the course?
     a: "Both can add time. We measured web exports opened directly, without an LMS. To tell them apart, upload the same package to SCORM Cloud: if it is slow there too, the course is the cause."
   - q: Are Elabora courses always lighter?
-    a: "No. One of our four examples transferred 6.9 MB, more than the Rise courses, because it loads the pictures of its four screens at once. Its content still showed in 3.8 s on slow 4G."
+    a: "Not always: a course weighs what its media weigh. Medieval charts first transferred 6.9 MB, more than the Rise courses, because Elabora’s player loaded the pictures of its four screens at once. Since 6 November 2026 the player loads them as the learner comes to them, and the same course transfers 0.35 MB. A first screen with heavy pictures still weighs what they weigh."
 ---
 
 ## The short answer
@@ -25,17 +25,17 @@ We opened 10 public courses as a learner opens them, with an empty cache, on a s
 
 | Slow 4G, processor ×4 | Storyline (3 courses) | Rise (3 courses) | Elabora (4 examples) |
 |---|---|---|---|
-| Main content shown (LCP) | 14.6 to 24.3 s | 14.5 to 23.6 s | 2.8 to 3.8 s |
-| JavaScript transferred | 0.84 to 1.21 MB | 1.45 to 1.67 MB | 0.13 to 0.37 MB |
-| Everything transferred until the page is quiet | 2.8 to 10.7 MB | 3.8 to 4.2 MB | 0.3 to 6.9 MB |
+| Main content shown (LCP) | 14.6 to 24.3 s | 14.5 to 23.6 s | 2.8 to 3.6 s |
+| JavaScript transferred | 0.84 to 1.21 MB | 1.45 to 1.67 MB | 0.14 to 0.38 MB |
+| Everything transferred until the page is quiet | 2.8 to 10.7 MB | 3.8 to 4.2 MB | 0.3 to 0.7 MB |
 
-Medians of 3 runs per course, measured from France on 6 November 2026. Served from one same computer, the same packages kept the same order.
+Medians of 3 runs per course, measured from France on 6 November 2026. Two Elabora examples, Clockwork and Medieval charts, were measured again that afternoon, once the showcase had a lighter player. Served from one same computer, the same packages kept the same order.
 
 ## What the learner sees
 
 [![What the learner sees at 0.5, 1, 2, 3, 5, 8, 13 and 20 s on slow 4G: the Storyline courses stay dark and the Rise courses white for 13 s or more, while the Elabora examples show their first screen at 3 s.](/media/compare/film-slow-4g-en.png)](/media/compare/film-slow-4g-en.png)
 
-One row per course, named by its id in the raw data, one column per moment, on slow 4G; open the image to see it full size. The Storyline courses stay on a dark screen, then three dots, until 13 s or later; one is still dark at 20 s. The Rise courses stay on a white page, then show “Your content is loading” at 13 s and their first screen by 20 s. The Elabora examples show their first screen at 3 s. (Screenshots slow a page down a little: the figures come from runs without them.)
+One row per course, named by its id in the raw data, one column per moment, on slow 4G; open the image to see it full size. The Storyline courses stay on a dark screen, then three dots, until 13 s or later; one is still dark at 20 s. The Rise courses stay on a white page, then show “Your content is loading” at 13 s and their first screen by 20 s. The Elabora examples show their first screen at 3 s; Medieval charts has no picture at 0.5 s, where its page was still blank. (Screenshots slow a page down a little: the figures come from runs without them.)
 
 ## Why: a fixed cost in each tool
 
@@ -50,15 +50,15 @@ Before the first picture, each tool loads its own player. That cost barely depen
 | Rise · [Micro-purchases](https://www.section508.gov/assets/online-training/micro-purchases-and-section-508-requirements/index.html) | 1,453 KB | 2,301 KB | 119 KB | 119 KB |
 | Rise · [Accessible meetings](https://www.section508.gov/assets/online-training/accessible-meetings/index.html) | 1,637 KB | 2,301 KB | 119 KB | 129 KB |
 | Elabora · [Phishing by numbers](https://vitrine.elabora.page/phishing-by-numbers/) | 161 KB | 79 KB | 59 KB | 207 KB |
-| Elabora · [Clockwork](https://vitrine.elabora.page/clockwork/) | 375 KB | 72 KB | 61 KB | — |
+| Elabora · [Clockwork](https://vitrine.elabora.page/clockwork/) | 381 KB | 71 KB | 61 KB | — |
 | Elabora · [Coffee in brief](https://vitrine.elabora.page/coffee-in-brief/) | 140 KB | 97 KB | 55 KB | 10 KB |
-| Elabora · [Medieval charts](https://vitrine.elabora.page/medieval-charts/) | 132 KB | 93 KB | 70 KB | 6,625 KB |
+| Elabora · [Medieval charts](https://vitrine.elabora.page/medieval-charts/) | 151 KB | 93 KB | 73 KB | 32 KB |
 
 Bytes transferred without throttling, compressed as the servers send them.
 
 - **Rise** loads 10 font files (1.9 to 2.3 MB) and 1.5 to 1.7 MB of compressed JavaScript, 5 MB once decompressed, before it shows anything. On disk, the library of a Rise web export weighs about 11 MB, 8.5 MB of it JavaScript, even for a course of three blocks (seven exports of 2025 and 2026). Articulate’s staff acknowledge that “Rise 360 courses can take a few seconds to initialize” ([E-Learning Heroes, 6 November 2025](https://community.articulate.com/discussions/discuss/rise-loading-state-and-loading-time/1242543)).
 - **Storyline** loads 0.8 to 1.2 MB of JavaScript (3 to 5 MB decompressed) and its stylesheets, then preloads the next slides’ pictures and media: its weight depends on the course. The library of a Storyline export weighs about 3 MB.
-- **Elabora**’s player weighs 0.39 MB on disk; the examples load 0.13 to 0.37 MB of JavaScript.
+- **Elabora**’s player weighs about 0.4 MB on disk; the examples load 0.14 to 0.38 MB of JavaScript.
 
 ## On a fast connection
 
@@ -66,9 +66,9 @@ Without throttling, on fibre, the gap narrows: every course showed its content w
 
 | Unthrottled | Storyline | Rise | Elabora |
 |---|---|---|---|
-| Main content shown (LCP) | 0.6 to 1.7 s | 1.1 to 4.4 s | 0.6 to 0.8 s |
+| Main content shown (LCP) | 0.6 to 1.7 s | 1.1 to 4.4 s | 0.6 to 1.0 s |
 
-The difference shows with a slow network or a modest processor, which is where many learners are.
+Unthrottled, the first paint moves by 0.1 to 0.3 s from one series to the next, with the network of the moment. The difference shows with a slow network or a modest processor, which is where many learners are.
 
 ## How to make a Rise course lighter
 
@@ -88,13 +88,14 @@ The fonts and the JavaScript of Rise’s player stay: they are its fixed cost.
 
 ## Elabora’s limits in this study
 
-- **Elabora is not always lighter in bytes.** Medieval charts transferred 6.9 MB, more than each Rise course, because it loads the pictures of its four screens at once. Its content still showed in 3.8 s.
-- **One example keeps the processor busy.** Clockwork’s animated clock produced 1.5 s of long tasks on the slowed processor.
-- **The Elabora examples are ours**, made to show what Elabora does, and the showcase was built a few days before the measurements.
+- **Elabora is not always lighter in bytes**: a course weighs what its media weigh. In the first series, Medieval charts transferred 6.9 MB, more than each Rise course, because Elabora’s player loaded the pictures of its four screens at once. Since 6 November 2026, the player loads pictures as the learner comes to them: the same course transfers 0.35 MB, and its content shows in 3.6 s. A first screen with heavy pictures or a video still weighs what they weigh.
+- **One example keeps the processor busy in this measurement.** Clockwork’s animated clock, drawn with WebGL, blocked the page for 295 ms on the slowed processor (1,533 ms in the first series, on a busier computer; served from one quiet computer, the player before and after the change both gave 295 ms). The cause is the bench: Chrome without a GPU reads every WebGL frame back to the processor. With a Mac’s GPU, no long task comes after 1.3 s.
+- **The Elabora examples are ours**, made to show what Elabora does. The showcase was republished on 6 November 2026 with the lighter player (elabora-core c6088bcb).
 
 ## How we measured
 
 - **The courses.** 10 public courses, open without an account: three Storyline 360 courses (versions 3.102 and 3.105, published between August 2025 and September 2026) and three Rise 360 courses (2026), published by their authors on GitHub Pages and section508.gov, and four Elabora examples on its showcase. Each is linked in the table above.
+- **Two series for Elabora.** Phishing by numbers and Coffee in brief come from the first series (12:49 UTC). Clockwork and Medieval charts were measured again at 14:45 UTC, once the showcase had the lighter player; the Storyline and Rise courses were not measured again. A run of both examples before and after the change, from one quiet computer, is in the raw data.
 - **The browser.** Chromium 151 without a GPU, a 1,366 × 768 window, the user agent of desktop Chrome.
 - **Throttled.** Lighthouse’s slow 4G profile, applied by Chrome to every request (562.5 ms round trip, 1,474.56 kbit/s down, 675 kbit/s up), and the processor slowed 4 times. **Unthrottled**: the computer’s fibre.
 - **An empty cache** on every run, after one uncounted load that wakes each CDN up. Three runs per course and condition, course after course; we keep the median.
@@ -105,7 +106,7 @@ The fonts and the JavaScript of Rise’s player stay: they are its fixed cost.
 
 What this study leaves out:
 
-- **The courses differ in size**: 6 to 63 slides for Storyline, 58 to 84 blocks for Rise, 4 to 13 screens for Elabora. The first screen depends little on it, the total weight a lot. The same small course made in all three tools would settle it.
+- **The courses differ in size**: 6 to 63 slides for Storyline, 58 to 84 blocks for Rise, 4 to 13 screens for Elabora. The first screen depends little on it, the total weight a lot. We will measure the same small course made in all three tools once it exists; until then, this study compares real courses as their authors published them.
 - **The media** follow each author’s choices.
 - **The hosts differ** (GitHub Pages, section508.gov, Cloudflare); the local series removes that difference.
 - **Throttling is simulated** by Chrome, not a real mobile network.
