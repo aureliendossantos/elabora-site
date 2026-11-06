@@ -69,6 +69,12 @@
       "fr": "Les cours publiés prennent en charge les WCAG 2.1 AA, avec NVDA, JAWS, VoiceOver et TalkBack.",
       "source": "https://www.articulate.com/360/rise/all/",
       "checked": "2026-11-05"
+    },
+    "performance": {
+      "en": "On a slow 4G connection, three public Rise courses showed their main content after 14.5 to 23.6 s. Before any picture they load 10 font files (1.9 to 2.3 MB) and 1.5 to 1.7 MB of JavaScript.",
+      "fr": "En 4G lente, trois cours Rise publics affichent leur contenu principal en 14,5 à 23,6 s. Avant la moindre image, ils chargent 10 fichiers de polices (1,9 à 2,3 Mo) et 1,5 à 1,7 Mo de JavaScript.",
+      "source": "https://elabora.studio/en/compare/rise-storyline-slow-to-load/",
+      "checked": "2026-11-06"
     }
   }
 }

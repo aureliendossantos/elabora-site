@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "mode": "local",
+    "runs": 3,
+    "conditions": [
+      "throttled",
+      "unthrottled"
+    ],
+    "core": "elabora-core 013396b9, before the lighter first load",
+    "date": "2026-11-06T14:40:30.746Z",
+    "chromium": "151.0.7922.34",
+    "host": "Darwin 27.2.0 arm64, 10 cores Apple M5, 16 GB",
+    "viewport": "1366x768 @1x",
+    "throttle": {
+      "latency": 562.5,
+      "downloadThroughput": 184320,
+      "uploadThroughput": 84375,
+      "cpu": 4
+    }
+  },
+  "summary": [
+    {
+      "id": "elb-clockwork",
+      "tool": "Elabora",
+      "form": "slides",
+      "cond": "throttled",
+      "n": 3,
+      "mb": 0.64,
+      "jsKB": 368,
+      "jsDecodedKB": 1275,
+      "requests": 17,
+      "fcp": 2332,
+      "lcp": 3044,
+      "tti": 7633.800000011921,
+      "tbt": 295,
+      "mainThread": 3606,
+      "script": 199,
+      "heapMB": 7,
+      "timedOut": 0,
+      "load": 4.2
+    },
+    {
+      "id": "elb-clockwork",
+      "tool": "Elabora",
+      "form": "slides",
+      "cond": "unthrottled",
+      "n": 3,
+      "mb": 0.64,
+      "jsKB": 368,
+      "jsDecodedKB": 1275,
+      "requests": 17,
+      "fcp": 48,
+      "lcp": 48,
+      "tti": 335.10000002384186,
+      "tbt": 186,
+      "mainThread": 3115,
+      "script": 84,
+      "heapMB": 7,
+      "timedOut": 0,
+      "load": 3.9
+    },
+    {
+      "id": "elb-medieval",
+      "tool": "Elabora",
+      "form": "scrolling page",
+      "cond": "throttled",
+      "n": 3,
+      "mb": 1.53,
+      "jsKB": 146,
+      "jsDecodedKB": 446,
+      "requests": 27,
+      "fcp": 2536,
+      "lcp": 3496,
+      "tti": 2536,
+      "tbt": 0,
+      "mainThread": 329,
+      "script": 55,
+      "heapMB": 2,
+      "timedOut": 0,
+      "load": 4.4
+    },
+    {
+      "id": "elb-medieval",
+      "tool": "Elabora",
+      "form": "scrolling page",
+      "cond": "unthrottled",
+      "n": 3,
+      "mb": 6.92,
+      "jsKB": 146,
+      "jsDecodedKB": 446,
+      "requests": 27,
+      "fcp": 80,
+      "lcp": 88,
+      "tti": 80,
+      "tbt": 0,
+      "mainThread": 72,
+      "script": 12,
+      "heapMB": 2,
+      "timedOut": 0,
+      "load": 4.4
+    }
+  ]
+}

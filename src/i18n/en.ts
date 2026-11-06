@@ -221,7 +221,7 @@ export const en: Dict = {
     questions: 'Questions',
     method: 'How we compare',
     methodText:
-      'We read each fact on the vendor’s official page and note the date. A price is checked every 60 days, a platform every 120 and a format every 180. Each tool’s strengths, and whom it suits, are our opinion.',
+      'We read each fact on the vendor’s official page and note the date. A price is checked every 60 days, a platform every 120, a format or a measurement every 180. Each tool’s strengths, and whom it suits, are our opinion.',
     methodStudy:
       'We measured public courses as learners open them, with the method above, and give each figure with its conditions. The script and the raw numbers are public: run them again, and tell us what you find.',
     methodFix:
@@ -251,6 +251,7 @@ export const en: Dict = {
       localization: 'Translation',
       accessibility: 'Accessibility',
       pedagogy: 'Learning design',
+      performance: 'Speed of a published course',
     },
   },
   notFound: {

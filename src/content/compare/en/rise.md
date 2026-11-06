@@ -50,6 +50,7 @@ Elabora is a desktop app for macOS and Windows. You describe the course, the AI 
 - **Peace of mind.** After each change, your AI reads Elabora’s checks and fixes what they find on its own, often before you notice: accessibility (contrast, text alternatives, keyboard use, captions), learning design, and the rules of common LMSs, which each package is tested against in an LMS emulator.
 - **Learning design, checked as it builds.** Elabora’s checks apply research on how people learn. Richard Mayer’s principles of multimedia learning keep cognitive load in check: short segments, bounded text, narration and on-screen text that complement each other. Learners get something to do every few screens, feedback that explains each answer, and objectives they can show. An employee who runs training without being an instructional designer is guided as well as a designer.
 - **Reviews in place.** Reviews are free: your reviewers comment from a link, without an account. Their comments come back into Elabora, placed on the screen, the block or the word of narration; you reply and resolve them there, as with Review 360 in Rise, or hand them to your AI.
+- **Quick to show on a slow connection.** Before its first picture, a Rise course loads 10 font files and 1.5 to 1.7 MB of JavaScript. On slow 4G, the Rise courses we measured showed their content after 14.5 to 23.6 s, Elabora’s examples after 2.8 to 3.6 s ([the study](/en/compare/rise-storyline-slow-to-load/)).
 
 ## Coming from Rise
 

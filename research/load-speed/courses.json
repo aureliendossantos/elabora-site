@@ -1,0 +1,105 @@
+{
+  "_": "The courses measured on 6 November 2026. url: the public address, as learners open it. entry: the file to open in a package served by measure.ts --mode local. The Storyline and Rise courses are published by their authors; their packages are not copied here.",
+  "courses": [
+    {
+      "id": "sl-phishing",
+      "tool": "Storyline",
+      "form": "slides",
+      "title": "Recognizing phishing attempts (Anna Asedovskaya)",
+      "version": "Storyline 360 3.102.35072.0, published August 2025",
+      "source": "https://github.com/AnnaAsedovskaya/Recognizing-phishing-attempts-Articulate-Storyline-360",
+      "url": "https://annaasedovskaya.github.io/Recognizing-phishing-attempts-Articulate-Storyline-360/story.html",
+      "entry": "story.html"
+    },
+    {
+      "id": "sl-career",
+      "tool": "Storyline",
+      "form": "slides",
+      "title": "Career profile (id1smq)",
+      "version": "Storyline 360 3.105.35604.0, published December 2025",
+      "source": "https://github.com/id1smq/storyline-career-profile",
+      "url": "https://id1smq.github.io/storyline-career-profile/story.html",
+      "entry": "story.html"
+    },
+    {
+      "id": "sl-bcs-cyber",
+      "tool": "Storyline",
+      "form": "slides",
+      "title": "BCS cyber (adp3504)",
+      "version": "Storyline 360 3.105.35604.0, pushed September 2026",
+      "source": "https://github.com/adp3504/BCS-cyber",
+      "url": "https://adp3504.github.io/BCS-cyber/story.html",
+      "entry": "story.html"
+    },
+    {
+      "id": "rise-rtk-gps",
+      "tool": "Rise",
+      "form": "scrolling page",
+      "title": "RTK GPS (UC Drones)",
+      "version": "Rise 360, runtime-data.js, updated April 2026",
+      "source": "https://github.com/UCDrones/UCDrones.github.io/tree/1ad794d/library/trainings/RTK_GPS",
+      "url": "https://ucdrones.github.io/library/trainings/RTK_GPS/index.html",
+      "entry": "index.html"
+    },
+    {
+      "id": "rise-gsa-micro",
+      "tool": "Rise",
+      "form": "scrolling page",
+      "title": "Micro-purchases and Section 508 (GSA, section508.gov)",
+      "version": "Rise 360, runtime-data.js, updated September 2026",
+      "source": "https://github.com/GSA/Section508.gov/tree/a81471b/assets/online-training/micro-purchases-and-section-508-requirements",
+      "url": "https://www.section508.gov/assets/online-training/micro-purchases-and-section-508-requirements/index.html",
+      "entry": "index.html"
+    },
+    {
+      "id": "rise-gsa-meetings",
+      "tool": "Rise",
+      "form": "scrolling page",
+      "title": "Accessible meetings (GSA, section508.gov)",
+      "version": "Rise 360, updated February 2026",
+      "source": "https://github.com/GSA/Section508.gov/tree/a81471b/assets/online-training/accessible-meetings",
+      "url": "https://www.section508.gov/assets/online-training/accessible-meetings/index.html",
+      "entry": "index.html"
+    },
+    {
+      "id": "elb-phishing",
+      "tool": "Elabora",
+      "form": "slides",
+      "title": "Phishing by numbers (an Elabora example)",
+      "version": "Elabora, as published on its showcase, vitrine.elabora.page",
+      "url": "https://vitrine.elabora.page/phishing-by-numbers/",
+      "entry": "index.html",
+      "example": "https://github.com/aureliendossantos/elabora-core/tree/main/examples/phishing-by-numbers"
+    },
+    {
+      "id": "elb-clockwork",
+      "tool": "Elabora",
+      "form": "slides",
+      "title": "Clockwork (an Elabora example)",
+      "version": "Elabora, as published on its showcase, vitrine.elabora.page",
+      "url": "https://vitrine.elabora.page/clockwork/",
+      "entry": "index.html",
+      "example": "https://github.com/aureliendossantos/elabora-core/tree/main/examples/clockwork"
+    },
+    {
+      "id": "elb-coffee",
+      "tool": "Elabora",
+      "form": "scrolling page",
+      "title": "Coffee in brief (an Elabora example)",
+      "version": "Elabora, as published on its showcase, vitrine.elabora.page",
+      "url": "https://vitrine.elabora.page/coffee-in-brief/",
+      "entry": "index.html",
+      "example": "https://github.com/aureliendossantos/elabora-core/tree/main/examples/coffee-in-brief"
+    },
+    {
+      "id": "elb-medieval",
+      "tool": "Elabora",
+      "form": "scrolling page",
+      "title": "Medieval charts (an Elabora example)",
+      "version": "Elabora, as published on its showcase, vitrine.elabora.page",
+      "url": "https://vitrine.elabora.page/medieval-charts/",
+      "entry": "index.html",
+      "example": "https://github.com/aureliendossantos/elabora-core/tree/main/examples/medieval-charts"
+    }
+  ]
+}

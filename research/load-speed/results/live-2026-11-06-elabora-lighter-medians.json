@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "mode": "live",
+    "runs": 3,
+    "conditions": [
+      "throttled",
+      "unthrottled"
+    ],
+    "date": "2026-11-06T14:45:10.397Z",
+    "chromium": "151.0.7922.34",
+    "host": "Darwin 27.2.0 arm64, 10 cores Apple M5, 16 GB",
+    "viewport": "1366x768 @1x",
+    "throttle": {
+      "latency": 562.5,
+      "downloadThroughput": 184320,
+      "uploadThroughput": 84375,
+      "cpu": 4
+    }
+  },
+  "summary": [
+    {
+      "id": "elb-clockwork",
+      "tool": "Elabora",
+      "form": "slides",
+      "cond": "throttled",
+      "n": 3,
+      "mb": 0.66,
+      "jsKB": 381,
+      "jsDecodedKB": 1278,
+      "requests": 17,
+      "fcp": 2432,
+      "lcp": 3140,
+      "tti": 7779.5,
+      "tbt": 295,
+      "mainThread": 3466,
+      "script": 177,
+      "heapMB": 7,
+      "timedOut": 0,
+      "load": 3.7
+    },
+    {
+      "id": "elb-clockwork",
+      "tool": "Elabora",
+      "form": "slides",
+      "cond": "unthrottled",
+      "n": 3,
+      "mb": 0.66,
+      "jsKB": 381,
+      "jsDecodedKB": 1278,
+      "requests": 17,
+      "fcp": 668,
+      "lcp": 668,
+      "tti": 1435.3999999761581,
+      "tbt": 193,
+      "mainThread": 3236,
+      "script": 104,
+      "heapMB": 7,
+      "timedOut": 0,
+      "load": 3.6
+    },
+    {
+      "id": "elb-medieval",
+      "tool": "Elabora",
+      "form": "scrolling page",
+      "cond": "throttled",
+      "n": 3,
+      "mb": 0.35,
+      "jsKB": 152,
+      "jsDecodedKB": 450,
+      "requests": 23,
+      "fcp": 2612,
+      "lcp": 3628,
+      "tti": 2612,
+      "tbt": 0,
+      "mainThread": 267,
+      "script": 54,
+      "heapMB": 2,
+      "timedOut": 0,
+      "load": 3.8
+    },
+    {
+      "id": "elb-medieval",
+      "tool": "Elabora",
+      "form": "scrolling page",
+      "cond": "unthrottled",
+      "n": 3,
+      "mb": 0.36,
+      "jsKB": 152,
+      "jsDecodedKB": 450,
+      "requests": 23,
+      "fcp": 880,
+      "lcp": 976,
+      "tti": 880,
+      "tbt": 0,
+      "mainThread": 108,
+      "script": 26,
+      "heapMB": 2,
+      "timedOut": 0,
+      "load": 3.9
+    }
+  ]
+}

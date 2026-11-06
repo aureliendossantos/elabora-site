@@ -33,10 +33,11 @@ Its learning-design checks apply research on how people learn. Richard Mayer’s
 
 It suits a designer or a small team who delivers courses to an LMS or on the web and wants rich screens, 3D scenes, dialogues, custom interactions and narration, built with AI. It also suits an employee who runs training without being an instructional designer: the checks guide the course’s design. For a team editing the same course, the tools above do it today.
 
-## Common Storyline problems, and their fixes
+## Studies and fixes
 
-Each page gives the fix in Storyline first, then what Elabora does differently.
+What we measured, with the script and the raw numbers, and the fixes for common Storyline problems. Each fix gives the solution in Storyline first, then what Elabora does differently.
 
+- [Why are Rise and Storyline courses slow to load?](/en/compare/rise-storyline-slow-to-load/)
 - [Storyline audio out of sync: causes and fixes](/en/compare/storyline-audio-out-of-sync/)
 - [Scrubbing the Storyline timeline: layers, triggers and what you see](/en/compare/storyline-timeline-scrubbing-layers-triggers/)
 - [Storyline slow to open or save a project: what helps](/en/compare/storyline-slow-to-open/)
