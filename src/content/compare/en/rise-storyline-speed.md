@@ -6,13 +6,13 @@ slug: rise-storyline-slow-to-load
 kind: study
 tools: [rise, storyline]
 checked: 2026-11-06
-summary: "On a slow 4G connection, three public Storyline courses showed their main content after 14.6 to 24.3 s, three public Rise courses after 14.5 to 23.6 s, and four Elabora examples after 2.8 to 3.6 s. Most of the gap is a fixed cost of each tool: before the first picture, Rise loads 10 font files and 1.5 to 1.7 MB of JavaScript, Storyline 0.8 to 1.2 MB of JavaScript, Elabora 0.14 to 0.38 MB. On fast fibre, every course showed within 5 s."
+summary: "On a slow 4G connection, three public Storyline courses showed their main content after 14.6 to 24.3 s, three public Rise courses after 14.5 to 23.6 s, and four Elabora examples after 2.8 to 3.6 s. Most of the gap is a fixed cost of each tool: before the first picture, Rise loads 10 font files and 1.5 to 1.7 MB of JavaScript, Storyline 0.8 to 1.2 MB of JavaScript, Elabora 0.14 to 0.38 MB. The same small module made in all three tools confirms it: Elabora showed its first screen in 2.3 to 2.4 s, Storyline in 9.8 s, and Rise its first text in 9.9 s. On fast fibre, every course showed within 5 s."
 published: 2026-11-06
 updated: 2026-11-06
 order: 10
 faq:
   - q: How heavy is a Rise course?
-    a: "The three Rise courses we measured transferred 3.8 to 4.2 MB before the learner could use them, of which 3.4 to 3.9 MB were JavaScript and fonts: almost the same for 58 blocks as for 84. On disk, the library of a Rise web export weighs about 11 MB, 8.5 MB of it JavaScript, even for a course of three blocks."
+    a: "The three Rise courses we measured transferred 3.8 to 4.2 MB before the learner could use them, of which 3.4 to 3.9 MB were JavaScript and fonts: almost the same for 58 blocks as for 84. A nearly empty Rise course we made loads 3.55 MB before its own content, 1.9 MB of it in fonts. On disk, the library of a Rise web export weighs about 11 MB, 8.5 MB of it JavaScript, even for a course of three blocks."
   - q: Is my LMS the cause, or the course?
     a: "Both can add time. We measured web exports opened directly, without an LMS. To tell them apart, upload the same package to SCORM Cloud: if it is slow there too, the course is the cause."
   - q: Are Elabora courses always lighter?
@@ -60,6 +60,46 @@ Bytes transferred without throttling, compressed as the servers send them.
 - **Storyline** loads 0.8 to 1.2 MB of JavaScript (3 to 5 MB decompressed) and its stylesheets, then preloads the next slides’ pictures and media: its weight depends on the course. The library of a Storyline export weighs about 3 MB.
 - **Elabora**’s player weighs about 0.4 MB on disk; the examples load 0.14 to 0.38 MB of JavaScript.
 
+## The same module in all three tools
+
+The courses above differ in size and media. So we also built the same small module in all three tools: a title, a 70-word text, one picture, 30 seconds of narration and three questions, with the same files and each tool’s default settings, served by the same local server. Storyline 360 3.129 and Rise 360 published it on 6 November 2026, with an Articulate 360 trial; Elabora built it twice, as slides to face Storyline and as a scrolling page to face Rise.
+
+| Slow 4G, processor ×4 | Storyline | Elabora, slides | Rise | Elabora, scrolling page |
+|---|---|---|---|---|
+| First text shown (FCP) | 9.8 s | 2.4 s | 9.9 s | 2.3 s |
+| Full first screen (LCP) | 9.8 s | 2.4 s | 25.0 s | 2.3 s |
+| Fixed cost, before the module’s content | 0.78 MB | 0.19 MB | 3.55 MB | 0.19 MB |
+| Everything transferred | 1.12 MB | 0.53 MB | 3.95 MB | 0.29 MB |
+
+Medians of 3 runs. Rise’s full first screen waits for the cover image it adds by default; served over HTTP/1.1, its 39 requests also queue.
+
+[![The shared module on slow 4G at 0.5, 1, 2, 3, 5, 8, 13 and 20 s: both Elabora versions show their first screen at 3 s, Storyline at 13 s, and Rise its title page at 20 s, before its cover image.](/media/compare/film-shared-module-slow-4g-en.png)](/media/compare/film-shared-module-slow-4g-en.png)
+
+Both Elabora versions show their first screen at 3 s. Storyline shows three dots from 5 s and its first slide at 13 s. Rise shows a spinner at 13 s and its title page at 20 s, its cover image still on its way.
+
+Before any of the module’s own content, Rise loaded 3.55 MB (1.9 MB of it in 10 font files), Storyline 0.78 MB and Elabora 0.19 MB. That fixed cost comes with every course the tool publishes, however small.
+
+| Tool | Fixed cost | JavaScript | Fonts | Stylesheets |
+|---|---|---|---|---|
+| Storyline | 0.78 MB | 624 KB | 63 KB | 89 KB |
+| Rise | 3.55 MB | 1,468 KB | 1,944 KB | 133 KB |
+| Elabora | 0.19 MB | 136 KB | system fonts | 52 KB |
+
+On disk, the web exports weigh 3.7 MB for Storyline (28 files), 12.8 MB for Rise (62 files) and 1.1 MB for Elabora (17 files).
+
+Without throttling, all three opened in under a second on the same computer: Elabora in 0.1 s, Rise in 0.6 to 0.9 s, Storyline in 0.8 s.
+
+What differs between the three modules, and weighs little:
+
+- **Rise’s free trial** puts a watermark on the title page, visible on the film strip.
+- **Rise’s cover image**, added by default (1,920 × 1,080, 407 KB), is the largest element of its title page, so its LCP; it is counted outside the fixed cost.
+- **Captions**: Storyline adds captions to the narration (2 KB); Elabora makes its own (0.8 KB).
+- **The media**: each tool re-encodes them its own way. Rise turns the narration into a 160 kb/s stereo MP3 (607 KB), Storyline into a 56 kb/s MP3 (213 KB); Elabora keeps the 64 kb/s track. Storyline keeps the picture as it is (102 KB), Rise recompresses it (37 KB).
+- **Fonts**: Elabora’s default theme uses the system’s fonts; a course with its own fonts adds them, 70 to 100 KB in our examples. Its player also carries its interface sounds (69 KB).
+- **The questions**: in Storyline and Rise, the first answer was marked correct in questions 2 and 3, which changes nothing in the weight.
+
+This measurement adds to the one of real published courses; it does not replace it. Both point the same way.
+
 ## On a fast connection
 
 Without throttling, on fibre, the gap narrows: every course showed its content within 5 s.
@@ -103,10 +143,11 @@ The fonts and the JavaScript of Rise’s player stay: they are its fixed cost.
 - **The figures**: bytes transferred by type (Chrome’s DevTools protocol), FCP and LCP (the browser’s API), when the page can be used (TTI, as Lighthouse computes it), the total blocking time, the main thread’s busy time.
 - **The computer**: an Apple M5 Mac with 10 cores and 16 GB, busy with other work during the runs (its load is noted on each run). Throttled times varied by 0.4 s at most from one run to the next: the network dominates.
 - **A second series** served the same packages from that one computer (HTTP/1.1), to set the hosts aside. The order stayed the same and the bytes matched to 1%; Rise took longer there (22.7 to 27.7 s), because its 34 to 39 requests queue on HTTP/1.1.
+- **The same module in all three tools** was served the same way, from the same computer (its load was 8 to 16), on 6 November 2026 at 14:56 UTC: Storyline 360 3.129.38633.0 and Rise 360 web exports with their proposed settings, and Elabora built from elabora-core bb4ce638.
 
 What this study leaves out:
 
-- **The courses differ in size**: 6 to 63 slides for Storyline, 58 to 84 blocks for Rise, 4 to 13 screens for Elabora. The first screen depends little on it, the total weight a lot. We will measure the same small course made in all three tools once it exists; until then, this study compares real courses as their authors published them.
+- **The courses differ in size**: 6 to 63 slides for Storyline, 58 to 84 blocks for Rise, 4 to 13 screens for Elabora. The first screen depends little on it, the total weight a lot. The same module made in all three tools (above) removes that reservation for the first screen, and keeps the same order.
 - **The media** follow each author’s choices.
 - **The hosts differ** (GitHub Pages, section508.gov, Cloudflare); the local series removes that difference.
 - **Throttling is simulated** by Chrome, not a real mobile network.
@@ -114,7 +155,7 @@ What this study leaves out:
 
 ## The script and the raw numbers
 
-The script, the list of courses and every run are public, in [research/load-speed](https://github.com/aureliendossantos/elabora-site/tree/main/research/load-speed) of this site’s repository. Run them again, on your courses too:
+The script, the list of courses and every run are public, in [research/load-speed](https://github.com/aureliendossantos/elabora-site/tree/main/research/load-speed) of this site’s repository. The shared module’s runs and film strips are there too; its Storyline and Rise exports stay unpublished, since they carry Articulate’s code and details of the author’s account. Run the script again, on your courses too:
 
 ```bash
 node research/load-speed/measure.ts --mode live --runs 3

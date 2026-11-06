@@ -44,9 +44,10 @@ Measurements
 
 research/load-speed/: measure.ts and filmstrip.ts are under Apache-2.0; courses.json, README.md and
 results/ under Creative Commons Attribution 4.0 International (CC BY 4.0), like the site's texts.
-public/media/compare/film-slow-4g-*.png show small screenshots of public courses published by
-their authors (listed in research/load-speed/courses.json), quoted for the study: they keep their
-authors' rights, and no licence of this repository applies to them.
+public/media/compare/film-*.png and research/load-speed/films/ show small screenshots of public
+courses published by their authors (listed in research/load-speed/courses.json), and of the shared
+module in Articulate's Storyline and Rise players, quoted for the study: they keep their authors'
+and Articulate's rights, and no licence of this repository applies to them.
 
 Fonts, under the SIL Open Font License 1.1
 ------------------------------------------

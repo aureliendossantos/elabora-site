@@ -45,9 +45,10 @@ const packages = opt('packages');
 const filmstrip = args.includes('--film');
 const FILM = [500, 1000, 2000, 3000, 5000, 8000, 13000, 20000];
 
-interface Course { id: string; tool: string; form: string; title: string; url: string; entry: string }
+interface Course { id: string; tool: string; form: string; title: string; url?: string; entry: string }
 const all: Course[] = JSON.parse(fs.readFileSync(path.join(here, 'courses.json'), 'utf8')).courses;
-const courses = all.filter((c) => !only || only.includes(c.id));
+// A course without a public address (the shared module) is measured locally only.
+const courses = all.filter((c) => (!only || only.includes(c.id)) && (mode === 'local' || c.url));
 if (mode === 'local' && !packages) throw new Error('--mode local needs --packages <dir>: one folder per course id');
 
 const { chromium } = createRequire(path.join(repo, 'package.json'))('playwright');
@@ -231,7 +232,7 @@ if (mode === 'local') {
   for (const c of courses) { dirs[c.id] = path.resolve(packages!, c.id); urls[c.id] = `/${c.id}/${c.entry}`; }
   server = await serve(dirs);
   for (const id in urls) urls[id] = server.base + urls[id];
-} else for (const c of courses) urls[c.id] = c.url;
+} else for (const c of courses) urls[c.id] = c.url!;
 
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM, args: ['--disable-quic', '--autoplay-policy=no-user-gesture-required'] });
 const meta = {

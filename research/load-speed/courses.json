@@ -1,5 +1,5 @@
 {
-  "_": "The courses measured on 6 November 2026. url: the public address, as learners open it. entry: the file to open in a package served by measure.ts --mode local. The Storyline and Rise courses are published by their authors; their packages are not copied here.",
+  "_": "The courses measured on 6 November 2026. url: the public address, as learners open it. entry: the file to open in a package served by measure.ts --mode local. The Storyline and Rise courses are published by their authors; their packages are not copied here. The four « commun » courses are the same small module, From cherry to bean, made in the three tools on 6 November 2026 and measured from one computer only (--mode local): their packages are not published.",
   "courses": [
     {
       "id": "sl-phishing",
@@ -100,6 +100,38 @@
       "url": "https://vitrine.elabora.page/medieval-charts/",
       "entry": "index.html",
       "example": "https://github.com/aureliendossantos/elabora-core/tree/main/examples/medieval-charts"
+    },
+    {
+      "id": "sl-commun",
+      "tool": "Storyline",
+      "form": "slides",
+      "title": "From cherry to bean (the shared module, 5 slides)",
+      "version": "Storyline 360 3.129.38633.0, Publish › Web with the proposed settings (Modern player, Optimized for standard delivery), 6 November 2026",
+      "entry": "story.html"
+    },
+    {
+      "id": "rise-commun",
+      "tool": "Rise",
+      "form": "scrolling page",
+      "title": "From cherry to bean (the shared module, a cover page and one lesson)",
+      "version": "Rise 360, Export › Web with the proposed options, 6 November 2026 (free trial)",
+      "entry": "index.html"
+    },
+    {
+      "id": "elb-commun-diapos",
+      "tool": "Elabora",
+      "form": "slides",
+      "title": "From cherry to bean (the shared module, 5 screens)",
+      "version": "elabora-core bb4ce638, elabora build --target web",
+      "entry": "index.html"
+    },
+    {
+      "id": "elb-commun-defil",
+      "tool": "Elabora",
+      "form": "scrolling page",
+      "title": "From cherry to bean (the shared module, a title screen and one page)",
+      "version": "elabora-core bb4ce638, elabora build --target web",
+      "entry": "index.html"
     }
   ]
 }

@@ -12,7 +12,9 @@ The script and the raw numbers behind the study [Why are Rise and Storyline cour
   - `local-2026-11-06.jsonl`: the same packages served from one computer by `measure.ts`, to set the hosts aside (9 courses: one Storyline course was too large to copy).
   - `live-2026-11-06-elabora-lighter.jsonl`: Clockwork and Medieval charts measured again at 14:45 UTC, once the showcase had a player that loads pictures as the learner comes to them (elabora-core c6088bcb). The study uses these two lines for those examples.
   - `local-2026-11-06-elabora-before.jsonl` and `local-2026-11-06-elabora-after.jsonl`: the same two examples served from one quiet computer, built by elabora-core before and after that change.
+  - `local-2026-11-06-shared-module.jsonl`: the same small module, From cherry to bean, made in Storyline 360 3.129.38633.0, Rise 360 and Elabora (as slides and as a scrolling page) on 6 November 2026, with the same files and each tool’s default settings, served from one computer (the four `*-commun` courses; « commun » is French for shared). Their packages are not published: Articulate’s exports carry Articulate’s code and details of the author’s account.
   - `*-medians.json`: the median of the 3 runs for each course and condition.
+- `films/`: the film strips of the study, on slow 4G: the published courses, and the shared module (also unthrottled). Their screenshots show courses by their authors and Articulate’s players, quoted for the study (see NOTICE).
 
 The first line of each `.jsonl` file describes the series: Chromium’s version, the computer, the window, the throttling. The runs of 6 November were made by the first version of this script, written in French; their field names are translated here, their values are unchanged, and the paths on that computer (the browser, the core’s folder) are left out.
 
