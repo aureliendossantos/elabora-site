@@ -1,0 +1,698 @@
+# Command line
+
+Generated from the help of `elabora` by `pnpm run docs`: `elabora help` prints the same, and `elabora <command> --help` one group. `[dir]` is a course folder (the current one by default). Run it from a checkout with `node bin/elabora.js`, or through the desktop app's bundled command.
+
+## Project
+
+```text
+init <dir> --id <id> --title <title> [--lang fr]    Create a course folder: course.json, plan.json, AGENTS.md
+     [--audience <who>] [--business-goal <goal>]    The brief so far: the plan's audience, business goal, duration in
+     [--duration 10-20|5|30+] [--presentation        minutes, presentation and LMS, and notes for agents in AGENTS.md
+     slides|scroll] [--lms a,b] [--notes <text>]    (the tone, the brand, what is left to the agent)
+     [--template <id>]                              Start from a module template (elabora templates): its charter and
+                                                    its screens with placeholder texts, in --lang when translated
+templates [--json]                                  List the module templates: each has 14 placeholder screens and a
+                                                    charter (theme, fonts, components, animated backdrop and variants)
+validate [dir] [--profile a,b] [--release] [--json] Check a course: format, plan, pedagogy, accessibility, budgets
+project [dir] [--client] [--screen <id>]            Print the course as Markdown: a map for agents, or --client for review
+migrate [dir] [--dry-run] [--json]                  Rewrite the course in the current format (older ones are read
+                                                    migrated): one change after a backup version; elabora undo reverts it
+rename [dir] <old-id> <new-id> [--json]             Rename a section, screen, layer, block or event: its references, the
+                                                    screen file and the state lock follow (learner progress keeps its key)
+ignore [dir] <code> <key> [--restore] [--json]      Ignore a warning by its key (elabora validate prints it) when the
+                                                    author asks, as « Ignorer » does in the editor (course.json ignored,
+                                                    D31). It returns when what it found changes; --restore brings it back
+```
+
+## Projects (the app's library: one plain folder per project; archives to exchange them)
+
+```text
+projects list [--json] [--validate]                 Projects of the library, newest first: title, course, date, size,
+                                                    validation, folder (--validate checks the unchecked ones)
+projects path [<id>] [--set <dir> [--move|--copy]]  Folder of the library, or of a project (id or its first characters).
+                                                    --set: use another folder; --move takes the projects along; --copy
+                                                    moves them by copying and checking every file (another disk)
+projects create [<course-id>] --title <t> [--language fr] [--template <id> | --charter <id or folder>]
+                                                    Create a course in the library, blank or from a module template
+                                                    (elabora templates), or blank in another module's charter (its theme,
+                                                    fonts, components and backdrop; --charter: its project id, or its folder, absolute or relative to here);
+                                                    the course id is the title's by default, the language the app's
+projects duplicate <id> [--title <t>]               Copy a project under a new id (same course id; the history stays)
+projects rename <id> --title <t>                    Change the title of a project (an undoable edit of course.json)
+projects trash <id>                                 Move a project, history included, to the library's trash
+projects trash list|restore <entry>|empty [--older-than <days>]
+                                                    What the trash holds; put a project back; delete for good
+export [dir] [--out <file>] [--history] [--sources] [--json]
+                                                    Write a project archive (default dist/<course-id>.elabora): the
+                                                    project's files and, with --history, its journal and backups; with
+                                                    --sources, the author's sources (sources/, may hold personal data)
+import <archive|folder> [--replace [<id>] | --copy] [--json]
+                                                    Import into the library: an archive (every file checked) or a folder
+                                                    (copied). When the library holds the course already, say --replace
+                                                    (the replaced files go to the trash, the history stays) or --copy
+import <file> [dir] [--title <t>] [--id <id>] [--lang fr] [--choose <decision>=<choice>,…] [--json]
+                                                    Beta: a Storyline 360 project (.story), a course Storyline published
+                                                    (folder or zip, web or LMS) or a Rise 360 export, as a new module: in
+                                                    dir, or else the library. Writes import-report.json (every loss, the
+                                                    choices to make); --choose takes one of its choices: presentation=scroll,
+                                                    backgrounds=keep, timing=steps, fonts=theme, media-accessibility=errors
+```
+
+## History (changes made through Elabora and by agents, in batches of AI work)
+
+```text
+history [dir] [--limit 20] [--json]                 List the changes by batch of AI work: when, who, the request, what
+                                                    changed, what was undone
+history [dir] --chats [--limit 20] [--json]         List the turns of Elabora's chat: the tools refused to the agent (file
+                                                    edits, shell), what it did instead, what each turn cost, and
+                                                    whether refusals call for a new Elabora tool
+undo [dir]                                          Undo the last change made through Elabora tools or by an agent
+undo [dir] --change <id|seq>                        Undo one change (undoing an undo redoes it)
+undo [dir] --batch [<id>]                           Undo a batch of AI work (default: the last one). Later changes stay,
+                                                    and are listed
+mark [dir] "<request>" [--chat <id>]                Label the next batch of AI work with the request that starts it.
+                                                    --chat: a turn of Elabora's chat, whose agent's changes all join it.
+                                                    In Claude Code, a UserPromptSubmit hook running elabora mark --stdin
+                                                    labels each batch with the prompt (read from the hook's JSON)
+```
+
+## The author's sources (private, kept out of packages)
+
+```text
+sources list [dir] [--json]                         List the author's sources (sources/: a brief, a deck, recordings),
+                                                    each with its readable version: ready, partial (its transcript to
+                                                    come), stale, missing, failed, native (read as it is: images, text,
+                                                    a PDF) or unsupported
+sources add [dir] <file|folder>… [--no-read] [--json]
+                                                    Copies files into sources/ (a file already there is skipped, a
+                                                    name taken is numbered, a name Windows refuses is made portable),
+                                                    then writes their readable versions (--no-read: later)
+sources read [dir] <file> [--no-refresh] [--json]   A source's readable version (Markdown), written first when it is
+                                                    missing or out of date: a Word document with its comments and
+                                                    tracked changes, a deck's slides in reading order with their notes
+                                                    and pictures, a recording's transcript (heard on this computer, the
+                                                    model downloaded once, 671 MB); an image or a PDF: its path
+sources refresh [dir] [<file>…] [--force] [--json]  Writes the readable versions missing, out of date or waiting for a
+                                                    transcript; --force writes them all again
+sources remove [dir] <file> [--json]                Deletes a source and its readable version for good: no backup
+                                                    holds sources
+
+Nothing leaves the computer: a client's brief may hold personal data. A deck gives its slides' texts, notes
+and pictures (the slides themselves are not drawn: add the deck as a PDF too to see them); a file in an older
+office format (.doc, .rtf, .odt, .ppt, .odp, .key) is read once saved as .docx or .pptx; agents read PDFs themselves.
+```
+
+## Media (video, audio and images of assets/)
+
+```text
+media import [dir] <file…> [--to <folder>] [--name <name>] [--no-wait] [--json]
+                                                    Bring media into assets/ (video, audio, images): converted in the
+                                                    background to web masters (MP4 H.264/AAC, M4A, WebP; SVG as is),
+                                                    metadata such as GPS positions removed; only the master is copied.
+                                                    Prints the paths at once, then waits (--no-wait: a worker goes on)
+media optimize [dir] [<path>…|--all] [--json]       Convert media of assets/ that are not masters (W_MEDIA_NOT_OPTIMIZED);
+                                                    references follow a new extension, in one undoable change
+media captions [dir] <block> <file.vtt|.srt> [--name <name>] [--json]
+                                                    Captions of a video block (E_VIDEO_CAPTIONS_MISSING): the file written
+                                                    under assets/captions/ (SubRip converted to WebVTT), named by the
+                                                    block, in one undoable change
+media to-video [dir] <block> [--json]              An image block whose file is animated (GIF, animated WebP or PNG)
+                                                    made a video block that loops like it (loop: true), several
+                                                    times lighter: an MP4 (H.264, no sound) and its first frame as
+                                                    poster; id, place, width, alt, caption and zoom kept.
+                                                    Centered or wide images only. One undoable change
+media weights [dir] [--media-quality high|medium|low] [--all] [--json]
+                                                    What the package weighs at each media quality, media by media,
+                                                    heaviest first: kind, file, duration and size, what high, medium
+                                                    and low ship (made or estimated), where the course uses it. A
+                                                    media heavier than it needs to be for what its file shows (an
+                                                    animated image; without ffmpeg, a media that ships as it is
+                                                    rather than as its web copy) comes first, with why and what
+                                                    lightens it. Nothing is encoded or written. At the course's
+                                                    quality unless --media-quality; ten unless --all
+media status [dir] [--wait] [--json]                Media jobs (queued, running, done, failed) and media to optimise
+media cancel [dir] <job>                            Cancel a media job
+media worker [dir]                                  Run the project's media jobs until none is left (import --no-wait)
+```
+
+## Narration (the voice of narrated screens, and their timeline)
+
+```text
+timeline [dir] [screen] [--language <lang>] [--json]
+                                                    A timed screen's timeline as text: its steps and their times,
+                                                    each line with its speaker, start, end and audio (ok, missing,
+                                                    stale), the blocks of each step, the timed blocks with their
+                                                    moments and effects, and the events its cues fire; then each
+                                                    layer that has its own timeline. Without a screen: every
+                                                    narrated screen and its audio
+timing [dir] <block> [--in <moment>] [--out <moment>] [--effect <name>] [--duration <s>] [--direction <side>]
+       [--out-effect <name>] [--out-duration <s>] [--out-direction <side>] [--clear in|out|all] [--json]
+                                                    When a block comes and goes on its screen's timeline, in one
+                                                    undoable change. A moment: l2 (a line starts), l2:end, a word of
+                                                    it l2:imprimante (l2:imprimante:end, #2 its second time, +0.3s
+                                                    after it), 1.5s or 1.5s@2 from a step's start on a screen without
+                                                    narration, step2, step2:end. Effects: none, fade, rise, slide,
+                                                    zoom, wipe, draw, or the theme's; sides: left, right, up, down
+narration import [dir] <screen> <line> <file> [--language <lang>] [--keep-silence] [--json]
+                                                    A recorded human voice for a line: converted (M4A, AAC, mono), its
+                                                    silence at both ends trimmed, written to
+                                                    assets/narration/<language>/<screen>/<line>.m4a with its sidecar,
+                                                    in one undoable change (W_NARRATION_AUDIO_MISSING, _STALE)
+narration import-files [dir] [--screen <id>] <file>… [--language <lang>] [--keep-silence] [--json]
+                                                    Recordings of several lines at once: each file goes to the line its name
+                                                    gives (l2.wav, accueil-l2.m4a, or 02.wav: the second line of --screen),
+                                                    the others to the line of --screen whose text the voice says (with the
+                                                    word aligner installed); one undoable change a line
+narration from-plan [dir] <screen> [--replace] [--json]
+                                                    The screen's script from the voice-over the validated plan gives the items
+                                                    it covers (plan items' voiceover), a line each; --replace: a screen that
+                                                    has a narration loses it and its audio
+narration transcribe [dir] <file> [--language <lang>] [--service local|elevenlabs] [--spend <percent>] [--json]
+                                                    What a recording says, punctuated, its words with their times: on this
+                                                    computer by default (Parakeet, downloaded once, 671 MB; free, nothing
+                                                    leaves the computer), or by ElevenLabs with the author's key: from 1 %
+                                                    of the quota it says the share (exit code 3) and runs with --spend
+narration add-from-audio [dir] <screen> <file> [--text <text>] [--after <line>|--first] [--step <n>] [--speaker <id>] [--layer <id>]
+       [--language <lang>] [--keep-silence] [--service local|elevenlabs] [--spend <percent>] [--json]
+                                                    A new line made from a recording: its text what the recording says
+                                                    (transcribed, or --text), its audio the recording (trimmed, encoded),
+                                                    its words timed when the aligner is installed, in one undoable change;
+                                                    after the last line by default, in the step and with the speaker of
+                                                    the line before it; --layer: a line of that layer's narration
+narration retranscribe [dir] <screen> <line> [--dry-run] [--text <text>] [--service local|elevenlabs] [--spend <percent>] [--json]
+                                                    The line's text written again from its recording (a recording says
+                                                    something else than the script): its old and new text printed, then
+                                                    written in one undoable change, the recording kept and its words timed
+                                                    again; translations of the line become « changed since ». --dry-run:
+                                                    print only
+narration keep [dir] <screen> <line> [--language <lang>] [--json]
+                                                    The line's text was corrected (a checked transcription, a typo) and its
+                                                    audio still says it: the audio stays up to date, its words follow
+narration split [dir] <screen> <line> [--json]      Cut a step at a line (W_SEGMENT_TOO_LONG): the line and those after it in
+                                                    its step start the next step, so Continue paces them; later steps, their
+                                                    blocks and the anchors that name them move one on, in one undoable change
+narration align [dir] [screen] [--line <ids>] [--language <lang>] [--force] [--json]
+                                                    When each word of the voiced lines is said (forced alignment):
+                                                    written into their sidecars, where word anchors find their
+                                                    times. Downloads the word aligner of the language once (French
+                                                    355 MB, English 95 MB); lines made or imported afterwards are
+                                                    timed at once. --line l1,l2 (with a screen); --force: lines
+                                                    already timed too. Says which words the voice may have swallowed
+```
+
+## Voices (generated narration)
+
+```text
+voice list [--language <lang>] [--json]             The voices a narration line can be generated with: id, name, register
+                                                    and pace, licence of the recording it comes from, and whether its
+                                                    model is on this computer (else the size downloaded on first use)
+voice models [--language <lang>] [--json]           The local voices by language and their model: on this computer (its
+                                                    size on disk) or not (the size downloaded on first use), being
+                                                    downloaded now (by the app, a command or an agent) or in use (the
+                                                    voices' part of elabora downloads list)
+voice install <language> [--force] [--json]         Downloads the model of a language's local voices once for this
+                                                    computer (fr 354 MB, en 126 MB), with its progress; --force removes
+                                                    it first and downloads it again (a reinstall)
+voice uninstall <language> [--json]                 Removes the model of a language's local voices from this computer
+                                                    (elabora downloads uninstall voices-<language>), refused while lines are
+                                                    said with it or it is being downloaded; the lines already made keep
+                                                    their audio, and the next generation downloads it again
+voice set [dir] <speaker> <voice> [--language <lang>] [--provider elevenlabs] [--name <n>] [--model <id>]
+          [--stability <0-1>] [--similarity <0-1>] [--json]
+                                                    The voice of a speaker of course.json in a language
+                                                    (speakers[].voices[<lang>]): its lines made with another voice are
+                                                    then out of date
+voice generate [dir] <screen> [--line <id,…>] [--all] [--voice <id>] [--language <lang>] [--take <n>]
+               [--dialogue] [--spend <percent>] [--json]
+                                                    Generates the lines of a narrated screen with their speaker's voice
+                                                    (by default those missing or out of date; --all: every line):
+                                                    each a new take, written to assets/narration/<lang>/<screen>/ with
+                                                    its sidecar (generated voice, credit), one undoable change a line.
+                                                    --voice sets that voice for the speaker of the lines first;
+                                                    --take puts back an earlier take of one line
+voice takes [dir] <screen> <line> [--language <lang>] [--json]
+                                                    The takes of a line kept on this computer: which one is its audio,
+                                                    which can be put back (--take)
+voice search [words] [--language <lang>] [--gender female|male] [--age young|middle_aged|old] [--accent <a>]
+             [--use-case <u>] [--mine|--library] [--model <m>] [--high-quality] [--ready] [--page <n>] [--json]
+                                                    ElevenLabs voices (D29): the account's own, then the library's
+                                                    thousands, most used first; each with its accent, age, use, a
+                                                    recording to hear it (free), its price over the model's, its
+                                                    quality and whether it is ready for the model (Eleven v4 unless
+                                                    --model) in the language: prefer « checked in <lang> ».
+                                                    --high-quality: professional clones that passed ElevenLabs'
+                                                    check only; --ready: those checked with the model in the language
+voice estimate [dir] <screen> [--line <id,…>] [--all] [--dialogue] [--language <lang>] [--json]
+                                                    What generating would cost before anything is spent: the share of
+                                                    the monthly quota, characters and credits per line (about, at most),
+                                                    lines made free (local voices, earlier takes given back), the runs
+                                                    said as one exchange (--dialogue)
+voice account [--check] [--json]                    The ElevenLabs plan, the share of its monthly quota used, what a line
+                                                    costs of it, the key (masked) and where it comes from; --check tries
+                                                    each permission Elabora needs without spending
+voice key set|remove|status                         The ElevenLabs API key for the command line and agents: set reads
+                                                    it from the input (never an argument), keeps it readable by you
+                                                    only in Elabora's local data; ELEVENLABS_API_KEY overrides it
+
+A paid voice's cost is told as a share of the author's monthly quota (D30). Under 1 % of it, voice generate
+runs; from 1 %, it refuses with the estimate (exit code 3) and runs with --spend <percent> once the author
+agreed to that share. --dialogue says the lines of several speakers that follow each other in a step as one
+exchange, cut back into lines (their pauses from it). Stage directions in brackets ([chuchote], [rit]) are
+played by Eleven v4 voices and never shown.
+```
+
+## Sounds
+
+```text
+sound search [dir] <words…> [--source library|openverse] [--category <c>] [--kind effect|ambience] [--max-duration <s>] [--json]
+                                                    Sounds to add: Elabora's library « Sons courants » (CC0, offline,
+                                                    the default), or Freesound and Wikimedia Commons through Openverse
+                                                    (no account; CC0, public domain and CC BY only)
+sound add [dir] <library id | openverse:<id> | file> [--id <id>] [--trim <start>:<end>] [--fade <s>] [--loop]
+          [--caption "<text>"] [--license <id> --author <name> --title <t> --url <https://…>]
+                                                    Copy a sound into assets/sounds/<id> with its sidecar (source,
+                                                    author, licence); a file needs --license (own: the author's)
+sound list [dir] [--json]                           The course's sounds: licence, credit, where each is used
+sound generate [dir] "<description>" [--duration <s>] [--loop] [--influence 0-1] [--id <id>] [--caption "<text>"]
+               [--estimate] [--spend <percent>] [--json]
+                                                    Make a sound effect with ElevenLabs (the author's key): from 1 %
+                                                    of the monthly quota, ask the author, then --spend
+```
+
+## Dialogues (branching conversations held in a block)
+
+```text
+dialogue show [dir] <block> [--json]                A dialogue block as a script: each node with its lines (name, stage
+                                                    direction, line), its options with their quality, points, effects and
+                                                    « then … » (where each one goes), their reply and feedback, then the
+                                                    endings. Stable text: it also serves diffs
+dialogue play [dir] <block> [--choose b,a,a] [--json]
+                                                    « Jouer un chemin »: the path of these choices (option ids, one for each
+                                                    decision met, retries included), its lines and notes, the ending, the
+                                                    score, the decisions and the duration (the lines' audio, else estimated
+                                                    from the text). Exit code 1 when a choice is not offered (it says which
+                                                    were)
+dialogue paths [dir] <block> [--limit <n>] [--json]
+                                                    Every path: how many, the best and worst score and points, the endings
+                                                    reached and never reached, the nodes never reached, and each path with
+                                                    its choices, ending, score and duration (2000 paths at most)
+dialogue export [dir] <block> --to html|pdf [--out <file>] [--date YYYY-MM-DD] [--json]
+                                                    The dialogue for the client: its map (every node and ending, placed by
+                                                    Elabora), then its script, as one page (html) or printed (pdf, by
+                                                    Elabora's or Google Chrome's Chromium); dist/<course>-<block>.<format>
+                                                    by default
+```
+
+## Optional downloads (models downloaded once per computer)
+
+```text
+downloads list [--kind <kind>] [--language <lang>] [--json]
+                                                    What Elabora downloads once per computer on first use (kept outside
+                                                    courses): the local voices and the word aligners, by language, what
+                                                    each is for and what happens without it, on this computer (its size
+                                                    on disk) or not (the size to download), being downloaded now (by
+                                                    the app, a command or an agent) or in use
+downloads install <id> [--force] [--json]           Downloads one now (voices-fr, aligner-en…), with its progress; --force
+                                                    removes it first and downloads it again (a reinstall)
+downloads uninstall <id> [--json]                   Removes one from this computer, refused while it is in use (lines
+                                                    said, words placed) or being downloaded; what modules already
+                                                    contain stays, and the next use downloads it again
+
+elabora voice models, voice install and voice uninstall are the local voices' part of these (voice uninstall <lang>
+is downloads uninstall voices-<lang>).
+```
+
+## Build and test
+
+```text
+build [dir] [--profile a,b|all] [--release] [--out <dir>] [--dir] [--debug] [--media-quality high|medium|low] [--languages all|<a,b>] [--packages one|each] [--no-wait] [--json]
+      [--format scorm12|scorm2004|cmi5|xapi] [--lrs-key <key> --lrs-secret <secret>] [--target web] [--progress local|none]
+      [--navigation authored|free] [--noindex] [--url <address>] [--image <file>] [--review-origin <origin>]…
+                                                    Validate, then make the package for the LMS and its proof dossier in
+                                                    dist/ (deterministic: same files, same bytes). Media ship at
+                                                    delivery.mediaQuality (default high: the masters); lower qualities
+                                                    ship renditions, encoded once and cached. Waits for running media
+                                                    jobs (--no-wait: fails while they run).
+                                                    The format: the module's (course.json delivery.format), else the best
+                                                    for its LMSs (delivery.lms), else SCORM 1.2, which every LMS takes;
+                                                    --format says it for this build. xAPI needs an LRS: the LMS's, or
+                                                    delivery.lrs with its key (--lrs-key and --lrs-secret, else
+                                                    ELABORA_LRS_KEY and ELABORA_LRS_SECRET), which the package carries.
+                                                    --languages en,fr: the package's languages (default: course.json
+                                                    delivery.languages, else the course's own), which learners switch
+                                                    from the player's « Langue », keeping their progress (D59). Each is
+                                                    put in as it is: a translation not approved or with texts still to
+                                                    translate goes in with a warning (D71). --languages all: the
+                                                    course's own and each translation ready and approved.
+                                                    --packages each: one package per language instead (default:
+                                                    course.json delivery.languagePackages), for LMSs that manage the
+                                                    language versions of a course themselves (Docebo, SuccessFactors).
+                                                    --target web: a module for any web server, outside an LMS (a folder to
+                                                    serve and its ZIP, <course>-<version>-web). --progress local (default:
+                                                    kept in the browser, resumed at the next visit) or none (nothing kept);
+                                                    --navigation authored (default: the course's rules) or free (every
+                                                    screen open); --noindex keeps search engines out; --url: the address
+                                                    of its index.html (canonical, sharing previews); --image: a PNG, JPEG or
+                                                    WebP shown when the link is shared. A showcase: --progress none
+                                                    --navigation free; a publication: the defaults.
+                                                    --review-origin (repeatable): a module for the Revue, shown in an
+                                                    iframe by a page of that origin (https://revue.elabora.studio; http
+                                                    on localhost for development): it carries the review bridge
+                                                    (elabora-review/1, docs/review-bridge.md) and talks to that page
+                                                    only; progress none, navigation free and noindex by default
+test [dir] [--package <zip>] [--profile a,b|all] [--format <format>] [--mode iframe,popup…] [--browser chromium,electron,chrome,msedge,playwright,firefox,webkit] [--parallel 4] [--no-a11y] [--json]
+                                                    Build, then run the package in the LMS emulator (profiles × launch modes
+                                                    × browsers), in the package's format (--package: any package, its format
+                                                    read from its files). 4 runs side by side by default; fewer on a loaded machine
+preview [dir] [--port 4807] [--profile <id>] [--navigation authored|free]
+                                                    Serve the course on this computer, alone and in the LMS emulator; pages
+                                                    reload when its files change. Free objects show in agent apps' in-app
+                                                    browsers. The emulator plays the course's LMS (--profile: another one);
+                                                    --navigation free opens every screen, whatever the course's rules
+look [dir] [--screen <id>,…|all] [--size 1600x900,375x812] [--state initial|answered] [--step <n>] [--layer <id>]
+     [--at <moment> | --sheet] [--scroll <px|N%|block>,…] [--block <id> [--scale 2] [--act <action>]…] [--viewport] [--motion]
+     [--language <code>] [--controls] [--select <css>] [--out shot.jpg | --out-dir <dir>] [--json] | --url | --stop
+                                                    Capture a screen while designing, in under a second: a look server kept warm
+                                                    for the course (one browser, no build) renders it from its files as they are,
+                                                    with the player's header and footer; free objects keep running across edits
+                                                    that leave them alone. JPEG (PNG: --out x.png), in .elabora/look/ by default.
+                                                    Says whether a slide fits. --url: a page that follows the looks and the files,
+                                                    for a browser pane. --stop: stop the server (it stops itself after 15 idle
+                                                    minutes).
+                                                    --at: a timed screen at a moment, the window with its bar: l2 (a line starts,
+                                                    its caption shown), l2:end, l2:imprimante (a word), l2:imprimante+0.3s,
+                                                    1.5s@2, step2:end, 12.5 (seconds). --sheet: a contact sheet, one capture per
+                                                    mark of its timeline (start, each block that comes or goes, each cue, each
+                                                    step's end), captioned with the anchor and what happens; on a screen without a
+                                                    timeline, the page down its length (0, 25, 50, 75, 100 % or --scroll's). With
+                                                    --layer, a layer that has its own timeline: --at and --sheet are on it.
+                                                    --scroll: the window there, animations on (px, % of the page, or a block's id);
+                                                    several: a sheet down the page. --block: a close-up of the block (PNG up to 2
+                                                    Mpx, else JPEG; in view unless --scroll says where), --scale 2 drawn twice as
+                                                    large. With --scroll, --block or --motion it says what moves: each block in
+                                                    the window (or the block) visible, clipped or outside, its animations and
+                                                    transitions, their timeline and progress, and the scroll-driven ones that
+                                                    CANNOT FINISH (the page ends before their range). --act (repeatable) drives
+                                                    the free object of --block from inside its frame before the capture:
+                                                    click:<text>, click:role=<role>[name=<n>], key:<key>, drag:x,y->x,y (0-1 across
+                                                    the object); it reports the object's state and events, and the object keeps
+                                                    that state until the screen changes. On a dialogue block, choose:<option>
+                                                    (one per decision met, retries included, as dialogue play) shows its thread
+                                                    at rest after those choices, its end in the window: notes, the next options,
+                                                    or the debrief. On a screen with free objects it says each control the
+                                                    page covers (a click on its middle would not reach it); --controls lists
+                                                    every control with its box in the window, instead of looking for them.
+                                                    --select <css>: the computed styles of what it matches (a layout's title, an
+                                                    ornament) and its parent's layout
+screenshot [dir] [--screen <id>,…|all] [--size 1600x900,375x812] [--state initial,answered] [--step <n>] [--layer <id>]
+           [--at 0,2000,4000|l1,l2:end | --scroll 0,25%,50%,1800] [--motion] [--viewport] [--language <code> [--allow-missing]]
+           [--from <screen>] [--out shot.png | --out-dir <dir>]
+                                                    Render screens to PNG once images and free objects are ready. answered: every
+                                                    activity shows its tallest feedback. --at: filmstrip of the animations (ms),
+                                                    or of a narrated screen as each line starts (l2) or ends (l2:end), with
+                                                    --layer of that layer's own timeline; with --from <screen>, the passage from
+                                                    that screen (times from the move, animations on: continuity, the backdrop);
+                                                    --scroll: filmstrip down the page (px or % of it: scroll-driven animations and
+                                                    objects). One contact sheet. Several shots share one build and one browser;
+                                                    --out names one image, so several shots are refused with it (exit code 2):
+                                                    --out-dir gets one file each
+fit [dir] [--screen <id>,…] [--reference 1600x900] [--minimum 1280x720] [--phone 375x812|none] [--language <code> [--allow-missing]] [--fresh] [--json]
+                                                    Measure every slide (all steps shown) at the fit sizes: what scrolls, by how
+                                                    much, and what moves once its activities are answered. In scroll presentation:
+                                                    the length of each page and the contrast of its text, down the whole page.
+                                                    On a phone (375×812 unless sizes are given): the contrast of the text down
+                                                    the page and the player's bars that go onto two lines. --language: the
+                                                    translation (--allow-missing: a draft, missing texts in the source language).
+                                                    A screen unchanged since its last measure (its files, the theme, components,
+                                                    objects, Elabora, the browser) keeps its last fit (--fresh measures every
+                                                    screen again)
+inspect <package.zip>                               Read any SCORM package: manifest, files, size
+diff <old.report.json> <new.report.json> [--profile a,b]
+                                                    What an update does to learners in progress, LMS by LMS
+profiles [--json]                                   List the LMS profiles the emulator plays (ids for --profile)
+```
+
+## Hosting: account (elabora.studio)
+
+```text
+account login --email <address> [--device <name>] [--language fr|en] [--handle <name>] [--json]
+                                                    Signs in to Elabora's hosting: a code is sent to the address and
+                                                    read from the input (never an argument); the session is kept
+                                                    readable by you only in Elabora's local data. At the first sign-in,
+                                                    --handle (or the input) chooses the account's address.
+                                                    The device is named « Elabora CLI · macOS » (or Windows, Linux),
+                                                    never after your computer; --device names it as you like
+account login --invitation <file>|- --space <space> [--json]
+                                                    Keeps a tester's invitation key instead (from a file, or the input
+                                                    with -), after checking it opens its space
+account handle <name> [--change] [--json]           Chooses the account's address: https://<name>.elabora.page/.
+                                                    --change renames it (once in 30 days, no redirect: the old
+                                                    address stops at once, links to it break, learners start
+                                                    their progress again; the old name is held a year)
+account status [--json]                             Who is signed in (the token masked, where it is kept), the space,
+                                                    the account's limits and usage
+account logout [--json]                             Ends the session on the server and forgets it here (an invitation
+                                                    key or an AI key is only forgotten)
+account ai-key create [--name <name>] [--replace-session] [--json]
+                                                    Makes a read-only key for your AI with your session and keeps it
+                                                    readable by you only: it lists reviews and reads their comments,
+                                                    nothing else (agents' read tools take it first). --replace-session:
+                                                    forget the session file then, so that what agents can reach here
+                                                    only reads (sign in again to publish or answer)
+account ai-key list [--json]                        The account's AI keys (never a key), the one kept here marked
+account ai-key revoke <aik_…> [--json]              Revokes an AI key at once (and forgets it here if kept)
+```
+
+## Hosting: publishing and review
+
+```text
+publish [dir] [--private] [--name <publication>] [--image <file>] [--index] [--progress local|none]
+        [--navigation authored|free] [--languages all|<a,b>] [--review-origin <origin>] [--json]
+                                                    Builds the course for the web and publishes it in your space; only
+                                                    the files the space lacks are sent (a second publication of the
+                                                    same content sends nothing). Public: https://<space>.elabora.page/
+                                                    <name>/ (default name: the course id), noindex unless --index.
+                                                    --private: a review build (<id>-review by default) that only a
+                                                    review shows; a new version goes to its open reviews, even with
+                                                    red checks (listed: they stop the web, not reviewers).
+                                                    --languages en,fr: the module's languages (default: course.json
+                                                    delivery.languages), which learners switch in the player (D59, D71;
+                                                    public only); all: every translation ready and approved. A folder
+                                                    elabora build --target web wrote is published as it is
+publication versions <publication> [--json]         The versions the hosting keeps of a publication (the current one
+                                                    marked): older ones stay at their pinned addresses
+publication withdraw <publication> <version> --yes [--json]
+                                                    Takes one older version down for good while the publication goes
+                                                    on: its pinned address answers 404, a review that showed it lists
+                                                    it as withdrawn (its comments stay), the files only it used are
+                                                    deleted. The current version is refused: publish a newer one first
+review create [dir] [--name <publication>] [--version <v>] [--title <t>] [--note <text>] [--link-out <file>]
+              [--json]                              Shares a private publication for review: prints the reviewers'
+                                                    link once (or writes it to --link-out, readable by you only).
+                                                    --note: a word to reviewers, under « <your name> vous invite à
+                                                    relire ce module » on the review page (500 characters)
+review list [dir] [--all] [--json]                  The course's reviews (--all: the space's): state, versions, open
+                                                    and resolved comments, reviewers
+review link <review> [--link-out <file>] [--json]   A new link for reviewers: the old one stops at once
+review close <review> [--read-only] [--json]        Closes a review (nothing shown any more), or makes it read-only
+review open <review> [--json]                       Opens a closed or read-only review again, under the same link
+review delete <review> --yes [--json]               Deletes a review, its comments and reviewers, and its private
+                                                    publication when no other review shows it
+review comments [dir] [--review <review>] [--since <rev>] [--state open|resolved] [--screen <id>] [--json]
+                                                    The reviewers' comments placed in the course: the screen (key,
+                                                    title, source file), the block (id, type, pointer), the step,
+                                                    layer, narration line and word, the version commented and whether
+                                                    a newer one or the screen's source changed since, the author, the
+                                                    text, the state and the replies. --since <rev>: only what changed
+review reply <review> <comment> [text] [--name <n>] [--json]
+                                                    Answers a thread (#4 or cm_…) as the author (the text, or the
+                                                    input); --name: the name shown (default: the account's)
+review resolve <review> <comment> [--json]          Marks a thread resolved
+review reopen <review> <comment> [--json]           Opens a resolved thread again
+
+The API is https://api.elabora.studio (ELABORA_CLOUD_URL elsewhere). A tester's key in a file also serves
+with ELABORA_CLOUD_KEY_FILE and ELABORA_CLOUD_SPACE.
+```
+
+## Design
+
+```text
+assets [dir] [--only <name>] [--sheet <file.png>]   Run generators/*.mjs: regenerate figures from code, theme tokens and plan.
+                                                    --sheet: a contact sheet of what they wrote, on the course's surface colour
+theme upgrade [dir] [--dry-run] [--json]            Put the theme's rules under the components (theme.cascade
+                                                    components-over-theme, D32), the course's look kept: what the theme
+                                                    sets on properties components also set goes into @layer overrides.
+                                                    One undoable change
+player [dir] [--enable <items>] [--disable <items>] [--move <item:bar[:index]>] [--set <item.option=value>]
+       [--position <bar=window|page>] [--token <player.name=value>] [--logo <asset|none>] [--reset]
+       [--link-terms [<ids>]] [--add-resource <file>…] [--title <t>] [--description <d>]
+       [--target scorm12|web] [--json]
+                                                    The learner's player (D58): its two bars of items (logo, title, progress,
+                                                    spacer, outline, controls, resources, glossary, credits, display,
+                                                    language, previous, next, exit), what shows and why not, its tokens and
+                                                    findings. With changes: one undoable change. The spacer is one per bar,
+                                                    always on: --move spacer:top:3 says where the start of the line ends.
+                                                    --set controls.speeds=0.75-1.5, outline.label=section,
+                                                    controls.transcript=false, logo.plate=true, progress.parts=false,
+                                                    progress.percent=false, glossary.linkTerms=false;
+                                                    --token player.top.background=#FFFFFF (=default removes it).
+                                                    --link-terms links the glossary's terms (all, or the ids given) the
+                                                    first time each is in each screen. --add-resource copies any file into
+                                                    assets/resources/ and adds it to the resources, titled by --title,
+                                                    else the PDF's own title, else its name (one undoable change each).
+                                                    Resources, glossary, credits: elabora tools call elabora_player .
+                                                    --from <arguments.json>
+```
+
+## Fonts
+
+```text
+font list [dir] [--category <c>] [--json]           The vetted fonts shipped with Elabora (offline): family, category,
+                                                    weights, styles, size, licence; ✔ marks those of the course
+font add [dir] <family> [--weights 400,700] [--styles normal,italic] [--for body,heading] [--subsets latin,latin-ext]
+                                                    Copy a vetted font and its licence into theme/fonts/<id>/, declare its
+                                                    faces in course.json and give its stack to tokens (--for body,
+                                                    heading, mono, display… or none; default: what the list says);
+                                                    latin, and latin-ext when a language of the course needs it
+font add [dir] --from <Fontsource package folder or .tgz> [--family <name>] [--weights …] [--styles …] [--subsets …] [--for …]
+font add [dir] --file <a.woff2,b.woff2> --license <OFL.txt> [--family <name>] [--for …]
+                                                    Any other font, with its licence: npm pack @fontsource-variable/<id>,
+                                                    or WOFF2 files (weights and style read from the files)
+```
+
+## Components
+
+```text
+component list [dir]                                Block types of the course: built-in and components/<id>/
+component new [dir] <id> [--title <t>] [--level block|screen]
+component fork [dir] <parent> <id> [--title <t>]    Fork a component (built-in or course); the fork remembers its parent
+component preview [dir] <id> [--width 375] [--out file.png]   Specimen of its examples, rendered
+component migrate [dir] [<id>] [--from <version>]   Run migrations.mjs steps on every instance (all or nothing)
+component add [dir] <id> --library <dir> [--as <id>] [--upgrade] [--force]   Copy (or upgrade) a library component
+component publish [dir] <id> --library <dir>        Copy a course component into a library
+block duplicate [dir] <block> [--id <new id>]       Copy a block (and the blocks of its slots)
+block detach [dir] <block>                          Replace a component instance by its native fallback
+block continue [dir] <block> --from <block> | --cut [--duration <ms>]
+                                                    Continuity between screens (D65): the block carries on from a block of
+                                                    another screen (a free object keeps running, another block glides), or
+                                                    no longer does; --duration: the passage to it (default 700)
+block place [dir] <block> --x <share> --y <share> --width <share> [--height <share>] [--z <n>] | --flow
+                                                    Placed by hand (D72): where the block sits in the frame (shares of the
+                                                    reference window at the screen's width), or back in the flow
+screen arrange [dir] <screen> [--block <id>,…]      « Ranger »: the screen's blocks placed by hand back in the flow
+convert [dir] <screen> <block> --to <type>[:<presentation>] [--dry-run] [--lang fr] [--json]
+                                                    « Transformer en… »: the block as another type or presentation, its id,
+                                                    items and translations kept; without --to, the possible targets
+```
+
+## Free objects
+
+```text
+object new [dir] <id> [--title <t>] [--objectives OBJ-1,OBJ-2 | --decoration]
+                                                    Scaffold a free object for plan objectives, or with --decoration a decoration
+                                                    of the course backdrop (theme.backdrop.object): a 2D canvas that follows the
+                                                    course (screen and section rank, direction), out of the player's bars
+object map [dir] <id> [--tests] [--json]            What to read before changing an object: each code file's sections (« // ── Name ── »)
+                                                    with their lines and functions, the props (type, choices, default), words,
+                                                    objects, state, events and the names of the tests (--tests: each test's steps
+                                                    on one line). Then read the lines needed
+object test [dir] <id> [--update-snapshots] [--browser chromium|electron|chrome|msedge|playwright|firefox|webkit] [--only <test name>] [--force]
+                                                    Gates 2–6 of the free-object contract (result kept in object.gates.json);
+                                                    an object unchanged since its last run here is skipped (--force runs it)
+object replay [dir] <id> [--test <name>] [--block <id> | --screen <id>] [--size 1600x900] [--out sheet.png] [--json]
+                                                    Replay a test of object.tests.json in the built course, on the page that
+                                                    places the object, in real time: a contact sheet of its snapshot steps,
+                                                    and its expectations checked. The backdrop's decoration replays behind the
+                                                    course with its bars, from --screen (default: the first one)
+```
+
+## Contract (the plan and its versions)
+
+```text
+plan status [dir] [--json]                          The plan's versions (made, sent, validated) and what changed since
+plan write [dir] (--from <plan.json> | --patch <patch.json>)
+                                                    Write the plan at any time (the whole plan, or a JSON Patch of it), its
+                                                    schema checked first; items moved take their screens along. Agents never
+                                                    change a text kept « à l'identique » (verbatim)
+plan text [dir] <TXT-1|block> --text <wording>      Reword a validated text of the plan (by its id, or a block that shows it)
+plan voiceover [dir] <item> (--from <file.txt> | --clear)
+                                                    The voice-over of an item, one line per line of the file (« marc: Bonjour… »
+                                                    for a speaker); elabora narration from-plan makes it a screen's script
+plan diff [dir] [--from <Vn|validated|latest>] [--to <Vn|current>] [--json]
+                                                    What changed in the plan, element by element (by default since the
+                                                    validated version, to the working copy)
+plan revert [dir] <key> [--version <Vn>]            Undo one change of the diff (item:ITEM-3, text:TXT-2…): back to the
+                                                    validated version (or the one given)
+plan note [dir] <key> (--text <note> | --clear)     A note for the client on a change in no version yet: frozen with the next
+                                                    version, a comment in Word
+plan version [dir] [--note <text>]                  A person's: freeze the working copy as the next version (V1, V2…)
+plan approve [dir] [--version <Vn>] --by "<name, organisation>" [--reference <ref>] [--date YYYY-MM-DD]
+                                                    A person's: the client validated a version (the latest by default)
+plan export [dir] [--version <Vn|current>] [--format pdf|docx|html] [--out <file>] [--date YYYY-MM-DD] [--json]
+                                                    The plan's document, what the client reads, comments and signs: the
+                                                    latest version (the working copy without one), its changes since the
+                                                    validated version as tracked changes in Word; PDF (default; printed by
+                                                    Elabora's or Google Chrome's Chromium), Word or one HTML page, in
+                                                    dist/<course>-plan.<format> by default. Records the send on the
+                                                    version; never makes one
+```
+
+## Translation (one package per language; translations live in the source course, translations/&lt;lang&gt;.xlf)
+
+```text
+translate export [dir] --to <lang>                  Create or update the XLIFF 2.0 file: every string, what changed since
+translate status [dir] [--to <lang>]                Translated, to translate and stale units; broken maths or placeholders
+translate reuse [dir] --to <lang> --from <course or .xlf> [--json]
+                                                    Fill the units to translate (or stale) whose source text another course
+                                                    already translated, word for word (a module made from the same template:
+                                                    --from its folder), in one undoable change
+translate build [dir] --to <lang> --out <dir> [--allow-missing] [--json]
+                                                    Generate the translated course (then elabora build it as any course)
+translate approve [dir] --to <lang> --by "<name, organisation>" [--reference <ref>]
+                                                    Approve the translated plan (the author's decision, kept with the source).
+                                                    An agent asks the author first: without --author-approved it writes
+                                                    nothing and says what to ask (exit code 3); with their yes,
+                                                    --author-approved <contentHash> records their approval, made through it
+```
+
+## Interoperability
+
+```text
+lesson-md export [dir] [--out <dir>]                Export simple blocks to LESSON.md 1.9 (Slate), with a loss report
+lesson-md import [dir] <lesson.md> --covers ITEM-n [--id <screen-id>] [--section <id>] [--after <screen-id>]
+```
+
+## Agents
+
+```text
+mcp [dir…] [--read-only] [--tools <name>,…]         Start the MCP server on stdio for a course folder. Several folders, or
+                                                    a folder of courses: each operation takes a course argument. Outside
+                                                    a course: the docs, skills and library. With no folder: every course
+                                                    Elabora knows (its library, the folders the app opened), read again
+                                                    at each call. --tools: only the named agent tools (unknown names are
+                                                    refused)
+codes [--json]                                      List the diagnostic codes
+docs [<page>] [--section <heading>] [--full]        Print the bundled documentation as Markdown: the map of pages, a page
+                                                    (D29: a decision; a long one as its outline), or one section
+rules [dir] [--json]                                Print this elabora's rules for agents (what a course's AGENTS.md
+                                                    holds between its markers), and the state of the course's copy
+rules update [dir] [--force] [--json]               Update the course's AGENTS.md rules (automatic while nobody edits
+                                                    them); --force replaces edited ones and keeps the notes after
+                                                    « elabora:rules end ». One undoable change
+```
+
+## Agent operations (shared with MCP)
+
+```text
+tools skills [<name> [<reference>]] [--json]        List the bundled skills, or read one skill or on-demand recipe (any folder)
+tools guide [--json]                                Print the agent guide: workflows, transport choices, human decisions (any folder)
+tools list [<tool>] [--read-only] [--tools <name>,…] [--json]
+                                                    List the agent operations and their JSON input schemas (any folder)
+tools call <tool> [dir] [--args '<json>' | --from <arguments.json>|-] [--read-only] [--raw]
+                                                    Call an operation as MCP does, with the same validation. Arguments
+                                                    default to {}: --args takes them inline, --from from a file (- reads
+                                                    stdin). Prints the tool's own JSON (its text when it answers in text);
+                                                    images go to files under the course's .elabora/look/, their paths in
+                                                    "images". --raw prints the MCP result (content, isError).
+                                                    Exit 0 success, 1 refused, 2 bad input
+```

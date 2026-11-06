@@ -1,0 +1,31 @@
+---
+// The page's action: one button for the visitor's system (macOS by default; Windows when the script sees it), the
+// other system as a link to the download section. The installers come from the newest public stable release
+// (src/lib/releases.ts); before the first one, « Bientôt disponible ».
+import { useT, type Lang } from '../../i18n';
+import { downloads, latestRelease } from '../../lib/releases';
+
+interface Props { lang: Lang; /** The link to the other system leads here; false: no such link. */ more?: string | false }
+const { lang, more = '#telecharger' } = Astro.props;
+const t = useT(lang);
+const release = latestRelease();
+const files = release ? Object.fromEntries(downloads(release).map((f) => [f.platform, f.url])) : null;
+const arrow = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 16.5h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+---
+{files ? (
+  <>
+    <a class="button" href={files['mac-arm64']} data-download data-mac={files['mac-arm64']} data-windows={files['windows']}>
+      <Fragment set:html={arrow} /><span data-os="mac">{t.download.mac}</span><span data-os="windows" hidden>{t.download.windows}</span>
+    </a>
+    {more && <a class="more" href={more} data-download-other><span data-os="mac">{t.download.alsoWindows}</span><span data-os="windows" hidden>{t.download.alsoMac}</span></a>}
+  </>
+) : <p class="fine">{t.home.soon}</p>}
+<script>
+  // Windows visitors get the Windows installer; everyone else keeps the Mac one (Apple Silicon, the most common).
+  if (/Win/.test(navigator.platform || navigator.userAgent)) {
+    document.querySelectorAll<HTMLAnchorElement>('[data-download]').forEach((a) => { if (a.dataset['windows']) a.href = a.dataset['windows']; });
+    document.querySelectorAll<HTMLElement>('[data-download] [data-os], [data-download-other] [data-os]').forEach((s) => { s.hidden = s.dataset['os'] !== 'windows'; });
+    // The other installers (the end of the home): the one the button offers goes, the Mac one comes.
+    document.querySelectorAll<HTMLElement>('[data-platform]').forEach((li) => { li.hidden = li.dataset['platform'] === 'windows'; });
+  }
+</script>

@@ -1,0 +1,17 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ReleaseNotes from '../../../components/ReleaseNotes.astro';
+import '../../../styles/changelog.css';
+import { LOCALES, type Lang } from '../../../i18n';
+import { changelogPath, publishedReleases } from '../../../lib/releases';
+export function getStaticPaths() { return LOCALES.map(lang => ({ params: { lang } })); }
+const lang = Astro.params.lang as Lang;
+const title = lang === 'fr' ? 'Nouveautés' : 'What’s new';
+const description = lang === 'fr' ? 'Les nouveautés et améliorations d’Elabora, version après version.' : 'New features and improvements in each Elabora release.';
+const releases = publishedReleases().filter(release => release.announce && !release.version.includes('-'));
+---
+<Base lang={lang} title={`${title} — Elabora`} description={description} paths={{ fr: changelogPath('fr'), en: changelogPath('en') }} path={changelogPath(lang)}>
+  <div class="changelog"><header class="changelog-intro"><h1>{title}</h1><p>{description}</p></header>
+    {releases.length ? releases.map(release => <ReleaseNotes release={release} lang={lang} />) : <p class="muted">{lang === 'fr' ? 'Les notes de version seront publiées ici à la sortie d’Elabora.' : 'Release notes will appear here when Elabora is released.'}</p>}
+  </div>
+</Base>

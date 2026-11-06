@@ -1,0 +1,56 @@
+{
+  "name": "Parta",
+  "short": "Parta",
+  "vendor": "Parta",
+  "url": "https://parta.io/",
+  "facts": {
+    "price": {
+      "en": "Solo 65 USD per month or 600 USD per year; Studio 900 USD per user per year; CMS on quote. The MCP is an add-on on quote.",
+      "fr": "Solo 65 $ par mois ou 600 $ par an ; Studio 900 $ par utilisateur et par an ; CMS sur devis. Le MCP est une option sur devis.",
+      "source": "https://parta.io/pricing/",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "In a web browser.",
+      "fr": "Dans un navigateur web.",
+      "source": "https://parta.io/pricing/",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "SCORM, PDF, HTML and public links; Markdown from Studio; Dynamic SCORM as an add-on.",
+      "fr": "SCORM, PDF, HTML et liens publics ; Markdown dès Studio ; SCORM dynamique en option.",
+      "source": "https://parta.io/pricing/",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "AI authoring with a course quota per plan (5 courses on Solo, 10 per user on Studio); AI translation from Studio.",
+      "fr": "Création par l’IA avec un quota de modules par offre (5 sur Solo, 10 par utilisateur sur Studio) ; traduction par l’IA dès Studio.",
+      "source": "https://parta.io/pricing/",
+      "checked": "2026-11-05"
+    },
+    "agents": {
+      "en": "Parta MCP: Claude, ChatGPT or Cursor draft and edit courses, translate, audit accessibility and migrate SCORM packages (MCP 3.0, October 2026).",
+      "fr": "Parta MCP : Claude, ChatGPT ou Cursor rédigent et modifient les modules, traduisent, auditent l’accessibilité et migrent des paquets SCORM (MCP 3.0, octobre 2026).",
+      "source": "https://help.parta.io/mcp/explore-parta-mcp-tools",
+      "checked": "2026-11-05"
+    },
+    "collaboration": {
+      "en": "Real-time collaboration; roles, permissions and tasks from Studio.",
+      "fr": "Collaboration en temps réel ; rôles, droits et tâches dès Studio.",
+      "source": "https://parta.io/pricing/",
+      "checked": "2026-11-05"
+    },
+    "templates": {
+      "en": "150+ content and quiz layouts, and your own templates.",
+      "fr": "Plus de 150 mises en page de contenu et de quiz, et vos propres modèles.",
+      "source": "https://parta.io/pricing/",
+      "checked": "2026-11-05"
+    },
+    "localization": {
+      "en": "Multilingual courses with linked language versions; Phrase TMS integration.",
+      "fr": "Modules multilingues aux versions de langue liées ; intégration de Phrase TMS.",
+      "source": "https://help.parta.io/translation/set-multilingual-courses",
+      "checked": "2026-11-05"
+    }
+  }
+}

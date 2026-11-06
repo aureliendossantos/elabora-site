@@ -1,0 +1,50 @@
+{
+  "name": "Adobe Captivate",
+  "short": "Captivate",
+  "vendor": "Adobe",
+  "url": "https://www.adobe.com/products/captivate.html",
+  "facts": {
+    "price": {
+      "en": "39.99 USD per month for one person, billed monthly (US store); Teams and Enterprise on quote.",
+      "fr": "39,99 $ par mois pour une personne, facturés au mois (boutique américaine) ; Teams et Enterprise sur devis.",
+      "source": "https://www.adobe.com/products/captivate/buying-guide",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "A desktop app for Windows and macOS (version 13.2, August 2026).",
+      "fr": "Une app de bureau pour Windows et macOS (version 13.2, août 2026).",
+      "source": "https://elearning.adobe.com/2026/08/adobe-captivate-13-2-is-here-discover-whats-new/",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "SCORM 1.2, SCORM 2004, AICC and xAPI; HTML5 packages.",
+      "fr": "SCORM 1.2, SCORM 2004, AICC et xAPI ; paquets HTML5.",
+      "source": "https://www.adobe.com/products/captivate.html",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "Image generation (Adobe Firefly), text rewriting and avatars; 25 generative credits per month on the individual plan.",
+      "fr": "Génération d’images (Adobe Firefly), réécriture de textes et avatars ; 25 crédits génératifs par mois sur l’offre individuelle.",
+      "source": "https://www.adobe.com/products/captivate/buying-guide",
+      "checked": "2026-11-05"
+    },
+    "review": {
+      "en": "Share for review: reviewers comment from a link, with nothing to install.",
+      "fr": "Partage pour relecture : les relecteurs commentent depuis un lien, sans rien installer.",
+      "source": "https://www.adobe.com/products/captivate.html",
+      "checked": "2026-11-05"
+    },
+    "import": {
+      "en": "PowerPoint slides; Captivate Classic projects in beta since version 13.1 (April 2026).",
+      "fr": "Diapositives PowerPoint ; projets Captivate Classic en bêta depuis la version 13.1 (avril 2026).",
+      "source": "https://elearning.adobe.com/2026/04/announcing-adobe-captivate-13-1-bring-your-classic-projects-forward/",
+      "checked": "2026-11-05"
+    },
+    "accessibility": {
+      "en": "Version 13.2 is certified WCAG 2.2 AA, with a published conformance report.",
+      "fr": "La version 13.2 est certifiée WCAG 2.2 AA, avec un rapport de conformité publié.",
+      "source": "https://elearning.adobe.com/2026/08/adobe-captivate-13-2-is-here-discover-whats-new/",
+      "checked": "2026-11-05"
+    }
+  }
+}

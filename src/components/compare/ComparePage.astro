@@ -1,0 +1,150 @@
+---
+// A comparison page: its title and short answer, who wrote it and when its facts were read, the table of facts, the
+// page's own text (src/content/compare/), Elabora's limits, who should choose which, the questions, how we compare
+// and how to correct us, and the other comparisons. Structured data: Article, BreadcrumbList, FAQPage.
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import VersusTable from './VersusTable.astro';
+import ToolsTable from './ToolsTable.astro';
+import '../../styles/compare.css';
+import { CONTACT_EMAIL, COMPARE_AUTHOR, SITE_REPO_URL, SITE_URL } from '../../site.config';
+import { fill, homePath, useT, type Lang } from '../../i18n';
+import { attributesOf, comparePages, comparePath, comparePaths, fact, gaps, longDate, maybeFact, oldestCheck, pageKey, tool, type ComparePage } from '../../lib/comparisons';
+import { ATTRIBUTES, type Attribute, type Fact } from '../../lib/comparisons-rules';
+
+interface Props { page: ComparePage }
+const { page } = Astro.props;
+const lang = page.id.split('/')[0] as Lang;
+const t = useT(lang);
+const d = page.data;
+const key = pageKey(page);
+const paths = await comparePaths(key);
+const { Content } = await render(page);
+const all = await comparePages(lang);
+
+// The tools a page shows must exist, and so must the facts its table names (the build stops otherwise).
+if (d.kind === 'versus' && !d.tool) throw new Error(`${page.id}: a versus page names its tool`);
+if (d.kind !== 'versus' && !d.table) throw new Error(`${page.id}: an ${d.kind} page has a table`);
+const attributes = (d.table?.attributes ?? []).map((a) => {
+  if (!(ATTRIBUTES as readonly string[]).includes(a)) throw new Error(`${page.id}: "${a}" is not one of ${ATTRIBUTES.join(', ')}`);
+  return a as Attribute;
+});
+const shown: Fact[] = d.tool
+  ? attributesOf(d.tool).flatMap((a) => [fact(d.tool!, a), fact('elabora', a)])
+  : (d.table?.tools ?? []).flatMap((id) => attributes.map((a) => maybeFact(id, a)).filter((f): f is Fact => !!f));
+const limits = gaps();
+const checked = oldestCheck([...shown, ...limits]);
+const other = d.tool ? tool(d.tool) : undefined;
+
+// Each tool's comparison, for the table's names and the list at the end.
+const versus = new Map(all.filter((p) => p.data.kind === 'versus' && p.data.tool).map((p) => [p.data.tool!, comparePath(lang, p.data.slug)]));
+const links = Object.fromEntries((d.table?.tools ?? []).filter((id) => versus.has(id) && id !== d.tool).map((id) => [id, versus.get(id)!]));
+const others = all.filter((p) => p.id !== page.id);
+
+const abs = (p: string) => new URL(p, SITE_URL).href;
+const day = (date: Date) => date.toISOString().slice(0, 10);
+const crumbs = [
+  { name: 'Elabora', url: homePath(lang) },
+  { name: t.compare.section, url: comparePath(lang) },
+  ...(d.kind === 'overview' ? [] : [{ name: d.title, url: comparePath(lang, d.slug) }]),
+];
+const factsFile = (id: string) => `${SITE_REPO_URL}/blob/main/src/data/comparisons/${id}.json`;
+const graph = [
+  {
+    '@type': 'Article',
+    headline: d.title,
+    description: d.description,
+    inLanguage: lang,
+    url: abs(comparePath(lang, d.slug)),
+    datePublished: day(d.published),
+    dateModified: day(d.updated),
+    author: { '@type': 'Person', name: COMPARE_AUTHOR, jobTitle: lang === 'fr' ? 'Fondateur d’Elabora' : 'Founder of Elabora' },
+    publisher: { '@type': 'Organization', name: 'Elabora', url: SITE_URL },
+    about: [{ '@type': 'SoftwareApplication', name: 'Elabora', applicationCategory: 'EducationalApplication', operatingSystem: 'macOS, Windows' }, ...(other ? [{ '@type': 'SoftwareApplication', name: other.name, url: other.url }] : [])],
+  },
+  { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: abs(c.url) })) },
+  ...(d.faq?.length ? [{ '@type': 'FAQPage', mainEntity: d.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+];
+// A data block (not a script the browser runs, so the CSP has nothing to allow); `<` escaped so the JSON cannot end it.
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
+const toolsInPage = d.tool ? [d.tool] : (d.table?.tools ?? []).filter((id) => id !== 'elabora');
+---
+<Base lang={lang} title={d.seo ?? `${d.title} · Elabora`} description={d.description} paths={paths} path={paths[lang]} mainClass="compare-main">
+  <script is:inline type="application/ld+json" set:html={jsonLd} />
+  <article class="compare">
+    <nav class="crumbs" aria-label={t.docs.breadcrumb}>
+      <ol>
+        {crumbs.map((c, i) => <li>{i < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>)}
+      </ol>
+    </nav>
+    <header class="compare-head">
+      <h1>{d.title}</h1>
+      <p class="compare-summary">{d.summary}</p>
+      <p class="byline">
+        <span>{fill(t.compare.by, { author: COMPARE_AUTHOR })}</span>
+        <span><time datetime={day(d.published)}>{fill(t.compare.published, { date: longDate(lang, day(d.published)) })}</time></span>
+        <span><time datetime={checked}>{fill(t.compare.checked, { date: longDate(lang, checked) })}</time></span>
+      </p>
+    </header>
+
+    <section class="compare-table" aria-labelledby="glance">
+      <h2 id="glance">{t.compare.atAGlance}</h2>
+      {d.tool ? <VersusTable lang={lang} other={d.tool} /> : <ToolsTable lang={lang} tools={d.table!.tools} attributes={attributes} links={links} />}
+      <p class="table-note">{d.tool ? t.compare.tableNote : t.compare.tableNoteTools}</p>
+    </section>
+
+    <div class="prose compare-prose"><Content /></div>
+
+    {(d.chooseOther?.length || d.chooseElabora?.length) && (
+      <section class="choose" aria-labelledby="choose">
+        <h2 id="choose">{t.compare.choose}</h2>
+        <div class="choose-grid">
+          {d.chooseOther?.length && other && (
+            <div><h3>{fill(t.compare.chooseOther, { tool: other.short })}</h3><ul>{d.chooseOther.map((x) => <li>{x}</li>)}</ul></div>
+          )}
+          {d.chooseElabora?.length && (
+            <div><h3>{t.compare.chooseElabora}</h3><ul>{d.chooseElabora.map((x) => <li>{x}</li>)}</ul></div>
+          )}
+        </div>
+      </section>
+    )}
+
+    <section class="limits" aria-labelledby="limits">
+      <h2 id="limits">{t.compare.gaps}</h2>
+      <p>{t.compare.gapsLead}</p>
+      <ul>
+        {limits.map((gap) => <li id={`limit-${gap.id}`}>{gap[lang]}</li>)}
+      </ul>
+    </section>
+
+    {d.faq?.length && (
+      <section class="faq" aria-labelledby="questions">
+        <h2 id="questions">{t.compare.questions}</h2>
+        <dl>{d.faq.map((f) => <><dt>{f.q}</dt><dd>{f.a}</dd></>)}</dl>
+      </section>
+    )}
+
+    <aside class="corrections" aria-labelledby="corrections">
+      <h2 id="corrections">{t.compare.correctionsTitle}</h2>
+      <p>{fill(t.compare.corrections, { email: CONTACT_EMAIL }).split(CONTACT_EMAIL).flatMap((part, i) => (i === 0 ? [part] : [<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, part]))}</p>
+      <ul>
+        {toolsInPage.map((id) => <li><a href={factsFile(id)}>{fill(t.compare.correctionsFile, { tool: tool(id).short })}</a></li>)}
+        <li><a href={`${SITE_REPO_URL}/tree/main/src/data/comparisons`}>{t.compare.correctionsAll}</a></li>
+      </ul>
+      <h2 class="method-title">{t.compare.method}</h2>
+      <p>{t.compare.methodText}</p>
+    </aside>
+
+    <nav class="others" aria-labelledby="others">
+      <h2 id="others">{t.compare.others}</h2>
+      <ul>
+        {others.map((p) => <li><a href={comparePath(lang, p.data.slug)}>{p.data.kind === 'overview' ? t.compare.all : p.data.title}</a></li>)}
+      </ul>
+    </nav>
+
+    <div class="compare-try">
+      <p>{t.compare.try}</p>
+      <a class="button" href={`${homePath(lang)}#telecharger`}>{t.compare.download}</a>
+    </div>
+  </article>
+</Base>

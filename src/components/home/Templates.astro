@@ -1,0 +1,38 @@
+---
+// The templates: a large animated preview and seven thumbnails to change it, as one picks a colour; « Voir les 14
+// écrans » opens the template's sheet, which invites to use it in Elabora (scripts/modeles.ts). Their texts come from
+// the core's index (src/data/modeles.json), their media from the app's previews (scripts/home-media.mjs).
+import modeles from '../../data/modeles.json';
+import { fill, useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+const T = t.home.templates;
+const list = modeles.templates.map((m) => ({ id: m.id, name: m.name[lang], summary: m.summary[lang], for: fill(T.for, { audiences: m.audiences[lang] }), dir: `/media/modeles/${m.id}/${lang}/` }));
+const first = list[0]!;
+const words = { preview: T.preview, screens: T.screens, screen: T.screen, kind: T.kind, facts: T.facts, note: T.note, use: T.use };
+---
+<section class="section" id="modeles" aria-labelledby="templates-title">
+  <div class="section-head">
+    <p class="eyebrow reveal">{T.eyebrow}</p>
+    <h2 id="templates-title" class="title reveal reveal--d1">{T.title}</h2>
+    <p class="lead reveal reveal--d2">{T.lead}</p>
+  </div>
+  <div class="frame frame--16x9 template-screen reveal reveal--media reveal--d1" data-template-screen>
+    <video muted loop playsinline autoplay preload="metadata" poster={`${first.dir}cover.webp`} src={`${first.dir}boucle.mp4`} aria-label={fill(T.preview, { name: first.name })}></video>
+  </div>
+  <ul class="thumbs reveal" aria-label={T.choose}>
+    {list.map((m, i) => <li><button type="button" data-template={m.id} aria-pressed={i === 0 ? 'true' : 'false'}><img src={`${m.dir}vignette.webp`} width="320" height="180" alt="" loading="lazy" />{m.name}</button></li>)}
+  </ul>
+  <div class="template-card reveal" data-template-card aria-live="polite">
+    <h3>{first.name}</h3>
+    <p>{first.summary}</p>
+    <p class="for">{first.for}</p>
+    <div class="actions"><button class="button button--light" type="button" data-template-sheet>{T.seeScreens}</button><a class="more" href="#telecharger">{T.use}</a></div>
+  </div>
+  <script type="application/json" id="modeles-data" set:html={JSON.stringify({ list, words })} is:inline></script>
+</section>
+<script>
+  import '../../scripts/modeles.ts';
+</script>

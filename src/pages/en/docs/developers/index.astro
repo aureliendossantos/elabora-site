@@ -1,0 +1,37 @@
+---
+import { getEntry, render } from 'astro:content';
+import Docs from '../../../../layouts/Docs.astro';
+import { docsPath, useT } from '../../../../i18n';
+import { CORE_REVISION, DEV_BASE, devMap, devMarkdownPath, devPath, sourceUrl } from '../../../../lib/core-docs';
+import { devNav } from '../../../../lib/docs-nav';
+
+const t = useT('en');
+const map = devMap();
+const entry = await getEntry('coreDocs', 'index');
+if (!entry) throw new Error('No docs/index.md in the core docs');
+await render(entry);
+const nav = devNav('index');
+const first = map.sections[0]?.pages[0];
+const crumbs = [{ title: t.docs.nav, href: docsPath('en') }, { title: t.docs.developers }];
+---
+<Docs lang="en" kind="dev" title={t.docs.devTitle} description={map.summary} path={DEV_BASE} paths={{ fr: docsPath('fr'), en: DEV_BASE }} alternates={['en']} nav={nav} heading={t.docs.devTitle} lead={map.summary} crumbs={crumbs} next={first && { title: first.title, href: devPath(first.id) }} source={{ url: sourceUrl('docs/index.md'), markdown: devMarkdownPath('index'), generated: false }}>
+  <p>{t.docs.devIntro}</p>
+  <div class="docs-groups">
+    {map.sections.map((section) => (
+      <section class="docs-group">
+        <h2 id={section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>{section.title}</h2>
+        <ul class="docs-cards">
+          {section.pages.map((page) => (
+            <li><a href={devPath(page.id)}><span class="docs-card-title">{page.title}{page.generated && <span class="docs-badge">generated</span>}</span><span class="docs-card-text">{page.description}</span></a></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+    <aside class="docs-agents">
+      <h2 id="for-ai-agents">{t.docs.agentsTitle}</h2>
+      <p>{t.docs.agentsText}</p>
+      <p class="docs-agents-links"><a href="/llms.txt" type="text/plain"><code>/llms.txt</code></a> <code>elabora docs [page] [--section]</code> <code>elabora_docs</code></p>
+      <p class="docs-revision">{t.docs.revision}: <a href={`${sourceUrl('docs/index.md').split('/blob/')[0]}/tree/${CORE_REVISION}`}><code>{CORE_REVISION.slice(0, 12)}</code></a></p>
+    </aside>
+  </div>
+</Docs>

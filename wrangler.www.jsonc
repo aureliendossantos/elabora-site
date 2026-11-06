@@ -1,0 +1,12 @@
+// www.elabora.studio → https://elabora.studio (301). A separate tiny Worker because host-specific
+// behaviour cannot be expressed in the assets config of the main one.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "elabora-site-www",
+  "main": "worker/www.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "www.elabora.studio/*", "zone_name": "elabora.studio" }],
+  "observability": { "enabled": false }
+}

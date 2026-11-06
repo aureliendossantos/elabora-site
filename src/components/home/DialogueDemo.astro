@@ -1,0 +1,30 @@
+---
+// The dialogues, in the dark room: the real scene of « Phishing by numbers », built for the web in French and English
+// (public/demo/phishing/), played in the page in its language on its dialogue screen, full frame, after a click (its
+// voices need one; scripts/dialogue.ts).
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+<section class="section section--night on-night" id="dialogues" aria-labelledby="dialogue-title">
+  <div class="section-head">
+    <p class="eyebrow reveal">{t.home.dialogue.eyebrow}</p>
+    <h2 id="dialogue-title" class="title reveal reveal--d1">{t.home.dialogue.title}</h2>
+    <p class="lead reveal reveal--d2">{t.home.dialogue.lead}</p>
+  </div>
+  <div class="frame frame--16x9 dialogue-stage reveal reveal--media reveal--d1" data-dialogue data-lang={lang} data-title={t.home.dialogue.frame}>
+    <img src={`/media/exemples/dialogue-${lang}.webp`} width="2240" height="1260" alt={t.home.dialogue.poster} loading="lazy" decoding="async" />
+    <button class="play" type="button" data-play>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff" /><path d="M10 8l6 4-6 4z" fill="#141317" /></svg>
+      {t.home.dialogue.play}
+    </button>
+  </div>
+  <ul class="points">
+    {t.home.dialogue.points.map((p, i) => <li class:list={['reveal', i === 1 && 'reveal--d1', i === 2 && 'reveal--d2']}><b>{p.title}</b><span>{p.text}</span></li>)}
+  </ul>
+</section>
+<script>
+  import '../../scripts/dialogue.ts';
+</script>

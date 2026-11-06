@@ -1,0 +1,92 @@
+---
+import '../styles/docs.css';
+import Base from './Base.astro';
+import DocsNav from '../components/docs/DocsNav.astro';
+import DocsSearch from '../components/docs/DocsSearch.astro';
+import { docsPath, useT, type Lang } from '../i18n';
+import type { NavGroup, NavItem } from '../lib/docs-nav';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  path: string;
+  paths: Record<Lang, string>;
+  alternates?: readonly Lang[] | undefined;
+  kind: 'manual' | 'dev';
+  nav: NavGroup[];
+  /** The page's headings, for « On this page » (h2, and h3 on pages that have few). */
+  headings?: { depth: number; slug: string; text: string }[] | undefined;
+  prev?: NavItem | undefined;
+  next?: NavItem | undefined;
+  crumbs?: { title: string; href?: string }[] | undefined;
+  /** The page title, when the content has no h1 of its own (the manual). */
+  heading?: string | undefined;
+  lead?: string | undefined;
+  /** Where the page comes from: its source on GitHub, its Markdown, and whether it is generated. */
+  source?: { url: string; markdown: string; generated: boolean } | undefined;
+  /** A decision of the log: a long title, set smaller. */
+  decision?: boolean | undefined;
+}
+const { lang, title, description, path, paths, alternates, kind, nav, headings = [], prev, next, crumbs = [], heading, lead, source, decision = false } = Astro.props;
+const t = useT(lang);
+const sections = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const toc = sections.length <= 40 ? sections : sections.filter((h) => h.depth === 2);
+const docsTitle = kind === 'dev' ? t.docs.developers : t.docs.manual;
+---
+<Base lang={lang} title={`${title} · ${docsTitle} · ${t.name}`} description={description} paths={paths} path={path} alternates={alternates} wide>
+  <Fragment slot="header">
+    <a class="docs-home" href={docsPath(lang)}>{t.docs.nav}</a>
+    <DocsSearch lang={lang} />
+  </Fragment>
+  <div class:list={['docs', `docs-${kind}`]}>
+    <details class="docs-menu">
+      <summary>{t.docs.menu}</summary>
+      <nav aria-label={t.docs.menu}><DocsNav lang={lang} groups={nav} kind={kind} /></nav>
+    </details>
+    <nav class="docs-sidebar" aria-label={docsTitle}>
+      <DocsNav lang={lang} groups={nav} kind={kind} />
+    </nav>
+    <article class:list={['docs-article', { 'docs-decision': decision }]} data-pagefind-body>
+      {crumbs.length > 0 && (
+        <nav class="docs-crumbs" aria-label={t.docs.breadcrumb} data-pagefind-ignore>
+          <ol>{crumbs.map((crumb) => <li>{crumb.href ? <a href={crumb.href}>{crumb.title}</a> : <span>{crumb.title}</span>}</li>)}</ol>
+        </nav>
+      )}
+      {heading && (
+        <header class="docs-head">
+          <h1>{heading}</h1>
+          {lead && <p class="docs-lead">{lead}</p>}
+        </header>
+      )}
+      {toc.length > 1 && (
+        <details class="docs-toc-inline" data-pagefind-ignore>
+          <summary>{t.docs.onThisPage}</summary>
+          <ul>{toc.map((h) => <li class={`depth-${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+        </details>
+      )}
+      <div class="prose docs-prose"><slot /></div>
+      {source && (
+        <footer class="docs-source" data-pagefind-ignore>
+          {source.generated && <p class="docs-generated">{t.docs.generated}</p>}
+          <p class="docs-source-links">
+            <a href={source.url}>{t.docs.source}</a>
+            <a href={source.markdown} title={t.docs.markdownTitle} type="text/markdown">{t.docs.markdown}</a>
+          </p>
+        </footer>
+      )}
+      {(prev || next) && (
+        <nav class="docs-pager" aria-label={`${t.docs.previous} / ${t.docs.next}`} data-pagefind-ignore>
+          {prev ? <a class="docs-prev" href={prev.href}><span class="docs-pager-label">{t.docs.previous}</span><span class="docs-pager-title">{prev.title}</span></a> : <span />}
+          {next && <a class="docs-next" href={next.href}><span class="docs-pager-label">{t.docs.next}</span><span class="docs-pager-title">{next.title}</span></a>}
+        </nav>
+      )}
+    </article>
+    {toc.length > 1 && (
+      <nav class="docs-toc" aria-labelledby="docs-toc-title">
+        <p id="docs-toc-title" class="docs-toc-title">{t.docs.onThisPage}</p>
+        <ul>{toc.map((h) => <li class={`depth-${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+      </nav>
+    )}
+  </div>
+</Base>

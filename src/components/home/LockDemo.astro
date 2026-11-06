@@ -1,0 +1,70 @@
+---
+// The 3D section: the canal lock of the « canal-locks » sample (the page /demo/ecluse/, in an iframe), and beside it
+// a copy of the inspector its author has in Elabora, whose settings really drive it (scripts/ecluse.ts). On a phone
+// the inspector waits under a button and opens in a drawer from the bottom, the lock in sight above it.
+import { ECLUSE_DEPART, TEINTES } from '../../data/ecluse';
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+const I = t.home.lock.inspector;
+type Row = { k: keyof typeof ECLUSE_DEPART; label: string } & (
+  { type: 'seg' | 'select'; opts: [string, string][] } | { type: 'switch' } | { type: 'slider' } | { type: 'swatches'; colors: readonly string[] });
+const groups: { title: string; rows: Row[] }[] = [
+  { title: I.look, rows: [
+    { k: 'visualStyle', label: I.style, type: 'seg', opts: Object.entries(I.styles) },
+    { k: 'cameraView', label: I.camera, type: 'seg', opts: Object.entries(I.cameras) },
+    { k: 'informationLevel', label: I.information, type: 'select', opts: Object.entries(I.informations) },
+    { k: 'showAnnotations', label: I.annotations, type: 'switch' },
+    { k: 'motionIntensity', label: I.motion, type: 'seg', opts: Object.entries(I.motions) },
+  ] },
+  { title: I.behaviour, rows: [
+    { k: 'mode', label: I.mode, type: 'seg', opts: Object.entries(I.modes) },
+    { k: 'scenario', label: I.journey, type: 'seg', opts: Object.entries(I.journeys) },
+    { k: 'rise', label: I.rise, type: 'slider' },
+  ] },
+  { title: I.materials, rows: [
+    { k: 'waterColor', label: I.water, type: 'swatches', colors: TEINTES.waterColor },
+    { k: 'grassColor', label: I.grass, type: 'swatches', colors: TEINTES.grassColor },
+    { k: 'hullColor', label: I.hull, type: 'swatches', colors: TEINTES.hullColor },
+  ] },
+];
+const value = (k: keyof typeof ECLUSE_DEPART) => String(ECLUSE_DEPART[k]);
+const metres = (n: number) => I.metres.replace('{n}', n.toLocaleString(lang));
+const sliders = '<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 5.5h7M14 5.5h1M3 12.5h1M8 12.5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="5.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="12.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+const close = '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 2.5l9 9M11.5 2.5l-9 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>';
+---
+<section class="section section--creme" id="trois-d" aria-labelledby="lock-title">
+  <div class="section-head">
+    <p class="eyebrow reveal">{t.home.lock.eyebrow}</p>
+    <h2 id="lock-title" class="title reveal reveal--d1">{t.home.lock.title}</h2>
+    <p class="lead reveal reveal--d2">{t.home.lock.lead}</p>
+  </div>
+  <div class="lock-stage reveal reveal--media reveal--d1" data-lock data-lang={lang} data-props={JSON.stringify(ECLUSE_DEPART)}>
+    <iframe title={t.home.lock.frame}></iframe>
+    <aside class="inspector" aria-label={I.label}>
+      <div class="inspector-head"><span class="drawer-grip" aria-hidden="true"></span><b>{I.name}</b><span>{I.kind}</span><button class="drawer-close" type="button" aria-label={I.close} set:html={close} /></div>
+      {groups.map((g) => (
+        <div class="inspector-group">
+          <h3>{g.title}</h3>
+          {g.rows.map((r) => (
+            <div class="inspector-row" data-k={r.k}>
+              {r.type === 'seg' && <><span>{r.label}</span><div class="segmented" role="group" aria-label={r.label}>{r.opts.map(([v, text]) => <button type="button" data-v={v} aria-pressed={value(r.k) === v ? 'true' : 'false'}>{text}</button>)}</div></>}
+              {r.type === 'select' && <><label for={`lock-${r.k}`}>{r.label}</label><select id={`lock-${r.k}`}>{r.opts.map(([v, text]) => <option value={v} selected={value(r.k) === v}>{text}</option>)}</select></>}
+              {r.type === 'switch' && <><label for={`lock-${r.k}`}>{r.label}</label><span><input type="checkbox" class="switch" id={`lock-${r.k}`} checked={Boolean(ECLUSE_DEPART[r.k])} /></span></>}
+              {r.type === 'slider' && <><label for={`lock-${r.k}`}>{r.label}</label><span class="slider"><input type="range" id={`lock-${r.k}`} min="1.5" max="4.5" step="0.5" value={value(r.k)} data-format={I.metres} data-lang={lang} /><output for={`lock-${r.k}`}>{metres(Number(value(r.k)))}</output></span></>}
+              {r.type === 'swatches' && <><span>{r.label}</span><div class="swatches" role="group" aria-label={r.label}>{r.colors.map((c) => <button type="button" data-v={c} data-color={c} aria-label={c} aria-pressed={value(r.k) === c ? 'true' : 'false'}></button>)}</div></>}
+            </div>
+          ))}
+        </div>
+      ))}
+      <div class="inspector-foot"><span>{I.footer}</span><button type="button" data-replay>{I.replay}</button></div>
+    </aside>
+  </div>
+  <div class="lock-open reveal"><button class="button button--light" type="button" aria-haspopup="dialog" aria-controls="lock-drawer" data-lock-open set:html={`${sliders}<span>${I.open}</span>`} /></div>
+  <dialog class="lock-drawer" id="lock-drawer" aria-label={I.label}></dialog>
+</section>
+<script>
+  import '../../scripts/ecluse.ts';
+</script>

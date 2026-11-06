@@ -1,0 +1,17 @@
+Sounds and music of “Phishing by numbers”
+
+elabora/sounds/back.m4a
+elabora/sounds/bad.m4a
+elabora/sounds/close.m4a
+elabora/sounds/good.m4a
+elabora/sounds/ok.m4a
+elabora/sounds/open.m4a
+elabora/sounds/select.m4a
+  Interface Sounds 1.0 by Kenney (www.kenney.nl) — CC0 1.0 — https://kenney.nl/assets/interface-sounds
+
+elabora/sounds/end.m4a
+  « WinBanjo » by Fupicat — CC0 1.0 — https://freesound.org/people/Fupicat/sounds/521640/
+
+assets/sounds/sonnerie.m4a
+  “Office phone ringing (one double ring)” by Elabora — CC0-1.0 — https://github.com/aureliendossantos/elabora-core
+  Modified: trimmed, faded.

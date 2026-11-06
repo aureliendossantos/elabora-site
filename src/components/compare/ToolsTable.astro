@@ -1,0 +1,37 @@
+---
+// Several tools, one row each, one column per fact (the overview, the Mac page). A tool's name leads to its
+// comparison when there is one, which gives its facts' sources and dates; Elabora's row is marked as ours. A tool
+// with no comparison of its own (Parallels Desktop) keeps them in its cells.
+import FactCell from './FactCell.astro';
+import { maybeFact, tool } from '../../lib/comparisons';
+import type { Attribute } from '../../lib/comparisons-rules';
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang; tools: string[]; attributes: Attribute[]; links: Record<string, string> }
+const { lang, tools, attributes, links } = Astro.props;
+const t = useT(lang);
+---
+<div class="facts-scroll">
+  <table class="facts facts--tools">
+    <thead>
+      <tr>
+        <th scope="col">{t.compare.tool}</th>
+        {attributes.map((a) => <th scope="col">{t.compare.attributes[a]}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {tools.map((id) => {
+        const it = tool(id);
+        return (
+          <tr class:list={{ 'is-us': id === 'elabora' }}>
+            <th scope="row">
+              {links[id] ? <a href={links[id]}>{it.short}</a> : <span>{it.short}</span>}
+              <span class="tool-vendor">{id === 'elabora' ? t.compare.us : it.vendor}</span>
+            </th>
+            {attributes.map((a) => <td data-label={t.compare.attributes[a]}><FactCell lang={lang} fact={maybeFact(id, a)} bare={id === 'elabora' || Boolean(links[id])} /></td>)}
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>

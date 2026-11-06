@@ -1,0 +1,33 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Docs from '../../../layouts/Docs.astro';
+import { LOCALES, docsPath, useT, type Lang } from '../../../i18n';
+import { manualCounterpart, manualNav, manualPages, neighbours } from '../../../lib/docs-nav';
+
+export const getStaticPaths = (async () => {
+  const pages = await getCollection('manual');
+  return pages.filter((page) => page.data.slug !== '').map((page) => ({ params: { lang: page.id.split('/')[0], slug: page.data.slug }, props: { page } }));
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const { Content, headings } = await render(page);
+const path = docsPath(lang, page.data.slug);
+// The same page in the other language, by its file name; without one, the other language's docs home.
+const paths = {} as Record<Lang, string>;
+const alternates: Lang[] = [];
+for (const other of LOCALES) {
+  const twin = other === lang ? page : await manualCounterpart(page, other);
+  paths[other] = twin ? docsPath(other, twin.data.slug) : docsPath(other);
+  if (twin) alternates.push(other);
+}
+const pages = await manualPages(lang);
+const nav = manualNav(pages, lang, path);
+const { prev, next } = neighbours(nav.flatMap((group) => group.items), path);
+const crumbs = [{ title: t.docs.manual, href: docsPath(lang) }, { title: t.docs.groups[page.data.group] }];
+---
+<Docs lang={lang} kind="manual" title={page.data.title} description={page.data.description} path={path} paths={paths} alternates={alternates.length === LOCALES.length ? undefined : alternates} nav={nav} headings={headings} heading={page.data.title} lead={page.data.description} prev={prev} next={next} crumbs={crumbs}>
+  <Content />
+</Docs>

@@ -1,0 +1,70 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/components.css';
+import '../styles/content.css';
+import interLatin from '@fontsource-variable/inter/files/inter-latin-opsz-normal.woff2?url';
+import newsreaderLatin from '@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2?url';
+import { INDEXING, SITE_URL } from '../site.config';
+import { LOCALES, useT, type Lang } from '../i18n';
+import SiteHeader from '../components/site/SiteHeader.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** Path of the page in each language (e.g. `/fr/conditions/`), for hreflang and the language selector. */
+  paths: Record<Lang, string>;
+  /** The page's own path. */
+  path: string;
+  /** An error page: no canonical, no alternates. */
+  error?: boolean;
+  /** The languages the page exists in (hreflang alternates); the developer docs are in English only. */
+  alternates?: readonly Lang[] | undefined;
+  /** A wider page (the docs): the header spans the window. */
+  wide?: boolean;
+  /** A class for <main> (the home page's sections). */
+  mainClass?: string;
+}
+const { lang, title, description, paths, path, error = false, alternates = LOCALES, wide = false, mainClass } = Astro.props;
+const t = useT(lang);
+const abs = (p: string) => new URL(p, SITE_URL).href;
+const ogLocale: Record<Lang, string> = { fr: 'fr_FR', en: 'en_US' };
+---
+<!doctype html>
+<html lang={t.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {!INDEXING && <meta name="robots" content="noindex" />}
+    {!error && <link rel="canonical" href={abs(path)} />}
+    {!error && alternates.map((l) => <link rel="alternate" hreflang={l} href={abs(paths[l])} />)}
+    {!error && <link rel="alternate" hreflang="x-default" href={abs(paths.en)} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={t.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {!error && <meta property="og:url" content={abs(path)} />}
+    <meta property="og:locale" content={ogLocale[lang]} />
+    {LOCALES.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={ogLocale[l]} />)}
+    <meta name="theme-color" content="#FBFAF7" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={newsreaderLatin} as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+    <a class="skip" href="#content">{t.skip}</a>
+    {Astro.slots.has('header')
+      ? <SiteHeader lang={lang} wide={wide}><slot name="header" /></SiteHeader>
+      : <SiteHeader lang={lang} wide={wide} />}
+    <main id="content" class={mainClass}>
+      <slot />
+    </main>
+    <SiteFooter lang={lang} paths={paths} />
+  </body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "name": "Easygenerator",
+  "short": "Easygenerator",
+  "vendor": "Easygenerator",
+  "url": "https://www.easygenerator.com/",
+  "facts": {
+    "price": {
+      "en": "Pro 1,299 EUR per year (1 author, 10 courses); Team 6,495 EUR per year (from 5 authors); Enterprise on quote. 14-day trial.",
+      "fr": "Pro 1 299 € par an (1 auteur, 10 modules) ; Team 6 495 € par an (à partir de 5 auteurs) ; Enterprise sur devis. Essai de 14 jours.",
+      "source": "https://www.easygenerator.com/en/pricing/",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "In a web browser.",
+      "fr": "Dans un navigateur web.",
+      "source": "https://www.easygenerator.com/en/features/",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "SCORM 1.2, SCORM 2004 and xAPI on paid plans; share links.",
+      "fr": "SCORM 1.2, SCORM 2004 et xAPI sur les offres payantes ; liens de partage.",
+      "source": "https://help.easygenerator.com/en/articles/2600495-export-a-scorm-xapi-package-and-publish-it-to-your-lms",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "EasyAI, and the EasyAI Agent (August 2026): it builds and edits the course from your documents and shows its plan before changing anything.",
+      "fr": "EasyAI, et l’EasyAI Agent (août 2026) : il construit et modifie le module à partir de vos documents et montre son plan avant de changer quoi que ce soit.",
+      "source": "https://www.easygenerator.com/en/product-updates/launching-the-easyai-agent/",
+      "checked": "2026-11-05"
+    },
+    "collaboration": {
+      "en": "Real-time co-authoring on the Team plan, with groups to share and hand over courses.",
+      "fr": "Co-édition en temps réel sur l’offre Team, avec des groupes pour partager et transmettre les modules.",
+      "source": "https://www.easygenerator.com/en/features/collaboration/",
+      "checked": "2026-11-05"
+    },
+    "review": {
+      "en": "Review link on Team and Enterprise: reviewers comment on any block without an account; comments are open or resolved.",
+      "fr": "Lien de relecture sur Team et Enterprise : les relecteurs commentent chaque bloc sans compte ; les commentaires sont ouverts ou résolus.",
+      "source": "https://help.easygenerator.com/en/articles/677402-review-a-course",
+      "checked": "2026-11-05"
+    },
+    "import": {
+      "en": "Course Builder turns PDF, Word or PowerPoint files into a course.",
+      "fr": "Course Builder transforme des fichiers PDF, Word ou PowerPoint en module.",
+      "source": "https://help.easygenerator.com/en/articles/8019127-course-builder",
+      "checked": "2026-11-05"
+    },
+    "localization": {
+      "en": "EasyTranslate add-on: one course in 75 languages, with a shared glossary.",
+      "fr": "Option EasyTranslate : un module en 75 langues, avec un glossaire partagé.",
+      "source": "https://www.easygenerator.com/en/features/collaboration/",
+      "checked": "2026-11-05"
+    }
+  }
+}

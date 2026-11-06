@@ -1,0 +1,23 @@
+---
+// L'écluse du module « canal-locks », seule, pour la 3D de l'accueil (une iframe de la même origine) : ?lang=en pour
+// ses mots en anglais. Ni lien ni index : X-Robots-Tag et sa CSP viennent de /demo/* (src/integrations/headers.ts).
+import '../../demos/ecluse/objet.css';
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Elabora · canal lock</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      import { ecluse } from '../../demos/ecluse/hote.ts';
+      // The home page (same origin) mounts the lock once the page and its fonts are ready.
+      (window as unknown as { ecluse: typeof ecluse }).ecluse = ecluse;
+      void document.fonts.ready.then(() => { document.body.dataset['ready'] = '1'; window.dispatchEvent(new Event('ecluse-prete')); });
+    </script>
+  </body>
+</html>

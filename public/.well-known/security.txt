@@ -1,0 +1,17 @@
+# Elabora: security contact (RFC 9116)
+# Signalement de failles de sécurité d'Elabora (RFC 9116)
+#
+# Please report vulnerabilities in elabora.studio, api.elabora.studio,
+# revue.elabora.studio, *.elabora.page and the Elabora desktop app to the
+# address below. Do not access other people's data, do not degrade the
+# service, and give us reasonable time to fix before any disclosure.
+# We reply in French or English.
+#
+# Merci de signaler les failles à l'adresse ci-dessous, sans accéder aux
+# données d'autrui ni perturber le service, et en nous laissant un délai
+# raisonnable de correction avant toute publication.
+
+Contact: mailto:security@elabora.studio
+Expires: 2027-10-13T22:00:00.000Z
+Preferred-Languages: fr, en
+Canonical: https://elabora.studio/.well-known/security.txt

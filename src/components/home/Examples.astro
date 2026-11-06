@@ -1,0 +1,45 @@
+---
+// The examples: real modules, a sentence on top of each card saying what one learns there, the module below.
+// A card is a link to the published module; with the script, it opens in a sheet over the page (scripts/exemples.ts).
+import { EXEMPLES, RAIL } from '../../data/exemples';
+import { VITRINE_ORIGIN } from '../../site.config';
+import { fill, useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+const cards = RAIL.map((id) => EXEMPLES.find((m) => m.id === id)!).map((m) => ({
+  ...m,
+  // A bilingual module opens in the visitor's language (the player's ?lang=).
+  url: `${VITRINE_ORIGIN}/${m.id}/${m.langs.length > 1 && m.langs.includes(lang) ? `?lang=${lang}` : ''}`,
+  meta: `${m.kind[lang]} · ${m.langs.map((l) => t.moduleLanguages[l]).join(', ')}`,
+  // Its title in the visitor's language when the module has it, else in its own (so that it is said right).
+  titleLang: m.langs.includes(lang) ? lang : m.langs[0],
+}));
+const arrow = (d: string) => `<svg viewBox="0 0 16 16" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+---
+<section class="section" id="exemples" aria-labelledby="exemples-title">
+  <div class="section-head">
+    <h2 id="exemples-title" class="title reveal">{t.home.examples.title}</h2>
+    <p class="lead reveal reveal--d1">{t.home.examples.lead}</p>
+  </div>
+  <ul class="rail reveal reveal--media reveal--d1" data-rail>
+    {cards.map((m) => (
+      <li>
+        <a class="card" href={m.url} target="_blank" rel="noopener" data-module data-title={m.title[lang]} data-title-lang={m.titleLang} data-meta={m.meta} aria-label={`${m.phrase[lang]} ${fill(t.home.examples.open, { title: m.title[lang] })}`}>
+          <span class="card-meta">{m.meta}</span>
+          <h3>{m.phrase[lang]}</h3>
+          <span class="card-picture"><img src={`/media/exemples/${lang}/${m.id}-800.webp`} srcset={`/media/exemples/${lang}/${m.id}-800.webp 800w, /media/exemples/${lang}/${m.id}.webp 1600w`} sizes="(max-width: 600px) 80vw, 392px" width="800" height="450" alt="" loading="lazy" decoding="async" /></span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <div class="rail-arrows reveal">
+    <button class="round" type="button" data-rail-back aria-label={t.home.examples.previous} set:html={arrow('M10 3L5 8l5 5')} />
+    <button class="round" type="button" data-rail-on aria-label={t.home.examples.next} set:html={arrow('M6 3l5 5-5 5')} />
+  </div>
+  <template id="module-actions"><a class="more" target="_blank" rel="noopener">{t.home.examples.openInTab}</a></template>
+</section>
+<script>
+  import '../../scripts/exemples.ts';
+</script>

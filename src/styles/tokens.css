@@ -1,0 +1,81 @@
+/* Elabora's design tokens: every colour, size, space, radius, shadow and movement of the site comes from here.
+   The identity sheets (elabora-notes/reports/elabora-identite): paper, ink and violet; Newsreader for what is said
+   (titles, the brand's voice in italic), Inter for what is used; one column, large pictures, quiet motion. */
+
+:root {
+  color-scheme: light;
+
+  /* ── Colour ── */
+  --paper: #fbfaf7;          /* the page */
+  --paper-white: #ffffff;    /* cards, frames, the white band */
+  --paper-creme: #f3eee4;    /* the brand's cream: the 3D section, the closing one (the riso press's paper) */
+  --night: #141317;          /* the dark room of the dialogue */
+  --ink: #1e1d1b;
+  --ink-2: #55524c;          /* secondary text: 7.4:1 on paper */
+  --ink-3: #75716b;          /* captions, metadata: 4.6:1 on paper (AA) */
+  --on-night: #f2efea;
+  --on-night-2: #b9b4ac;
+  --on-night-3: #9c978f;
+  --line: rgba(30, 29, 27, 0.12);
+  --line-soft: rgba(30, 29, 27, 0.07);
+  --fill: rgba(30, 29, 27, 0.06);       /* quiet buttons, code */
+  --fill-hover: rgba(30, 29, 27, 0.1);
+  --violet: #5a43c9;         /* the brand's accent: buttons, links, the agent's head */
+  --violet-strong: #4a35b5;
+  --violet-soft: #eeeafb;
+  --violet-on-night: #c3b5f7;
+  --focus: var(--violet);
+
+  /* ── Type ── */
+  --font: "Inter", "Inter Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --serif: "Newsreader", "Newsreader Fallback", "Iowan Old Style", Charter, Georgia, serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  --text-display: clamp(2.875rem, 7vw, 5.875rem);   /* the home's headline */
+  --text-title: clamp(2.375rem, 5.1vw, 4.125rem);   /* a section's sentence */
+  --text-subtitle: clamp(1.3125rem, 2.1vw, 1.6875rem);
+  --text-card: 1.5625rem;
+  --text-lead: clamp(1.125rem, 1.5vw, 1.3125rem);
+  --text-body: 1.0625rem;
+  --text-small: 0.90625rem;
+  --text-caption: 0.8125rem;
+  --leading-tight: 1.03;
+  --leading-title: 1.2;
+  --leading-text: 1.55;
+  --tracking-display: -0.028em;
+  --tracking-title: -0.022em;
+
+  /* ── Space and layout ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --section-y: clamp(100px, 12vw, 168px);
+  --gutter: clamp(20px, 5vw, 48px);
+  --measure: 780px;          /* a section's head */
+  --page: 1180px;            /* the page's width: pictures, cards, the footer */
+  --header-h: 56px;
+
+  /* ── Shape ── */
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+  --shadow-frame: 0 0 0 1px rgba(30, 29, 27, 0.06), 0 2px 4px rgba(30, 29, 27, 0.03), 0 34px 80px -34px rgba(30, 29, 27, 0.38);
+  --shadow-card: 0 0 0 1px rgba(30, 29, 27, 0.05), 0 14px 34px -22px rgba(30, 29, 27, 0.3);
+  --shadow-card-hover: 0 0 0 1px rgba(30, 29, 27, 0.06), 0 26px 48px -24px rgba(30, 29, 27, 0.38);
+  --shadow-raised: 0 0 0 1px rgba(30, 29, 27, 0.07), 0 22px 54px -22px rgba(30, 29, 27, 0.4);
+  --shadow-button: 0 1px 1px rgba(40, 20, 110, 0.14), 0 12px 28px -14px rgba(90, 67, 201, 0.7);
+
+  /* ── Motion: what appears does it once, a fade and a short rise; never the scroll itself ── */
+  --ease-out: cubic-bezier(0.16, 0.84, 0.3, 1);
+  --ease-sheet: cubic-bezier(0.2, 0, 0, 1);   /* a panel from the bottom: leaves gently, settles long (Lin) */
+  --reveal-shift: 26px;
+  --reveal-time: 0.9s;
+  --hover-time: 0.5s;
+}

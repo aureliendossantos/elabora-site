@@ -1,0 +1,171 @@
+{
+  "comment": "The highlights' rule of a release record, the same file in elabora-app (scripts/fixtures) and elabora-site (scripts/fixtures). Both validators are tested against it; change both files together. Highlights are the app's notes: bullets of a few words, no final period.",
+  "rule": {
+    "min": 1,
+    "max": 5,
+    "maxLength": 60
+  },
+  "cases": [
+    {
+      "name": "one highlight",
+      "valid": true,
+      "highlights": {
+        "en": [
+          "Import an existing course"
+        ],
+        "fr": [
+          "Importer un module existant"
+        ]
+      }
+    },
+    {
+      "name": "five highlights",
+      "valid": true,
+      "highlights": {
+        "en": [
+          "Import a course",
+          "Keep its narration",
+          "Publish it",
+          "Review it",
+          "Translate it"
+        ],
+        "fr": [
+          "Importer un module",
+          "Garder sa narration",
+          "Le publier",
+          "Le relire",
+          "Le traduire"
+        ]
+      }
+    },
+    {
+      "name": "a highlight of 60 characters",
+      "valid": true,
+      "highlights": {
+        "en": [
+          "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "fr": [
+          "Importer un module existant"
+        ]
+      }
+    },
+    {
+      "name": "an ellipsis is not a final period",
+      "valid": true,
+      "highlights": {
+        "en": [
+          "Import a course…"
+        ],
+        "fr": [
+          "Importer un module…"
+        ]
+      }
+    },
+    {
+      "name": "no highlight",
+      "valid": false,
+      "highlights": {
+        "en": [],
+        "fr": []
+      }
+    },
+    {
+      "name": "six highlights",
+      "valid": false,
+      "highlights": {
+        "en": [
+          "One",
+          "Two",
+          "Three",
+          "Four",
+          "Five",
+          "Six"
+        ],
+        "fr": [
+          "Un",
+          "Deux",
+          "Trois",
+          "Quatre",
+          "Cinq",
+          "Six"
+        ]
+      }
+    },
+    {
+      "name": "a highlight of 61 characters",
+      "valid": false,
+      "highlights": {
+        "en": [
+          "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "fr": [
+          "Importer un module existant"
+        ]
+      }
+    },
+    {
+      "name": "a sentence with its final period",
+      "valid": false,
+      "highlights": {
+        "en": [
+          "Import a course"
+        ],
+        "fr": [
+          "Importez un module."
+        ]
+      }
+    },
+    {
+      "name": "translations that do not correspond",
+      "valid": false,
+      "highlights": {
+        "en": [
+          "Import a course",
+          "Keep its narration"
+        ],
+        "fr": [
+          "Importer un module"
+        ]
+      }
+    },
+    {
+      "name": "the same highlight twice",
+      "valid": false,
+      "highlights": {
+        "en": [
+          "Import a course",
+          "Import a course"
+        ],
+        "fr": [
+          "Importer un module",
+          "Garder sa narration"
+        ]
+      }
+    },
+    {
+      "name": "an empty highlight",
+      "valid": false,
+      "highlights": {
+        "en": [
+          ""
+        ],
+        "fr": [
+          "Importer un module"
+        ]
+      }
+    },
+    {
+      "name": "markup in a highlight",
+      "valid": false,
+      "highlights": {
+        "en": [
+          "<b>Import</b> a course"
+        ],
+        "fr": [
+          "Importer un module"
+        ]
+      }
+    }
+  ]
+}

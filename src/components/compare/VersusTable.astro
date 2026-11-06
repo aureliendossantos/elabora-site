@@ -1,0 +1,32 @@
+---
+// Elabora and one other tool, side by side: one row per fact the other tool has, in the order of ATTRIBUTES.
+import FactCell from './FactCell.astro';
+import { attributesOf, fact, tool } from '../../lib/comparisons';
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang; other: string }
+const { lang, other } = Astro.props;
+const t = useT(lang);
+const them = tool(other);
+const rows = attributesOf(other);
+---
+<div class="facts-scroll">
+  <table class="facts facts--versus">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden">{t.compare.criterion}</span></th>
+        <th scope="col">Elabora</th>
+        <th scope="col">{them.short}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((attribute) => (
+        <tr>
+          <th scope="row">{t.compare.attributes[attribute]}</th>
+          <td data-label="Elabora"><FactCell lang={lang} fact={fact('elabora', attribute)} /></td>
+          <td data-label={them.short}><FactCell lang={lang} fact={fact(other, attribute)} /></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,200 @@
+/* The home page, one confident column: the hero and its film, the examples' rail, the lock and its inspector, the
+   dialogue, the templates, the four steps, the reasons, the end. Built on tokens.css and components.css. */
+
+.home { font-size: var(--text-body); line-height: var(--leading-text); }
+
+/* ── The hero ── */
+.hero { padding: clamp(76px, 10vw, 124px) var(--gutter) 24px; text-align: center; }
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: var(--text-display); line-height: 1; letter-spacing: var(--tracking-display); text-wrap: balance; max-width: 14em; margin: 0 auto; }
+.hero-visual { max-width: 1120px; margin: clamp(52px, 6vw, 84px) auto 0; }
+
+/* The film: a request is set down whole (what is not typed yet invisible), so that it is centred before its first
+   letter; all requests share one cell, so the window below never moves. Before the next one types itself, the request
+   fades out (ease, a fade that must be seen: Lin's « Le mouvement »), and the next one's label fades in. Then the
+   module it gave, in a window. */
+.film-request { display: grid; margin: 0 auto 22px; padding: 0 12px; max-width: 46em; text-align: center; font: italic 400 clamp(1.1875rem, 1.75vw, 1.5rem) / 1.35 var(--serif); color: var(--ink); }
+.film-request > span { grid-area: 1 / 1; visibility: hidden; opacity: 0; text-wrap: balance; transition: opacity 0.3s ease, visibility 0s 0.3s; }
+.film-request > span.is-on { visibility: visible; opacity: 1; transition: opacity 0.2s ease; }
+.film-request > span.is-on.is-leaving { opacity: 0; transition: opacity 0.3s ease; }
+/* The label sits on the request's baseline. */
+.film-request .label { font: 500 var(--text-caption) / 1 var(--font); font-style: normal; color: var(--ink-3); margin-right: 12px; }
+.film-request .rest { visibility: hidden; }
+/* The caret takes no room and opens no line break: the line stays the whole sentence's. It is as tall as the text,
+   from its ascenders to its descenders: the empty span's own box, the font's ascent and descent. */
+.film-request .caret { position: relative; }
+.film-request .caret::after { content: ""; position: absolute; left: 0.06em; top: 0; bottom: 0; width: 2px; background: var(--violet); animation: caret 1.05s steps(2, start) infinite; }
+@keyframes caret { to { visibility: hidden; } }
+.film-screen > * { opacity: 0; transition: opacity 1s ease; will-change: opacity; }
+.film-screen > .is-on { opacity: 1; }
+.film-relay { display: flex; justify-content: center; margin-top: 26px; min-height: 18px; }
+@media (max-width: 600px) { .film-request .label { display: block; margin: 0 0 8px; } }
+@media (prefers-reduced-motion: reduce) { .film-request .caret { display: none; } }
+
+/* ── The examples: a sentence on top of each card, the module below; the rail scrolls sideways ── */
+.rail { display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 64px calc(-1 * var(--gutter)) 0; padding: 10px max(var(--gutter), calc((100vw - var(--page)) / 2)) 44px; scroll-padding-inline: max(var(--gutter), calc((100vw - var(--page)) / 2)); list-style: none; }
+.rail::-webkit-scrollbar { display: none; }
+.rail > li { flex: 0 0 clamp(290px, 30vw, 392px); scroll-snap-align: start; display: flex; }
+.card { width: 100%; border: 0; border-radius: 26px; padding: 30px 28px 28px; display: flex; flex-direction: column; background: var(--paper-white); color: inherit; text-align: left; cursor: pointer; text-decoration: none; box-shadow: var(--shadow-card); transition: transform var(--hover-time) var(--ease-out), box-shadow var(--hover-time) var(--ease-out); }
+.card-meta { font: 500 var(--text-caption) / 1.3 var(--font); color: var(--ink-3); }
+.card h3 { font: 400 var(--text-card) / var(--leading-title) var(--serif); letter-spacing: -0.01em; margin: 12px 0 26px; flex: 1; }
+.card-picture { border-radius: 12px; overflow: hidden; aspect-ratio: 16 / 9; box-shadow: 0 0 0 1px var(--line-soft); flex: none; }
+.card-picture img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+  .card:hover .card-picture img { transform: scale(1.03); }
+}
+.rail-arrows { max-width: var(--page); margin: 0 auto; display: flex; justify-content: flex-end; gap: 12px; }
+.round { width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--fill); display: grid; place-items: center; cursor: pointer; transition: background-color 0.2s, opacity 0.2s; }
+.round:hover { background: var(--fill-hover); }
+.round:disabled { opacity: 0.35; cursor: default; }
+.round svg { width: 16px; height: 16px; }
+
+/* A sample module, opened in a sheet: a one-line head, the module just below at the window's height, drawn at 90 %
+   (its frame is 1/0.9 larger, then scaled), so it gets the room it was made for. */
+.sheet-in--module { margin: 20px auto; padding: 22px 28px 26px; width: min(1180px, calc(100% - 32px)); }
+.module-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; padding-right: 44px; margin-bottom: 16px; }
+.module-head h2 { font: 400 1.625rem / 1.2 var(--serif); letter-spacing: -0.01em; }
+.module-head span { font-size: var(--text-small); color: var(--ink-3); }
+.module-frame { margin: 0 auto; width: min(100%, calc((100vh - 200px) * 16 / 9)); border-radius: 12px; box-shadow: 0 0 0 1px var(--line); }
+.module-frame iframe { width: 111.12%; height: 111.12%; max-width: none; transform: scale(0.9); transform-origin: 0 0; }
+.sheet-in--module .actions { margin-top: 20px; }
+
+/* ── The lock, and its author's inspector floating beside it ── */
+.lock-stage { position: relative; max-width: 1260px; margin: 52px auto 0; height: clamp(540px, 52vw, 700px); }
+.lock-stage > iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* The lock's watercolour spreads past the stage: its sides fade into the paper. */
+@media (min-width: 901px) { .lock-stage > iframe { mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); } }
+.inspector { position: absolute; top: 18px; right: 18px; width: 318px; max-height: calc(100% - 36px); overflow: auto; scrollbar-width: thin; z-index: 2; text-align: left; background: #fff; border-radius: 16px; box-shadow: var(--shadow-raised); font: 13.5px / 1.35 var(--font); color: #2a2925; }
+.inspector-head { position: sticky; top: 0; z-index: 1; padding: 16px 16px 14px; background: #fff; border-bottom: 1px solid #efede9; }
+.inspector-head b { display: block; font-size: 15px; font-weight: 600; color: var(--ink); }
+.inspector-head span { font-size: 12.5px; color: #6f6b64; }
+.inspector-group { padding: 12px 16px 6px; border-bottom: 1px solid #efede9; }
+.inspector-group h3 { font: 600 13px var(--font); margin: 2px 0 10px; color: var(--ink); letter-spacing: 0; }
+.inspector-row { display: grid; grid-template-columns: 84px 1fr; align-items: center; gap: 8px; margin: 0 0 10px; }
+.inspector-row > label, .inspector-row > span { color: #5b5852; }
+.segmented { display: flex; background: #efede9; border-radius: 9px; padding: 2px; gap: 2px; }
+.segmented button { flex: 1 1 auto; border: 0; background: none; border-radius: 7px; padding: 5px 6px; font: 500 12px var(--font); color: #5b5852; cursor: pointer; white-space: nowrap; transition: background-color 0.15s, color 0.15s; }
+.segmented button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 2px rgba(30, 29, 27, 0.14), 0 0 0 0.5px rgba(30, 29, 27, 0.08); }
+.inspector select { appearance: none; width: 100%; border: 0; border-radius: 9px; padding: 7px 28px 7px 10px; font: 500 12.5px var(--font); color: var(--ink); cursor: pointer; background: #efede9 url("../assets/brand/chevron.svg") no-repeat right 10px center; }
+.switch { appearance: none; width: 34px; height: 20px; border-radius: 99px; background: #c9c5be; position: relative; cursor: pointer; margin: 0; transition: background-color 0.2s; }
+.switch::after { content: ""; position: absolute; left: 2px; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); transition: transform 0.2s var(--ease-out); }
+.switch:checked { background: #2e64c8; }
+.switch:checked::after { transform: translateX(14px); }
+.slider { display: flex; align-items: center; gap: 10px; }
+.slider input { flex: 1; accent-color: var(--ink); }
+.slider output { min-width: 46px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 500; }
+.swatches { display: flex; gap: 6px; }
+.swatches button { width: 22px; height: 22px; border-radius: 50%; border: 0; cursor: pointer; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12); transition: box-shadow 0.15s; }
+.swatches button[aria-pressed="true"] { box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--ink); }
+.inspector-foot { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 14px; font-size: 12.5px; color: #6f6b64; }
+.inspector-foot button { border: 0; background: #efede9; border-radius: 8px; padding: 6px 10px; font: 500 12.5px var(--font); color: var(--ink); cursor: pointer; }
+/* On a phone (and in a narrow window), the inspector waits under a button; opened, it moves into a drawer from the
+   bottom (Lin's panel of the bottom: 350 ms on --ease-sheet; it leaves the way it came), the lock in sight above.
+   Its button, a swipe down on its head, Escape or a tap above close it (scripts/ecluse.ts). */
+.lock-open, .drawer-grip, .drawer-close { display: none; }
+@media (max-width: 900px) {
+  .lock-stage { height: auto; }
+  .lock-stage > iframe { position: relative; height: 440px; }
+  .lock-stage > .inspector { display: none; }
+  .lock-open { display: flex; justify-content: center; margin-top: 22px; }
+}
+.lock-drawer { position: fixed; inset: auto 0 0; width: 100%; max-width: none; max-height: min(58dvh, 560px); margin: 0; padding: 0; border: 0; border-radius: 18px 18px 0 0; background: #fff; box-shadow: 0 -16px 50px -18px rgba(30, 29, 27, 0.35); overflow: hidden; transition: translate 0.35s var(--ease-sheet); }
+.lock-drawer:not([open]) { display: none; }
+.lock-drawer::backdrop { background: rgba(24, 22, 20, 0.16); transition: opacity 0.35s ease; }
+@starting-style { .lock-drawer[open] { translate: 0 100%; } .lock-drawer[open]::backdrop { opacity: 0; } }
+.lock-drawer.is-leaving { translate: 0 100%; }
+.lock-drawer.is-leaving::backdrop { opacity: 0; }
+.lock-drawer.is-dragging { transition: none; }
+.lock-drawer .inspector { position: static; width: auto; max-height: inherit; margin: 0; border-radius: 0; box-shadow: none; overscroll-behavior: contain; padding-bottom: env(safe-area-inset-bottom); }
+.lock-drawer .inspector-head { padding: 24px 60px 14px 16px; touch-action: none; cursor: grab; }
+.lock-drawer .drawer-grip { display: block; position: absolute; top: 8px; left: 50%; translate: -50% 0; width: 36px; height: 5px; border-radius: 3px; background: #dcd8d1; }
+.lock-drawer .drawer-close { display: grid; place-items: center; position: absolute; top: 18px; right: 14px; width: 32px; height: 32px; border: 0; border-radius: 50%; background: #efede9; color: var(--ink); cursor: pointer; }
+.lock-drawer .drawer-close svg { width: 13px; height: 13px; }
+/* Less motion: the drawer fades in and out, without moving. */
+@media (prefers-reduced-motion: reduce) {
+  .lock-drawer { transition: opacity 0.2s ease; }
+  @starting-style { .lock-drawer[open] { translate: none; opacity: 0; } }
+  .lock-drawer.is-leaving { translate: none; opacity: 0; }
+}
+
+/* ── The dialogue, in the dark room: the real scene, full frame ── */
+.dialogue-stage { max-width: 1120px; margin: 56px auto 0; background: #f7f4ee; box-shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.06); }
+.dialogue-stage > img { transition: opacity 0.6s ease; }
+.dialogue-stage > iframe { opacity: 0; transition: opacity 0.6s ease; }
+.dialogue-stage.is-playing > iframe { opacity: 1; }
+.dialogue-stage.is-playing > img, .dialogue-stage.is-playing > .play { opacity: 0; pointer-events: none; }
+.play { position: absolute; left: 50%; top: 50%; translate: -50% -50%; display: inline-flex; align-items: center; gap: 12px; border: 0; border-radius: var(--radius-pill); padding: 16px 26px 16px 20px; background: rgba(20, 19, 23, 0.86); color: #fff; font: 500 var(--text-body) var(--font); cursor: pointer; backdrop-filter: blur(8px); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5); transition: opacity 0.4s, scale 0.3s var(--ease-out); }
+.play:hover { scale: 1.03; }
+.play svg { width: 22px; height: 22px; }
+.points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 960px; margin: 56px auto 0; text-align: center; list-style: none; padding: 0; }
+.points b { display: block; font: 400 1.375rem / 1.25 var(--serif); color: var(--on-night); margin-bottom: 6px; }
+.points span { display: block; font-size: 0.9375rem; color: var(--on-night-3); text-wrap: balance; }
+
+/* ── The templates: a large animated preview, seven thumbnails to change it ── */
+.template-screen { max-width: 1120px; margin: 56px auto 0; }
+.template-screen > video { transition: opacity 0.5s ease; }
+.template-screen > video.is-leaving { opacity: 0; }
+.thumbs { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 16px; max-width: 900px; margin: 30px auto 0; padding: 0; list-style: none; }
+.thumbs button { border: 0; background: none; padding: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 9px; font: 500 var(--text-caption) var(--font); color: var(--ink-3); }
+.thumbs img { width: 92px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-s); box-shadow: 0 0 0 1px rgba(30, 29, 27, 0.1); transition: box-shadow 0.2s, transform 0.3s var(--ease-out); }
+.thumbs button:hover img { transform: translateY(-2px); }
+.thumbs button[aria-pressed="true"] { color: var(--ink); }
+.thumbs button[aria-pressed="true"] img { box-shadow: 0 0 0 2px var(--paper), 0 0 0 3.5px var(--ink); }
+.template-card { max-width: 640px; margin: 40px auto 0; text-align: center; }
+.template-card h3 { font: 400 2.25rem / 1.1 var(--serif); letter-spacing: -0.015em; }
+.template-card p { margin: 10px auto 0; color: var(--ink-2); text-wrap: pretty; }
+.template-card .for { font-size: var(--text-small); color: var(--ink-3); }
+@media (max-width: 600px) {
+  .thumbs { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; margin: 24px calc(-1 * var(--gutter)) 0; padding: 6px var(--gutter) 8px; max-width: none; scrollbar-width: none; }
+  .thumbs li { flex: none; }
+}
+/* The template's sheet: its name and what it is for, the action, then its fourteen screens */
+.sheet-head { text-align: center; max-width: 680px; margin: 0 auto; }
+.sheet-head h2 { font: 400 clamp(2.125rem, 4vw, 3rem) / 1.1 var(--serif); letter-spacing: -0.02em; }
+.sheet-head p { color: var(--ink-2); margin: 12px auto 0; text-wrap: pretty; }
+.sheet-head .for { font-size: var(--text-small); color: var(--ink-3); }
+.sheet-head .actions { margin-top: 26px; }
+.sheet-note { font-size: 0.875rem; color: var(--ink-3); margin: 14px auto 0; max-width: 34em; }
+.sheet-screen { margin-top: 36px; border-radius: 16px; box-shadow: 0 0 0 1px rgba(30, 29, 27, 0.08); }
+.screens { display: flex; gap: 10px; overflow-x: auto; margin: 14px 0 0; padding: 4px 2px 8px; list-style: none; scrollbar-width: thin; }
+.screens button { flex: 0 0 132px; border: 0; padding: 0; background: none; cursor: pointer; border-radius: var(--radius-s); overflow: hidden; aspect-ratio: 16 / 9; box-shadow: 0 0 0 1px rgba(30, 29, 27, 0.1); opacity: 0.75; transition: opacity 0.2s, box-shadow 0.2s; }
+.screens button:hover { opacity: 1; }
+.screens button[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--ink); }
+.screens img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── How it works: four tabs; between two, the agent walks a dotted line ── */
+.steps { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin: 56px auto 0; }
+.steps button { border: 0; background: none; padding: 8px 4px; font: 500 1rem var(--font); color: var(--ink-3); cursor: pointer; display: flex; align-items: center; gap: 10px; transition: color 0.2s; }
+.steps .n { width: 26px; height: 26px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px currentColor; display: grid; place-items: center; font-size: 0.8125rem; transition: background-color 0.2s, color 0.2s, box-shadow 0.2s; }
+.steps button[aria-selected="true"] { color: var(--ink); }
+.steps button[aria-selected="true"] .n { background: var(--ink); color: #fff; box-shadow: none; }
+.steps canvas { margin: 0 10px; }
+.step-sentence { font: 400 var(--text-subtitle) / 1.32 var(--serif); text-align: center; max-width: 30em; margin: 34px auto 30px; min-height: 2.7em; text-wrap: balance; transition: opacity 0.35s ease; }
+.app-window { max-width: 1120px; margin: 0 auto; }
+.app-window > img { opacity: 0; transition: opacity 0.6s ease; }
+.app-window > img.is-on { opacity: 1; }
+.app-window > img.is-document { object-fit: contain; object-position: top; }
+.app-window::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 24%; background: linear-gradient(rgba(255, 255, 255, 0), #fff 78%); opacity: 0; transition: opacity 0.6s ease; pointer-events: none; }
+.app-window.is-document::after { opacity: 1; }
+@media (max-width: 900px) { .steps canvas { display: none; } .steps { gap: 4px 14px; } }
+
+/* ── Ready for your organisation ── */
+.reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: var(--page); margin: 64px auto 0; padding: 0; list-style: none; }
+.reasons li { background: var(--paper-white); border-radius: 24px; padding: 32px 30px 34px; box-shadow: 0 0 0 1px var(--line-soft); }
+.reasons svg { width: 30px; height: 30px; color: var(--violet); }
+.reasons h3 { font: 400 1.5rem / 1.2 var(--serif); margin: 20px 0 8px; letter-spacing: -0.01em; text-wrap: pretty; }
+.reasons p { font-size: 0.96875rem; color: var(--ink-2); }
+.lms { text-align: center; margin: 48px auto 0; color: var(--ink-3); font-size: 0.9375rem; }
+.lms b { font-weight: 500; color: var(--ink-2); }
+.beta-note { text-align: center; margin: 12px auto 0; color: var(--ink-3); font-size: 0.9375rem; max-width: 40em; text-wrap: balance; }
+@media (max-width: 900px) { .reasons, .points { grid-template-columns: 1fr; } }
+
+/* ── The end: the anchor printed in ink, the current along the edges ── */
+.closing { position: relative; background: var(--paper-creme); text-align: center; overflow: hidden; padding: clamp(120px, 14vw, 190px) var(--gutter); }
+.closing > *:not(.current) { position: relative; }
+.current { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.closing .anchor { width: 140px; height: 150px; margin: 0 auto 30px; mix-blend-mode: multiply; }
+.closing h2 { font-family: var(--serif); font-weight: 400; font-size: var(--text-title); line-height: var(--leading-tight); letter-spacing: var(--tracking-title); text-wrap: balance; }
+.downloads { margin: 28px auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 24px; font-size: 0.8125rem; color: var(--ink-3); list-style: none; padding: 0; }
+.downloads a { color: inherit; text-decoration: none; }
+.downloads a:hover { color: var(--ink-2); text-decoration: underline; }

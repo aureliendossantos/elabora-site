@@ -1,0 +1,29 @@
+---
+// How it works: four steps, four screens of the app, one window. The tabs advance by themselves while the section is
+// in view (the agent walks the dotted line between them), until the visitor picks one (scripts/temps.ts).
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+const shots = ['decrire', 'plan', 'affiner', 'livrer'];
+---
+<section class="section section--white" id="comment" aria-labelledby="steps-title">
+  <div class="section-head">
+    <h2 id="steps-title" class="title reveal">{t.home.steps.title}</h2>
+  </div>
+  <div class="steps reveal" role="tablist" aria-label={t.home.steps.label} data-steps>
+    {t.home.steps.items.map((s, i) => (
+      <button type="button" role="tab" id={`step-${i}`} aria-controls="step-panel" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} data-sentence={s.text}><span class="n">{i + 1}</span>{s.title}</button>
+    ))}
+  </div>
+  <div id="step-panel" role="tabpanel" aria-labelledby="step-0">
+    <p class="step-sentence reveal">{t.home.steps.items[0]!.text}</p>
+    <div class="frame frame--16x10 app-window reveal reveal--media">
+      {shots.map((s, i) => <img class:list={{ 'is-on': i === 0, 'is-document': s === 'plan' }} src={`/media/app/${s}.webp`} width="1600" height={s === 'plan' ? 900 : 1000} alt={t.home.steps.items[i]!.text} loading="lazy" decoding="async" />)}
+    </div>
+  </div>
+</section>
+<script>
+  import '../../scripts/temps.ts';
+</script>

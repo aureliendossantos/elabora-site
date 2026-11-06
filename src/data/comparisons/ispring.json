@@ -1,0 +1,68 @@
+{
+  "name": "iSpring Suite",
+  "short": "iSpring",
+  "vendor": "iSpring",
+  "url": "https://www.ispringsolutions.com/ispring-suite",
+  "facts": {
+    "price": {
+      "en": "Per author per year: iSpring Suite 970 EUR, iSpring Suite AI 1,290 EUR, iSpring Cloud AI (web) 720 EUR. 14-day trial.",
+      "fr": "Par auteur et par an : iSpring Suite 970 €, iSpring Suite AI 1 290 €, iSpring Cloud AI (web) 720 €. Essai de 14 jours.",
+      "source": "https://www.ispringsolutions.com/pricing",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "iSpring Suite: Windows 10 or 11, inside PowerPoint. iSpring Cloud AI: in a web browser.",
+      "fr": "iSpring Suite : Windows 10 ou 11, dans PowerPoint. iSpring Cloud AI : dans un navigateur web.",
+      "source": "https://ispringhelpdocs.com/ispring-suite/system-requirements-59867325.html",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "SCORM 1.2, SCORM 2004, xAPI and cmi5; HTML5 for the web; MP4 video.",
+      "fr": "SCORM 1.2, SCORM 2004, xAPI et cmi5 ; HTML5 pour le web ; vidéo MP4.",
+      "source": "https://www.ispringsolutions.com/features",
+      "checked": "2026-11-05"
+    },
+    "files": {
+      "en": "A course is a PowerPoint presentation that the iSpring add-in turns into e-learning.",
+      "fr": "Un module est une présentation PowerPoint que le complément iSpring transforme en e-learning.",
+      "source": "https://ispringhelpdocs.com/ispring-suite/system-requirements-59867325.html",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "Suite AI and Cloud AI: a course creator from a topic or documents, text-to-speech in 53 languages and translation into 70+ languages.",
+      "fr": "Suite AI et Cloud AI : création de cours à partir d’un sujet ou de documents, synthèse vocale en 53 langues et traduction en plus de 70 langues.",
+      "source": "https://www.ispringsolutions.com/whats-new",
+      "checked": "2026-11-05"
+    },
+    "review": {
+      "en": "A web app for feedback: comments sit next to the content and are resolved in one place.",
+      "fr": "Une app web pour les retours : les commentaires sont à côté du contenu et se résolvent au même endroit.",
+      "source": "https://www.ispringsolutions.com/ispring-suite",
+      "checked": "2026-11-05"
+    },
+    "import": {
+      "en": "Works from PowerPoint presentations; iSpring Cloud AI also takes PDF, MP4 and MP3 files.",
+      "fr": "Part de présentations PowerPoint ; iSpring Cloud AI prend aussi des fichiers PDF, MP4 et MP3.",
+      "source": "https://www.ispringsolutions.com/ispring-cloud",
+      "checked": "2026-11-05"
+    },
+    "templates": {
+      "en": "Content Library: more than 130,000 assets.",
+      "fr": "Content Library : plus de 130 000 éléments.",
+      "source": "https://www.ispringsolutions.com/features",
+      "checked": "2026-11-05"
+    },
+    "localization": {
+      "en": "AI translation of a whole course into 70+ languages.",
+      "fr": "Traduction d’un module entier par l’IA en plus de 70 langues.",
+      "source": "https://www.ispringsolutions.com/whats-new",
+      "checked": "2026-11-05"
+    },
+    "accessibility": {
+      "en": "WCAG 2.1 AA and Section 508, as iSpring states.",
+      "fr": "WCAG 2.1 AA et Section 508, selon iSpring.",
+      "source": "https://www.ispringsolutions.com/features",
+      "checked": "2026-11-05"
+    }
+  }
+}

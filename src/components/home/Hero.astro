@@ -1,0 +1,36 @@
+---
+// The hero: the promise, the download, then the film. A request writes itself, then the module it gave appears in
+// a window, one module at a time; the stepping agent counts them below (scripts/film.ts).
+import DownloadButton from '../site/DownloadButton.astro';
+import { EXEMPLES } from '../../data/exemples';
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+<section class="hero" aria-labelledby="hero-title">
+  <h1 id="hero-title" class="reveal">{t.home.title}</h1>
+  <p class="lead reveal reveal--d1">{t.home.lead}</p>
+  <div class="actions reveal reveal--d2">
+    <DownloadButton lang={lang} more={false} />
+    <a class="more" href="#exemples">{t.home.seeExamples}</a>
+  </div>
+  <p class="fine reveal reveal--d2">{t.home.facts}</p>
+  <div class="hero-visual reveal reveal--media reveal--d3" data-film>
+    <p class="film-request" aria-hidden="true">
+      {EXEMPLES.map((m, i) => (
+        <span class:list={{ 'is-on': i === 0 }}><span class="label">{t.home.film.request}</span><span class="typed">{i === 0 ? m.demande[lang] : ''}</span><span class="caret"></span><span class="rest">{i === 0 ? '' : m.demande[lang]}</span></span>
+      ))}
+    </p>
+    <div class="frame frame--16x9 film-screen" role="img" aria-label={t.home.film.label}>
+      {EXEMPLES.map((m, i) => m.video
+        ? <video class:list={{ 'is-on': i === 0 }} muted playsinline loop preload={i === 0 ? 'auto' : 'none'} poster={`/media/exemples/videos/${lang}/${m.id}.webp`} src={`/media/exemples/videos/${lang}/${m.id}.mp4`} data-title={m.title[lang]} data-request={m.demande[lang]}></video>
+        : <img class:list={{ 'is-on': i === 0 }} src={`/media/exemples/${lang}/${m.id}.webp`} width="1600" height="900" alt="" decoding="async" fetchpriority={i === 0 ? 'high' : 'low'} data-title={m.title[lang]} data-request={m.demande[lang]} />)}
+    </div>
+    <div class="film-relay"></div>
+  </div>
+</section>
+<script>
+  import '../../scripts/film.ts';
+</script>

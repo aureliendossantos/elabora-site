@@ -1,0 +1,936 @@
+[
+  {
+    "schemaVersion": 1,
+    "version": "0.6.0",
+    "date": "2026-11-06",
+    "core": {
+      "revision": "013396b920b42c224dcca6fc43dfc6aae27c00e7",
+      "version": "0.1.0"
+    },
+    "title": {
+      "en": "Elabora 0.6.0: free placement, new LMS formats, several languages",
+      "fr": "Elabora 0.6.0 : placement libre, nouveaux formats et plusieurs langues"
+    },
+    "highlights": {
+      "en": [
+        "Place your blocks freely on the screen",
+        "SCORM 2004, cmi5 and xAPI, to suit your LMS",
+        "One package for a module in several languages"
+      ],
+      "fr": [
+        "Placez vos blocs librement sur l’écran",
+        "SCORM 2004, cmi5 et xAPI, selon votre LMS",
+        "Un seul paquet pour un module en plusieurs langues"
+      ]
+    },
+    "entries": [
+      {
+        "id": "placement",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Place blocks by hand on the canvas. Drag a block over the layout and it takes the place its box comes to, with the zones lit and named; drop it elsewhere, or hold ⌘ (Alt on Windows), and it stays where you let it go, in its place in the reading order. Its handles step through the column’s widths, and a long page scrolls under the drag. « Place » in the inspector gives its position and where it reads on a phone; the screen lists its placed blocks with « Ranger » and « Mettre au propre », which asks your AI for a tidy layout. Works in slides and in scrolling pages.",
+          "fr": "Placez les blocs à la main sur le canevas. Glissé sur la mise en page, un bloc prend la place où arrive sa boîte, les zones allumées et nommées ; lâché ailleurs, ou avec ⌘ (Alt sous Windows), il reste où vous le posez, à sa place dans l’ordre de lecture. Ses poignées passent d’une largeur de colonne à l’autre, et une longue page défile sous le geste. « Place » dans l’inspecteur donne sa position et où il se lit sur un téléphone ; l’écran liste ses blocs placés avec « Ranger » et « Mettre au propre », qui demande à votre IA une mise en page nette. En diapositives comme en pages qui défilent."
+        }
+      },
+      {
+        "id": "delivery-formats",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "The package for the LMS comes in the format that suits it: SCORM 2004 for most LMSs, SCORM 1.2 for Moodle and Totara or when no LMS is chosen. « Réglages » shows it under « Format » (« Automatique : SCORM 2004 pour Docebo ») and lets you choose SCORM 1.2, SCORM 2004, cmi5 or xAPI; « Publier » names the package’s format. All four complete, pass and resume in SCORM Cloud.",
+          "fr": "Le paquet pour le LMS arrive dans le format qui lui convient : SCORM 2004 pour la plupart des LMS, SCORM 1.2 pour Moodle et Totara ou sans LMS choisi. « Réglages » l’indique sous « Format » (« Automatique : SCORM 2004 pour Docebo ») et vous laisse choisir SCORM 1.2, SCORM 2004, cmi5 ou xAPI ; « Publier » nomme le format du paquet. Les quatre se terminent, se réussissent et reprennent dans SCORM Cloud."
+        }
+      },
+      {
+        "id": "package-languages",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Publier lists the module’s languages: check those the package holds, a translation still to approve included, with a line that says how to approve it. Choose the language learners start in, or one package per language for LMSs that manage language versions. The Aperçu offers « Langue » for every translation, so you can try one before it is approved.",
+          "fr": "Publier liste les langues du module : cochez celles que contient le paquet, y compris une traduction encore à approuver, avec une ligne qui dit comment l’approuver. Choisissez la langue de départ des apprenants, ou un paquet par langue pour les LMS qui gèrent les versions linguistiques. L’Aperçu propose « Langue » pour chaque traduction, pour en essayer une avant son approbation."
+        }
+      },
+      {
+        "id": "new-module-look",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "« Nouveau module » lets you choose the module’s look under your request: made to measure by your AI, the look of one of your modules, or a template. « Utiliser ce modèle » in a template’s window leads there with the template chosen; « Créer manuellement » makes the template’s screens, or one screen in your module’s look.",
+          "fr": "« Nouveau module » vous laisse choisir l’allure du module sous votre demande : sur mesure par votre IA, celle d’un de vos modules, ou un modèle. « Utiliser ce modèle », dans la fenêtre d’un modèle, y mène avec le modèle choisi ; « Créer manuellement » crée les écrans du modèle, ou un écran à l’allure de votre module."
+        }
+      },
+      {
+        "id": "media-weight",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Publier gives the module’s weight at the chosen quality, in orange when a media file is heavier than it needs to be. A click lists the media, the heaviest first, with why; a click on one opens its screen. An animated image offers « Transformer en vidéo »: it becomes a video that loops like it, several times lighter, and ⌘Z gives the image back. Photos saved as PNG and heavy videos ship as optimized copies, your files unchanged. The qualities are called Standard, Allégée and Très allégée.",
+          "fr": "Publier donne le poids du module à la qualité choisie, en orange quand un média pèse plus que nécessaire. Un clic liste les médias, les plus lourds d’abord, avec la raison ; un clic sur l’un ouvre son écran. Une image animée propose « Transformer en vidéo » : elle devient une vidéo qui boucle comme elle, plusieurs fois plus légère, et ⌘Z rend l’image. Les photos enregistrées en PNG et les vidéos lourdes partent en copies optimisées, vos fichiers intacts. Les qualités s’appellent Standard, Allégée et Très allégée."
+        }
+      },
+      {
+        "id": "video-illustration",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "A video is an illustration as an image is: it takes a caption shown under it, and a loop can open full size with « S’ouvre en grand ». A video that loops shows only its file and « En boucle » in its inspector, the rest under « Plus de réglages ».",
+          "fr": "Une vidéo est une illustration, comme une image : elle prend une légende affichée dessous, et une boucle peut s’ouvrir en grand avec « S’ouvre en grand ». Une vidéo en boucle montre seulement son fichier et « En boucle » dans son inspecteur, le reste sous « Plus de réglages »."
+        }
+      },
+      {
+        "id": "first-launch",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "A new welcome at first launch: five short pages say what Elabora is, what an AI agent is and why your own subscription matters, then ask which AI you want to use: Claude, ChatGPT, or free models. The same choices are in « Votre IA préférée ».",
+          "fr": "Un nouvel accueil au premier lancement : cinq pages courtes disent ce qu’est Elabora, ce qu’est un agent IA et pourquoi votre propre abonnement compte, puis demandent quelle IA utiliser : Claude, ChatGPT ou des modèles gratuits. Les mêmes choix sont dans « Votre IA préférée »."
+        }
+      },
+      {
+        "id": "personalization",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Réglages gain « Personnalisation »: a light or dark appearance, or your computer’s, in every window at once. Messages to the AI send with Enter (Shift+Enter for a new line), or with ⌘ Enter if you prefer. Downloaded elements, AI tools and your account’s lists show as soft cards.",
+          "fr": "Les Réglages gagnent « Personnalisation » : une apparence claire ou sombre, ou celle de votre ordinateur, dans toutes les fenêtres à la fois. Les messages à l’IA partent avec Entrée (Maj+Entrée pour une nouvelle ligne), ou avec ⌘ Entrée si vous préférez. Les éléments téléchargés, les outils pour les IA et les listes de votre compte prennent la forme de cartes douces."
+        }
+      },
+      {
+        "id": "chat",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "In the chat, the AI ends with a short answer: what changed, or the answer to your question, and what awaits you. It can approve a translated plan for you once you say yes in a card (« Approuver le plan en anglais ? »), in your name. In Claude’s app, Elabora’s extension can now start a new module in your library, blank, from a template, or by importing an archive or a folder.",
+          "fr": "Dans le chat, l’IA finit par une réponse courte : ce qui a changé, ou la réponse à votre question, et ce qui vous attend. Elle peut approuver un plan traduit pour vous, après votre oui dans une carte (« Approuver le plan en anglais ? »), en votre nom. Dans l’app Claude, l’extension d’Elabora peut maintenant créer un module dans votre bibliothèque, vide, d’après un modèle, ou en important une archive ou un dossier."
+        }
+      },
+      {
+        "id": "samples",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Two examples are new or rebuilt, each in English and French: « Why is the hour hand 12 times slower? », a 3D clockwork from the dial to the gear train, and the network diagnosis, now a real case with Marc’s ticket, a 3D network and his call.",
+          "fr": "Deux exemples sont nouveaux ou refaits, chacun en anglais et en français : « Why is the hour hand 12 times slower? », un mécanisme d’horloge en 3D du cadran aux engrenages, et le diagnostic réseau, devenu un vrai cas avec le ticket de Marc, un réseau en 3D et son appel."
+        }
+      },
+      {
+        "id": "install-update",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "On Windows, « Redémarrer maintenant » installs an update quietly: Elabora closes, a small window says « Elabora se met à jour », and Elabora opens again on the new version. The app ships a third of the files it did, so an update writes less before Elabora is back. On Mac, the disk image shows the app, the Applications folder and an arrow between them.",
+          "fr": "Sous Windows, « Redémarrer maintenant » installe une mise à jour en douceur : Elabora se ferme, une petite fenêtre dit « Elabora se met à jour », puis Elabora se rouvre sur la nouvelle version. L’app compte un tiers des fichiers d’avant : une mise à jour en écrit moins avant le retour d’Elabora. Sur Mac, l’image disque montre l’app, le dossier Applications et une flèche entre les deux."
+        }
+      },
+      {
+        "id": "editor",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Changing screens in the Slide view is smooth from the first visit. In a narrow window, the list of screens floats over the canvas when the first module opens, then folds away. With a mouse, the canvas and Traduction’s « En contexte » keep the course’s full width. Selection boxes fall on the blocks of templates whose blocks come in moving (Editorial, Paper). A screen’s « Terminé » is now « Complété », as in the LMS. On Windows, the Elabora icon opens your menu and the preview window opens centred.",
+          "fr": "Passer d’un écran à l’autre dans la vue Diapositive est fluide dès la première visite. Dans une fenêtre étroite, la liste des écrans flotte sur le canevas à l’ouverture du premier module, puis se replie. Avec une souris, le canevas et « En contexte » de Traduction gardent toute la largeur du module. Les cadres de sélection tombent sur les blocs des modèles dont les blocs arrivent en mouvement (Editorial, Paper). « Terminé » s’appelle maintenant « Complété » pour un écran, comme dans le LMS. Sous Windows, l’icône d’Elabora ouvre votre menu et la fenêtre d’aperçu s’ouvre centrée."
+        }
+      },
+      {
+        "id": "core-fixes",
+        "kind": "fix",
+        "source": "core",
+        "text": {
+          "en": "A blank module starts with nothing to fix. A statement block shows the plan’s validated text it names. A steps block’s scroll keeps its figure in phase with the words. A dialogue’s debrief opens over the whole screen in slides. Lines generated as one ElevenLabs exchange keep a sigh that opens a line. Animated WebP images stay animated in every package. Screen readers say a screen is « complété » in French.",
+          "fr": "Un module vide démarre sans rien à corriger. Un bloc d’énoncé montre le texte validé du plan qu’il nomme. Le défilé d’un bloc d’étapes garde sa figure au rythme du texte. Le bilan d’un dialogue s’ouvre sur tout l’écran en diapositives. Les répliques générées en un échange ElevenLabs gardent un soupir qui ouvre une réplique. Les images WebP animées restent animées dans tous les paquets. Les lecteurs d’écran disent qu’un écran est « complété »."
+        }
+      },
+      {
+        "id": "agents-and-cli",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "For agents and the CLI: place_block and arrange_screen place blocks (D72); elabora build --format (scorm12, scorm2004, cmi5, xapi) and --languages; elabora_projects_create, elabora_templates, elabora_projects_duplicate and elabora_import start modules over MCP, and elabora projects create --charter takes another module’s look (D69); elabora_translation_approve approves a translated plan on the author’s yes; elabora media weights and elabora media to-video; elabora help opens with « Start here » and suggests the closest command on a typo."
+        }
+      },
+      {
+        "id": "schemas",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "The course schemas are published up to 0.1.11: block.place for blocks placed by hand, delivery.format and delivery.languages in course.json, and a video’s caption and zoom. Files pointing to earlier versions stay valid."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "version": "0.5.1",
+    "date": "2026-11-03",
+    "core": {
+      "revision": "dd64c2764d47f9a47d857433dff37ce3f71d14b4",
+      "version": "0.1.0"
+    },
+    "title": {
+      "en": "Elabora 0.5.1: a module in one go, the canal locks in French",
+      "fr": "Elabora 0.5.1 : un module d’une traite, les écluses en français"
+    },
+    "highlights": {
+      "en": [
+        "A new module, from its plan to its screens in one go",
+        "The canal locks example, now in French",
+        "« Installer dans Claude » now works on Windows"
+      ],
+      "fr": [
+        "Un nouveau module, du plan aux écrans d’une traite",
+        "L’exemple des écluses, désormais en français",
+        "« Installer dans Claude » fonctionne sous Windows"
+      ]
+    },
+    "entries": [
+      {
+        "id": "new-module",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "« Nouveau module » with an AI now goes for « un plan, puis tous les écrans » by default: the AI writes the plan, then every screen, in one go, without waiting for your approval. « un plan, que vous validez » is the second choice, in the sentence by the buttons. A new module’s folder is named elabora-module- and six characters, which an AI app shows plainly when it asks whether to trust the folder; earlier modules keep theirs.",
+          "fr": "« Nouveau module » avec une IA part désormais sur « un plan, puis tous les écrans » : l’IA écrit le plan, puis tous les écrans, d’une traite, sans attendre votre validation. « un plan, que vous validez » est le second choix, dans la phrase à côté des boutons. Le dossier d’un nouveau module s’appelle elabora-module- suivi de six caractères, qu’une app d’IA affiche clairement quand elle demande si elle peut s’y fier ; les modules déjà créés gardent le leur."
+        }
+      },
+      {
+        "id": "canal-locks-fr",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "The example « How do canal locks work? » comes with its French translation, ready in Traduction.",
+          "fr": "L’exemple « How do canal locks work? » arrive avec sa traduction française, prête dans Traduction."
+        }
+      },
+      {
+        "id": "translation-context",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "In Traduction › En contexte, a screen with a free object, like the first screen of the canal locks, shows its slide again: the texts the slide does not mark are listed under it, and a block’s many texts open on a click.",
+          "fr": "Dans Traduction › En contexte, un écran avec un objet libre, comme le premier écran des écluses, montre de nouveau sa diapositive : les textes qu’elle ne marque pas sont listés en dessous, et les nombreux textes d’un bloc s’ouvrent d’un clic."
+        }
+      },
+      {
+        "id": "publish-energy",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Publier counts the energy of loading a course at 0.03 kWh a gigabyte, the latest French average (Arcep, 2024 data), instead of 0.1: a 100 MB course is an LED bulb lit for 25 minutes rather than 1 h 15. The manual’s page « Poids et énergie » explains the figure.",
+          "fr": "Publier compte l’énergie du chargement d’un module à 0,03 kWh par gigaoctet, la dernière moyenne française (Arcep, données 2024), au lieu de 0,1 : un module de 100 Mo, c’est une ampoule LED allumée 25 minutes plutôt qu’1 h 15. La page du manuel « Poids et énergie » explique ce chiffre."
+        }
+      },
+      {
+        "id": "news-note",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "After an update, the note at the head of the home shows what a new version brings, never a fix like this one: every version’s notes are in Aide › Nouveautés d’Elabora and on elabora.studio.",
+          "fr": "Après une mise à jour, la note en tête de l’accueil montre ce qu’apporte une nouvelle version, jamais un correctif comme celui-ci : les notes de chaque version sont dans Aide › Nouveautés d’Elabora et sur elabora.studio."
+        }
+      },
+      {
+        "id": "claude-extension-windows",
+        "kind": "fix",
+        "source": "core",
+        "text": {
+          "en": "The extension « Installer dans Claude » adds starts in the Node.js built into Claude, its default for extensions, as on Windows: Claude no longer reports « Server disconnected » right after it starts. The extension is version 0.2.1.",
+          "fr": "L’extension qu’ajoute « Installer dans Claude » démarre dans le Node.js intégré à Claude, celui qu’il prend par défaut, comme sous Windows : Claude ne signale plus « Server disconnected » juste après son lancement. L’extension passe en version 0.2.1."
+        }
+      },
+      {
+        "id": "translation-plurals",
+        "kind": "fix",
+        "source": "core",
+        "text": {
+          "en": "A translation may change the words of a message that varies with a number or a choice (ICU plural or select); the check still keeps its real placeholders.",
+          "fr": "Une traduction peut changer les mots d’un message qui varie selon un nombre ou un choix (pluriel ou select ICU) ; la vérification garde ses vrais paramètres."
+        }
+      },
+      {
+        "id": "cli-module-folders",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "For agents and the CLI: new library modules live in elabora-module-xxxxxx folders, and folders named by a UUID stay modules. A copy of the elabora CLI from Elabora 0.5.0 or earlier, installed apart from the app, reports the new folders as errors; the CLI the app installs updates with it."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "version": "0.5.0",
+    "date": "2026-11-03",
+    "core": {
+      "revision": "98ed62b37f7105b1bad822b1564893dae65a0b97",
+      "version": "0.1.0"
+    },
+    "title": {
+      "en": "Elabora 0.5.0: an AI inside the app, clearer properties",
+      "fr": "Elabora 0.5.0 : une IA dans l’app et des propriétés claires"
+    },
+    "highlights": {
+      "en": [
+        "OpenCode, a free AI, works inside Elabora",
+        "Clearer block properties, set out in sections",
+        "Describe an image or translate a text in one click"
+      ],
+      "fr": [
+        "OpenCode, une IA gratuite, travaille dans Elabora",
+        "Des propriétés plus claires, rangées par sections",
+        "Une image décrite ou un texte traduit en un clic"
+      ]
+    },
+    "entries": [
+      {
+        "id": "opencode",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "OpenCode works in Elabora, in the Agent panel, with its free models (usually slower than Claude and ChatGPT): choose it in « Votre IA préférée » or in the composer’s menu, which now say where each AI works. Its reply comes as it is written, one line says what it does in the module’s words, and its steps then fold into one line whose screens are links. It asks in a card before spending your ElevenLabs quota, reading a file outside the module or reading a web page (naming only its site). « Arrêter » or Esc stops a turn, « Annuler » undoes the whole turn, and earlier conversations reopen from the panel’s head.",
+          "fr": "OpenCode travaille dans Elabora, dans le panneau Agent, avec ses modèles gratuits (en général plus lents que Claude et ChatGPT) : choisissez-le dans « Votre IA préférée » ou dans le menu du composeur, qui disent maintenant où travaille chaque IA. Sa réponse s’écrit sous vos yeux, une ligne dit ce qu’il fait avec les mots du module, puis ses étapes se replient en une ligne dont les écrans sont des liens. Il demande dans une carte avant de dépenser votre quota ElevenLabs, de lire un fichier hors du module ou de lire une page web (en ne nommant que son site). « Arrêter » ou Échap interrompt un tour, « Annuler » défait le tour entier, et les conversations précédentes se rouvrent depuis la tête du panneau."
+        }
+      },
+      {
+        "id": "inspector",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "« Propriétés » reads at a glance: each value sits in its own well on a regular grid, and a block’s settings come in sections by meaning (Question, Options, Notation for a quiz; Contenu and Données for a chart), the rarely used ones under « Plus de réglages ». Presentations are small pictures, a picture shows its focal point, zones or markers, a chart’s rows show their values as bars and a quiz’s right answer is ticked. Values left to their default read in grey; « Place » and « Accessibilité » fold with a summary.",
+          "fr": "« Propriétés » se lit d’un coup d’œil : chaque valeur a sa case sur une grille régulière, et les réglages d’un bloc viennent par sections de sens (Question, Options, Notation pour un quiz ; Contenu et Données pour un graphique), les plus rares sous « Plus de réglages ». Les présentations sont de petites images, une image montre son point focal, ses zones ou ses repères, les lignes d’un graphique montrent leurs valeurs en barres et la bonne réponse d’un quiz est cochée. Les valeurs par défaut sont en gris ; « Place » et « Accessibilité » se replient avec un résumé."
+        }
+      },
+      {
+        "id": "ai-fill",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "A small ✨ beside an empty image text alternative or an empty translation asks OpenCode’s free models to fill it. The rest of the app stays free while it works, the words land in their field even if you went elsewhere, and ⌘Z or « Annuler » undoes it. The first time, if OpenCode is not your AI, one line asks before anything leaves the computer.",
+          "fr": "Une petite ✨ à côté d’un texte alternatif d’image ou d’une traduction vide demande aux modèles gratuits d’OpenCode de le remplir. Le reste de l’app reste libre pendant ce temps, les mots arrivent dans leur champ même si vous êtes passé ailleurs, et ⌘Z ou « Annuler » les retire. La première fois, si OpenCode n’est pas votre IA, une ligne demande avant que quoi que ce soit ne quitte l’ordinateur."
+        }
+      },
+      {
+        "id": "handoff",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Once a request is handed to Claude or ChatGPT, the composer says the conversation goes on in its app, with « Ouvrir Claude » (or ChatGPT) and « Nouvelle conversation »: a follow-up no longer opens a second conversation unawares. The panel shows the request at once, in a few words for one launched from elsewhere.",
+          "fr": "Une fois une demande confiée à Claude ou à ChatGPT, le composeur dit que la conversation continue dans son app, avec « Ouvrir Claude » (ou ChatGPT) et « Nouvelle conversation » : une relance n’ouvre plus une seconde conversation à votre insu. Le panneau montre la demande tout de suite, en quelques mots quand elle part d’ailleurs."
+        }
+      },
+      {
+        "id": "claude-extension",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "« Installer dans Claude » asks nothing more: the extension serves the modules Elabora knows, its library and the folders the app opened, including those created after Claude started.",
+          "fr": "« Installer dans Claude » ne demande plus rien : l’extension sert les modules qu’Elabora connaît, sa bibliothèque et les dossiers ouverts dans l’app, y compris ceux créés après le lancement de Claude."
+        }
+      },
+      {
+        "id": "canal-locks",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "A seventh example in « Exemples »: « How do canal locks work? », a five-minute module with a 3D lock to operate, a cross-section that explains it and a lock keeper’s case.",
+          "fr": "Un septième exemple dans « Exemples » : « How do canal locks work? », un module de cinq minutes avec une écluse en 3D à manœuvrer, une coupe qui l’explique et le cas d’un éclusier."
+        }
+      },
+      {
+        "id": "publish-energy",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Publier says what loading the course costs in energy, as an everyday gesture (« autant qu’une ampoule LED allumée 45 minutes »). The sentence follows the media quality and the course’s real weight without building it; its icon gives the CO₂ of a car over the same and opens the manual’s page « Poids et énergie ».",
+          "fr": "Publier dit ce que coûte en énergie le chargement du module, comme un geste du quotidien (« autant qu’une ampoule LED allumée 45 minutes »). La phrase suit la qualité des médias et le poids réel du module, sans le construire ; son icône donne le CO₂ d’une voiture pour la même chose et ouvre la page du manuel « Poids et énergie »."
+        }
+      },
+      {
+        "id": "editor",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Each section of Charte has « ✨ Nouveau », which asks your agent for one more style, variant or layout. A right click on a step’s title in the Script (or Shift+F10) offers « Mettre en scène l’étape » and « Générer l’étape ». The Script and Chronologie panel takes the height of what it shows and moves smoothly between them. In « Ajouter un bloc », the pointer goes straight to « Insérer » without the blocks it crosses taking its place. Download gauges hold still, in whole megabytes.",
+          "fr": "Chaque section de la Charte a « ✨ Nouveau », qui demande à votre agent un style, une variante ou une mise en page de plus. Un clic droit sur le titre d’une étape du Script (ou Maj+F10) propose « Mettre en scène l’étape » et « Générer l’étape ». Le panneau Script et Chronologie prend la hauteur de ce qu’il montre et passe de l’un à l’autre sans à-coup. Dans « Ajouter un bloc », le pointeur va droit à « Insérer » sans que les blocs traversés prennent sa place. Les jauges de téléchargement ne bougent plus, en mégaoctets entiers."
+        }
+      },
+      {
+        "id": "reading-order",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "The reading order shows the screen as a screen reader reads it: its title first, then the texts of its layout, such as a part’s title and lead, numbered like the blocks. A block whose picture is decorative is still read by its text, and screen readers hear a part opener’s number (« Partie 1 »).",
+          "fr": "L’ordre de lecture montre l’écran comme un lecteur d’écran le lit : son titre d’abord, puis les textes de sa mise en page, comme le titre et le chapeau d’une partie, numérotés comme les blocs. Un bloc dont l’image est décorative reste lu par son texte, et les lecteurs d’écran entendent le numéro d’une ouverture de partie (« Partie 1 »)."
+        }
+      },
+      {
+        "id": "core-fixes",
+        "kind": "fix",
+        "source": "core",
+        "text": {
+          "en": "Checks with Google Chrome or Microsoft Edge no longer wait for the browser to exit (fit from 12 s to 3 s, screenshot from 11 s to 2.5 s); a theme that styles the classic progress bar no longer draws a second bar under the parts; Editorial’s part opener keeps its lead clear of the band on phones; text painted by a clipped gradient is no longer reported unreadable."
+        }
+      },
+      {
+        "id": "agents-and-cli",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "For agents and the CLI: elabora mcp with no folder serves the courses Elabora knows (elabora mcp . serves the current folder); each chat turn is one batch that « Annuler » undoes whole, with refused tools recorded and elabora history --chats; packageWeights gives a package’s weight at each media quality without building it."
+        }
+      },
+      {
+        "id": "schemas",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "The course schemas are published up to 0.1.10: x-group names a setting’s section and x-advanced marks the rarely changed ones. Files pointing to earlier versions stay valid."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "version": "0.4.0",
+    "date": "2026-10-31",
+    "core": {
+      "revision": "108eae6f5bb2279a701a992e81270c01f876ed13",
+      "version": "0.1.0"
+    },
+    "title": {
+      "en": "Elabora 0.4.0: sounds, templates and your AI at work",
+      "fr": "Elabora 0.4.0 : sons, modèles et votre IA au travail"
+    },
+    "highlights": {
+      "en": [
+        "Sounds, ambiences and music",
+        "Seven ready-made module templates on the home",
+        "Follow your AI’s work, step by step"
+      ],
+      "fr": [
+        "Des sons, des ambiances et de la musique",
+        "Sept modèles de modules, prêts sur l’accueil",
+        "Suivez le travail de votre IA, pas à pas"
+      ]
+    },
+    "entries": [
+      {
+        "id": "sounds",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Sounds, ambiences and music: « Ajouter un son » in the script opens the sound browser, with the module’s sounds, « Sons courants », Openverse, « Créer un son » with ElevenLabs and « Depuis un fichier… ». Hear a sound before adding it, see its licence and author, keep only part of it and set it by ear under its line. Dialogues take sounds between their lines, and the Lecteur tab sets the interface sounds and the music or ambiences over a range of screens.",
+          "fr": "Des sons, des ambiances et de la musique : « Ajouter un son » dans le script ouvre la sonothèque, avec les sons du module, « Sons courants », Openverse, « Créer un son » avec ElevenLabs et « Depuis un fichier… ». On écoute un son avant de l’ajouter, on voit sa licence et son auteur, on n’en garde qu’une partie et on le règle à l’oreille sous sa réplique. Les dialogues prennent des sons entre leurs répliques, et l’onglet Lecteur règle les sons de l’interface ainsi que la musique ou les ambiances sur une suite d’écrans."
+        }
+      },
+      {
+        "id": "templates",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Seven module templates on the home (Organique, Flux, Clair, Formes, Revue, Atelier, Aquarelle): a card plays its template under the pointer, a click opens its preview, and « Créer à partir de ce modèle » makes a module from it, in the app’s language.",
+          "fr": "Sept modèles de modules sur l’accueil (Organique, Flux, Clair, Formes, Revue, Atelier, Aquarelle) : une carte joue son modèle sous le pointeur, un clic ouvre son aperçu, et « Créer à partir de ce modèle » en fait un module, dans la langue de l’app."
+        }
+      },
+      {
+        "id": "agent-steps",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "The Agent panel says what your AI does in the module as it works: « Claude lit l’écran 1.2… », « … vérifie que le module fonctionne… ». Under the card of its work, what it read, looked at and checked; a click unfolds every step.",
+          "fr": "Le panneau Agent dit ce que fait votre IA dans le module pendant qu’elle travaille : « Claude lit l’écran 1.2… », « … vérifie que le module fonctionne… ». Sous la carte de son travail, ce qu’elle a lu, regardé et vérifié ; un clic déplie chaque étape."
+        }
+      },
+      {
+        "id": "preview-inspector",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Aperçu › « Inspecter » shows the variables, changed in a click, the events as they ran and what the LMS receives, with « Reprendre plus tard » and « Déverrouiller la progression ». The Aperçu shows a tablet or a phone, and reloads where you were when an agent changes the module.",
+          "fr": "Aperçu › « Inspecter » montre les variables, modifiables en un clic, les événements tels qu’ils se sont produits et ce que reçoit le LMS, avec « Reprendre plus tard » et « Déverrouiller la progression ». L’Aperçu montre une tablette ou un téléphone, et se recharge là où vous étiez quand un agent modifie le module."
+        }
+      },
+      {
+        "id": "player-progress",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "The player says where the learner is: in a module of several parts, the progress bar is cut into parts to hover and click, or stays a classic bar, with or without its percentage; the outline’s button can read the part’s title. All of it is set in the Lecteur tab.",
+          "fr": "Le lecteur dit où en est l’apprenant : dans un module en plusieurs parties, la barre de progression se découpe en parties à survoler et à cliquer, ou reste une barre classique, avec ou sans pourcentage ; le bouton du sommaire peut afficher le titre de la partie. Tout se règle dans l’onglet Lecteur."
+        }
+      },
+      {
+        "id": "space-address",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Réglages › Compte changes your space’s address, once every 30 days, after saying what the change does: modules and reviews move to the new address and the old one stops at once.",
+          "fr": "Réglages › Compte change l’adresse de votre espace, une fois tous les 30 jours, après avoir dit ce que fait le changement : modules et relectures passent à la nouvelle adresse et l’ancienne s’arrête aussitôt."
+        }
+      },
+      {
+        "id": "charter",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "The Charte shows its options as cards, each with a miniature in the module’s own charter and the screens that use it. Styles and backdrop variants are named in the module’s language, the colour picker offers the charter’s colours first, and a charter colour keeps following the charter.",
+          "fr": "La Charte montre ses options en cartes, chacune avec sa miniature dans la charte du module et les écrans qui l’utilisent. Les styles et les variantes du décor sont nommés dans la langue du module, le sélecteur de couleur propose d’abord les couleurs de la charte, et une couleur de la charte suit la charte quand elle change."
+        }
+      },
+      {
+        "id": "dialogues",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Dialogues: the debrief holds « Changer ce choix » under each decision and « Recommencer »; going back marks « Vous reprenez ici ». The script is lighter, and « Ajouter une didascalie » puts a direction in a line.",
+          "fr": "Les dialogues : le bilan propose « Changer ce choix » sous chaque décision et « Recommencer » ; revenir en arrière marque « Vous reprenez ici ». Le script est plus léger, et « Ajouter une didascalie » place une indication de jeu dans une réplique."
+        }
+      },
+      {
+        "id": "editor",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Shorter interface texts; a screen without narration shows the dock’s usual script and timeline, empty. ⌘Z undoes typing in every field of the home. « Ce que Claude a décidé » in a draft plan shows every answer with its reason, to change or restore. A component that forks another shows the settings it inherits and adds.",
+          "fr": "Des textes d’interface plus courts ; un écran sans narration montre le script et la chronologie habituels du dock, vides. ⌘Z annule la saisie dans tous les champs de l’accueil. « Ce que Claude a décidé », dans un plan brouillon, montre chaque réponse avec sa raison, à changer ou à rétablir. Un composant qui en dérive un autre montre les réglages dont il hérite et ceux qu’il ajoute."
+        }
+      },
+      {
+        "id": "fixes",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "Claude and Codex installed from the Microsoft Store are detected on Windows."
+        }
+      },
+      {
+        "id": "core-fixes",
+        "kind": "fix",
+        "source": "core",
+        "text": {
+          "en": "The fit check reads text cut by a bar’s edge and controls in a row, a glossary entry stays marked, and a scroll animation comes to rest."
+        }
+      },
+      {
+        "id": "agents-and-cli",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "For agents and the CLI: elabora mcp serves several courses or a folder of courses; elabora account handle --change changes the space’s address; every operation an agent runs is written to the course’s activity; seven module templates ship with the core (CC0)."
+        }
+      },
+      {
+        "id": "schemas",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "The course schemas are published up to 0.1.9: sounds of the story, music and ambiences, the words of a charter, the outline’s label and the progress in parts. Files pointing to earlier versions stay valid."
+        }
+      },
+      {
+        "id": "security",
+        "kind": "security",
+        "source": "app",
+        "text": {
+          "en": "markdown-it 14.3.3, and the packaging tools’ undici and fast-uri, brought to their patched versions."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "version": "0.3.0",
+    "date": "2026-10-28",
+    "core": {
+      "revision": "a17dc25ca8add897525b48f9f388a4b42a2f9708",
+      "version": "0.1.0"
+    },
+    "title": {
+      "en": "Elabora 0.3.0: dialogues reworked, continuity between screens",
+      "fr": "Elabora 0.3.0 : dialogues retravaillés et continuité entre écrans"
+    },
+    "highlights": {
+      "en": [
+        "Dialogues reworked after a first round of use",
+        "A block that carries on from one screen to the next",
+        "Right-click menus, also from the keyboard",
+        "Faster tests, and builds made with pnpm"
+      ],
+      "fr": [
+        "Des dialogues retravaillés après les premiers essais",
+        "Un bloc qui continue d’un écran à l’autre",
+        "Des menus au clic droit, aussi au clavier",
+        "Des tests plus rapides et des builds faits avec pnpm"
+      ]
+    },
+    "entries": [
+      {
+        "id": "continuity",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "A block can carry on from the previous screen: in its inspector, « Suite de l’écran précédent » links it to the block of its kind on the screen before, so a 3D scene keeps running and moves to its new settings, and a picture glides from its place. « Passage » sets how long it takes (Rapide, Normal, Lent). One ⌘Z undoes the link on both screens, and the canvas and Aperçu show the passage as learners will see it.",
+          "fr": "Un bloc peut continuer celui de l’écran précédent : dans son inspecteur, « Suite de l’écran précédent » le lie au bloc du même genre de l’écran d’avant. Une scène 3D continue alors de tourner et va vers ses nouveaux réglages, une image glisse depuis sa place. « Passage » règle la durée (Rapide, Normal, Lent). Un seul ⌘Z défait le lien sur les deux écrans, et le canevas comme l’Aperçu montrent le passage tel que l’apprenant le verra."
+        }
+      },
+      {
+        "id": "dialogues",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Dialogues, after a first round of use: a line without a voice appears whole and waits for « Suite »; while a voice speaks, « Suite » stays quiet and a click ends the line; the words still to be said are fainter. The History and the debrief open over the dialogue, the rest dimmed, and close with a click beside them or Esc. The trainer’s note sits between the two sides, its quality in a pill. « Reprendre d’ici » is an icon beside a past answer that moves nothing, and « Personnage » is in Texte in « Ajouter un bloc ».",
+          "fr": "Les dialogues, après les premiers essais : une réplique sans voix s’affiche entière et attend « Suite » ; pendant qu’une voix parle, « Suite » reste discret et un clic termine la réplique ; les mots encore à dire sont plus pâles. L’historique et le bilan s’ouvrent par-dessus le dialogue, le reste assombri, et se ferment d’un clic à côté ou avec Échap. La note du formateur se place entre les deux interlocuteurs, sa qualité dans une pastille. « Reprendre d’ici » est une icône à côté d’une réponse passée, qui ne fait rien bouger, et « Personnage » est rangé dans Texte, dans « Ajouter un bloc »."
+        }
+      },
+      {
+        "id": "menus",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Right-click menus: a module’s card on the home page, a row of the trash, the plan’s lines and cards, and a dialogue’s passages, options, lines and endings open their menu with a right click, and every such menu opens from the keyboard with Shift+F10 or the menu key. A card’s menu has « Show in Finder » (« Show in File Explorer » on Windows), and the card no longer shows « … » or its folder’s path under the pointer.",
+          "fr": "Des menus au clic droit : la carte d’un module sur l’accueil, une ligne de la corbeille, les lignes et les cartes du plan, et les passages, options, répliques et fins d’un dialogue ouvrent leur menu d’un clic droit. Chacun de ces menus s’ouvre aussi au clavier, avec Maj+F10 ou la touche de menu. Le menu d’une carte propose « Afficher dans le Finder » (« dans l’Explorateur » sous Windows), et la carte ne montre plus « … » ni le chemin de son dossier sous le pointeur."
+        }
+      },
+      {
+        "id": "fixes",
+        "kind": "fix",
+        "source": "core",
+        "text": {
+          "en": "The heading the player focuses for screen readers no longer draws a ring on every screen when a theme rings everything focused; a module’s folder moved or deleted while it was open is no longer recreated at its old place; your AI’s checks of 3D objects no longer cut off their bottom controls on macOS, and run again when the 3D context is lost on a busy computer."
+        }
+      },
+      {
+        "id": "faster-tests",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "Faster tests: the core’s unit suite runs on about a third less CPU, its browser suites hold steady on a loaded computer, and one test file runs in seconds."
+        }
+      },
+      {
+        "id": "pnpm",
+        "kind": "technical",
+        "source": "app",
+        "text": {
+          "en": "Elabora and its core are installed and built with pnpm instead of npm, with the same package versions."
+        }
+      },
+      {
+        "id": "schemas",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "The course schemas are published as 0.1.2, with a block’s continuity between screens; files pointing to 0.1 and 0.1.1 stay valid."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "version": "0.2.0",
+    "date": "2026-10-27",
+    "core": {
+      "revision": "1d96a5d8cbd3bf2237ffa58c81354c332dbf43b9",
+      "version": "0.1.0"
+    },
+    "title": {
+      "en": "Elabora 0.2.0: dialogues, charts and starter blocks",
+      "fr": "Elabora 0.2.0 : dialogues, graphiques et blocs de départ"
+    },
+    "highlights": {
+      "en": [
+        "Branching dialogues with their own editor",
+        "Twelve charts and diagrams, ready to use",
+        "Starter blocks for scroll courses",
+        "Layers that speak, on their own timeline",
+        "A preview of every block before you add it"
+      ],
+      "fr": [
+        "Des dialogues à embranchements, avec leur éditeur",
+        "Douze graphiques et schémas prêts à l’emploi",
+        "Des blocs de départ pour les modules à défiler",
+        "Des calques qui parlent, sur leur propre chronologie",
+        "L’aperçu de chaque bloc avant de l’ajouter"
+      ]
+    },
+    "entries": [
+      {
+        "id": "dialogues",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Branching dialogues: « Interaction › Dialogue » adds a short conversation to start from, written as a script, with a map, a table of every answer and « Jouer un chemin » to try a path. Characters have their look, expressions and voices, learners play the dialogue in the player, and the script exports as a PDF for the client.",
+          "fr": "Les dialogues à embranchements : « Interaction › Dialogue » ajoute une courte conversation de départ, écrite comme un script, avec une carte, un tableau de toutes les réponses et « Jouer un chemin » pour essayer un parcours. Les personnages ont leur apparence, leurs expressions et leurs voix, l’apprenant joue le dialogue dans le lecteur, et le script s’exporte en PDF pour le client."
+        }
+      },
+      {
+        "id": "charts",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Twelve charts and diagrams in « Graphiques » (key figures, bars, trend, funnel, cycle, matrix, milestones, diagram…), each saying one thing, with a highlighted item, a trend the learner can predict first, and « Afficher le titre » to let a chart’s takeaway head the slide.",
+          "fr": "Douze graphiques et schémas dans « Graphiques » (chiffres clés, barres, évolution, entonnoir, cycle, matrice, jalons, schéma…), chacun disant une seule chose, avec un élément mis en avant, une évolution que l’apprenant peut prédire d’abord, et « Afficher le titre » pour que le message d’un graphique serve de titre à la diapositive."
+        }
+      },
+      {
+        "id": "starter-blocks",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Starter blocks for scroll courses: statements, quotes, galleries, columns, panels, flip cards, steps, timelines, interactive images, characters, fill-in texts, matching, sorting and reflection, each starting with short words in the course’s language, and « Transformer en… » to change a block’s presentation in place.",
+          "fr": "Des blocs de départ pour les modules à défiler : énoncés, citations, galeries, colonnes, panneaux, cartes à retourner, étapes, frises, images interactives, personnages, textes à trous, associations, classements et réflexions, chacun commençant par quelques mots dans la langue du module, et « Transformer en… » pour changer la présentation d’un bloc sur place."
+        }
+      },
+      {
+        "id": "layer-timelines",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "A layer can speak on its own timeline: its lines, voices and blocks anchored to its words, or blocks that come a few seconds after it opens, and « Fermer le calque à la fin de sa voix » in one click.",
+          "fr": "Un calque peut parler sur sa propre chronologie : ses répliques, ses voix et ses blocs accrochés à ses mots, ou des blocs qui arrivent quelques secondes après son ouverture, et « Fermer le calque à la fin de sa voix » en un clic."
+        }
+      },
+      {
+        "id": "block-picker",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "« Ajouter un bloc » shows each block in your module’s charter before you insert it, with its styles beside the preview; a « + » between two blocks and « / » in an empty paragraph add one where you are, and the toolbar opens each family of blocks.",
+          "fr": "« Ajouter un bloc » montre chaque bloc dans la charte de votre module avant de l’insérer, ses styles à côté de l’aperçu ; un « + » entre deux blocs et « / » dans un paragraphe vide en ajoutent un là où vous êtes, et la barre d’outils ouvre chaque famille de blocs."
+        }
+      },
+      {
+        "id": "command-line",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Your AI can run Elabora by typing « elabora »: on macOS, Réglages › Outils pour les IA installs the command; on Windows, the installer adds it to the PATH.",
+          "fr": "Votre IA peut lancer Elabora en tapant « elabora » : sur macOS, Réglages › Outils pour les IA installe la commande ; sur Windows, l’installateur l’ajoute au PATH."
+        }
+      },
+      {
+        "id": "inspector",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "A denser inspector: long texts above their value, segmented controls for short choices, lists as tables that reorder by dragging, and sliders, ranges and points for free objects.",
+          "fr": "Un inspecteur plus dense : les textes longs au-dessus de leur valeur, des contrôles segmentés pour les choix courts, des listes en tableaux qui se réordonnent en glissant, et des curseurs, des intervalles et des points pour les objets libres."
+        }
+      },
+      {
+        "id": "motion",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Elabora moves a little where it helps: menus, tooltips and dialogs, opening a module and coming back home, the panels and the panel under the canvas. A line’s waveform shows its real audio. With less motion asked, only fades remain.",
+          "fr": "Elabora bouge un peu, là où cela aide : les menus, les infobulles et les dialogues, l’ouverture d’un module et le retour à l’accueil, les panneaux et le panneau sous le canevas. L’onde d’une réplique montre son vrai son. Quand moins de mouvement est demandé, il ne reste que des fondus."
+        }
+      },
+      {
+        "id": "voices",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "The ElevenLabs voice picker opens on voices checked with Eleven v4 in your module’s language and says how each was made; samples that could not be heard now play. A speaker can be removed from the module’s voices.",
+          "fr": "Le choix d’une voix ElevenLabs s’ouvre sur les voix vérifiées avec Eleven v4 dans la langue du module et dit comment chacune a été faite ; les extraits qu’on ne pouvait pas entendre se jouent. Un locuteur peut être retiré des voix du module."
+        }
+      },
+      {
+        "id": "editing",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Dragging a screen works like dragging in the plan, and the panel under the canvas has one button to show and hide it.",
+          "fr": "Glisser un écran fonctionne comme dans le plan, et le panneau sous le canevas s’affiche et se masque d’un seul bouton."
+        }
+      },
+      {
+        "id": "agent-checks",
+        "kind": "improvement",
+        "source": "core",
+        "text": {
+          "en": "Faster checks for your AI: an unchanged screen’s fit is reused, « elabora look » inspects scroll positions, blocks and dialogue paths, and « elabora tools call » takes its arguments inline."
+        }
+      },
+      {
+        "id": "rise-import",
+        "kind": "fix",
+        "source": "core",
+        "text": {
+          "en": "The Rise importer reads 2026 and 2017 exports, which it refused before."
+        }
+      },
+      {
+        "id": "fixes",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "Reviewers’ comments arrive right after a first share for review; importing several media files in a row no longer fails now and then; the narration’s seek bar keeps playing or paused; a speaking layer’s captions no longer cover its last lines."
+        }
+      },
+      {
+        "id": "schemas",
+        "kind": "technical",
+        "source": "core",
+        "text": {
+          "en": "The course schemas are published as 0.1.1 with the new blocks; files pointing to 0.1 stay valid."
+        }
+      },
+      {
+        "id": "electron",
+        "kind": "security",
+        "source": "app",
+        "text": {
+          "en": "Elabora runs on Electron 44.9.2, with its latest security fixes. Apple Silicon builds ship smaller media tools."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "version": "0.1.0",
+    "date": "2026-10-20",
+    "core": {
+      "revision": "1d742940676e5111fc8cb36b33b5a0d36f6b0ec5",
+      "version": "0.1.0"
+    },
+    "title": {
+      "en": "Elabora 0.1.0, the first beta",
+      "fr": "Elabora 0.1.0, la première bêta"
+    },
+    "highlights": {
+      "en": [
+        "Courses written with your AI, Claude or ChatGPT",
+        "Every screen edited on a live canvas",
+        "Narration with local voices or ElevenLabs",
+        "SCORM export, web publishing and review by link",
+        "Free on Windows and macOS"
+      ],
+      "fr": [
+        "Des modules écrits avec votre IA, Claude ou ChatGPT",
+        "Chaque écran retouché sur un canevas vivant",
+        "La narration en voix locales ou ElevenLabs",
+        "Export SCORM, publication web et revue par lien",
+        "Gratuit sur Windows et macOS"
+      ]
+    },
+    "entries": [
+      {
+        "id": "open-format",
+        "kind": "feature",
+        "source": "core",
+        "text": {
+          "en": "An open course format: the plan, screens, components, narration and translations are readable files, checked by a validator, that the free Apache-2.0 core builds without the app.",
+          "fr": "Un format de module ouvert : le plan, les écrans, les composants, la narration et les traductions sont des fichiers lisibles, vérifiés par un validateur, que le cœur libre (Apache-2.0) construit sans l’app."
+        }
+      },
+      {
+        "id": "preferred-ai",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Work with your preferred AI, Claude or ChatGPT: it reads the plan and your sources, writes through Elabora’s tools, and each of its changes can be undone.",
+          "fr": "Travaillez avec votre IA préférée, Claude ou ChatGPT : elle lit le plan et vos sources, écrit par les outils d’Elabora, et chacun de ses changements s’annule."
+        }
+      },
+      {
+        "id": "canvas-and-plan",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Edit on the canvas: text, blocks, media, events and slides. The plan has versions to validate and a document view exported to Word or PDF.",
+          "fr": "Retouchez sur le canevas : textes, blocs, médias, événements et diapositives. Le plan a des versions à faire valider et une vue Document exportée en Word ou en PDF."
+        }
+      },
+      {
+        "id": "narration",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Narration on a timeline: free local voices or ElevenLabs with your own key, recordings transcribed into lines, captions and word timing.",
+          "fr": "La narration sur une chronologie : des voix locales gratuites ou ElevenLabs avec votre clé, des enregistrements transcrits en répliques, des sous-titres et le minutage des mots."
+        }
+      },
+      {
+        "id": "player",
+        "kind": "feature",
+        "source": "core",
+        "text": {
+          "en": "A learner’s player you set in the Lecteur tab: its two bars, outline, controls, resources, glossary, AI and credits mention, and every approved language in one package.",
+          "fr": "Un lecteur que vous réglez dans l’onglet Lecteur : ses deux barres, le sommaire, les contrôles, les ressources, le glossaire, la mention de l’IA et les crédits, et toutes les langues approuvées dans un seul paquet."
+        }
+      },
+      {
+        "id": "translation",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Translate a module in context, have each language approved, and keep translations in step when the course changes.",
+          "fr": "Traduisez un module en contexte, faites approuver chaque langue, et gardez les traductions à jour quand le module change."
+        }
+      },
+      {
+        "id": "import",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Import a Storyline or Rise module into an Elabora module, with a report of everything that could not be carried over.",
+          "fr": "Importez un module Storyline ou Rise en module Elabora, avec le rapport de tout ce qui n’a pas pu être repris."
+        }
+      },
+      {
+        "id": "publish-and-review",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Publish a SCORM 1.2 package checked before export, or, with an online space, a web page and a private review that reviewers open from a link, without an account.",
+          "fr": "Publiez un paquet SCORM 1.2 vérifié avant l’export ou, avec un espace en ligne, une page web et une revue privée que les relecteurs ouvrent par un lien, sans compte."
+        }
+      },
+      {
+        "id": "updates",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Updates download in the background on an unmetered connection and install when you quit; Settings › Updates turns this off. The unsigned Mac beta opens the download page instead.",
+          "fr": "Les mises à jour se téléchargent en arrière-plan sur une connexion non limitée et s’installent quand vous quittez ; Réglages › Mises à jour les coupe. La bêta Mac non signée ouvre la page de téléchargement."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  }
+]

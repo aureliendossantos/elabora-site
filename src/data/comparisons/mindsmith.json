@@ -1,0 +1,68 @@
+{
+  "name": "Mindsmith",
+  "short": "Mindsmith",
+  "vendor": "Mindsmith",
+  "url": "https://www.mindsmith.ai/",
+  "facts": {
+    "price": {
+      "en": "Free plan; Professional 39 USD and Business 65 USD per author per month (468 and 780 USD per year); Enterprise on quote.",
+      "fr": "Offre gratuite ; Professional 39 $ et Business 65 $ par auteur et par mois (468 et 780 $ par an) ; Enterprise sur devis.",
+      "source": "https://www.mindsmith.ai/pricing",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "In a web browser.",
+      "fr": "Dans un navigateur web.",
+      "source": "https://www.mindsmith.ai/pricing",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "SCORM 1.2 and 2004 on every plan, static or dynamic; xAPI on Enterprise; links, HTML and PDF.",
+      "fr": "SCORM 1.2 et 2004 sur toutes les offres, statique ou dynamique ; xAPI en Enterprise ; liens, HTML et PDF.",
+      "source": "https://help.mindsmith.ai/en/articles/12044733-sharing-content-in-mindsmith",
+      "checked": "2026-11-05"
+    },
+    "files": {
+      "en": "Lessons live in your Mindsmith workspace; exports are SCORM, HTML and PDF.",
+      "fr": "Les leçons vivent dans votre espace Mindsmith ; les exports sont SCORM, HTML et PDF.",
+      "source": "https://help.mindsmith.ai/en/articles/12044733-sharing-content-in-mindsmith",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "Mindsmith Agent: a storyboard, then a lesson, from your request and files; 2,000 to 5,000 credits per author per month on paid plans.",
+      "fr": "Mindsmith Agent : un storyboard, puis une leçon, à partir de votre demande et de vos fichiers ; 2 000 à 5 000 crédits par auteur et par mois sur les offres payantes.",
+      "source": "https://www.mindsmith.ai/pricing",
+      "checked": "2026-11-05"
+    },
+    "agents": {
+      "en": "MCP server: Claude, ChatGPT, Cursor or Copilot can read, create, edit and publish lessons.",
+      "fr": "Serveur MCP : Claude, ChatGPT, Cursor ou Copilot peuvent lire, créer, modifier et publier des leçons.",
+      "source": "https://help.mindsmith.ai/en/articles/14986327-mindsmith-mcp-connect-claude-cursor-copilot-chatgpt",
+      "checked": "2026-11-05"
+    },
+    "collaboration": {
+      "en": "Live co-editing on Business and Enterprise.",
+      "fr": "Co-édition en direct sur Business et Enterprise.",
+      "source": "https://www.mindsmith.ai/pricing",
+      "checked": "2026-11-05"
+    },
+    "review": {
+      "en": "Review links for people without an account.",
+      "fr": "Liens de relecture pour des personnes sans compte.",
+      "source": "https://help.mindsmith.ai/en/articles/12044733-sharing-content-in-mindsmith",
+      "checked": "2026-11-05"
+    },
+    "import": {
+      "en": "PDF, Word, PowerPoint, text and SCORM packages; Storyline import in beta.",
+      "fr": "PDF, Word, PowerPoint, texte et paquets SCORM ; import Storyline en bêta.",
+      "source": "https://help.mindsmith.ai/en/articles/12036959-getting-started-generating-a-lesson-in-mindsmith",
+      "checked": "2026-11-05"
+    },
+    "accessibility": {
+      "en": "The learner’s side is built to meet WCAG 2.2 AA; VPAT on request.",
+      "fr": "Le côté apprenant est conçu pour respecter les WCAG 2.2 AA ; VPAT sur demande.",
+      "source": "https://www.mindsmith.ai/accessibility",
+      "checked": "2026-11-05"
+    }
+  }
+}

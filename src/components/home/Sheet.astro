@@ -1,0 +1,15 @@
+---
+// The sheet that opens over the page (a sample module, a template): the native dialog, so that Escape, the focus
+// and a click outside behave; scripts/sheet.ts fills it.
+import { type Lang } from '../../i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-in">
+    <button class="sheet-close" type="button" aria-label={lang === 'fr' ? 'Fermer' : 'Close'}>
+      <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+    </button>
+    <div class="sheet-body"></div>
+  </div>
+</dialog>

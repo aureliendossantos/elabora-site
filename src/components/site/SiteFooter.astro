@@ -1,0 +1,55 @@
+---
+// The footer of every page: what Elabora is in a line, then the product, the resources, the company and the law,
+// and the language (the same page in the other language).
+import Logo from '../brand/Logo.astro';
+import { CONTACT_EMAIL, CORE_REPO_URL } from '../../site.config';
+import { LEGAL_KEYS, LOCALES, docsPath, homePath, legalPath, useT, type Lang } from '../../i18n';
+import { changelogPath } from '../../lib/releases';
+
+interface Props { lang: Lang; paths: Record<Lang, string> }
+const { lang, paths } = Astro.props;
+const t = useT(lang);
+const home = homePath(lang);
+---
+<footer class="site-footer">
+  <div class="site-footer-in">
+    <div class="site-footer-brand">
+      <a class="logo" href={home} aria-label={t.nav.home}><Logo size={21} /></a>
+      <p>{t.footer.tagline}</p>
+    </div>
+    <nav aria-labelledby="pied-produit">
+      <h2 id="pied-produit">{t.footer.product}</h2>
+      <ul>
+        <li><a href={`${home}#exemples`}>{t.nav.examples}</a></li>
+        <li><a href={`${home}#modeles`}>{t.nav.templates}</a></li>
+        <li><a href={changelogPath(lang)}>{t.footer.whatsNew}</a></li>
+        <li><a href={`${home}#telecharger`}>{t.nav.download}</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="pied-ressources">
+      <h2 id="pied-ressources">{t.footer.resources}</h2>
+      <ul>
+        <li><a href={docsPath(lang)}>{t.nav.docs}</a></li>
+        <li><a href="/en/docs/developers/" hreflang="en">{t.footer.developers}</a></li>
+        <li><a href={CORE_REPO_URL}>{t.footer.source}</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="pied-elabora">
+      <h2 id="pied-elabora">{t.footer.about}</h2>
+      <ul>
+        <li><a href={`mailto:${CONTACT_EMAIL}`}>{t.footer.contact}</a></li>
+        {LEGAL_KEYS.map((key) => <li><a href={legalPath(lang, key)}>{t.legal.names[key]}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+  <div class="site-footer-end">
+    <p>{t.footer.copyright}</p>
+    <nav aria-label={t.footer.language}>
+      <ul class="lang-switch">
+        {LOCALES.map((l) => (
+          <li>{l === lang ? <span aria-current="true">{l.toUpperCase()}</span> : <a href={paths[l]} hreflang={l} lang={l} title={t.languages[l]}>{l.toUpperCase()}</a>}</li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</footer>

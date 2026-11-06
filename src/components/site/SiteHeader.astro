@@ -1,0 +1,28 @@
+---
+// The bar at the top of every page: the logo, four links, « Télécharger ». The docs put their own links and
+// search in its slot, in place of the four links.
+import Logo from '../brand/Logo.astro';
+import { docsPath, homePath, useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang; wide?: boolean }
+const { lang, wide = false } = Astro.props;
+const t = useT(lang);
+const home = homePath(lang);
+const hasSlot = Astro.slots.has('default');
+---
+<header class:list={['site-header', { 'site-header--wide': wide }]}>
+  <div class="site-header-in">
+    <a class="logo" href={home} aria-label={t.nav.home}><Logo size={23} /></a>
+    {hasSlot ? <slot /> : (
+      <nav class="site-nav" aria-label={t.nav.label}>
+        <ul>
+          <li><a href={`${home}#exemples`}>{t.nav.examples}</a></li>
+          <li><a href={`${home}#modeles`}>{t.nav.templates}</a></li>
+          <li><a href={`${home}#comment`}>{t.nav.how}</a></li>
+          <li><a href={docsPath(lang)}>{t.nav.docs}</a></li>
+        </ul>
+      </nav>
+    )}
+    <a class="button button--small" href={`${home}#telecharger`}>{t.nav.download}</a>
+  </div>
+</header>

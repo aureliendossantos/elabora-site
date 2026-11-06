@@ -1,0 +1,37 @@
+---
+import { docsPath, useT, type Lang } from '../../i18n';
+import { DEV_BASE } from '../../lib/core-docs';
+import type { NavGroup } from '../../lib/docs-nav';
+
+interface Props {
+  lang: Lang;
+  groups: NavGroup[];
+  kind: 'manual' | 'dev';
+}
+const { lang, groups, kind } = Astro.props;
+const t = useT(lang);
+---
+<div class="docs-nav-inner">
+  {kind === 'dev' && (
+    <>
+      <a class="docs-back" href={docsPath('en')}><span aria-hidden="true">←</span> {t.docs.backToManual}</a>
+      <p class="docs-nav-label">{t.docs.developers}</p>
+    </>
+  )}
+  {groups.map((group) => (
+    <div class="docs-nav-group">
+      <p class="docs-nav-title">{group.title}</p>
+      <ul>
+        {group.items.map((item) => (
+          <li><a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.title}</a></li>
+        ))}
+      </ul>
+    </div>
+  ))}
+  {kind === 'manual' && (
+    <a class="docs-dev-card" href={DEV_BASE} hreflang="en">
+      <span class="docs-dev-title">{t.docs.developers} <span aria-hidden="true">→</span></span>
+      <span class="docs-dev-text">{t.docs.developersNote}{lang !== 'en' && <> ({t.docs.inEnglish})</>}</span>
+    </a>
+  )}
+</div>

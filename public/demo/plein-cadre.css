@@ -1,0 +1,8 @@
+/* Le dialogue de « Phishing by numbers » dans l'accueil : la page y ajoute cette feuille (public/demo/phishing/, même
+   origine) pour donner tout le cadre à la scène, sans les barres du lecteur ni le titre de l'écran. */
+.t-bar, .t-screen-title { display: none !important; }
+.t-main { position: fixed !important; inset: 0 !important; padding: 0 !important; margin: 0 !important; overflow: hidden !important; }
+.t-screen { padding: 0 !important; margin: 0 !important; max-width: none !important; width: 100% !important; height: 100% !important; min-height: 0 !important; }
+.t-blocks { padding: 0 !important; margin: 0 !important; max-width: none !important; width: 100% !important; height: 100% !important; gap: 0 !important; }
+.t-block--dialogue { margin: 0 !important; max-width: none !important; width: 100% !important; height: 100% !important; }
+.t-dialogue--scene { width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; border-radius: 0 !important; margin: 0 !important; }

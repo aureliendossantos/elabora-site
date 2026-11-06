@@ -1,0 +1,96 @@
+---
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang }
+const t = useT(Astro.props.lang);
+---
+<!-- Pagefind's index of the docs (npm run build writes dist/pagefind/); shown once its script runs. -->
+<div class="docs-search" data-docs-search data-empty={t.docs.searchEmpty} data-error={t.docs.searchError} hidden>
+  <label class="visually-hidden" for="docs-search-input">{t.docs.search}</label>
+  <input id="docs-search-input" type="search" placeholder={t.docs.searchPlaceholder} autocomplete="off" spellcheck="false" aria-controls="docs-search-results" aria-expanded="false" />
+  <kbd aria-hidden="true">/</kbd>
+  <div id="docs-search-results" class="docs-search-results" aria-live="polite" hidden></div>
+</div>
+
+<script>
+  type Sub = { title: string; url: string; excerpt: string; locations?: number[] };
+  type Result = { url: string; meta: { title?: string }; excerpt: string; sub_results?: Sub[] };
+  type Pagefind = { search(query: string): Promise<{ results: { data(): Promise<Result> }[] } | null>; preload?(query: string): void };
+
+  const box = document.querySelector<HTMLElement>('[data-docs-search]');
+  const input = box?.querySelector<HTMLInputElement>('input');
+  const panel = box?.querySelector<HTMLElement>('.docs-search-results');
+  if (box && input && panel) {
+    box.hidden = false;
+    let pagefind: Promise<Pagefind> | undefined;
+    // The index is a static file of the site, loaded on the first search only.
+    const load = () => (pagefind ??= import(/* @vite-ignore */ `${'/pagefind/'}pagefind.js`) as Promise<Pagefind>);
+    let latest = 0;
+    let timer: number | undefined;
+    const close = () => { clearTimeout(timer); ++latest; panel.hidden = true; input.setAttribute('aria-expanded', 'false'); };
+    const message = (text: string) => { panel.replaceChildren(Object.assign(document.createElement('p'), { className: 'docs-search-message', textContent: text })); };
+
+    async function run() {
+      const query = input!.value.trim();
+      const ticket = ++latest;
+      if (!query) { close(); return; }
+      try {
+        const search = await (await load()).search(query);
+        if (ticket !== latest || !search) return;
+        const results = await Promise.all(search.results.slice(0, 8).map((result) => result.data()));
+        if (ticket !== latest) return;
+        panel!.hidden = false;
+        input!.setAttribute('aria-expanded', 'true');
+        if (!results.length) { message(box!.dataset.empty ?? ''); return; }
+        const list = document.createElement('ul');
+        for (const result of results) {
+          // The section where most of the words were found, on a long page: its heading and its anchor.
+          const sub = result.sub_results?.reduce<Sub | undefined>((best, entry) => ((entry.locations?.length ?? 0) > (best?.locations?.length ?? 0) ? entry : best), undefined);
+          const link = document.createElement('a');
+          link.href = sub?.url ?? result.url;
+          const title = document.createElement('span');
+          title.className = 'docs-search-title';
+          title.textContent = result.meta.title ?? result.url;
+          if (sub && sub.title && sub.title !== result.meta.title) title.append(Object.assign(document.createElement('span'), { className: 'docs-search-sub', textContent: ` › ${sub.title}` }));
+          const excerpt = document.createElement('span');
+          excerpt.className = 'docs-search-excerpt';
+          // Pagefind's excerpt: the page's own text, escaped, with <mark> around the words found.
+          excerpt.innerHTML = sub?.excerpt ?? result.excerpt;
+          link.append(title, excerpt);
+          const item = document.createElement('li');
+          item.append(link);
+          list.append(item);
+        }
+        panel!.replaceChildren(list);
+      } catch {
+        if (ticket !== latest) return;
+        panel!.hidden = false;
+        input!.setAttribute('aria-expanded', 'true');
+        message(box!.dataset.error ?? '');
+      }
+    }
+
+    input.addEventListener('input', () => { clearTimeout(timer); timer = window.setTimeout(run, 120); });
+    input.addEventListener('focus', (event) => {
+      void load();
+      // Returning from a result (Escape or ArrowUp) keeps the panel's current state.
+      if (input.value.trim() && !(event.relatedTarget instanceof Node && panel.contains(event.relatedTarget))) void run();
+    });
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') { close(); input.blur(); }
+      if (event.key === 'ArrowDown') { panel.querySelector<HTMLAnchorElement>('a')?.focus(); event.preventDefault(); }
+    });
+    panel.addEventListener('keydown', (event) => {
+      const links = [...panel.querySelectorAll<HTMLAnchorElement>('a')];
+      const index = links.indexOf(document.activeElement as HTMLAnchorElement);
+      if (event.key === 'ArrowDown' && index < links.length - 1) { links[index + 1]?.focus(); event.preventDefault(); }
+      if (event.key === 'ArrowUp') { ((index > 0 && links[index - 1]) || input).focus(); event.preventDefault(); }
+      if (event.key === 'Escape') { close(); input.focus(); }
+    });
+    document.addEventListener('click', (event) => { if (!box.contains(event.target as Node)) close(); });
+    document.addEventListener('keydown', (event) => {
+      const target = event.target as HTMLElement;
+      if (event.key === '/' && !event.metaKey && !event.ctrlKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName) && !target.isContentEditable) { input.focus(); event.preventDefault(); }
+    });
+  }
+</script>

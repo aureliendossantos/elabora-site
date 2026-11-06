@@ -1,0 +1,116 @@
+{
+  "name": "Elabora",
+  "short": "Elabora",
+  "vendor": "Elabora",
+  "url": "https://elabora.studio/",
+  "facts": {
+    "price": {
+      "en": "Free on your computer, and it will stay free. Online, each author has free quotas to create review links and publish courses on the web; paid options with larger quotas will come later.",
+      "fr": "Gratuit sur votre ordinateur, et il le restera. En ligne, des quotas gratuits pour créer des liens de relecture et publier des modules sur le web ; des options payantes avec plus de quotas viendront plus tard.",
+      "source": "https://elabora.studio/en/docs/online-reviews/",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "A desktop app for macOS and for Windows 10 or 11.",
+      "fr": "Une app de bureau pour macOS et pour Windows 10 ou 11.",
+      "source": "https://elabora.studio/en/docs/install/",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "SCORM 1.2, SCORM 2004, cmi5 and xAPI packages, and web publishing on Elabora’s hosting or any web server. Elabora picks SCORM 1.2 or SCORM 2004 for your client’s LMS; you choose cmi5 or xAPI in the course’s settings.",
+      "fr": "Paquets SCORM 1.2, SCORM 2004, cmi5 et xAPI, et publication web sur l’hébergement d’Elabora ou sur n’importe quel serveur web. Elabora choisit SCORM 1.2 ou SCORM 2004 selon le LMS du client ; vous choisissez cmi5 ou xAPI dans les réglages du module.",
+      "source": "https://elabora.studio/en/docs/developers/delivery/",
+      "checked": "2026-11-06"
+    },
+    "files": {
+      "en": "Each course is a folder of readable files on your computer, in an open format with public schemas. The core that reads it is open source (Apache-2.0).",
+      "fr": "Chaque module est un dossier de fichiers lisibles sur votre ordinateur, dans un format ouvert aux schémas publics. Le cœur qui le lit est open source (Apache-2.0).",
+      "source": "https://elabora.studio/en/docs/developers/",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "Elabora’s chat with free models (through OpenCode), and quick buttons for text alternatives and translations. Every change the AI makes can be undone.",
+      "fr": "Le chat d’Elabora avec des modèles gratuits (via OpenCode) et des boutons rapides pour les textes alternatifs et les traductions. Chaque retouche de l’IA peut être annulée.",
+      "source": "https://elabora.studio/en/docs/working-with-your-ai/",
+      "checked": "2026-11-05"
+    },
+    "agents": {
+      "en": "Works with your own agent: the Claude or ChatGPT app, or any AI through the elabora command and its MCP server, to change every aspect of a course. You use your own subscription, for the best quality for the cost.",
+      "fr": "Fonctionne avec votre propre agent : l’app Claude ou ChatGPT, ou toute IA par la commande elabora et son serveur MCP, pour modifier tous les aspects d’un module. Vous utilisez votre propre abonnement pour un rapport qualité/coût optimal.",
+      "source": "https://elabora.studio/en/docs/developers/agents/",
+      "checked": "2026-11-06"
+    },
+    "review": {
+      "en": "Reviews are free: reviewers comment from a link, without an account. Their comments show in Elabora on the screen, the block or the word of narration; you reply there or hand them to your AI.",
+      "fr": "Les relecteurs commentent depuis un lien, gratuitement et sans compte. Leurs commentaires s’affichent dans Elabora sur l’écran, le bloc ou le mot de la narration ; vous y répondez ou les confiez à votre IA.",
+      "source": "https://elabora.studio/en/docs/online-reviews/",
+      "checked": "2026-11-05"
+    },
+    "collaboration": {
+      "en": "One author per course, on their computer. Reviewers comment through a link.",
+      "fr": "Un auteur par module, sur son ordinateur. Les relecteurs commentent par un lien.",
+      "source": "https://elabora.studio/en/docs/online-reviews/",
+      "checked": "2026-11-05"
+    },
+    "import": {
+      "en": "Storyline projects (.story), published Storyline courses and Rise exports, in beta, with a report of what came over and what did not.",
+      "fr": "Projets Storyline (.story), cours Storyline publiés et exports Rise, en bêta, avec un rapport de ce qui est repris et de ce qui manque.",
+      "source": "https://elabora.studio/en/docs/import-storyline-rise/",
+      "checked": "2026-11-05"
+    },
+    "templates": {
+      "en": "7 complete templates of 14 screens each, in English and French, and starter blocks.",
+      "fr": "7 modèles complets de 14 écrans chacun, en anglais et en français, et des blocs de départ.",
+      "source": "https://elabora.studio/en/#modeles",
+      "checked": "2026-11-05"
+    },
+    "localization": {
+      "en": "Several languages in one course, translated by your AI, a translator or yourself, checked on screen and tried in the preview. You choose the package’s languages, or make one package per language; learners switch between them in place, starting in their LMS’s language or the one you choose.",
+      "fr": "Plusieurs langues dans un même module, traduites par votre IA, un traducteur ou vous-même, vérifiées à l’écran et essayées dans l’aperçu. Vous choisissez les langues du paquet, ou faites un paquet par langue ; l’apprenant passe de l’une à l’autre sur place, en commençant dans la langue de son LMS ou celle que vous choisissez.",
+      "source": "https://elabora.studio/en/docs/developers/decisions/d71/",
+      "checked": "2026-11-06"
+    },
+    "accessibility": {
+      "en": "Built-in checks your AI can read: WCAG 2.2 AA contrast, text alternatives, captions, keyboard use and axe tests. Your AI fixes them on its own before delivery.",
+      "fr": "Des contrôles intégrés lisibles par votre IA : contraste WCAG 2.2 AA, textes alternatifs, sous-titres, clavier et tests axe. Votre IA les corrige spontanément avant la livraison.",
+      "source": "https://elabora.studio/en/docs/developers/diagnostics/",
+      "checked": "2026-11-06"
+    },
+    "pedagogy": {
+      "en": "Learning-design checks drawn from research on how people learn, which your AI reads after every change: observable objectives, each one practised, regular activities, short segments and bounded text, narration and on-screen text that complement each other, plausible options and feedback that explains them, spaced retrieval after the course.",
+      "fr": "Des contrôles pédagogiques issus de la recherche sur l’apprentissage, que votre IA lit après chaque retouche : objectifs observables et mis en pratique, activités régulières, segments courts et textes mesurés, narration et texte à l’écran qui se complètent, options plausibles et retours qui les expliquent, rappels espacés après le module.",
+      "source": "https://elabora.studio/en/docs/developers/diagnostics/",
+      "checked": "2026-11-06"
+    }
+  },
+  "gaps": [
+    {
+      "id": "import",
+      "en": "Importing Storyline and Rise courses is in beta. Some question types, triggers and interactions come over as text with a note, and the import report lists each one.",
+      "fr": "L’import des modules Storyline et Rise est en bêta. Certains types de questions, déclencheurs et interactions arrivent en texte avec une note, et le rapport d’import les liste un par un.",
+      "source": "https://elabora.studio/en/docs/import-storyline-rise/",
+      "checked": "2026-11-05"
+    },
+    {
+      "id": "young",
+      "en": "A young tool: the first public version came out on 20 October 2026, and Elabora is in beta. Expect fewer tutorials and community answers, and a new version every few days.",
+      "fr": "Un outil jeune : la première version publique date du 20 octobre 2026, et Elabora est en bêta. Comptez moins de tutoriels et de réponses de la communauté, et une nouvelle version tous les quelques jours.",
+      "source": "https://elabora.studio/en/changelog/",
+      "checked": "2026-11-05"
+    },
+    {
+      "id": "team",
+      "en": "One author per course for now. Co-authoring and shared team spaces come later, with Elabora’s cloud.",
+      "fr": "Un auteur par module pour l’instant. Le travail à plusieurs et les espaces d’équipe viendront plus tard, avec le cloud d’Elabora.",
+      "source": "https://elabora.studio/en/docs/online-reviews/",
+      "checked": "2026-11-05"
+    },
+    {
+      "id": "templates",
+      "en": "A smaller library: 7 templates and starter blocks, and no stock library of photos or characters. Your AI makes illustrations, backdrops and layouts to measure for each course.",
+      "fr": "Une bibliothèque plus petite : 7 modèles et des blocs de départ, sans banque de photos ni de personnages. Votre IA réalise des illustrations, des décors et des mises en page sur mesure pour chaque module.",
+      "source": "https://elabora.studio/en/docs/developers/design/",
+      "checked": "2026-11-06"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Gomo",
+  "short": "Gomo",
+  "vendor": "Gomo Learning",
+  "url": "https://www.gomolearning.com/",
+  "facts": {
+    "price": {
+      "en": "On quote, per year by company size; 12-month minimum; 21-day trial.",
+      "fr": "Sur devis, à l’année selon la taille de l’entreprise ; 12 mois minimum ; essai de 21 jours.",
+      "source": "https://www.gomolearning.com/pricing/",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "In a web browser.",
+      "fr": "Dans un navigateur web.",
+      "source": "https://www.gomolearning.com/elearning-authoring-tool/cloud-based-authoring/",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "SCORM 1.2, SCORM 2004 and xAPI; live delivery updates courses without uploading them again.",
+      "fr": "SCORM 1.2, SCORM 2004 et xAPI ; la diffusion en direct met les modules à jour sans les renvoyer.",
+      "source": "https://www.gomolearning.com/elearning-authoring-tool/feature-list/",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "AI text writing, automated content review and AI translation.",
+      "fr": "Rédaction par l’IA, relecture automatique du contenu et traduction par l’IA.",
+      "source": "https://www.gomolearning.com/",
+      "checked": "2026-11-05"
+    },
+    "collaboration": {
+      "en": "Real-time co-authoring with topic locking; Administrator, Editor and Reviewer roles.",
+      "fr": "Co-édition en temps réel avec verrouillage par sujet ; rôles Administrateur, Éditeur et Relecteur.",
+      "source": "https://www.gomolearning.com/elearning-authoring-tool/feature-list/",
+      "checked": "2026-11-05"
+    },
+    "review": {
+      "en": "Reviewers per course; feedback on each screen becomes a task for the team.",
+      "fr": "Relecteurs par module ; chaque retour sur un écran devient une tâche pour l’équipe.",
+      "source": "https://www.gomolearning.com/elearning-authoring-tool/feature-list/",
+      "checked": "2026-11-05"
+    },
+    "localization": {
+      "en": "250+ languages, AI translation, XLIFF export and import.",
+      "fr": "Plus de 250 langues, traduction par l’IA, export et import XLIFF.",
+      "source": "https://www.gomolearning.com/",
+      "checked": "2026-11-05"
+    },
+    "accessibility": {
+      "en": "Alt text, keyboard navigation, transcripts and captions; a public VPAT.",
+      "fr": "Textes alternatifs, navigation au clavier, transcriptions et sous-titres ; un VPAT public.",
+      "source": "https://www.gomolearning.com/elearning-authoring-tool/feature-list/",
+      "checked": "2026-11-05"
+    }
+  }
+}

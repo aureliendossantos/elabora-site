@@ -1,0 +1,25 @@
+---
+// One fact in a table: its value in the page's language, then the day it was read and its source (left out with
+// `bare`: the tables of several tools, whose tools' comparisons give them).
+import type { Fact } from '../../lib/comparisons-rules';
+import { useT, fill, type Lang } from '../../i18n';
+import { localSource } from '../../lib/comparisons';
+
+interface Props { lang: Lang; fact: Fact | undefined; bare?: boolean }
+const { lang, fact, bare = false } = Astro.props;
+const t = useT(lang);
+const day = (d: string) => new Intl.DateTimeFormat(lang === 'fr' ? 'fr-FR' : 'en-GB', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(d));
+const host = fact ? new URL(fact.source).hostname.replace(/^www\./, '') : '';
+const href = fact ? await localSource(lang, fact.source) : '';
+const own = host === 'elabora.studio';
+---
+{fact ? (
+  <>
+    <span class="fact-value">{fact[lang]}</span>
+    {!bare && <span class="fact-meta">
+      <time datetime={fact.checked}>{fill(t.compare.checkedOn, { date: day(fact.checked) })}</time>
+      {' · '}
+      <a href={href} rel={own ? undefined : 'nofollow'}>{host}</a>
+    </span>}
+  </>
+) : <span class="fact-none">—</span>}

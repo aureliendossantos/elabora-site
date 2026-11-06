@@ -1,0 +1,44 @@
+{
+  "name": "Create (formerly Elucidat)",
+  "short": "Elucidat",
+  "vendor": "Confirm",
+  "url": "https://www.confirm.com/scale-up/products/create",
+  "facts": {
+    "price": {
+      "en": "On quote: the price depends on the products, the size of the workforce and the support.",
+      "fr": "Sur devis : le prix dépend des produits, de la taille des effectifs et du support.",
+      "source": "https://www.confirm.com/faqs",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "Cloud-based, in a web browser.",
+      "fr": "Dans le cloud, depuis un navigateur web.",
+      "source": "https://www.confirm.com/frontline/products/create",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "Web link or SCORM file; updates reach learners without uploading the package again.",
+      "fr": "Lien web ou fichier SCORM ; les mises à jour arrivent aux apprenants sans renvoyer le paquet.",
+      "source": "https://www.confirm.com/frontline/products/create",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "AI course outlines from your PDFs, text-to-speech narration and automatic translation.",
+      "fr": "Plans de cours par l’IA à partir de vos PDF, narration en synthèse vocale et traduction automatique.",
+      "source": "https://www.confirm.com/frontline/products/create",
+      "checked": "2026-11-05"
+    },
+    "templates": {
+      "en": "Pre-built templates, with brand and style locking across teams.",
+      "fr": "Des modèles prêts, avec charte et styles verrouillés pour les équipes.",
+      "source": "https://www.confirm.com/frontline/products/create",
+      "checked": "2026-11-05"
+    },
+    "localization": {
+      "en": "Automatic translation into 75+ languages, bulk translation, glossaries, XLIFF, CSV and JSON export.",
+      "fr": "Traduction automatique en plus de 75 langues, traduction en masse, glossaires, export XLIFF, CSV et JSON.",
+      "source": "https://www.confirm.com/frontline/products/create",
+      "checked": "2026-11-05"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+---
+// The home: one confident column. The promise and its film, real modules, the lock one can handle, the dialogue,
+// the templates, how it works, why an organisation can trust it, the download. Its sections are
+// components/home/*.astro; its styles styles/home.css on the design tokens; its scripts scripts/*.ts.
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/home/Hero.astro';
+import Examples from '../../components/home/Examples.astro';
+import LockDemo from '../../components/home/LockDemo.astro';
+import DialogueDemo from '../../components/home/DialogueDemo.astro';
+import Templates from '../../components/home/Templates.astro';
+import Steps from '../../components/home/Steps.astro';
+import Trust from '../../components/home/Trust.astro';
+import Closing from '../../components/home/Closing.astro';
+import Sheet from '../../components/home/Sheet.astro';
+import '../../styles/home.css';
+import { LOCALES, homePath, useT, type Lang } from '../../i18n';
+
+export const getStaticPaths = (() => LOCALES.map((lang) => ({ params: { lang } }))) satisfies GetStaticPaths;
+
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const paths = { fr: homePath('fr'), en: homePath('en') };
+---
+<Base lang={lang} title={t.siteTitle} description={t.siteDescription} paths={paths} path={paths[lang]} mainClass="home">
+  <Hero lang={lang} />
+  <Examples lang={lang} />
+  <LockDemo lang={lang} />
+  <DialogueDemo lang={lang} />
+  <Templates lang={lang} />
+  <Steps lang={lang} />
+  <Trust lang={lang} />
+  <Closing lang={lang} />
+  <Sheet lang={lang} />
+</Base>
+<script>
+  import '../../scripts/reveal.ts';
+</script>

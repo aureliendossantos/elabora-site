@@ -1,0 +1,34 @@
+---
+// The end: the anchor printed in ink and the brand's current along the edges (the riso press, src/brand/presse.js,
+// loaded as the section nears: scripts/fin.ts), the promise, the download, then the other installers and the version.
+import DownloadButton from '../site/DownloadButton.astro';
+import affiche from '../../assets/brand/ancre-affiche.svg?raw';
+import { useT, fill, type Lang } from '../../i18n';
+import { changelogPath, downloads, latestRelease } from '../../lib/releases';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+const release = latestRelease();
+const names = { 'mac-arm64': t.download.macArm, 'mac-x64': t.download.macIntel, windows: t.download.windowsX64 };
+const files = release ? downloads(release).sort((a, b) => (a.platform === 'windows' ? 1 : 0) - (b.platform === 'windows' ? 1 : 0)) : [];
+// The anchor's outline, for the press: its path and its box.
+const [x, y, w, h] = (affiche.match(/viewBox="([^"]+)"/)?.[1] ?? '0 0 1 1').split(/\s+/).map(Number);
+const ancre = { d: affiche.match(/ d="([^"]+)"/)?.[1] ?? '', x, y, w, h };
+---
+<section class="closing" id="telecharger" aria-labelledby="closing-title" data-closing data-ancre={JSON.stringify(ancre)}>
+  <canvas class="current" aria-hidden="true"></canvas>
+  <canvas class="anchor reveal" aria-hidden="true"></canvas>
+  <h2 id="closing-title" class="reveal reveal--d1">{t.home.final.title}</h2>
+  <p class="lead reveal reveal--d2">{t.home.final.lead}</p>
+  <div class="actions reveal reveal--d2"><DownloadButton lang={lang} more={false} /></div>
+  {release && (
+    <ul class="downloads reveal reveal--d3">
+      {files.map((f) => <li data-platform={f.platform} hidden={f.platform === 'mac-arm64'}><a href={f.url}>{names[f.platform]}</a></li>)}
+      <li>{fill(t.download.version, { version: release.version })} · <a href={changelogPath(lang, release.version)}>{t.download.notes}</a></li>
+    </ul>
+  )}
+</section>
+<script>
+  import '../../scripts/fin.ts';
+</script>

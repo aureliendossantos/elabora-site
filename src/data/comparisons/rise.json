@@ -1,0 +1,74 @@
+{
+  "name": "Articulate Rise 360",
+  "short": "Rise",
+  "vendor": "Articulate",
+  "url": "https://www.articulate.com/360/rise/",
+  "facts": {
+    "price": {
+      "en": "Sold in Articulate 360 AI: 1,749 USD per seat per year for teams, 1,449 USD for a single designer. 14-day trial.",
+      "fr": "Vendu dans Articulate 360 AI : 1 749 $ par poste et par an pour les équipes, 1 449 $ pour un concepteur seul. Essai de 14 jours.",
+      "source": "https://www.articulate.com/360/pricing/",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "In a web browser, on Windows or Mac.",
+      "fr": "Dans un navigateur web, sur Windows ou sur Mac.",
+      "source": "https://www.articulatesupport.com/article/Articulate-360-FAQs-Working-on-a-Mac",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "cmi5, xAPI, SCORM and AICC packages; share links with an optional password; publishing to Review 360 and Reach 360.",
+      "fr": "Paquets cmi5, xAPI, SCORM et AICC ; liens de partage avec mot de passe en option ; publication vers Review 360 et Reach 360.",
+      "source": "https://www.articulate.com/360/rise/all/",
+      "checked": "2026-11-05"
+    },
+    "files": {
+      "en": "Courses live in your Articulate 360 account. When the subscription ends, editing stops, and Articulate keeps the courses for up to 6 months. Published courses keep working.",
+      "fr": "Les cours vivent dans votre compte Articulate 360. À la fin de l’abonnement, l’édition s’arrête, et Articulate garde les cours jusqu’à 6 mois. Les cours publiés continuent de fonctionner.",
+      "source": "https://www.articulatesupport.com/article/Here-s-What-to-Do-Before-Cancelling-Your-Articulate-360-Subscription",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "AI Assistant: drafts courses from ideas or documents (September 2025), writes blocks, quizzes and captions. Uses the credits of Articulate 360 AI.",
+      "fr": "AI Assistant : rédige des cours à partir d’idées ou de documents (septembre 2025), écrit des blocs, des quiz et des sous-titres. Utilise les crédits d’Articulate 360 AI.",
+      "source": "https://cdn.articulate.com/assets/kb/360/en-Rise-360-Version-History.html",
+      "checked": "2026-11-05"
+    },
+    "agents": {
+      "en": "Articulate 360 connects to Claude, ChatGPT or Copilot through MCP to generate content and outlines.",
+      "fr": "Articulate 360 se connecte à Claude, ChatGPT ou Copilot par MCP pour générer du contenu et des plans.",
+      "source": "https://www.articulate.com/360/integrations/",
+      "checked": "2026-11-05"
+    },
+    "review": {
+      "en": "Review 360, included: reviewers comment from a link, without an account by default; you answer and resolve their comments in a panel inside Rise, lesson by lesson.",
+      "fr": "Review 360, inclus : les relecteurs commentent depuis un lien, sans compte par défaut ; vous répondez et résolvez leurs commentaires dans un panneau de Rise, leçon par leçon.",
+      "source": "https://cdn.articulate.com/assets/kb/360/en-Rise-360-Version-History.html",
+      "checked": "2026-11-05"
+    },
+    "collaboration": {
+      "en": "With Articulate 360 Teams, members edit different lessons at the same time, or take turns on one, and share block templates.",
+      "fr": "Avec Articulate 360 Teams, les membres modifient des leçons différentes en même temps, ou à tour de rôle la même, et partagent des modèles de blocs.",
+      "source": "https://www.articulate.com/360/rise/all/",
+      "checked": "2026-11-05"
+    },
+    "templates": {
+      "en": "1,000+ course templates, and Content Library 360.",
+      "fr": "Plus de 1 000 modèles de cours, et Content Library 360.",
+      "source": "https://www.articulate.com/360/rise/",
+      "checked": "2026-11-05"
+    },
+    "localization": {
+      "en": "Articulate Localization: translation into 80+ languages, paid with credits.",
+      "fr": "Articulate Localization : traduction en plus de 80 langues, payée en crédits.",
+      "source": "https://www.articulate.com/360/pricing/",
+      "checked": "2026-11-05"
+    },
+    "accessibility": {
+      "en": "Published courses support WCAG 2.1 AA, with NVDA, JAWS, VoiceOver and TalkBack.",
+      "fr": "Les cours publiés prennent en charge les WCAG 2.1 AA, avec NVDA, JAWS, VoiceOver et TalkBack.",
+      "source": "https://www.articulate.com/360/rise/all/",
+      "checked": "2026-11-05"
+    }
+  }
+}

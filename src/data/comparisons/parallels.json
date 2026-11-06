@@ -1,0 +1,21 @@
+{
+  "name": "Parallels Desktop for Mac",
+  "short": "Parallels Desktop",
+  "vendor": "Parallels",
+  "url": "https://www.parallels.com/products/desktop/",
+  "role": "requirement",
+  "facts": {
+    "price": {
+      "en": "Standard Edition: 99.99 EUR per year, or 189.99 EUR as a one-time purchase (European store). On 6 Nov 2026, a promotion showed 49.99 EUR per year.",
+      "fr": "Standard Edition : 99,99 € par an, ou 189,99 € en achat unique (boutique européenne). Le 6 nov. 2026, une promotion affichait 49,99 € par an.",
+      "source": "https://www.parallels.com/fr/products/desktop/buy/",
+      "checked": "2026-11-06"
+    },
+    "platforms": {
+      "en": "A Mac app that runs Windows and Windows apps, Linux and macOS in virtual machines.",
+      "fr": "Une app Mac qui fait tourner Windows et ses applications, Linux et macOS en machines virtuelles.",
+      "source": "https://www.parallels.com/fr/products/desktop/buy/",
+      "checked": "2026-11-06"
+    }
+  }
+}

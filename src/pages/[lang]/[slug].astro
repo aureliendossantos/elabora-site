@@ -1,0 +1,40 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { legalKeyOf, legalPath, useT, type Lang } from '../../i18n';
+
+export const getStaticPaths = (async () => {
+  const pages = await getCollection('legal');
+  return pages.map((page) => {
+    const key = legalKeyOf(page.data.lang, page.data.slug);
+    if (!key) throw new Error(`${page.id}: slug "${page.data.slug}" is not in LEGAL_PAGES for ${page.data.lang}`);
+    return { params: { lang: page.data.lang, slug: page.data.slug }, props: { page, key } };
+  });
+}) satisfies GetStaticPaths;
+
+const { page, key } = Astro.props;
+const lang = page.data.lang as Lang;
+const t = useT(lang);
+const { Content, headings } = await render(page);
+const toc = headings.filter((h) => h.depth === 2);
+const paths = { fr: legalPath('fr', key), en: legalPath('en', key) };
+const updated = new Intl.DateTimeFormat(lang, { dateStyle: 'long', timeZone: 'UTC' }).format(page.data.updated);
+---
+<Base lang={lang} title={`${page.data.title} · ${t.name}`} description={t.siteDescription} paths={paths} path={paths[lang]}>
+  <article class="doc">
+    <header class="doc-head">
+      <h1>{page.data.title}</h1>
+      <p class="muted">{t.legal.updated} {updated}</p>
+    </header>
+    {toc.length > 1 && (
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">{t.legal.toc}</h2>
+        <ol>
+          {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+        </ol>
+      </nav>
+    )}
+    <div class="prose"><Content /></div>
+  </article>
+</Base>

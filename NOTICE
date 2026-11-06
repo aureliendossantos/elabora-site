@@ -1,0 +1,65 @@
+elabora-site, the source of https://elabora.studio
+Copyright 2026 the Elabora authors.
+
+The code of this repository is licensed under the Apache License 2.0 (LICENSE).
+The items below keep their own licences.
+
+Copied from elabora-core (https://github.com/aureliendossantos/elabora-core)
+---------------------------------------------------------------------------
+
+public/schemas/        The format schemas, Apache-2.0 (LICENSE.txt in each version folder).
+src/content/core-docs/ The developer documentation, Apache-2.0.
+public/downloads/elabora.mcpb
+                       Elabora's extension for Claude, built from elabora-core, Apache-2.0.
+
+Sample courses and module templates of elabora-core
+---------------------------------------------------
+
+The pictures and videos of public/media/exemples/ and public/media/modeles/, the dialogue of
+public/demo/phishing/, the canal lock of src/demos/ecluse/, public/downloads/coffee-in-brief.elabora
+and src/content/core-docs/docs/images/ show elabora-core's sample courses and templates. Their
+original content is dedicated to the public domain under CC0 1.0
+(https://creativecommons.org/publicdomain/zero/1.0/). Each sample's LICENSE.md in elabora-core
+lists what keeps its own licence; src/demos/ecluse/LICENSE-canal-locks.md is the lock's.
+
+The pictures of medieval-charts show two medieval maps in the public domain: the Catalan Atlas
+(1375, Bibliothèque nationale de France) and the Hereford Mappa Mundi (around 1300), via
+Wikimedia Commons.
+
+Narration of the dialogue
+-------------------------
+
+public/demo/phishing/narration/**/*.m4a are synthetic voices made with ElevenLabs (voice
+« Kristen » of the ElevenLabs voice library) on a plan that allows commercial use. They follow
+ElevenLabs' terms and stay outside CC0. The player shows their credit.
+
+Sounds
+------
+
+public/demo/phishing/CREDITS.txt lists the dialogue's sounds: Interface Sounds 1.0 by Kenney
+(CC0 1.0), « WinBanjo » by Fupicat (CC0 1.0) and a phone ring by Elabora (CC0 1.0).
+
+Fonts, under the SIL Open Font License 1.1
+------------------------------------------
+
+Inter and Newsreader, installed from the Fontsource npm packages (@fontsource-variable/*).
+Fraunces and Figtree in public/demo/phishing/theme/fonts/, with their OFL.txt.
+Fraunces and Source Sans 3 in src/demos/ecluse/fonts/, with their OFL-*.txt.
+
+npm dependencies
+----------------
+
+three.js (MIT), Astro (MIT), Pagefind (MIT) and the other npm dependencies keep their own
+licences.
+
+The site's texts, its own pictures and the identity
+---------------------------------------------------
+
+The texts of the site (src/content/manual/, src/content/compare/, src/content/legal/, src/i18n/)
+and the app's screenshots (public/media/app/) are licensed under Creative Commons Attribution 4.0
+International (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/). Credit: « Elabora »,
+with a link to the page.
+
+The name Elabora, the anchor and the logotype (src/assets/brand/, src/components/brand/,
+public/favicon.*, public/icon-*.png, public/apple-touch-icon.png) are Elabora's marks. The
+licences above grant no right to them beyond naming Elabora and linking to it.

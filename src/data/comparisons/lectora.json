@@ -1,0 +1,50 @@
+{
+  "name": "Lectora",
+  "short": "Lectora",
+  "vendor": "ELB Learning",
+  "url": "https://products.elblearning.com/create-learning/lectora",
+  "facts": {
+    "price": {
+      "en": "Sold in ELB Learning’s Studio Gold Suite (Lectora Online and Desktop, ReviewLink, Asset Library): from 1,549 USD per year, US prices.",
+      "fr": "Vendu dans la Studio Gold Suite d’ELB Learning (Lectora Online et Desktop, ReviewLink, Asset Library) : à partir de 1 549 $ par an, prix américains.",
+      "source": "https://www.elblearning.com/lectora-pricing",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "Lectora Desktop: Windows. Lectora Online: in a web browser, on Windows or Mac.",
+      "fr": "Lectora Desktop : Windows. Lectora Online : dans un navigateur web, sur Windows ou sur Mac.",
+      "source": "https://www.elblearning.com/lectora-faq",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "HTML for the web, AICC, SCORM 1.1, 1.2 and 2004, cmi5 and xAPI.",
+      "fr": "HTML pour le web, AICC, SCORM 1.1, 1.2 et 2004, cmi5 et xAPI.",
+      "source": "https://products.elblearning.com/create-learning/lectora",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "AI Course Wizard in Lectora Online: a first draft from a topic and a theme.",
+      "fr": "AI Course Wizard dans Lectora Online : un premier jet à partir d’un sujet et d’un thème.",
+      "source": "https://www.elblearning.com/lectora-faq",
+      "checked": "2026-11-05"
+    },
+    "review": {
+      "en": "ReviewLink: unlimited free reviewers invited by email; comments with statuses and priorities.",
+      "fr": "ReviewLink : relecteurs gratuits et illimités, invités par e-mail ; commentaires avec statuts et priorités.",
+      "source": "https://knowledgebase.elblearning.com/reviewlink-faqs",
+      "checked": "2026-11-05"
+    },
+    "import": {
+      "en": "PowerPoint 2007 and newer.",
+      "fr": "PowerPoint 2007 et plus récent.",
+      "source": "https://www.elblearning.com/lectora-faq",
+      "checked": "2026-11-05"
+    },
+    "templates": {
+      "en": "Asset Library in the suite: over 160 million stock assets and thousands of templates.",
+      "fr": "Asset Library dans la suite : plus de 160 millions d’éléments et des milliers de modèles.",
+      "source": "https://www.elblearning.com/studio-gold-suite",
+      "checked": "2026-11-05"
+    }
+  }
+}

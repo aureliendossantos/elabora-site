@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security issue
+    url: https://elabora.studio/.well-known/security.txt
+    about: Write to security@elabora.studio, privately
+  - name: The format, the CLI or the developer docs
+    url: https://github.com/aureliendossantos/elabora-core/issues
+    about: They live in elabora-core

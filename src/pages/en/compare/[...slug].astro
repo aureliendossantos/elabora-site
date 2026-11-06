@@ -1,0 +1,12 @@
+---
+// The comparison pages in English (src/components/compare/ComparePage.astro, src/content/compare/en/).
+import type { GetStaticPaths } from 'astro';
+import ComparePage from '../../../components/compare/ComparePage.astro';
+import { comparePages } from '../../../lib/comparisons';
+
+export const getStaticPaths = (async () =>
+  (await comparePages('en')).map((page) => ({ params: { slug: page.data.slug || undefined }, props: { page } }))) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+<ComparePage page={page} />

@@ -1,0 +1,23 @@
+// The site: static assets (dist/) behind a small Worker. Routes rather than custom domains: the zone's
+// proxied AAAA records for elabora.studio and www already send the traffic through Cloudflare, so no DNS
+// record is created or changed. api., revue. and mail. are other names and are not touched.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "elabora-site",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  // Run before every deploy, even a direct `wrangler deploy`: dist/ must serve the committed release snapshot,
+  // never a preview's ELABORA_RELEASES_FILE (scripts/releases.mjs).
+  "build": { "command": "node scripts/releases.mjs guard" },
+  "preview_urls": false,
+  "routes": [{ "pattern": "elabora.studio/*", "zone_name": "elabora.studio" }],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // The Worker only runs for these paths (/docs/ and the legal ones are short unprefixed addresses).
+    "run_worker_first": ["/", "/docs", "/docs/", "/mentions-legales*", "/legal-notice*", "/confidentialite*", "/privacy*", "/conditions*", "/terms*", "/signalement*", "/reporting*"]
+  },
+  "observability": { "enabled": false }
+}

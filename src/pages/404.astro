@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { useT } from '../i18n';
+
+const paths = { fr: '/fr/', en: '/en/' };
+const fr = useT('fr');
+const en = useT('en');
+---
+<Base lang="en" title={`${en.notFound.title} · ${en.name}`} description={en.siteDescription} paths={paths} path="/404/" error>
+  <section class="notfound">
+    <h1>{en.notFound.title} · {fr.notFound.title}</h1>
+    <p><a href="/en/">{en.notFound.back}</a></p>
+    <p lang="fr"><a href="/fr/">{fr.notFound.back}</a></p>
+  </section>
+</Base>

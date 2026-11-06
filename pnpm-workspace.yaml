@@ -1,0 +1,8 @@
+# Dependencies allowed to run their install scripts: esbuild's and workerd's fetch their platform binary.
+allowBuilds:
+  esbuild@0.28.2: true
+  workerd@1.20261012.1: true
+
+overrides:
+  # wrangler's miniflare pins an undici with known flaws (local development and deploys only): its patch.
+  'undici@>=7 <7.30.1': ^7.30.1

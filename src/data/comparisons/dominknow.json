@@ -1,0 +1,56 @@
+{
+  "name": "dominKnow | ONE",
+  "short": "dominKnow",
+  "vendor": "dominKnow",
+  "url": "https://www.dominknow.com/dominknow-one-cloud-based-elearning-authoring",
+  "facts": {
+    "price": {
+      "en": "On quote, per author (learners are free): Business, Business PLUS and Enterprise. Free trial.",
+      "fr": "Sur devis, par auteur (les apprenants sont gratuits) : Business, Business PLUS et Enterprise. Essai gratuit.",
+      "source": "https://www.dominknow.com/pricing",
+      "checked": "2026-11-05"
+    },
+    "platforms": {
+      "en": "In a web browser (PC, Mac, Chromebook); on your own servers for Enterprise.",
+      "fr": "Dans un navigateur web (PC, Mac, Chromebook) ; sur vos propres serveurs en Enterprise.",
+      "source": "https://www.dominknow.com/dominknow-one-cloud-based-elearning-authoring",
+      "checked": "2026-11-05"
+    },
+    "delivery": {
+      "en": "SCORM 1.2 and 2004, AICC, cmi5 and xAPI; web packages and share links; print and PDF.",
+      "fr": "SCORM 1.2 et 2004, AICC, cmi5 et xAPI ; paquets web et liens de partage ; impression et PDF.",
+      "source": "https://www.dominknow.com/publishing",
+      "checked": "2026-11-05"
+    },
+    "ai": {
+      "en": "AI Question Generator (October 2026) and AI Translator (DeepL; extra cost on Business plans).",
+      "fr": "AI Question Generator (octobre 2026) et AI Translator (DeepL ; en supplément sur les offres Business).",
+      "source": "https://dominknow.com/news",
+      "checked": "2026-11-05"
+    },
+    "collaboration": {
+      "en": "Real-time work in shared projects, roles and group permissions, version logs with rollback.",
+      "fr": "Travail en temps réel dans des projets partagés, rôles et droits par groupe, historique des versions avec retour en arrière.",
+      "source": "https://www.dominknow.com/elearning-collaboration-review",
+      "checked": "2026-11-05"
+    },
+    "review": {
+      "en": "Reviewers comment on a page or one element; review periods with notifications; comments are tracked to completion in the authoring tool.",
+      "fr": "Les relecteurs commentent une page ou un élément ; périodes de relecture avec notifications ; les commentaires sont suivis jusqu’à leur traitement dans l’outil auteur.",
+      "source": "https://www.dominknow.com/elearning-collaboration-review",
+      "checked": "2026-11-05"
+    },
+    "import": {
+      "en": "PowerPoint slides, as editable pages (Claro mode).",
+      "fr": "Diapositives PowerPoint, en pages modifiables (mode Claro).",
+      "source": "https://dominknow.com/features",
+      "checked": "2026-11-05"
+    },
+    "localization": {
+      "en": "Several languages in one project; XML export for translators; AI Translator.",
+      "fr": "Plusieurs langues dans un même projet ; export XML pour les traducteurs ; AI Translator.",
+      "source": "https://www.dominknow.com/dominknow-one-cloud-based-elearning-authoring",
+      "checked": "2026-11-05"
+    }
+  }
+}

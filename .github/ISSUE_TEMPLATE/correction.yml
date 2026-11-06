@@ -1,0 +1,25 @@
+name: Correct a fact or a page
+description: A price, a platform, a sentence of the manual or of a comparison that has changed. You can also write to contact@elabora.studio.
+labels: [correction]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: The page
+      description: Its address on elabora.studio
+      placeholder: https://elabora.studio/en/compare/storyline/
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should it say?
+      description: The sentence or the value as it should read
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Where you read it
+      description: The vendor's official page, for a fact about a tool
+      placeholder: https://www.example.com/pricing/

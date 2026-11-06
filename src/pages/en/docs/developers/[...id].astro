@@ -1,0 +1,37 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Docs from '../../../../layouts/Docs.astro';
+import { docsPath, useT } from '../../../../i18n';
+import { DEV_BASE, coreTitle, devMap, devMarkdownPath, devPages, devPath, sourceUrl, type DevPage } from '../../../../lib/core-docs';
+import { decisionItems, devNav, neighbours } from '../../../../lib/docs-nav';
+
+export const getStaticPaths = (async () => {
+  const entries = new Map((await getCollection('coreDocs')).map((entry) => [entry.id, entry]));
+  return devPages().map((page) => {
+    const entry = entries.get(page.id);
+    if (!entry) throw new Error(`${page.file} is on the map but not in the core docs`);
+    return { params: { id: page.id }, props: { page, entry } };
+  });
+}) satisfies GetStaticPaths;
+
+const { page, entry } = Astro.props as { page: DevPage; entry: Awaited<ReturnType<typeof getCollection<'coreDocs'>>>[number] };
+const t = useT('en');
+const { Content, headings } = await render(entry);
+const path = devPath(page.id);
+const isDecision = page.id.startsWith('decisions/');
+const nav = devNav(page.id);
+const { prev, next } = neighbours(isDecision ? decisionItems() : nav.flatMap((group) => group.items), path);
+// A decision's description: its first sentence; a page's: its line on the map.
+const firstSentence = (entry.body ?? '').split('\n').find((line) => line && !line.startsWith('#') && !line.startsWith('*'))?.replace(/[*`_[\]]/g, '').replace(/\(([^)]*\.md[^)]*)\)/g, '').split(/(?<=\.)\s/)[0];
+const description = page.description || (firstSentence ?? page.title).slice(0, 220);
+const section = isDecision ? devMap().sections.find((s) => s.pages.some((p) => p.id === 'decisions')) : devMap().sections.find((s) => s.title === page.section);
+const crumbs = [
+  { title: t.docs.nav, href: docsPath('en') },
+  { title: t.docs.developers, href: DEV_BASE },
+  ...(isDecision ? [{ title: t.docs.decisions, href: devPath('decisions') }] : section ? [{ title: section.title }] : []),
+];
+---
+<Docs lang="en" kind="dev" title={page.title} description={description} path={path} paths={{ fr: docsPath('fr'), en: path }} alternates={['en']} nav={nav} headings={headings} heading={coreTitle(entry.body) ?? page.title} prev={prev} next={next} crumbs={crumbs} source={{ url: sourceUrl(page.file), markdown: devMarkdownPath(page.id), generated: page.generated }} decision={isDecision}>
+  <Content />
+</Docs>

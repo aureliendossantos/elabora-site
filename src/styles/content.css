@@ -1,0 +1,33 @@
+/* Long reads: the legal pages (.doc, .toc, .prose, also the docs' prose) and the 404 page. */
+
+/* ---- Legal pages ---- */
+.doc { max-width: calc(68ch + 2 * var(--gutter)); margin: 0 auto; padding: clamp(32px, 6vw, 64px) var(--gutter) clamp(56px, 8vw, 96px); }
+.doc-head h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 450; }
+.doc-head .muted { margin-top: 12px; font-size: 0.875rem; }
+.toc { margin-top: 32px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font-size: 0.9375rem; }
+.toc h2 { font-family: var(--font); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+.toc ol { list-style: none; margin: 0; padding: 0; columns: 1; }
+.toc li { padding: 3px 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { color: var(--link); text-decoration: underline; }
+.prose { margin-top: 40px; font-size: 1.0625rem; line-height: 1.7; overflow-wrap: anywhere; }
+.prose > * + * { margin-top: 1em; }
+.prose h2 { font-size: 1.625rem; margin-top: 2.2em; margin-bottom: 0.2em; }
+.prose h3 { font-size: 1.25rem; margin-top: 1.8em; margin-bottom: 0.1em; }
+.prose h4 { font-family: var(--font); font-size: 1rem; font-weight: 600; margin-top: 1.6em; }
+.prose ul, .prose ol { padding-left: 1.4em; }
+.prose li + li { margin-top: 0.35em; }
+.prose li > ul, .prose li > ol { margin-top: 0.35em; }
+.prose blockquote { margin-left: 0; padding: 4px 0 4px 18px; border-left: 3px solid var(--line); color: var(--text-2); }
+.prose code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; background: rgba(44, 42, 39, 0.06); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.prose pre { overflow-x: auto; padding: 14px 16px; background: rgba(44, 42, 39, 0.05); border-radius: 8px; font-size: 0.875rem; }
+.prose pre code { background: none; padding: 0; }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; display: block; overflow-x: auto; }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: 8px 12px; border-bottom: 1px solid var(--line); min-width: 8rem; }
+.prose th { font-weight: 600; border-bottom-color: var(--line-2, rgba(44,42,39,.3)); }
+
+/* ---- 404 ---- */
+.notfound { max-width: var(--page); margin: 0 auto; padding: clamp(48px, 10vw, 120px) var(--gutter); }
+.notfound h1 { font-size: 2rem; margin-bottom: 20px; }
+.notfound p + p { margin-top: 8px; }

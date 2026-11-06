@@ -1,0 +1,38 @@
+---
+// Ready for your organisation: six reasons, said simply, the LMS whose rules each package is checked against (the
+// core's LMS profiles, docs/lms-profiles.md: documented rules, not field tests), and where the beta stands. The first
+// three reasons and the beta line are the home's points of comparison (free, your files in an open format, the AI of
+// your choice): the same facts as src/data/comparisons/elabora.json, which the comparison pages show. The home never
+// links to those pages (docs/maintenance.md, « Comparison pages »).
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+const icons = [
+  '<path d="M4.5 12h21v4h-21zM6.5 16h17v10h-17zM15 12v14"/><path d="M15 12c-1.6-3.6-6.5-5-6.5-2.2C8.5 12 12.4 12 15 12zm0 0c1.6-3.6 6.5-5 6.5-2.2 0 2.2-3.9 2.2-6.5 2.2z"/>',
+  '<path d="M3 8.5A2.5 2.5 0 015.5 6H11l2.5 2.5h11A2.5 2.5 0 0127 11v12.5a2.5 2.5 0 01-2.5 2.5h-19A2.5 2.5 0 013 23.5z"/>',
+  '<circle cx="15" cy="15" r="11"/><circle cx="15" cy="15" r="3.2" fill="currentColor" stroke="none"/><circle cx="23" cy="9.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="7.5" cy="20.5" r="1.4" fill="currentColor" stroke="none"/>',
+  '<path d="M15 3l11 5.5v13L15 27 4 21.5v-13z"/><path d="M4 8.5L15 14l11-5.5M15 14v13"/>',
+  '<circle cx="15" cy="6" r="2.4"/><path d="M6 10.5l9 2 9-2M15 12.5v6.5l-4.5 7.5M15 19l4.5 7.5"/>',
+  '<path d="M5 6.5h20a2 2 0 012 2V20a2 2 0 01-2 2H13l-6 4.5V22H5a2 2 0 01-2-2V8.5a2 2 0 012-2z"/><path d="M9 12h12M9 16h8"/>',
+];
+const lms = ['Moodle', '360Learning', 'Cornerstone', 'Docebo', 'SuccessFactors', 'Workday'];
+---
+<section class="section" id="equipes" aria-labelledby="trust-title">
+  <div class="section-head">
+    <h2 id="trust-title" class="title reveal">{t.home.trust.title}</h2>
+    <p class="lead reveal reveal--d1">{t.home.trust.lead}</p>
+  </div>
+  <ul class="reasons">
+    {t.home.trust.items.map((item, i) => (
+      <li class:list={['reveal', i % 3 === 1 && 'reveal--d1', i % 3 === 2 && 'reveal--d2']}>
+        <svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={icons[i]} />
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+      </li>
+    ))}
+  </ul>
+  <p class="lms reveal">{t.home.trust.lms} {lms.map((name, i) => <>{i > 0 && ', '}<b>{name}</b></>)}…</p>
+  <p class="beta-note reveal">{t.home.trust.beta}</p>
+</section>
