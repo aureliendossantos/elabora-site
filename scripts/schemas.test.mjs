@@ -5,7 +5,8 @@ import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'nod
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import test from 'node:test';
-import { readSnapshot, syncSchemas, validateSnapshot } from './schemas.mjs';
+import { createServer } from 'node:http';
+import { readSnapshot, syncSchemas, validateSnapshot, verifyDeployment } from './schemas.mjs';
 
 function changeSchema(snapshot, name, edit) {
   const schema = JSON.parse(snapshot.files.get(name));
@@ -84,4 +85,32 @@ test('sync uses committed bytes, preserves old versions and refuses to overwrite
   assert.throws(() => syncSchemas(core, next, '0.1', output), /version 0.1 is frozen/);
   assert(readFileSync(join(output, 'manifest.json')).equals(before));
   assert(readFileSync(join(output, '0.1/course.schema.json')).equals(original));
+});
+
+test('the live check waits for a file a fresh deployment does not serve yet, then gives up', async () => {
+  const snapshot = readSnapshot();
+  const files = new Map(snapshot.files);
+  files.set('manifest.json', Buffer.from(`${JSON.stringify(snapshot.manifest, null, 2)}\n`));
+  const late = [...files.keys()].find((name) => name.endsWith('.schema.json'));
+  let lateAnswers = 0;
+  let serveLate = 2; // how many times the late file answers 404 first (Infinity: never served)
+  const server = createServer((request, response) => {
+    const name = decodeURIComponent(new URL(request.url, 'http://x').pathname).replace(/^\/schemas\//, '');
+    const bytes = files.get(name);
+    if (!bytes || (name === late && lateAnswers++ < serveLate)) { response.writeHead(404); response.end(); return; }
+    const type = name.endsWith('.schema.json') ? 'application/schema+json' : name.endsWith('.json') ? 'application/json' : 'text/plain';
+    response.writeHead(200, { 'content-type': type, 'access-control-allow-origin': '*', etag: '"x"', 'cache-control': 'public, max-age=0, must-revalidate' });
+    response.end(bytes);
+  });
+  await new Promise((done) => server.listen(0, '127.0.0.1', done));
+  const origin = `http://127.0.0.1:${server.address().port}`;
+  try {
+    await verifyDeployment(origin, readSnapshot(), { patienceMs: 2000, retryMs: 50 });
+    assert.equal(lateAnswers, 3);
+    lateAnswers = 0;
+    serveLate = Infinity;
+    await assert.rejects(verifyDeployment(origin, readSnapshot(), { patienceMs: 300, retryMs: 50 }), /expected HTTP 200/);
+  } finally {
+    server.close();
+  }
 });

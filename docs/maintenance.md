@@ -56,7 +56,8 @@ to replace a published version with different bytes. Repeating the same import i
 
 Both `pnpm run check` and `pnpm run build` check file hashes, canonical `$id` URLs and the complete `$ref`
 graph, including JSON Pointer fragments. The build also checks its copied `dist/schemas/` output, and
-deployment automatically verifies the live files. `pnpm run schemas:verify http://localhost:8787`
+deployment automatically verifies the live files (a file Cloudflare does not serve yet is tried again every 10 seconds,
+for two minutes at most). `pnpm run schemas:verify http://localhost:8787`
 can check a local Wrangler preview; without an argument it checks production. It verifies every published file's
 bytes, HTTP status, MIME type, CORS and caching headers, and that a missing schema returns 404.
 

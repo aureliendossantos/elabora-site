@@ -128,26 +128,41 @@ export function syncSchemas(core, ref, version, directory = SNAPSHOT) {
   return { revision, unchanged: false };
 }
 
-export async function verifyDeployment(origin = 'https://elabora.studio', snapshot = readSnapshot()) {
+/**
+ * Checks the live schemas against the snapshot. Right after `wrangler deploy`, Cloudflare can still answer a new file
+ * with 404 (or an old one with its former bytes) for a minute: a file that fails is tried again every `retryMs`, until
+ * `patienceMs` after the start (two minutes by default), and only then is the failure reported.
+ */
+export async function verifyDeployment(origin = 'https://elabora.studio', snapshot = readSnapshot(), { patienceMs = 120_000, retryMs = 10_000 } = {}) {
   const result = validateSnapshot(snapshot);
   const publicFiles = new Map(snapshot.files);
   publicFiles.set('manifest.json', Buffer.from(json(snapshot.manifest)));
+  const deadline = Date.now() + patienceMs;
+  const checkFile = async (name, expected) => {
+    const url = new URL(`/schemas/${name}`, origin);
+    const response = await fetch(url, {
+      redirect: 'manual', signal: AbortSignal.timeout(15000), headers: { Origin: 'https://schema-editor.example' },
+    });
+    assert.equal(response.status, 200, `${url}: expected HTTP 200`);
+    const mime = name.endsWith('.schema.json') ? 'application/schema+json' : name.endsWith('.json') ? 'application/json' : 'text/plain';
+    assert.equal(response.headers.get('content-type')?.split(';')[0], mime, `${url}: wrong content type`);
+    assert.equal(response.headers.get('access-control-allow-origin'), '*', `${url}: missing public CORS header`);
+    assert(response.headers.has('etag'), `${url}: missing ETag`);
+    assert.match(response.headers.get('cache-control') ?? '', /must-revalidate/, `${url}: missing cache revalidation`);
+    assert(Buffer.from(await response.arrayBuffer()).equals(expected), `${url}: deployed bytes differ from the pinned snapshot`);
+  };
+  const patiently = async (name, expected) => {
+    for (;;) {
+      try { return await checkFile(name, expected); } catch (error) {
+        if (Date.now() + retryMs > deadline) throw error;
+        await new Promise((done) => setTimeout(done, retryMs));
+      }
+    }
+  };
   // Bounded batches keep the verifier quick without opening a connection for every schema at once.
   const entries = [...publicFiles];
   for (let start = 0; start < entries.length; start += 6) {
-    await Promise.all(entries.slice(start, start + 6).map(async ([name, expected]) => {
-      const url = new URL(`/schemas/${name}`, origin);
-      const response = await fetch(url, {
-        redirect: 'manual', signal: AbortSignal.timeout(15000), headers: { Origin: 'https://schema-editor.example' },
-      });
-      assert.equal(response.status, 200, `${url}: expected HTTP 200`);
-      const mime = name.endsWith('.schema.json') ? 'application/schema+json' : name.endsWith('.json') ? 'application/json' : 'text/plain';
-      assert.equal(response.headers.get('content-type')?.split(';')[0], mime, `${url}: wrong content type`);
-      assert.equal(response.headers.get('access-control-allow-origin'), '*', `${url}: missing public CORS header`);
-      assert(response.headers.has('etag'), `${url}: missing ETag`);
-      assert.match(response.headers.get('cache-control') ?? '', /must-revalidate/, `${url}: missing cache revalidation`);
-      assert(Buffer.from(await response.arrayBuffer()).equals(expected), `${url}: deployed bytes differ from the pinned snapshot`);
-    }));
+    await Promise.all(entries.slice(start, start + 6).map(([name, expected]) => patiently(name, expected)));
   }
   const missing = await fetch(new URL('/schemas/0.0/not-published.schema.json', origin), { redirect: 'manual', signal: AbortSignal.timeout(15000) });
   assert.equal(missing.status, 404, 'Missing schemas must return HTTP 404');
