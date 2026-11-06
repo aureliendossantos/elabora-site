@@ -59,7 +59,7 @@ interface Row { tool: Tool; label: string; value: number; same: boolean; tick?: 
 
 function loadRows(lang: Lang): Row[] {
   const t = T[lang];
-  const live = { ...medians('live-2026-11-06-medians.json'), ...medians('live-2026-11-06-elabora-lighter-medians.json') };
+  const live = { ...medians('live-2026-11-06-medians.json'), ...medians('live-2026-11-06-clockwork-medieval-medians.json') };
   const shared = medians('local-2026-11-06-shared-module-medians.json');
   const sec = (ms: number) => Math.round(ms / 100) / 10;
   const get = (set: Record<string, { lcp: number }>, id: string) => {

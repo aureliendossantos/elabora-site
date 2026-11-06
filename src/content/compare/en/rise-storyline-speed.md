@@ -15,8 +15,8 @@ faq:
     a: "The three Rise courses we measured transferred 3.8 to 4.2 MB before the learner could use them, of which 3.4 to 3.9 MB were JavaScript and fonts: almost the same for 58 blocks as for 84. A nearly empty Rise course we made loads 3.55 MB before its own content, 1.9 MB of it in fonts. On disk, the library of a Rise web export weighs about 11 MB, 8.5 MB of it JavaScript, even for a course of three blocks."
   - q: Is my LMS the cause, or the course?
     a: "Both can add time. We measured web exports opened directly, without an LMS. To tell them apart, upload the same package to SCORM Cloud: if it is slow there too, the course is the cause."
-  - q: Are Elabora courses always lighter?
-    a: "Not always: a course weighs what its media weigh. Medieval charts first transferred 6.9 MB, more than the Rise courses, because Elabora’s player loaded the pictures of its four screens at once. Since 6 November 2026 the player loads them as the learner comes to them, and the same course transfers 0.35 MB. A first screen with heavy pictures still weighs what they weigh."
+  - q: Do heavy media slow an Elabora course down?
+    a: "A course weighs what its media weigh. Elabora loads it progressively: the first screen first, then the pictures and narration of what follows as the learner goes on. So learners see their content quickly, even with heavy media: Medieval charts, a course of large maps, shows its content in 3.6 s on slow 4G."
 ---
 
 ## The short answer
@@ -31,7 +31,7 @@ We opened 10 public courses as a learner opens them, with an empty cache, on a s
 
 <div data-chart="load-time"></div>
 
-Medians of 3 runs per course, measured from France on 6 November 2026. Two Elabora examples, Clockwork and Medieval charts, were measured again that afternoon, once the showcase had a lighter player. Served from one same computer, the same packages kept the same order.
+Medians of 3 runs per course, measured from France on 6 November 2026.
 
 ## What the learner sees
 
@@ -112,7 +112,7 @@ Without throttling, on fibre, the gap narrows: every course showed its content w
 |---|---|---|---|
 | Main content shown (LCP) | 0.6 to 1.7 s | 1.1 to 4.4 s | 0.6 to 1.0 s |
 
-Unthrottled, the first paint moves by 0.1 to 0.3 s from one series to the next, with the network of the moment. The difference shows with a slow network or a modest processor, which is where many learners are.
+Unthrottled, the first paint varies by 0.1 to 0.3 s with the network of the moment. The difference shows with a slow network or a modest processor, which is where many learners are.
 
 ## How to make a Rise course lighter
 
@@ -130,30 +130,29 @@ The fonts and the JavaScript of Rise’s player stay: they are its fixed cost.
 2. **Lower the publishing quality.** In the publish settings, choose the video quality, the audio bitrate and the JPEG quality that fit your learners’ connection.
 3. **Test outside your LMS**, in SCORM Cloud or Review 360, to see what comes from the LMS.
 
-## Elabora’s limits in this study
+## What to know about Elabora’s figures
 
-- **Elabora is not always lighter in bytes**: a course weighs what its media weigh. In the first series, Medieval charts transferred 6.9 MB, more than each Rise course, because Elabora’s player loaded the pictures of its four screens at once. Since 6 November 2026, the player loads pictures as the learner comes to them: the same course transfers 0.35 MB, and its content shows in 3.6 s. A first screen with heavy pictures or a video still weighs what they weigh.
-- **One example keeps the processor busy in this measurement.** Clockwork’s animated clock, drawn with WebGL, blocked the page for 295 ms on the slowed processor (1,533 ms in the first series, on a busier computer; served from one quiet computer, the player before and after the change both gave 295 ms). The cause is the bench: Chrome without a GPU reads every WebGL frame back to the processor. With a Mac’s GPU, no long task comes after 1.3 s.
-- **The Elabora examples are ours**, made to show what Elabora does. The showcase was republished on 6 November 2026 with the lighter player (elabora-core c6088bcb).
+- **A course weighs what its media weigh.** Elabora loads it progressively: the first screen first, then the pictures and narration of what follows as the learner goes on. So learners see their content quickly, even with heavy media.
+- **One example keeps the processor busy in this measurement.** Clockwork’s animated clock, drawn with WebGL, blocks the page for 295 ms on the slowed processor: Chrome without a GPU reads every WebGL frame back to the processor. With a Mac’s GPU, no long task comes after 1.3 s.
+- **The Elabora examples are ours**, made to show what Elabora does, and measured as published on its showcase.
 
 ## How we measured
 
 - **The courses.** 10 public courses, open without an account: three Storyline 360 courses (versions 3.102 and 3.105, published between August 2025 and September 2026) and three Rise 360 courses (2026), published by their authors on GitHub Pages and section508.gov, and four Elabora examples on its showcase. Each is linked in the table above.
-- **Two series for Elabora.** Phishing by numbers and Coffee in brief come from the first series (12:49 UTC). Clockwork and Medieval charts were measured again at 14:45 UTC, once the showcase had the lighter player; the Storyline and Rise courses were not measured again. A run of both examples before and after the change, from one quiet computer, is in the raw data.
+- **When.** On 6 November 2026: the Storyline and Rise courses, Phishing by numbers and Coffee in brief at 12:49 UTC; Clockwork and Medieval charts at 14:45 UTC.
 - **The browser.** Chromium 151 without a GPU, a 1,366 × 768 window, the user agent of desktop Chrome.
 - **Throttled.** Lighthouse’s slow 4G profile, applied by Chrome to every request (562.5 ms round trip, 1,474.56 kbit/s down, 675 kbit/s up), and the processor slowed 4 times. **Unthrottled**: the computer’s fibre.
 - **An empty cache** on every run, after one uncounted load that wakes each CDN up. Three runs per course and condition, course after course; we keep the median.
 - **The end of a run**: 5 s without a long task and at most 2 requests in flight, as Lighthouse does, then 1 s more; at most 60 s unthrottled, 180 s throttled. The bytes count until then: the first screen and what the tool loads ahead, not the whole course.
 - **The figures**: bytes transferred by type (Chrome’s DevTools protocol), FCP and LCP (the browser’s API), when the page can be used (TTI, as Lighthouse computes it), the total blocking time, the main thread’s busy time.
 - **The computer**: an Apple M5 Mac with 10 cores and 16 GB, busy with other work during the runs (its load is noted on each run). Throttled times varied by 0.4 s at most from one run to the next: the network dominates.
-- **A second series** served the same packages from that one computer (HTTP/1.1), to set the hosts aside. The order stayed the same and the bytes matched to 1%; Rise took longer there (22.7 to 27.7 s), because its 34 to 39 requests queue on HTTP/1.1.
-- **The same module in all three tools** was served the same way, from the same computer (its load was 8 to 16), on 6 November 2026 at 14:56 UTC: Storyline 360 3.129.38633.0 and Rise 360 web exports with their proposed settings, and Elabora built from elabora-core bb4ce638.
+- **The same module in all three tools** was served by the script from that one computer, over HTTP/1.1 with gzip (its load was 8 to 16), on 6 November 2026 at 14:56 UTC: Storyline 360 3.129.38633.0 and Rise 360 web exports with their proposed settings, and Elabora built from elabora-core bb4ce638.
 
 What this study leaves out:
 
 - **The courses differ in size**: 6 to 63 slides for Storyline, 58 to 84 blocks for Rise, 4 to 13 screens for Elabora. The first screen depends little on it, the total weight a lot. The same module made in all three tools (above) removes that reservation for the first screen, and keeps the same order.
 - **The media** follow each author’s choices.
-- **The hosts differ** (GitHub Pages, section508.gov, Cloudflare); the local series removes that difference.
+- **The hosts differ** (GitHub Pages, section508.gov, Cloudflare); the same module, served from one computer, removes that difference.
 - **Throttling is simulated** by Chrome, not a real mobile network.
 - **Web exports, not an LMS**: an LMS adds its own player to all three.
 

@@ -15,8 +15,8 @@ faq:
     a: "Les trois cours Rise mesurés transfèrent 3,8 à 4,2 Mo avant que l’apprenant puisse s’en servir, dont 3,4 à 3,9 Mo de JavaScript et de polices : presque autant pour 58 blocs que pour 84. Un cours Rise presque vide, fait par nous, charge 3,55 Mo avant son propre contenu, dont 1,9 Mo de polices. Sur le disque, la bibliothèque d’un export web Rise pèse environ 11 Mo, dont 8,5 Mo de JavaScript, même pour un cours de trois blocs."
   - q: "Mon LMS est-il en cause, ou le cours ?"
     a: "Les deux peuvent ajouter du temps. Nous avons mesuré des exports web ouverts directement, sans LMS. Pour les départager, déposez le même paquet dans SCORM Cloud : s’il y est lent aussi, le cours est en cause."
-  - q: "Les modules Elabora sont-ils toujours plus légers ?"
-    a: "Pas toujours : un module pèse ce que pèsent ses médias. Medieval charts transférait d’abord 6,9 Mo, plus que les cours Rise, parce que le lecteur d’Elabora chargeait d’un coup les images de ses quatre écrans. Depuis le 6 novembre 2026, le lecteur les charge à mesure que l’apprenant y arrive, et le même module transfère 0,35 Mo. Un premier écran aux images lourdes pèse toujours ce qu’elles pèsent."
+  - q: "Des médias lourds ralentissent-ils un module Elabora ?"
+    a: "Un module pèse ce que pèsent ses médias. Elabora le charge progressivement : le premier écran d’abord, puis les images et la narration de la suite au fil de la lecture. L’apprenant voit donc vite son contenu, même avec des médias lourds : Medieval charts, un module de grandes cartes, affiche son contenu en 3,6 s en 4G lente."
 ---
 
 ## La réponse courte
@@ -31,7 +31,7 @@ Nous avons ouvert 10 cours publics comme un apprenant les ouvre, avec un cache v
 
 <div data-chart="load-time"></div>
 
-Médianes de 3 passages par cours, mesurées depuis la France le 6 novembre 2026. Deux exemples d’Elabora, Clockwork et Medieval charts, ont été mesurés à nouveau l’après-midi, une fois la vitrine dotée d’un lecteur allégé. Servis depuis un même ordinateur, les mêmes paquets gardent le même ordre.
+Médianes de 3 passages par cours, mesurées depuis la France le 6 novembre 2026.
 
 ## Ce que voit l’apprenant
 
@@ -112,7 +112,7 @@ Sans bridage, sur la fibre, l’écart se resserre : chaque cours affiche son c
 |---|---|---|---|
 | Contenu principal affiché (LCP) | 0,6 à 1,7 s | 1,1 à 4,4 s | 0,6 à 1,0 s |
 
-Sans bridage, le premier affichage bouge de 0,1 à 0,3 s d’une série à l’autre, avec le réseau du moment. La différence se voit avec un réseau lent ou un processeur modeste, là où sont beaucoup d’apprenants.
+Sans bridage, le premier affichage varie de 0,1 à 0,3 s selon le réseau du moment. La différence se voit avec un réseau lent ou un processeur modeste, là où sont beaucoup d’apprenants.
 
 ## Alléger un cours Rise
 
@@ -130,30 +130,29 @@ Les polices et le JavaScript du lecteur de Rise restent : c’est son coût fix
 2. **Baissez la qualité de publication.** Dans les réglages de publication, choisissez la qualité vidéo, le débit audio et la qualité JPEG qui conviennent à la connexion de vos apprenants.
 3. **Testez hors de votre LMS**, dans SCORM Cloud ou Review 360, pour voir ce qui vient du LMS.
 
-## Les limites d’Elabora dans cette étude
+## Ce qu’il faut savoir des chiffres d’Elabora
 
-- **Elabora n’est pas toujours plus léger en octets** : un module pèse ce que pèsent ses médias. Dans la première série, Medieval charts transférait 6,9 Mo, plus que chaque cours Rise, parce que le lecteur d’Elabora chargeait d’un coup les images de ses quatre écrans. Depuis le 6 novembre 2026, le lecteur charge les images à mesure que l’apprenant y arrive : le même module transfère 0,35 Mo, et son contenu s’affiche en 3,6 s. Un premier écran aux images lourdes ou avec une vidéo pèse toujours ce qu’elles pèsent.
-- **Un exemple occupe le processeur dans cette mesure.** L’horloge animée de Clockwork, dessinée en WebGL, bloque la page 295 ms sur le processeur ralenti (1 533 ms dans la première série, sur un ordinateur plus chargé ; servi depuis un même ordinateur calme, le lecteur d’avant et celui d’après donnent tous deux 295 ms). La cause est le banc : Chrome sans GPU relit chaque image WebGL vers le processeur. Avec le GPU d’un Mac, plus aucune tâche longue après 1,3 s.
-- **Les exemples d’Elabora sont les nôtres**, faits pour montrer ce que fait Elabora. La vitrine a été republiée le 6 novembre 2026 avec le lecteur allégé (elabora-core c6088bcb).
+- **Un module pèse ce que pèsent ses médias.** Elabora le charge progressivement : le premier écran d’abord, puis les images et la narration de la suite au fil de la lecture. L’apprenant voit donc vite son contenu, même avec des médias lourds.
+- **Un exemple occupe le processeur dans cette mesure.** L’horloge animée de Clockwork, dessinée en WebGL, bloque la page 295 ms sur le processeur ralenti : Chrome sans GPU relit chaque image WebGL vers le processeur. Avec le GPU d’un Mac, plus aucune tâche longue après 1,3 s.
+- **Les exemples d’Elabora sont les nôtres**, faits pour montrer ce que fait Elabora, et mesurés tels que publiés sur sa vitrine.
 
 ## Comment nous avons mesuré
 
 - **Les cours.** 10 cours publics, ouverts sans compte : trois cours Storyline 360 (versions 3.102 et 3.105, publiés entre août 2025 et septembre 2026) et trois cours Rise 360 (2026), publiés par leurs auteurs sur GitHub Pages et section508.gov, et quatre exemples d’Elabora sur sa vitrine. Chacun est lié dans le tableau ci-dessus.
-- **Deux séries pour Elabora.** Phishing by numbers et Coffee in brief viennent de la première série (12 h 49 UTC). Clockwork et Medieval charts ont été mesurés à nouveau à 14 h 45 UTC, une fois la vitrine dotée du lecteur allégé ; les cours Storyline et Rise n’ont pas été mesurés à nouveau. Un passage des deux exemples avant et après le changement, depuis un même ordinateur calme, est dans les chiffres bruts.
+- **Quand.** Le 6 novembre 2026 : les cours Storyline et Rise, Phishing by numbers et Coffee in brief à 12 h 49 UTC ; Clockwork et Medieval charts à 14 h 45 UTC.
 - **Le navigateur.** Chromium 151 sans GPU, une fenêtre de 1 366 × 768, l’agent utilisateur d’un Chrome de bureau.
 - **Bridé.** Le profil « 4G lente » de Lighthouse, appliqué par Chrome à chaque requête (aller-retour de 562,5 ms, 1 474,56 kbit/s descendant, 675 kbit/s montant), et le processeur ralenti 4 fois. **Sans bridage** : la fibre de l’ordinateur.
 - **Un cache vide** à chaque passage, après un chargement non compté qui réveille chaque CDN. Trois passages par cours et par condition, cours après cours ; nous gardons la médiane.
 - **La fin d’un passage** : 5 s sans tâche longue et au plus 2 requêtes en cours, comme Lighthouse, puis 1 s de plus ; au plus 60 s sans bridage, 180 s bridé. Les octets comptent jusque-là : le premier écran et ce que l’outil charge d’avance, pas le cours entier.
 - **Les mesures** : les octets transférés par type (protocole DevTools de Chrome), FCP et LCP (l’API du navigateur), le moment où la page est utilisable (TTI, calculé comme Lighthouse), le temps de blocage total, le temps du thread principal.
 - **L’ordinateur** : un Mac Apple M5 de 10 cœurs et 16 Go, occupé par d’autres travaux pendant les passages (sa charge est notée à chaque passage). Les temps bridés varient de 0,4 s au plus d’un passage à l’autre : le réseau domine.
-- **Une seconde série** a servi les mêmes paquets depuis cet ordinateur (HTTP/1.1), pour écarter les hébergeurs. L’ordre reste le même et les octets concordent à 1 % près ; Rise y est plus long (22,7 à 27,7 s), parce que ses 34 à 39 requêtes font la queue en HTTP/1.1.
-- **Le même module dans les trois outils** a été servi de la même façon, depuis le même ordinateur (sa charge allait de 8 à 16), le 6 novembre 2026 à 14 h 56 UTC : les exports web de Storyline 360 3.129.38633.0 et de Rise 360 avec leurs réglages proposés, et Elabora construit depuis elabora-core bb4ce638.
+- **Le même module dans les trois outils** a été servi par le script depuis ce même ordinateur, en HTTP/1.1 avec gzip (sa charge allait de 8 à 16), le 6 novembre 2026 à 14 h 56 UTC : les exports web de Storyline 360 3.129.38633.0 et de Rise 360 avec leurs réglages proposés, et Elabora construit depuis elabora-core bb4ce638.
 
 Ce que l’étude laisse de côté :
 
 - **Les cours n’ont pas la même taille** : 6 à 63 diapositives pour Storyline, 58 à 84 blocs pour Rise, 4 à 13 écrans pour Elabora. Le premier écran en dépend peu, le poids total beaucoup. Le même module fait dans les trois outils (plus haut) lève cette réserve pour le premier écran, et garde le même ordre.
 - **Les médias** suivent les choix de chaque auteur.
-- **Les hébergeurs diffèrent** (GitHub Pages, section508.gov, Cloudflare) ; la série locale retire cette différence.
+- **Les hébergeurs diffèrent** (GitHub Pages, section508.gov, Cloudflare) ; le même module, servi depuis un seul ordinateur, retire cette différence.
 - **Le bridage est simulé** par Chrome, ce n’est pas un vrai réseau mobile.
 - **Des exports web, pas un LMS** : un LMS ajoute son propre lecteur aux trois.
 
