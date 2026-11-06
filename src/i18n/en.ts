@@ -153,6 +153,7 @@ export const en: Dict = {
     legal: 'Legal information',
     language: 'Language',
     copyright: '© 2026 Elabora',
+    licence: { texts: 'Texts under', code: 'code under', source: 'source on GitHub', deed: 'https://creativecommons.org/licenses/by/4.0/' },
   },
   legal: {
     updated: 'Last updated:',

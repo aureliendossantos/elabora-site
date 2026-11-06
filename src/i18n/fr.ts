@@ -154,6 +154,8 @@ export const fr = {
     legal: 'Informations légales',
     language: 'Langue',
     copyright: '© 2026 Elabora',
+    /** The line under the footer: the site's texts, its code, its repository (README, « Licences »). */
+    licence: { texts: 'Textes sous', code: 'code sous', source: 'source sur GitHub', deed: 'https://creativecommons.org/licenses/by/4.0/deed.fr' },
   },
   legal: {
     updated: 'Dernière mise à jour :',

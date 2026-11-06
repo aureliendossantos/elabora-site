@@ -1,8 +1,8 @@
 ---
 // The footer of every page: what Elabora is in a line, then the product, the resources, the company and the law,
-// and the language (the same page in the other language).
+// and the language (the same page in the other language). Its last line gives the licences and the site's source.
 import Logo from '../brand/Logo.astro';
-import { CONTACT_EMAIL, CORE_REPO_URL } from '../../site.config';
+import { CONTACT_EMAIL, CORE_REPO_URL, SITE_REPO_URL } from '../../site.config';
 import { LEGAL_KEYS, LOCALES, docsPath, homePath, legalPath, useT, type Lang } from '../../i18n';
 import { changelogPath } from '../../lib/releases';
 
@@ -43,7 +43,7 @@ const home = homePath(lang);
     </nav>
   </div>
   <div class="site-footer-end">
-    <p>{t.footer.copyright}</p>
+    <p>{t.footer.copyright} · {t.footer.licence.texts} <a href={t.footer.licence.deed} rel="license">CC BY 4.0</a>, {t.footer.licence.code} <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a>, <a href={SITE_REPO_URL}>{t.footer.licence.source}</a></p>
     <nav aria-label={t.footer.language}>
       <ul class="lang-switch">
         {LOCALES.map((l) => (
