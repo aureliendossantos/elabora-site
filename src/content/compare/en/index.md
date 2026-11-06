@@ -40,3 +40,4 @@ Each page gives the fix in Storyline first, then what Elabora does differently.
 - [Storyline audio out of sync: causes and fixes](/en/compare/storyline-audio-out-of-sync/)
 - [Scrubbing the Storyline timeline: layers, triggers and what you see](/en/compare/storyline-timeline-scrubbing-layers-triggers/)
 - [Storyline slow to open or save a project: what helps](/en/compare/storyline-slow-to-open/)
+- [Storyline 360 blurry on a high-DPI screen or at 150%: the fix](/en/compare/storyline-blurry-high-dpi/)
