@@ -1,6 +1,6 @@
 {
   "source": "elabora-core",
-  "revision": "013396b920b42c224dcca6fc43dfc6aae27c00e7",
+  "revision": "099b7ff7b7caf6e2a71df827bc5acd4e92b88776",
   "files": {
     "CHANGELOG.md": "23c1bed388e2219035579048592758fa0798d99196674f4c99665106409ab638",
     "CONTRIBUTING.md": "dec8cf4ac7e82400785ed58db3855df0a23e4cfdb53118ea8d8154d423ffe900",
@@ -13,7 +13,7 @@
     "docs/architecture/media.md": "dcafd9960a144ee6075c94d4495a0768d7b84a1a851120bdb825de9f00292fee",
     "docs/architecture/operations.md": "1851076a206b4f689ddfbd0ecb041d01ac8d83e5dd9107d0ed58f7790716dfb8",
     "docs/architecture/plan.md": "fe4813df5f5da21511161b96899f03d4e8db2349a12fd53d6d825ecc8f87267b",
-    "docs/architecture/rendering.md": "f319038a5c045f4d492cad5438f537fb99c89cab59f08a37a2ead6ebf5b1a809",
+    "docs/architecture/rendering.md": "234e260a6de9433240a0b0d9aca23faf39e5a46d7ea61740f9b4363c42c7f6db",
     "docs/architecture/storage.md": "5b4b0a173a4e0e87e753557642c1f11157732558178204d76de9a60c0ff10fe3",
     "docs/blocks.md": "77b644b9ebe079dd53e89cbf924c616bced37153f9cf6479a802d81e36b20959",
     "docs/charts.md": "0135acf7d495bb90617fc451db13149cc71e93094776557a92c3d9232c1a13fd",
@@ -91,7 +91,7 @@
     "docs/decisions/D69.md": "35c6aa079a59f1bcc2f1f92a755e6406c02f8c07662d30359ad610792b37eb14",
     "docs/decisions/D70.md": "4e0f295bfedf3d0503ab2c8bae97e656adcbc5229d615c5921cc49d2f38e5ff5",
     "docs/decisions/D71.md": "9cc1271e06e187f278ce010f66c57783f098c1ae4a5fc862fe0c0411960d012e",
-    "docs/decisions/D72.md": "e453d3f658383eb1475d73f75d9d70f4f92f3ef4705497f0381b4c330e727211",
+    "docs/decisions/D72.md": "bf6ed3610572a179d4bf23967fdd0c5e6a0c8ccbdb8ce9910fc978456050581f",
     "docs/delivery-cmi5.md": "40f865cdedfbec89f26d8f6bc9b7cdab3881b49cd4e103b4bafc4784eecb889c",
     "docs/delivery-scorm12.md": "04962dfca7f1e631d9bf6d3e4cf993ff109c6c199c1d4d0a1c0ae12582f960c8",
     "docs/delivery-scorm2004.md": "a857742adbce01eb04d773aa70c642210cc4216083f63c3fdb4da5e23d307f06",
