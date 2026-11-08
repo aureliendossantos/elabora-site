@@ -19,7 +19,7 @@ const lang = page.id.split('/')[0] as Lang;
 const t = useT(lang);
 const d = page.data;
 const key = pageKey(page);
-const paths = await comparePaths(key);
+const { paths, languages } = await comparePaths(key);
 const { Content } = await render(page);
 const all = await comparePages(lang);
 
@@ -73,7 +73,7 @@ const graph = [
 const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
 const toolsInPage = d.tool ? [d.tool] : (d.tools ?? d.table?.tools ?? []).filter((id) => id !== 'elabora');
 ---
-<Base lang={lang} title={d.seo ?? `${d.title} · Elabora`} description={d.description} paths={paths} path={paths[lang]} mainClass="compare-main">
+<Base lang={lang} title={d.seo ?? `${d.title} · Elabora`} description={d.description} paths={paths} path={paths[lang]} alternates={languages} noindex={d.draft ?? false} mainClass="compare-main">
   <script is:inline type="application/ld+json" set:html={jsonLd} />
   <article class="compare">
     <nav class="crumbs" aria-label={t.docs.breadcrumb}>

@@ -189,6 +189,10 @@ header, the footer: `pnpm run links` fails otherwise). They are signed by Aurél
   proof; a supervisor checks it, the founder reads the prose and merges. Nothing goes live on its own.
 - **A new tool**: its facts file, its two pages (one text per page, with what it does better), then `pnpm test`,
   `pnpm run check`, `pnpm run build`, `pnpm run links`.
+- **A draft**: `draft: true` in the front matter. The page is built at its address for the founder to read, marked
+  noindex, and left out of the other pages’ lists, the sitemap and `/llms.txt`; it may exist in one language only (the
+  other language leads to its comparisons). To publish it: its other language, `draft` removed, a line in the overview’s
+  « Studies and fixes ».
 
 ## Search Console
 

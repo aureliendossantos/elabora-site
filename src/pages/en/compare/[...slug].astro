@@ -5,7 +5,7 @@ import ComparePage from '../../../components/compare/ComparePage.astro';
 import { comparePages } from '../../../lib/comparisons';
 
 export const getStaticPaths = (async () =>
-  (await comparePages('en')).map((page) => ({ params: { slug: page.data.slug || undefined }, props: { page } }))) satisfies GetStaticPaths;
+  (await comparePages('en', { drafts: true })).map((page) => ({ params: { slug: page.data.slug || undefined }, props: { page } }))) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
 ---

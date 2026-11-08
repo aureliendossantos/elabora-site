@@ -53,20 +53,27 @@ export type ComparePage = CollectionEntry<'compare'>;
 /** The page's key, the same in both languages: its file name (`storyline` for en/storyline.md and fr/storyline.md). */
 export const pageKey = (page: ComparePage) => page.id.split('/')[1]!;
 
-export async function comparePages(lang: Lang): Promise<ComparePage[]> {
-  const pages = (await getCollection('compare')).filter((p) => p.id.startsWith(`${lang}/`));
+/** The pages of a language, in their order; drafts only for the routes that build them. */
+export async function comparePages(lang: Lang, { drafts = false } = {}): Promise<ComparePage[]> {
+  const pages = (await getCollection('compare')).filter((p) => p.id.startsWith(`${lang}/`) && (drafts || !p.data.draft));
   return pages.sort((a, b) => a.data.order - b.data.order);
 }
 
-/** The same page in each language, for hreflang and the language selector. */
-export async function comparePaths(key: string): Promise<Record<Lang, string>> {
+/**
+ * The same page in each language, for hreflang and the language selector, and the languages it exists in. A draft may
+ * be written in one language first: the other language leads to its comparisons.
+ */
+export async function comparePaths(key: string): Promise<{ paths: Record<Lang, string>; languages: Lang[] }> {
   const all = await getCollection('compare');
-  const slug = (lang: Lang) => {
-    const page = all.find((p) => p.id === `${lang}/${key}`);
-    if (!page) throw new Error(`src/content/compare/${lang}/${key}.md is missing: every comparison exists in both languages`);
-    return page.data.slug;
+  const pages = { en: all.find((p) => p.id === `en/${key}`), fr: all.find((p) => p.id === `fr/${key}`) };
+  const draft = Object.values(pages).some((page) => page?.data.draft);
+  const path = (lang: Lang) => {
+    const page = pages[lang];
+    if (page) return comparePath(lang, page.data.slug);
+    if (draft) return comparePath(lang);
+    throw new Error(`src/content/compare/${lang}/${key}.md is missing: every comparison exists in both languages`);
   };
-  return { en: comparePath('en', slug('en')), fr: comparePath('fr', slug('fr')) };
+  return { paths: { en: path('en'), fr: path('fr') }, languages: (['en', 'fr'] as const).filter((lang) => pages[lang]) };
 }
 
 /** A day as the page's language writes it. */

@@ -69,6 +69,9 @@ const compare = defineCollection({
     faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
     /** Its place in the lists of comparisons. */
     order: z.number(),
+    /** A draft for the founder to read: built at its address, noindex, out of the lists, the sitemap and llms.txt;
+     *  it may exist in one language only. */
+    draft: z.boolean().optional(),
   }),
 });
 

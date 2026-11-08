@@ -30,6 +30,21 @@ function idsOf(file) {
 // Legacy unprefixed addresses are answered by the Worker, not by files.
 const workerPaths = new Set(['/', '/mentions-legales/', '/legal-notice/', '/confidentialite/', '/privacy/', '/conditions/', '/terms/', '/signalement/', '/reporting/']);
 
+// Draft comparisons (draft: true in their front matter): built for the founder to read, noindex, and possibly in one
+// language only. Their address → the languages they exist in.
+const compareBase = { en: 'compare', fr: 'comparatif' };
+const drafts = new Map();
+for (const lang of ['en', 'fr']) {
+  const folder = join(dist, '..', 'src', 'content', 'compare', lang);
+  for (const name of readdirSync(folder).filter((f) => f.endsWith('.md'))) {
+    const head = readFileSync(join(folder, name), 'utf8').split(/^---$/m)[1] ?? '';
+    if (!/^draft: true$/m.test(head)) continue;
+    const slug = /^slug: "?([a-z0-9-]*)"?$/m.exec(head)?.[1];
+    const other = lang === 'en' ? 'fr' : 'en';
+    drafts.set(`/${lang}/${compareBase[lang]}/${slug ? `${slug}/` : ''}`, existsSync(join(dist, '..', 'src', 'content', 'compare', other, name)) ? ['fr', 'en'] : [lang]);
+  }
+}
+
 const errors = [];
 let count = 0;
 for (const file of htmlFiles) {
@@ -51,10 +66,11 @@ for (const file of htmlFiles) {
   // Every page: lang, hreflang trio, canonical; not the home's demos (/demo/*: framed by the home, never indexed).
   if (file.endsWith('404.html') || page.startsWith('/demo/')) continue;
   if (!/<html lang="(fr|en)"/.test(html)) errors.push(`${page}: no html lang`);
-  // The developer docs exist in English only: their alternates are en and x-default.
-  const languages = page.startsWith('/en/docs/developers/') ? ['en', 'x-default'] : ['fr', 'en', 'x-default'];
+  // The developer docs exist in English only: their alternates are en and x-default. A draft, in its languages.
+  const languages = page.startsWith('/en/docs/developers/') ? ['en', 'x-default'] : drafts.has(page) ? [...drafts.get(page), 'x-default'] : ['fr', 'en', 'x-default'];
   for (const h of languages) if (!html.includes(`hreflang="${h}"`)) errors.push(`${page}: no hreflang ${h}`);
-  if (languages.length === 2 && html.includes('rel="alternate" hreflang="fr"')) errors.push(`${page}: a French alternate for an English-only page`);
+  for (const h of ['fr', 'en']) if (!languages.includes(h) && html.includes(`rel="alternate" hreflang="${h}"`)) errors.push(`${page}: a ${h} alternate for a page that does not exist in ${h}`);
+  if (drafts.has(page) && !/<meta name="robots" content="noindex"/.test(html)) errors.push(`${page}: a draft without noindex`);
   if (!html.includes('rel="canonical"')) errors.push(`${page}: no canonical`);
 }
 // The comparison pages are found through search and agents (the sitemap, llms.txt, their links to each other), never
