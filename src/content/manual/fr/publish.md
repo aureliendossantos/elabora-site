@@ -52,7 +52,7 @@ Avec deux langues ou plus, choisissez comment elles partent :
 
 Elabora allège seul tout ce qu’il peut, à toutes les qualités, Standard comprise. Une photo enregistrée en PNG, une vidéo exportée à un débit trop élevé pour sa taille ou un média hors des formats du web (une photo HEIC, une vidéo ProRes) partent dans le paquet en copie optimisée, faite une fois ; vos fichiers ne changent pas. Une capture d’écran ou un schéma en PNG part tel quel : il est déjà léger, et une compression de photo brouillerait son texte.
 
-Le poids passe à l’orange quand un média semble plus lourd que nécessaire pour ce qu’il est et qu’Elabora ne peut pas l’alléger seul. Exemple : une image animée, qui pèserait plusieurs fois moins en vidéo. Elle vient en tête de la liste, avec la raison. Une fois la liste ouverte, le poids redevient gris ; il ne repasse à l’orange que pour un nouveau cas. Une longue vidéo n’est jamais signalée : vingt minutes de vidéo pèsent naturellement des centaines de mégaoctets.
+Le poids passe à l’orange quand un média semble plus lourd que nécessaire pour ce qu’il est et qu’Elabora ne peut pas l’alléger seul, par exemple une image animée, qui pèserait plusieurs fois moins en vidéo. Elle vient en tête de la liste, avec la raison. Une fois la liste ouverte, le poids redevient gris ; il ne repasse à l’orange que pour un nouveau cas. Une longue vidéo n’est jamais signalée : vingt minutes de vidéo pèsent naturellement des centaines de mégaoctets.
 
 ## Ce que reçoit le LMS
 

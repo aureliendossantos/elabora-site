@@ -23,7 +23,7 @@ Cliquez sur un mot souligné de pointillés pour ouvrir un menu : un autre bloc,
 ## Écrire un événement
 
 1. **Ajouter un événement** demande ce qui le déclenche : **À l’ouverture de l’écran**, **Quand on clique sur…**, **Quand on valide une question…**, **Quand on fait un choix…**, **Quand un objet signale…**, **Quand on ferme un calque…**, **Quand une variable change…** (et, sur un écran narré, les moments de la voix).
-2. L’événement s’écrit aussitôt, sans action. Son **+** demande ce qu’il fait : **Aller à un écran**, **Afficher un calque**, **Fermer un calque**, **Afficher un bloc**, **Masquer un bloc**, **Afficher une étape**, **Donner une valeur à une variable**, **Ajouter à une variable**, **Régler un objet**, **Marquer l’écran comme terminé**, **Quitter le module**…
+2. L’événement s’écrit aussitôt, sans action. Son **+** demande ce qu’il fait : **Aller à un écran**, **Afficher un calque**, **Fermer un calque**, **Afficher un bloc**, **Masquer un bloc**, **Afficher une étape**, **Donner une valeur à une variable**, **Ajouter à une variable**, **Régler un objet**, **Marquer l’écran comme complété**, **Quitter le module**…
 3. Le menu **…** de l’événement sélectionné (ou un clic droit à côté de ses mots) ajoute une condition (**Ajouter une condition supplémentaire…**), une alternative (**Ajouter « sinon »…**) ou une note pour les relecteurs (**Ajouter une note…**), et propose **Supprimer l’événement**.
 
 Un événement laissé sans action le dit sur sa ligne. Raccourcis sur l’événement sélectionné : / ajoute une action, ⌘D le duplique, ⌫ le supprime.
@@ -34,7 +34,7 @@ Un calque s’affiche par-dessus l’écran : un retour, un indice, une fenêtre
 
 - Les onglets au-dessus du canevas montrent **Base** et les calques de l’écran ; **+** en ajoute un, avec un premier texte prêt à être tapé.
 - Un double clic sur un onglet le renomme. Le clic droit choisit **Fenêtre** (au-dessus de l’écran assombri ; l’apprenant la ferme pour continuer) ou **Panneau** (sur une partie de l’écran, qui reste utilisable), propose un événement qui l’affiche, ou le supprime avec ses blocs (⌘Z le ramène).
-- Avec un calque affiché et rien de sélectionné, les **Propriétés** sont celles du calque : son nom, **S’affiche en**, **Ouvert par** (les événements qui l’affichent ; sinon, Elabora prévient que l’apprenant ne le verra jamais) et **Ajouter un événement qui l’affiche**.
+- Avec un calque affiché et rien de sélectionné, les **Propriétés** montrent les réglages du calque : son nom, **S’affiche en**, **Ouvert par** (les événements qui l’affichent ; sinon, Elabora prévient que l’apprenant ne le verra jamais) et **Ajouter un événement qui l’affiche**.
 - Un bloc passe dans un calque, ou revient à la base, depuis son menu. Les blocs ajoutés pendant qu’un calque est affiché vont dans ce calque.
 - Un calque peut parler : sa voix explique, ses blocs arrivent au mot qui les nomme, et il peut se fermer quand sa voix a fini. Voir [un calque qui parle](/fr/docs/voix-et-narration/#un-calque-qui-parle).
 

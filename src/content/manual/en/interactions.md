@@ -34,7 +34,7 @@ A layer shows over the screen: feedback, a hint, a window of details.
 
 - The tabs above the canvas show **Base** and the screen’s layers; **+** adds one, with a first text ready to type over.
 - Double-click a tab to rename it. Right-click to choose **Modal** (over the dimmed screen; learners close it to continue) or **Panel** (over part of the screen, which stays usable), to add an event that shows it, or to delete it with its blocks (⌘Z brings it back).
-- With a layer shown and nothing selected, **Properties** shows the layer’s own: its name, **Display as**, **Opened by** (the events that show it; if none, Elabora warns that learners will never see it) and **Add an event to show it**.
+- With a layer shown and nothing selected, **Properties** shows the layer’s settings: its name, **Display as**, **Opened by** (the events that show it; if none, Elabora warns that learners will never see it) and **Add an event to show it**.
 - A block moves into a layer, or back to the base, from its menu. Blocks added while a layer is shown go into that layer.
 - A layer can speak: its voice explains, its blocks come in on the word that names them, and it can close once its voice has finished. See [a layer that speaks](/en/docs/voices-and-narration/#a-layer-that-speaks).
 

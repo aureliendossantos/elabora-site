@@ -52,7 +52,7 @@ On the right of the quality, Elabora gives the course’s weight at that quality
 
 Elabora lightens on its own whatever it can, at every quality, Standard included. A photo saved as PNG, a video exported at too high a bitrate for its size, or a media file outside the web’s formats (a HEIC photo, a ProRes video) goes into the package as an optimized copy, made once; your files do not change. A screenshot or a diagram in PNG goes as it is: it is already light, and photo compression would blur its text.
 
-The weight turns orange when a media file seems heavier than it needs to be for what it is and Elabora cannot lighten it on its own. An example is an animated image, which would weigh several times less as a video. It comes first in the list, with the reason. Once you open the list, the weight turns grey again, and turns orange again only for a new case. A long video is never flagged: twenty minutes of video naturally weigh hundreds of megabytes.
+The weight turns orange when a media file seems heavier than it needs to be for what it is and Elabora cannot lighten it on its own, such as an animated image, which would weigh several times less as a video. It comes first in the list, with the reason. Once you open the list, the weight turns grey again, and turns orange again only for a new case. A long video is never flagged: twenty minutes of video naturally weigh hundreds of megabytes.
 
 ## What the LMS receives
 
