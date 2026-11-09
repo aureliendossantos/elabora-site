@@ -7,7 +7,7 @@ kind: versus
 tool: storyline
 summary: Storyline is the reference for interactions and simulations built by hand, on Windows. Elabora builds the course with your AI from a plan you approve, on Mac or Windows, for free. Pick Storyline to build every interaction yourself or to record software simulations; pick Elabora for a course designed to measure from your brief, built and checked by your AI, in the format your LMS expects and in files you keep.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 1
 chooseOther:
   - You record software simulations from the screen.
@@ -25,7 +25,7 @@ faq:
   - q: Does Storyline 360 run on a Mac?
     a: Only inside Windows. Articulate’s requirements list Windows 11, and on a Mac a virtual machine such as Parallels Desktop, which is paid, with a Windows licence. Elabora has its own Mac app.
   - q: Can I use both?
-    a: Yes. Both deliver SCORM packages to the same LMS. An AI that runs commands, such as Claude Code or Codex, can also test a Storyline package in Elabora’s LMS emulator.
+    a: Yes. Both deliver SCORM packages to the same LMS, and your AI can test a Storyline package in Elabora’s LMS emulator.
   - q: What happens to my courses if I stop paying?
     a: With Storyline 360, Articulate says the app stops working when the subscription ends, so .story files can no longer be opened; published courses keep working. Elabora is free on your computer, and your courses are folders of files you keep.
 ---
@@ -43,6 +43,8 @@ Elabora starts from what your learners need to be able to do. You describe your 
 - **A large ecosystem.** Content Library 360 with millions of photos, illustrations, icons and videos, years of tutorials and a large community.
 
 ## Where Elabora differs
+
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
 
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices. The Claude app, the ChatGPT app on your computer or Elabora’s free chat does the work, and each change shows up as a card you review, undone in one click.
 - **Behaviours your AI writes.** Storyline gives you layers, states, triggers and variables to set slide by slide, and its AI Chat can now create triggers and variables. In Elabora, your AI writes each screen’s events, layers and variables, which read as sentences you can retouch.

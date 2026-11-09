@@ -7,7 +7,7 @@ kind: versus
 tool: rise
 summary: Rise builds clean, responsive courses from blocks, in the browser, and lets a team work on the same course. Elabora also makes scrolling courses, or slides, built by your AI from a plan you approve, on your computer and for free. Pick Rise for team co-editing; pick Elabora for courses designed to measure and checked by your AI, with 3D, dialogues and voices, in files you keep.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 2
 chooseOther:
   - Several authors edit the same courses, with shared folders and block templates.
@@ -30,7 +30,7 @@ faq:
 
 ## The difference in one minute
 
-Rise is a web app. You stack ready-made blocks, text, images, accordions, quizzes, and the course adapts to every screen. It is quick to learn, and it lives in your Articulate 360 account.
+Rise is a web app. You stack ready-made blocks, text, images, accordions, quizzes, and the course adapts to every screen. It is quick to learn, and it comes with your Articulate 360 account.
 
 Elabora is a desktop app for macOS and Windows. You describe the course, the AI proposes a plan, you approve it, then it designs the course to measure and builds the screens, as a scrolling page or as slides, checking each one as it goes. Each course is a folder of files on your computer.
 
@@ -42,8 +42,10 @@ Elabora is a desktop app for macOS and Windows. You describe the course, the AI 
 
 ## Where Elabora differs
 
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
+
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices. The Claude app, the ChatGPT app on your computer or Elabora’s free chat does the work; each change becomes a card you review and can undo.
-- **Your files, for good.** A Rise course lives on Articulate’s servers and stops being editable when the subscription ends. An Elabora course is a folder in an open format, and Elabora is free.
+- **Your files, for good.** A Rise course is stored on Articulate’s servers and stops being editable when the subscription ends. An Elabora course is a folder in an open format, and Elabora is free.
 - **More than blocks.** 3D scenes you can operate, dialogues where learners answer characters who speak, narration timed to the screen, with ElevenLabs or free voices made on your computer.
 - **Your own AI subscription.** Elabora works with the Claude or ChatGPT plan you already have, so you use AI as much as that plan allows, well beyond the AI credits included in Articulate 360. It does ask you to have that subscription; Elabora’s free chat covers smaller edits.
 - **Interactions of any kind.** When a screen needs more than the built-in blocks, your AI writes a free object in JavaScript: a 3D simulation, a mini-game or a custom interaction, sandboxed, tested, and settable by you without code.
