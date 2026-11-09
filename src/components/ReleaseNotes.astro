@@ -12,6 +12,6 @@ const date = new Intl.DateTimeFormat(lang, { dateStyle: 'long', timeZone: 'UTC' 
   {detail && <>
     <h3>{lang === 'fr' ? 'Toutes les améliorations' : 'All changes'}</h3>
     <ul>{release.entries.map(entry => <li id={entry.id} lang={entry.text[lang] ? lang : 'en'}>{entry.text[lang] ?? entry.text.en}</li>)}</ul>
-    <p class="release-core"><a href={`https://github.com/aureliendossantos/elabora-core/tree/${release.core.revision}`}>{lang === 'fr' ? 'Version du cœur intégrée :' : 'Included core version:'} {release.core.version}</a></p>
+    <p class="release-core"><a href={`https://github.com/aureliendossantos/elabora-core/tree/${release.core.revision}`}>{lang === 'fr' ? 'Version du cœur intégrée :' : 'Included core version:'} {release.core.version}</a></p>
   </>}
 </article>
