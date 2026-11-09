@@ -20,7 +20,7 @@ order: 1
 - **Keyboard only**: the mouse does nothing (Tab, Shift+Tab, Space, Enter and the arrows);
 - **Zoom 200%**;
 - **Reduced motion**;
-- **Colour vision**: **Without telling red from green**, or **Without colours**.
+- **Color vision**: **Without telling red from green**, or **Without colors**.
 
 **Stop simulating** goes back to normal. A simulation does not replace a test with a real screen reader (NVDA, VoiceOver).
 

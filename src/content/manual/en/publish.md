@@ -73,7 +73,7 @@ To show a course without an LMS (a demo course, an open training), publish it in
    - **Address**: the course’s name in the address, fixed at the first publication;
    - **Progress**: **Kept in the browser** (learners resume where they left off, in that browser) or **None** (the course starts over at each visit);
    - **Navigation**: **As in the course**, or **Free**;
-   - **Sharing image** (the first screen’s thumbnail) and **Search engines** (**Out of search engines** for now).
+   - **Sharing image** (the first screen’s thumbnail) and **Search engines** (**Hidden from search engines** for now).
 3. **Publish on the web**. Elabora builds, sends, then puts it online (only changed files are sent); you can keep working meanwhile. Each new publication replaces the previous one, at the same address.
 
 Red checks stop the web publication, as they stop the package. Your account allows a limited number of courses on the web; **Settings** › **Account** shows where you stand and offers **Remove from the web…**: learners who started it will not be able to resume, and you can publish it again later at the same address. The technical details: [Web delivery](/en/docs/developers/delivery-web/).

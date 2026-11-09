@@ -36,7 +36,7 @@ Quand le module a une traduction, **Publier** affiche **Langues** : la langue d
 
 Une traduction cochée part telle quelle. Quand il lui manque quelque chose, une ligne le dit, avec le moyen d’y remédier :
 
-- « La traduction française part telle quelle : son plan traduit attend votre approbation. » **Approuver** ouvre **Traduction**, **Versions**, sur cette langue.
+- « La traduction française est publiée telle quelle : son plan traduit attend votre approbation. » **Approuver** ouvre **Traduction**, **Versions**, sur cette langue.
 - « 3 textes restent en anglais. », ou « Des textes ont changé depuis la traduction française : ils restent en anglais. » **Traduire** ouvre son tableau.
 
 Avec deux langues ou plus, choisissez comment elles partent :
@@ -59,7 +59,7 @@ Le poids passe à l’orange quand un média semble plus lourd que nécessaire p
 Ces réglages sont dans **Réglages du module**, onglet **Module** :
 
 - **Réussite** : **Ce que reçoit le LMS** (**Terminé ou non terminé**, **Réussi ou non terminé**, **Réussi ou échoué**, **Terminé ou échoué**) et, sauf pour le premier, le **Seuil de réussite**, en pourcentage.
-- **Suivi** : **Une fois terminé**, **Garder sa progression** ou **Clore la tentative** (à la prochaine ouverture, le module repart du début) ; **Réponses** : **Envoyer les réponses au LMS**, liées aux objectifs.
+- **Suivi** : **Une fois terminé**, **Garder sa progression** ou **Fermer la tentative** (à la prochaine ouverture, le module repart du début) ; **Réponses** : **Envoyer les réponses au LMS**, liées aux objectifs.
 - En haut de l’onglet : le **Titre du module** et la **Description du module** pour le catalogue du LMS, la **Durée en minutes**, et la **Version** (trois nombres, comme 1.0.0) : augmentez-la à chaque livraison pour signaler la mise à jour au LMS.
 
 Les détails techniques sont dans [Delivery formats](/en/docs/developers/delivery/) et [LMS profiles](/en/docs/developers/lms-profiles/), en anglais.

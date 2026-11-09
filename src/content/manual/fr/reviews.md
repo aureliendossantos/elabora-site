@@ -41,7 +41,7 @@ Vos relecteurs ouvrent le lien, cliquent sur « Commenter », puis sur ce qui 
 - Dans la vue **Revue**, mode **Commentaires** : vos revues à gauche ; pour la revue choisie, qui la lit, quelle version ils voient, le lien, puis les fils de commentaires écran par écran, dans l’ordre du module. Filtrez par **Ouverts**, **Résolus** ou **Tous**. **Voir dans l’écran** ouvre le fil à sa place, dans Diapositive.
 - Dans **Diapositive**, le bouton **Commentaires** (à côté de **Propriétés** et **Agent**) montre les fils de l’écran, avec leurs pastilles sur le canevas. Répondez sur place (⌘Entrée envoie), puis **Résoudre** ; **Rouvrir** si besoin.
 
-Les commentaires sont relevés toutes les 30 secondes tant que le module est ouvert (et aussitôt avec **Relever maintenant**). Un point bleu sur **Revue** signale du nouveau ; sur l’accueil, la carte du module dit « 3 commentaires à traiter ». Un fil dit aussi si l’écran a changé depuis la version commentée.
+Les commentaires sont relevés toutes les 30 secondes tant que le module est ouvert (et aussitôt avec **Vérifier maintenant**). Un point bleu sur **Revue** signale du nouveau ; sur l’accueil, la carte du module dit « 3 commentaires à traiter ». Un fil dit aussi si l’écran a changé depuis la version commentée.
 
 Hors ligne, votre réponse reste dans son champ : rien ne part plus tard tout seul.
 

@@ -8,7 +8,7 @@ order: 4
 
 Under **Media quality**, **Publish** says what loading the course costs, as an everyday gesture: “At this setting, loading this course uses as much energy as an LED bulb lit for 25 minutes.” The sentence follows the setting you choose and the course’s real weight. It gives an order of magnitude.
 
-## How it is worked out
+## How it is calculated
 
 - **The weight**: what a learner loads to go through the whole course in their language, at the chosen quality. Media count as Elabora prepares them for that setting, with the narration and the player.
 - **The energy of a gigabyte**: 0.03 kWh for the network (a fixed line and its router, or mobile), the data centre and the CDN. It is the latest French average (Arcep, 2024 data: 0.02 kWh over a fixed line, 0.14 over mobile). It was 0.08 kWh in 2020 (ADEME and Arcep) and 0.065 in 2022: it keeps going down, so this figure will stay a good approximation without being updated.

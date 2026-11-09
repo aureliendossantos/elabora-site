@@ -32,9 +32,9 @@ An Elabora archive attached the same way is not imported: it joins the new cours
 
 - The sentence at the top sums up the import: how many slides became screens, how many elements were brought over, kept in a simpler form or not brought over.
 - **Your choices**: the decisions that are yours, each with its count, the choice the import applied and the other possible ones. A button accepts the import’s choice; it then reads **Accepted**.
-- Picking another option rebuilds the course from the original file. Elabora first asks **Import the module again?**: what was changed since the import, by you or your AI, is replaced, and the current state stays in the history. Confirm with **Import again**. Right after, **Go back to how it was** undoes that new import.
+- Picking another option rebuilds the course from the original file. Elabora first asks **Import the course again?**: what was changed since the import, by you or your AI, is replaced, and the current state stays in the history. Confirm with **Import again**. Right after, **Go back to how it was** undoes that new import.
 - Videos and sounds with **No captions or transcript** come first: complete them before delivering.
-- Then the losses, grouped: **In a simple fallback** (kept in a simpler form), **Not taken yet** (Elabora cannot read it yet) and **Left out** (set aside on purpose). Each one opens the screen it is on.
+- Then the losses, grouped: **In a simple fallback** (kept in a simpler form), **Not imported yet** (Elabora cannot read it yet) and **Left out** (set aside on purpose). Each one opens the screen it is on.
 - For a published Storyline course, a note says that media from Articulate’s Content Library could not be recognised: replace those that come from it, or import the `.story` instead if you have it.
 
 When you are done, **Close the report** (⌘Z brings it back). While the report is in the course, the course title’s menu offers **Import report** to come back to it.
