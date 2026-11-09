@@ -184,6 +184,12 @@ header, the footer: `pnpm run links` fails otherwise). They are signed by Aurél
   `src/components/compare/ComparePage.astro` adds the table, the limits, the corrections (PostHog’s way: write to us,
   or a pull request on the tool’s facts file) and the other comparisons. French follows French typography (no-break
   space before `? ! : ; » %`, `’`), as `typo.mjs` does for the app’s pages.
+- **The writing** (since 9 Nov 2026): a `/prose` pass on every page. The `summary` says what to do; the introduction
+  follows the problem as the reader meets it. No `elabora` command on a page: write what Elabora or « your AI » does,
+  and leave commands to the developer docs. Elabora comes last, as the other path: a fix page ends on « Or let
+  Elabora… » (« Ou laissez Elabora… ») and one sentence on how Elabora was designed around the problem; a tool page
+  keeps « What X does better » honest and opens Elabora’s section on a tool designed from the start for a reliable and
+  pleasant experience. Only what Elabora does today, checked in the code or the app.
 - **The notes**: `research/pages/<slug>.md`, optional, one file per page for both languages. They keep what the
   author found while researching: each source with the day it was read, the facts left out of the page and why, the
   open questions, and what to check again next time. The page keeps only what serves its reader where it stands; the
