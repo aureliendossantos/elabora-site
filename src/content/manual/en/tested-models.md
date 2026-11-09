@@ -20,7 +20,7 @@ These are the models Elabora’s chat offers, with OpenCode, with no account or 
 | GLM-5.3 Flash | 11 of 12 | 2 min 20 | free |
 
 - **DeepSeek V4.1 Flash**: the most reliable. It reads Elabora’s documentation, checks on screen and points out what it notices on the way. Rarely slips in a sentence in English.
-- **GLM-5.3 Flash**: economical and effective; once edited the wrong sentence. Ran on 1 November, before the chat asked for shorter final answers: its line does not quite compare with DeepSeek’s.
+- **GLM-5.3 Flash**: economical and effective; once edited the wrong sentence. Ran on 1 November, before the chat asked for shorter final answers, so its line is not quite comparable with DeepSeek’s.
 
 ## For comparison
 

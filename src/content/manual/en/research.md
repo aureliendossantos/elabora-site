@@ -34,7 +34,7 @@ Two older lines of work point the same way. A meta-analysis of 86 studies found 
 
 **The limits.** Nothing here tells you which single message a chart should carry. That is a choice about your course.
 
-**What Elabora does.** The new chart blocks ask for a *takeaway*: the title is the sentence the chart proves (“Most incidents start with an email”, not “Incidents by origin”). One item is highlighted and the others fade back. Labels sit next to the data, and there is no decoration. Each chart also carries a data table for screen readers.
+**What Elabora does.** The chart blocks ask for a *takeaway*: the title is the sentence the chart proves (“Most incidents start with an email”, not “Incidents by origin”). One item is highlighted and the others fade back. Labels sit next to the data, and there is no decoration. Each chart also carries a data table for screen readers.
 
 ## “1 in 10”: icon arrays
 
@@ -112,7 +112,7 @@ Two older lines of work point the same way. A meta-analysis of 86 studies found 
 
 **The limits.** They concern us directly. The redundancy principle (see [above](#narration-without-reading-the-screen-aloud)) says that on-screen text identical to the narration usually hurts, especially when there is a picture to look at; and a dialogue’s bubble says exactly what the voice says. And the study closest to what Elabora does is not favourable: Gerbier, Bailly and Bosse (2018) had 40 French children aged about 8 to 11 read stories while a narrator told them, the text in grey and each word turning black as it was said. This synchronisation made no difference to remembering the spelling of new words, and hurt remembering their meaning; the children preferred the static text, except the weakest readers. It held their gaze on the word being heard. It is an exploratory study, with children, but it is the closest we found.
 
-**What Elabora does.** A bubble’s text is laid out in full as soon as it arrives, and can be read ahead: in “Word by word”, the default, the words not said yet stay visible, fainter, never hidden. A line without a voice appears whole, and the dialogue waits for learners to move on. Learners stay in control: they can mute the voices and read on their own, and their “Text: all at once” setting, like their system’s reduced motion, shows the whole text from the start. You can also set a dialogue so that a bubble’s whole text appears at once. Following the voice word by word is an aid Elabora offers, not a constraint.
+**What Elabora does.** A bubble’s text is laid out in full as soon as it arrives, and can be read ahead: in “Word by word”, the default, the words not said yet stay visible, fainter, never hidden. A line without a voice appears whole, and the dialogue waits for learners to move on. Learners stay in control: they can mute the voices and read on their own, and their “Text: all at once” setting, like their system’s reduced motion, shows the whole text from the start. You can also set a dialogue so that a bubble’s whole text appears at once. Following the voice word by word is an optional aid.
 
 ## A debrief at the end
 
@@ -136,7 +136,7 @@ Two older lines of work point the same way. A meta-analysis of 86 studies found 
 
 **The limits.** These studies are about characters who teach. Those of a dialogue act out a situation (a customer, a colleague): what research says of the former applies to the latter only with caution. The effects are small, and the mere presence of a character guarantees none of them. The voice studies predate 2014, and so today’s synthetic voices; in a more recent study, the quality of a virtual character’s voice did not change what participants learned, but it did change how much they trusted it (Chiou et al., 2020).
 
-**What Elabora does.** A drawn character is not required: the messaging style, the default, makes do with a small portrait next to the bubbles. When a character is drawn, what it does relates to what it says: its mouth follows its voice, its expression changes with the line, its gestures land on words (waving on the word “Hello”); otherwise it breathes and blinks, nothing more. Under reduced motion no animation plays, and the learner’s pause freezes everything. Its name is in the bubbles: for a screen reader, the drawing is decorative.
+**What Elabora does.** A drawn character is optional: the messaging style, the default, makes do with a small portrait next to the bubbles. When a character is drawn, what it does relates to what it says: its mouth follows its voice, its expression changes with the line, its gestures land on words (waving on the word “Hello”); otherwise it breathes and blinks, nothing more. Under reduced motion no animation plays, and the learner’s pause freezes everything. Its name is in the bubbles: for a screen reader, the drawing is decorative.
 
 ## Revealing is not practice
 
@@ -152,7 +152,7 @@ Two older lines of work point the same way. A meta-analysis of 86 studies found 
 
 **The limits.** The authors of the review note that the size of the gain varies with how the procedure is run and how learning is measured. The right answer has to follow: a question with no follow-up is of no use. And these studies mostly measure what people recall, less the understanding of a whole course.
 
-**What Elabora does.** **Think first**, on **Panels**, shows a prompt before the reveal (“Before you turn each card over, say what you think is on the back”); on **Interactive image**, it is the **Instruction**. The **Opening** layout has room for a question asked before the lesson, a question or a reflection, unscored. This moment is not an assessment: it is a primer, which what follows has to correct.
+**What Elabora does.** **Think first**, on **Panels**, shows a prompt before the reveal (“Before you turn each card over, say what you think is on the back”); on **Interactive image**, it is the **Instruction**. The **Opening** layout has room for a question asked before the lesson, a question or a reflection, unscored. This moment is a primer, which what follows has to correct.
 
 ## Flip cards as retrieval
 

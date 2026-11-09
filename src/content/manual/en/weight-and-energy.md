@@ -6,7 +6,7 @@ group: deliver
 order: 4
 ---
 
-Under **Media quality**, **Publish** says what loading the course costs, as an everyday gesture: “At this setting, loading this course uses as much energy as an LED bulb lit for 25 minutes.” The sentence follows the setting you choose and the course’s real weight. It is not meant as an exact figure: it puts the orders of magnitude back where they belong.
+Under **Media quality**, **Publish** says what loading the course costs, as an everyday gesture: “At this setting, loading this course uses as much energy as an LED bulb lit for 25 minutes.” The sentence follows the setting you choose and the course’s real weight. It gives an order of magnitude.
 
 ## How it is worked out
 
