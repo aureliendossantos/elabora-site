@@ -36,7 +36,7 @@ Le panneau de droite suit ce que vous sélectionnez : une option (sa qualité, 
 
 Quelques règles à connaître :
 
-- **Une option sans suite propre continue avec le passage** : après sa réaction et sa note, la conversation reprend là où elle allait de toute façon. Vous n’avez rien à câbler pour une décision qui se rejoint aussitôt. Une option peut aussi ouvrir une petite branche (un autre passage), qui revient ensuite au tronc.
+- **Une option sans suite propre continue avec le passage** : après sa réaction et sa note, la conversation reprend là où elle allait de toute façon. Une décision qui rejoint aussitôt le passage n’a pas besoin d’être câblée. Une option peut aussi ouvrir une petite branche (un autre passage), qui revient ensuite au tronc.
 - **Les mêmes options à nouveau**, comme suite d’une option : après sa réaction et sa note, les mêmes options reviennent, celle-ci grisée. Le premier choix compte.
 - **Une seule fois** : l’option disparaît (ou se grise) une fois prise. C’est ce qu’il faut pour un entretien où l’apprenant choisit ses questions, avec une option « Passer à la suite » toujours là.
 - **Choix définitif**, sur un passage : annoncé à l’apprenant avant qu’il choisisse ; il ne pourra revenir ni sur ce choix, ni avant. Une fois le dialogue fini, **Recommencer** reste possible : c’est une nouvelle partie, qui ne change pas le parcours noté.
@@ -61,7 +61,7 @@ Dans les **Propriétés** du dialogue (rien n’étant sélectionné dans l’é
 
 ## La qualité des options et les modes
 
-Chaque option est marquée **Bonne**, **Moyenne** ou **Mauvaise**. L’apprenant ne voit jamais cette marque avant son choix. Elle colore l’éditeur, et elle suffit au score, au bilan et au suivi dans le LMS : vous n’avez aucun nombre à écrire. Les vérifications signalent une décision de plus de quatre options et des options de longueurs très inégales, car l’apprenant repère sans réfléchir la plus longue.
+Chaque option est marquée **Bonne**, **Moyenne** ou **Mauvaise**. L’apprenant ne voit jamais cette marque avant son choix. Elle colore l’éditeur, et elle suffit au score, au bilan et au suivi dans le LMS, sans aucun nombre à écrire. Les vérifications signalent une décision de plus de quatre options et des options de longueurs très inégales, car l’apprenant repère sans réfléchir la plus longue.
 
 Le **Mode** du dialogue, dans ses **Propriétés**, règle d’un coup le retour en arrière, le moment des notes et le score. Les boutons cités sont ceux que voit l’apprenant :
 
@@ -96,7 +96,7 @@ Dans les deux styles, la narration est centrée, sans bulle, et la note du forma
 
 **Commence** dit quand le dialogue démarre : **À l’arrivée sur l’écran**, **Au clic** (une carte de départ) ou **Par un événement**. La section **Rythme** règle les **Répliques** (**Enchaînées** ou **Une par clic**) et le **Texte** : **Mot par mot** (par défaut, les mots pas encore dits plus pâles, visibles en avance), **En fondu** ou **D’un coup**. Ces effets suivent la voix : une réplique sans voix paraît entière.
 
-L’apprenant garde la main avec **Suite**. Pendant qu’une voix parle, le bouton reste discret, mais un clic termine la réplique et passe à la suivante : qui lit plus vite n’attend jamais la voix. Après une réplique sans voix (un dialogue sans audio, un narrateur muet entre deux répliques voisées) et après une note, le dialogue attend **Suite** : c’est l’apprenant qui dit quand il a fini de lire. Il peut aussi mettre en pause et **Couper les voix**. Le réglage **Texte : tout de suite**, dans **Affichage**, comme le mouvement réduit de son système, montre toujours le texte entier.
+L’apprenant garde la main avec **Suite**. Pendant qu’une voix parle, le bouton reste discret, mais un clic termine la réplique et passe à la suivante : qui lit plus vite n’attend jamais la voix. Après une réplique sans voix (un dialogue sans audio, un narrateur muet entre deux répliques voisées) et après une note, le dialogue attend **Suite** : c’est l’apprenant qui dit quand il a fini de lire. Il peut aussi mettre en pause et **Couper les voix**. Le réglage **Texte : tout de suite**, dans **Présentation**, comme le mouvement réduit de son système, montre toujours le texte entier.
 
 ## Jouer un chemin
 

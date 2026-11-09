@@ -6,7 +6,7 @@ group: create
 order: 5
 ---
 
-Elabora a peu de blocs, et chacun se présente de plusieurs façons. Un bloc correspond à un geste de l’apprenant et à une forme de données : on ouvre des panneaux, on suit des étapes, on explore une image, on répond à une question. Les présentations ne changent que l’aspect : passer des **Onglets** aux **Cartes** ne touche à aucun mot.
+Elabora a peu de blocs, et chacun se présente de plusieurs façons. Un bloc correspond à un geste de l’apprenant et à une forme de données : on ouvre des panneaux, on suit des étapes, on explore une image, on répond à une question. Les présentations ne changent que l’aspect : passer des **Onglets** aux **Cartes** garde tous les mots.
 
 Cette page suit la liste des blocs, famille par famille, avec les entrées telles que vous les voyez : **Texte**, **Média**, **Disposition**, **Interaction** et **Questions**. Elle dit aussi ce qui les relie : **Transformer en…**, **Après exploration** et la mise en page **Ouverture**. Pour ajouter un bloc, voir [écrans et blocs](/fr/docs/ecrans-et-blocs/#ajouter-un-bloc). Les raisons de ces choix sont dans [ce que la recherche dit](/fr/docs/ce-que-dit-la-recherche/#révéler-nest-pas-pratiquer).
 
@@ -14,7 +14,7 @@ Cette page suit la liste des blocs, famille par famille, avec les entrées telle
 
 ## Comment ils s’utilisent
 
-- **Chaque entrée est une chose que vous avez en tête.** Vous cherchez des cartes à retourner, une frise, un exercice pour associer : chacune a son entrée dans la liste, sans retrait ni sous-menu. Les entrées marquées d’une ellipse (**Image…**, **Galerie…**, **Défilé…**) demandent d’abord vos images.
+- **Chaque entrée est une chose que vous avez en tête.** Vous cherchez des cartes à retourner, une frise, un exercice pour associer : chacune a son entrée dans la liste, au même niveau que les autres. Les entrées marquées d’une ellipse (**Image…**, **Galerie…**, **Défilé…**) demandent d’abord vos images.
 - **Les variantes à côté de l’aperçu sont des styles de cette chose.** Les **Cartes à retourner** se posent en **Grille** ou **Une à la fois** ; un **Encadré**, en **Information**, **Astuce**, **Attention** ou **Important**. Cliquez sur celle que vous voulez, le bloc arrive ainsi.
 - **L’inspecteur offre toutes les présentations.** Une fois le bloc inséré, il garde le nom du bloc (**Panneaux**, **Classer**, **Étapes**…) et **Présentation** est le premier réglage des **Propriétés**, un choix en boutons. Vous passez de **Cartes** à **Onglets**, ou de **Paires** à **Catégories**, quand vous voulez.
 - **Seuls les réglages utiles apparaissent.** Un réglage qui ne sert qu’à une présentation (le titre d’une image avec **Texte à côté**, la date d’une **Frise**) n’est affiché que pour elle.
@@ -49,13 +49,13 @@ La famille contient **Image…**, **Galerie…**, **Comparer deux images…**, *
 - **Point focal** : cliquez sur l’image là où est son sujet. Les recadrages (le bandeau, un téléphone) le gardent en vue. **Centrer** le remet au milieu.
 - **S’ouvre en grand** : un clic agrandit l’image dans le lecteur, avec sa légende.
 - **Texte à côté** : **Image** (**À gauche** ou **À droite**) et **Largeur de l’image** (**Moitié**, **Un tiers**, **Deux tiers**), avec un titre et un texte. **Texte dessus** et **Bandeau** ont une **Hauteur** (**Basse**, **Moyenne**, **Haute**). Gardez le texte dessus à une ou deux phrases.
-- **Bandeau** est un bloc **Bord à bord** : la **Largeur** du bloc a quatre choix, **Pleine**, **Large**, **Moitié** et **Bord à bord**. Sur une diapositive, le bord est celui de la diapositive.
+- **Bandeau** est un bloc **Bord à bord** : la **Largeur** du bloc a quatre choix, **Standard**, **Large**, **Moitié** et **Bord à bord**. Sur une diapositive, le bord est celui de la diapositive.
 
 **Galerie…** (*gallery* dans Rise) demande vos images, puis les met en **Grille**, en **Mosaïque** ou **Une à la fois**. Chaque image a sa légende ; **Colonnes** et **Format** règlent la grille ; **S’ouvre en grand** ouvre les images en grand, avec précédent et suivant. **Une à la fois** ne tourne jamais seule.
 
 **Comparer deux images…** est un curseur qui glisse d’une image à l’autre, avant et après. Dans l’inspecteur, c’est la **Galerie**, et sa **Présentation** offre les quatre : **Grille**, **Mosaïque**, **Une à la fois** et **Avant / après**.
 
-**Vidéo…** et **Son…** n’ont pas changé : voir [images, vidéos et sons](/fr/docs/ecrans-et-blocs/#images-vidéos-et-sons).
+**Vidéo…** et **Son…** sont décrits dans [images, vidéos et sons](/fr/docs/ecrans-et-blocs/#images-vidéos-et-sons).
 
 ## Disposition
 
@@ -84,7 +84,7 @@ La famille contient **Accordéon**, **Onglets**, **Cartes à retourner**, **Idé
 
 ### Étapes
 
-**Étapes**, **Frise** et **Défilé…** sont trois entrées d’un même bloc, **Étapes** dans l’inspecteur (*process* et *timeline* dans Rise). Il lit une procédure ou une suite d’événements pas à pas. Ne le confondez pas avec le graphique **Processus**, qui se lit d’un coup d’œil, avec de courts libellés.
+**Étapes**, **Frise** et **Défilé…** sont trois entrées d’un même bloc, **Étapes** dans l’inspecteur (*process* et *timeline* dans Rise). Il lit une procédure ou une suite d’événements pas à pas. Le graphique **Processus** est différent : il se lit d’un coup d’œil, avec de courts libellés.
 
 - **Étapes** : « Étape 2 sur 5 », précédent et suivant, les flèches du clavier et le balayage du doigt ; une étape affichée compte comme vue. **Introduction** et **À retenir** ouvrent et ferment la suite. Elle n’avance jamais seule. Dans l’inspecteur, c’est **Une à la fois**.
 - **Frise** : une frise verticale, avec une **Date** par événement. Chaque événement entre quand il arrive à l’écran.
@@ -106,7 +106,7 @@ La famille contient **Accordéon**, **Onglets**, **Cartes à retourner**, **Idé
 
 **Personnage** montre un personnage du module qui dit ou pense une ou deux phrases : **Parole** ou **Pensée**. Choisissez-le parmi les personnages du module, ou laissez Elabora en créer un. **Bulles** pour les phrases ; **Portrait** à gauche ou à droite. Pour une vraie conversation avec des choix, c’est le [dialogue](/fr/docs/dialogues/) qu’il vous faut.
 
-**Dialogue**, **Décision** et **Bouton** (**Principal** ou **Secondaire**) n’ont pas changé : voir [les événements](/fr/docs/interactions/) et [les dialogues](/fr/docs/dialogues/).
+**Dialogue**, **Décision** et **Bouton** (**Principal** ou **Secondaire**) sont décrits dans [les événements](/fr/docs/interactions/) et [les dialogues](/fr/docs/dialogues/).
 
 ## Questions
 
@@ -155,14 +155,14 @@ Ces trois entrées sont un même bloc, **Classer** dans l’inspecteur (*matchin
 
 ## Les recettes
 
-Les recettes sont les modèles tout faits de Rise : des blocs déjà remplis, où il ne reste qu’à écrire. Ici, ce sont des entrées comme les autres, sans retrait ni mention : elles se trouvent à côté de ce dont elles sont faites.
+Les recettes sont les modèles tout faits de Rise : des blocs déjà remplis, où il ne reste qu’à écrire. Ici, ce sont des entrées comme les autres, sans marque propre : elles se trouvent à côté de ce dont elles sont faites.
 
 - **À faire / À éviter**, après **Colonnes** : deux colonnes, ce qu’il faut faire et ce qu’il faut éviter.
 - **Idée reçue ou fait ?**, après **Cartes à retourner** : des cartes dont le recto pose la question et le verso répond.
 - **Introduction de leçon**, après **Titre** : l’écran s’ouvre sur son titre, un chapeau et le temps de lecture.
 - **Persona**, en dernier dans **Texte** : une image, qui c’est, et ce qu’il ou elle dit.
 
-Ce ne sont pas de nouveaux blocs : une fois insérée, une recette se retouche comme n’importe quels autres blocs. Votre IA peut ajouter les recettes propres à votre module.
+Ce ne sont pas de nouveaux blocs : une fois insérée, une recette se retouche comme n’importe quel autre bloc. Votre IA peut ajouter les recettes propres à votre module.
 
 ## Transformer en…
 

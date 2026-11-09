@@ -24,7 +24,7 @@ Some text comes from the approved course plan: **Properties** says so. Rewording
 
 ## A block’s properties
 
-Select a block: **Properties** shows everything you can set, in words: its texts, its choices, its options, its **Width** (**Full**, **Wide**, **Half**, and **Edge to edge** for the blocks that allow it), its **Step**, its **Style**, its **Events** and its **Accessibility**. A block that has several presentations offers them first, under **Presentation**. For a question: the question text, the answers and the feedback for each (why [a feedback per option](/en/docs/learning-science/#feedback-that-explains) is worth writing).
+Select a block: **Properties** shows everything you can set, in words: its texts, its choices, its options, its **Width** (**Standard**, **Wide**, **Half**, and **Edge to edge** for the blocks that allow it), its **Step**, its **Style**, its **Events** and its **Accessibility**. A block that has several presentations offers them first, under **Presentation**. For a question: the question text, the answers and the feedback for each (why [a feedback per option](/en/docs/learning-science/#feedback-that-explains) is worth writing).
 
 ## Adding a block
 
@@ -38,18 +38,18 @@ The toolbar adds a block after the selected block (or at the end of the screen, 
 - **Charts**: figures, a ranking, a trend, a share, a process, a diagram (see below);
 - **Course blocks**: blocks specific to this course, when it has some.
 
-Each entry is one specific thing you have in mind, with no indentation and no submenu; the variants beside the preview are only styles of it, and the inspector then offers every presentation of the block. Entries marked with an ellipsis (**Image…**, **Gallery…**, **Scrolling…**) ask for your files first. All of it, with **Transform into…** and the **Opening** screen layout, is in [starter blocks](/en/docs/starter-blocks/).
+Each entry is one specific thing you have in mind, in a flat list; the variants beside the preview are styles of it, and the inspector then offers every presentation of the block. Entries marked with an ellipsis (**Image…**, **Gallery…**, **Scrolling…**) ask for your files first. All of it, with **Transform into…** and the **Opening** screen layout, is in [starter blocks](/en/docs/starter-blocks/).
 
 Each tool opens its family, with a preview of each entry as it will appear on your screen. The **+** between two blocks, right-clicking a block or the screen, or a block’s **…** menu offer every block, with a search field; in a paragraph, type **/** and its name. The new block’s first text is selected: just type over it. A branching dialogue has its own page: [dialogues](/en/docs/dialogues/). Recall and drag-and-drop **Questions** are in [starter blocks](/en/docs/starter-blocks/#questions).
 
 ## Charts and diagrams
 
-An Elabora chart says one thing. Its title is the sentence it proves, the **Takeaway** (“Most incidents start with an email” rather than “Incidents by origin”); **Highlighted** picks the item that carries the idea: it takes the accent colour and the others fade back. Here is why: [one chart, one idea](/en/docs/learning-science/#one-chart-one-idea). When a chart carries the slide, its takeaway is the slide's title: turn off **Show the title** in the screen's settings (the menu and screen readers keep it), and leave **Context** empty unless it says what neither the title nor the chart does, such as what is counted.
+An Elabora chart says one thing. Its title is the sentence it proves, the **Takeaway** (“Most incidents start with an email” rather than “Incidents by origin”); **Highlighted** picks the item that carries the idea: it takes the accent colour and the others fade back. Here is why: [one chart, one idea](/en/docs/learning-science/#one-chart-one-idea). When a chart carries the slide, its takeaway is the slide’s title: turn off **Show the title** in the screen’s settings (the menu and screen readers keep it), and leave **Context** empty unless it says what neither the title nor the chart does, such as what is counted.
 
 - **Key figures**, **Bars**, **Part of a whole**, **Trend**, **Proportion** (“1 in 10”), **Before and after**, **Funnel** (or pyramid), **Process**, **Cycle**, **Matrix**, **Milestones** and **Diagram** (a flowchart, a mind map, a sequence, written in Mermaid).
 - They animate once, when they come on screen, and answer the pointer, touch and the arrow keys; a table of their data is read by screen readers.
 - On a narrated screen, each item can come when the voice names it, the others fading back while it speaks: ask your AI (“bring each bar in when the voice mentions it”), or see [the chart follows the voice](/en/docs/learning-science/#the-chart-follows-the-voice).
-- **Trend** can let learners predict: they draw the line they expect, then see the real one. It is not scored unless you decide so ([predict, then reveal](/en/docs/learning-science/#predict-then-reveal)).
+- **Trend** can let learners predict: they draw the line they expect, then see the real one. It is scored only if you decide so ([predict, then reveal](/en/docs/learning-science/#predict-then-reveal)).
 - For what no block draws (two series, a map, a log scale), your AI writes a custom object following the same rules.
 
 ## Moving, copying, deleting
@@ -60,7 +60,7 @@ Once a block is selected: drag it on the canvas (a line shows where it will go),
 
 - Replacing an image: in **Properties**, **Replace…**, or drop the file on the field, or straight onto the image on the canvas. Elabora then asks you to check its alternative text: does it still describe what the new image shows?
 - Adding: drop an image, a video or an audio file elsewhere on the canvas; it comes in as a new block after the one under the pointer.
-- Elabora converts the file for the web with the ffmpeg it brings.
+- Elabora converts the file for the web with its own ffmpeg.
 - A video or audio file: the inspector says what it lacks. **Captions** come from a WebVTT (.vtt) or SubRip (.srt) file: choose it, or drop it on the field or on the video. Add the **Transcript**. **Loop** is for silent animations; **Decorative** for what carries no information.
 
 ## Custom objects and course blocks
@@ -71,7 +71,7 @@ A custom object (a 3D simulation, a small game…) has its **Object settings**, 
 
 A 3D scene or an image that comes back on the next screen can carry on instead of appearing again, as a morph transition between two slides does. Select it on the second screen and turn on **Continues from the previous screen** in **Properties**: a custom object keeps running and moves to its new settings (another camera, another mode) without loading again; an image glides from its place. **Transition** sets how long it takes: **Quick**, **Normal** or **Slow**. It is one step that ⌘Z undoes. The canvas and **Preview** show the transition as learners will see it.
 
-Nothing else moves: the rest of the screen changes as usual, and when learners ask for less motion the transition becomes a clean cut. The scene keeps one state from one screen to the next: what learners did in it is waiting when they come back. What the object does during the transition (the camera turning, its controls changing) is up to its code: ask your AI, for example “during the transition to the explanation, bring the camera down to the cut-away view”.
+The rest of the screen changes as usual, and when learners ask for less motion the transition becomes a clean cut. The scene keeps one state from one screen to the next: what learners did in it is still there when they come back. What the object does during the transition (the camera turning, its controls changing) is up to its code: ask your AI, for example “during the transition to the explanation, bring the camera down to the cut-away view”.
 
 ## Search and replace
 
