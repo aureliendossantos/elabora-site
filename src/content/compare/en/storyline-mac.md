@@ -7,9 +7,9 @@ kind: alternative
 table:
   tools: [elabora, storyline, parallels, captivate, rise, ispring, lectora, dominknow, easygenerator, mindsmith, parta, genially]
   attributes: [platforms, delivery, price]
-summary: Storyline 360 runs on Windows 11. On a Mac, it needs a virtual machine. You can keep it that way, switch to Rise in the browser, or use a tool made for the Mac. Elabora is a free Mac and Windows app that also reads your .story files.
+summary: "Storyline 360 runs on Windows only. On a Mac, run it in Windows 11 with Parallels Desktop, move to Rise 360 in the browser, or switch to a Mac app or a web tool. Elabora, a free app for Mac and Windows, also imports your .story files."
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 3
 chooseElabora:
   - You want a real Mac app, with nothing to virtualise.
@@ -32,19 +32,21 @@ faq:
 
 **2. Move to Rise 360, in the browser.** It comes with the same subscription and works in Safari. Rise builds courses from blocks; free-form slides, layers and triggers stay in Storyline. Read [Elabora vs Rise 360](/en/compare/rise/).
 
-**3. Use a desktop app made for the Mac.** Adobe Captivate has a macOS version. Elabora is a free app for macOS and Windows, made for building courses with your AI.
+**3. Use a desktop app made for the Mac.** Adobe Captivate has a macOS version, and so does Elabora, below.
 
 **4. Use a web tool.** Lectora Online, dominKnow | ONE, Easygenerator, Mindsmith, Parta and Genially all work in a browser. Each has its own format, so your .story files stay behind.
-
-## When Elabora fits
-
-Elabora suits a designer or a small team on Mac and Windows who delivers courses to an LMS or on the web. You describe the course, approve the plan the AI proposes, and the AI builds the screens, designed to measure, checking and fixing accessibility, learning design and the LMS’s rules on its own; you refine them yourself or through the agent. Courses can be slides, as in Storyline, or a scrolling page, as in Rise. When a screen needs a custom interaction, a 3D scene or a game, your AI writes it as a free object, in JavaScript.
-
-Elabora can read your existing files. Attach a .story project or a published Storyline course: Elabora rebuilds it, and a report lists what came over, what took a simpler form and what was left out.
 
 ## When to keep Storyline in Windows
 
 - Your courses rely on software simulations recorded from the screen.
 - You edit the same .story files with colleagues who stay on Storyline.
 
-In those cases, Parallels is the shortest path. You can still try Elabora for new courses, side by side.
+In those cases, Parallels is the shortest path.
+
+## Or move to Elabora
+
+Elabora was designed from the start for a reliable and pleasant experience, on the Mac as on Windows. It suits a designer or a small team who delivers courses to an LMS or on the web.
+
+You describe the course and approve the plan the AI proposes. The AI then builds the screens, designed to measure, and checks and fixes accessibility, learning design and the LMS’s rules on its own; you refine the screens yourself or through the agent. Courses can be slides, as in Storyline, or a scrolling page, as in Rise. When a screen needs a custom interaction, a 3D scene or a game, your AI writes it as a free object, in JavaScript.
+
+Elabora can read your existing files. Attach a .story project or a published Storyline course: Elabora rebuilds it, and a report lists what came over, what took a simpler form and what was left out. You can start with new courses in Elabora and keep Storyline in Parallels for the others.

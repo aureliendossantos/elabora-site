@@ -7,9 +7,9 @@ kind: alternative
 table:
   tools: [elabora, storyline, parallels, captivate, rise, ispring, lectora, dominknow, easygenerator, mindsmith, parta, genially]
   attributes: [platforms, delivery, price]
-summary: Storyline 360 tourne sur Windows 11. Sur Mac, il faut utiliser une machine virtuelle. Vous pouvez garder cette solution, passer à Rise dans le navigateur, ou prendre un outil fait pour le Mac. Elabora est une app gratuite pour Mac et Windows qui lit aussi vos fichiers .story.
+summary: "Storyline 360 tourne seulement sur Windows. Sur Mac, faites-le tourner dans Windows 11 avec Parallels Desktop, passez à Rise 360 dans le navigateur, ou prenez une app Mac ou un outil web. Elabora, une app gratuite pour Mac et Windows, importe aussi vos fichiers .story."
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 3
 chooseElabora:
   - Vous voulez une vraie app Mac, sans rien virtualiser.
@@ -30,21 +30,23 @@ faq:
 
 **1. Garder Storyline, dans une machine virtuelle.** Installez Windows 11 dans Parallels Desktop, puis Storyline dedans. Vous gardez vos fichiers .story et vos habitudes. Vous ajoutez un abonnement Parallels Desktop (son prix est dans le tableau ci-dessus) et une licence Windows.
 
-**2. Passer à Rise 360, dans le navigateur.** Il est inclus dans le même abonnement et fonctionne dans Safari. Rise construit des cours à partir de blocs ; il ne propose pas les diapositives libres, les calques et les déclencheurs de Storyline. Lisez [Elabora ou Rise 360](/fr/comparatif/rise/).
+**2. Passer à Rise 360, dans le navigateur.** Il est inclus dans le même abonnement et fonctionne dans Safari. Rise construit des cours à partir de blocs ; les diapositives libres, les calques et les déclencheurs restent propres à Storyline. Lisez [Elabora ou Rise 360](/fr/comparatif/rise/).
 
-**3. Prendre une app de bureau faite pour le Mac.** Adobe Captivate a une version macOS. Elabora est une app gratuite pour macOS et Windows, faite pour réaliser des modules avec votre IA.
+**3. Prendre une app de bureau faite pour le Mac.** Adobe Captivate a une version macOS, tout comme Elabora, plus bas.
 
-**4. Prendre un outil web.** Lectora Online, dominKnow | ONE, Easygenerator, Mindsmith, Parta et Genially fonctionnent tous dans un navigateur. Chacun a son propre format : vous devez laisser vos fichiers .story derrière vous.
-
-## Quand Elabora convient
-
-Elabora convient à un concepteur ou à une petite équipe sur Mac et Windows qui livre des modules à un LMS ou sur le web. Vous décrivez le module, validez le plan que l’IA propose, et l’IA réalise les écrans, avec un design sur mesure, en vérifiant et corrigeant d’elle-même l’accessibilité, la pédagogie et les règles du LMS ; vous les affinez vous-même ou par l’agent. Les modules peuvent être en diapositives, comme Storyline, ou en page qui défile, comme Rise. Quand un écran demande une interaction sur mesure, une scène en 3D ou un jeu, votre IA l’écrit en objet libre, en JavaScript.
-
-Elabora peut lire vos fichiers existants. Joignez un projet .story ou un cours Storyline déjà publié : Elabora le reconstruit, et un rapport liste ce qui est repris, ce qui prend une forme plus simple et ce qui est laissé de côté.
+**4. Prendre un outil web.** Lectora Online, dominKnow | ONE, Easygenerator, Mindsmith, Parta et Genially fonctionnent tous dans un navigateur. Chacun a son propre format : vos fichiers .story restent derrière vous.
 
 ## Quand garder Storyline dans Windows
 
 - Vos modules reposent sur des simulations logicielles enregistrées à partir de l’écran.
 - Vous modifiez les mêmes fichiers .story avec des collègues qui restent sur Storyline.
 
-Dans ces cas, Parallels reste le chemin le plus court. Vous pouvez quand même essayer Elabora pour vos nouveaux modules, en parallèle.
+Dans ces cas, Parallels reste le chemin le plus court.
+
+## Ou passez à Elabora
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, sur Mac comme sur Windows. Il convient à un concepteur ou à une petite équipe qui livre des modules à un LMS ou sur le web.
+
+Vous décrivez le module et validez le plan que l’IA propose. L’IA réalise ensuite les écrans, avec un design sur mesure, et vérifie et corrige d’elle-même l’accessibilité, la pédagogie et les règles du LMS ; vous affinez les écrans vous-même ou par l’agent. Les modules peuvent être en diapositives, comme Storyline, ou en page qui défile, comme Rise. Quand un écran demande une interaction sur mesure, une scène en 3D ou un jeu, votre IA l’écrit en objet libre, en JavaScript.
+
+Elabora peut lire vos fichiers existants. Joignez un projet .story ou un cours Storyline déjà publié : Elabora le reconstruit, et un rapport liste ce qui est repris, ce qui prend une forme plus simple et ce qui est laissé de côté. Vous pouvez commencer par les nouveaux modules dans Elabora et garder Storyline dans Parallels pour les autres.
