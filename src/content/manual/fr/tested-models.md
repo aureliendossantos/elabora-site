@@ -20,7 +20,7 @@ Ce sont ceux que propose le chat d’Elabora, avec OpenCode, sans compte ni clé
 | GLM-5.3 Flash | 11 sur 12 | 2 min 20 | gratuit |
 
 - **DeepSeek V4.1 Flash** : le plus sûr. Il lit la documentation d’Elabora, vérifie à l’écran et signale ce qu’il remarque en passant. Glisse rarement une phrase en anglais.
-- **GLM-5.3 Flash** : économe et efficace ; a une fois retouché la mauvaise phrase. Passé le 1er novembre, avant que le chat demande des réponses finales plus courtes : sa ligne ne se compare pas tout à fait à celle de DeepSeek.
+- **GLM-5.3 Flash** : économe et efficace ; a une fois retouché la mauvaise phrase. Passé le 1er novembre, avant que le chat demande des réponses finales plus courtes, donc sa ligne n’est pas tout à fait comparable à celle de DeepSeek.
 
 ## Pour comparaison
 

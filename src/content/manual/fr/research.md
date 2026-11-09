@@ -34,7 +34,7 @@ Deux travaux plus anciens vont dans le même sens. Une méta-analyse de 86 étud
 
 **Les limites.** Rien de tout cela ne dit quel message unique un graphique doit porter. C’est un choix qui vous revient.
 
-**Ce qu’Elabora en fait.** Les nouveaux blocs de graphique demandent une *idée à retenir* (*takeaway*) : le titre est la phrase que le graphique démontre (« La plupart des incidents commencent par un e-mail », et non « Incidents par origine »). Un élément est mis en valeur, les autres s’estompent. Les étiquettes sont à côté des données, et il n’y a aucune décoration. Chaque graphique porte aussi un tableau de données pour les lecteurs d’écran.
+**Ce qu’Elabora en fait.** Les blocs de graphique demandent une *idée à retenir* (*takeaway*) : le titre est la phrase que le graphique démontre (« La plupart des incidents commencent par un e-mail », et non « Incidents par origine »). Un élément est mis en valeur, les autres s’estompent. Les étiquettes sont à côté des données, et il n’y a aucune décoration. Chaque graphique porte aussi un tableau de données pour les lecteurs d’écran.
 
 ## « 1 sur 10 » : les pictogrammes en grille
 
@@ -112,7 +112,7 @@ Deux travaux plus anciens vont dans le même sens. Une méta-analyse de 86 étud
 
 **Les limites.** Elles nous concernent directement. Le principe de redondance (voir [plus haut](#une-narration-qui-ne-lit-pas-lécran-à-voix-haute)) dit qu’un texte identique à la narration nuit en général, surtout quand il y a une image à regarder ; or la bulle d’un dialogue dit exactement ce que dit la voix. Et l’étude la plus proche de ce que fait Elabora n’est pas favorable : Gerbier, Bailly et Bosse (2018) ont fait lire des histoires à 40 élèves du CE2 au CM2 pendant qu’un narrateur les disait, le texte en gris et chaque mot passant au noir au moment où il était dit. Cette synchronisation n’a rien changé au souvenir de l’orthographe des mots nouveaux, et a nui au souvenir de leur sens ; les enfants préféraient le texte fixe, sauf les lecteurs les plus faibles. Elle retenait leur regard sur le mot entendu. C’est une étude exploratoire, auprès d’enfants, mais c’est la plus proche que nous ayons trouvée.
 
-**Ce qu’Elabora en fait.** Le texte d’une bulle est mis en page en entier dès son arrivée, et il se lit en avance : en « Mot par mot », le réglage par défaut, les mots pas encore dits restent visibles, plus pâles, jamais cachés. Une réplique sans voix paraît entière, et le dialogue attend que l’apprenant passe à la suite. L’apprenant garde la main : il peut couper les voix et lire seul, et son réglage « Texte : tout de suite », comme le mouvement réduit de son système, montre le texte entier d’emblée. Vous pouvez aussi régler un dialogue pour que tout le texte d’une bulle paraisse d’un coup. Suivre la voix mot à mot est une aide qu’Elabora propose, pas une contrainte.
+**Ce qu’Elabora en fait.** Le texte d’une bulle est mis en page en entier dès son arrivée, et il se lit en avance : en « Mot par mot », le réglage par défaut, les mots pas encore dits restent visibles, plus pâles, jamais cachés. Une réplique sans voix paraît entière, et le dialogue attend que l’apprenant passe à la suite. L’apprenant garde la main : il peut couper les voix et lire seul, et son réglage « Texte : tout de suite », comme le mouvement réduit de son système, montre le texte entier d’emblée. Vous pouvez aussi régler un dialogue pour que tout le texte d’une bulle paraisse d’un coup. Suivre la voix mot à mot est une aide facultative.
 
 ## Un bilan à la fin
 
@@ -136,7 +136,7 @@ Deux travaux plus anciens vont dans le même sens. Une méta-analyse de 86 étud
 
 **Les limites.** Ces études portent sur des personnages qui enseignent. Ceux d’un dialogue jouent une situation (un client, une collègue) : ce que la recherche dit des premiers ne vaut pour les seconds qu’avec prudence. Les effets sont petits, et la seule présence d’un personnage n’en garantit aucun. Les études sur la voix sont antérieures à 2014, donc aux voix de synthèse actuelles ; dans une étude plus récente, la qualité de la voix d’un personnage virtuel n’a pas changé ce que les participants apprenaient, mais elle changeait la confiance qu’ils lui accordaient (Chiou et al., 2020).
 
-**Ce qu’Elabora en fait.** Un personnage dessiné n’est pas obligatoire : le style messagerie, celui par défaut, se contente d’un petit portrait près des bulles. Quand un personnage est dessiné, ce qu’il fait se rapporte à ce qu’il dit : sa bouche suit sa voix, son expression change avec la réplique, ses gestes tombent sur des mots (saluer au mot « Bonjour ») ; pour le reste, il respire et cligne des yeux, sans plus. Sous mouvement réduit, aucune animation ne joue, et la pause de l’apprenant fige tout. Son nom est dans les bulles : pour un lecteur d’écran, le dessin est décoratif.
+**Ce qu’Elabora en fait.** Un personnage dessiné est facultatif : le style messagerie, celui par défaut, se contente d’un petit portrait près des bulles. Quand un personnage est dessiné, ce qu’il fait se rapporte à ce qu’il dit : sa bouche suit sa voix, son expression change avec la réplique, ses gestes tombent sur des mots (saluer au mot « Bonjour ») ; pour le reste, il respire et cligne des yeux, sans plus. Sous mouvement réduit, aucune animation ne joue, et la pause de l’apprenant fige tout. Son nom est dans les bulles : pour un lecteur d’écran, le dessin est décoratif.
 
 ## Révéler n’est pas pratiquer
 
@@ -152,7 +152,7 @@ Deux travaux plus anciens vont dans le même sens. Une méta-analyse de 86 étud
 
 **Les limites.** Les auteurs de la synthèse notent que l’ampleur du gain varie selon la façon de procéder et de mesurer l’apprentissage. La bonne réponse doit suivre : une question sans suite ne sert à rien. Et ces études portent surtout sur ce qu’on se rappelle, moins sur la compréhension d’un module entier.
 
-**Ce qu’Elabora en fait.** **Réfléchir d’abord**, sur **Panneaux**, affiche une consigne avant de révéler (« Avant de retourner chaque carte, dites ce que vous pensez trouver au dos ») ; sur **Image interactive**, c’est la **Consigne**. La mise en page **Ouverture** a une place pour une question posée avant la leçon, une question ou une réflexion, non notée. Ce moment n’engage pas l’apprenant dans une évaluation : c’est une amorce, que la suite doit corriger.
+**Ce qu’Elabora en fait.** **Réfléchir d’abord**, sur **Panneaux**, affiche une consigne avant de révéler (« Avant de retourner chaque carte, dites ce que vous pensez trouver au dos ») ; sur **Image interactive**, c’est la **Consigne**. La mise en page **Ouverture** a une place pour une question posée avant la leçon, une question ou une réflexion, non notée. Ce moment est une amorce, que la suite doit corriger.
 
 ## Les cartes à retourner comme rappel
 

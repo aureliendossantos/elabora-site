@@ -6,7 +6,7 @@ group: deliver
 order: 4
 ---
 
-Sous la **Qualité des médias**, **Publier** dit ce que coûte le chargement du module en un geste du quotidien : « À ce réglage, charger ce module consomme autant qu’une ampoule LED allumée 25 minutes. » La phrase suit le réglage choisi et le poids réel du module. Le but n’est pas de donner un chiffre exact : c’est de remettre les ordres de grandeur à leur place.
+Sous la **Qualité des médias**, **Publier** dit ce que coûte le chargement du module en un geste du quotidien : « À ce réglage, charger ce module consomme autant qu’une ampoule LED allumée 25 minutes. » La phrase suit le réglage choisi et le poids réel du module. Elle donne un ordre de grandeur.
 
 ## Le calcul
 
