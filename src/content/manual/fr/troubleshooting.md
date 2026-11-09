@@ -84,7 +84,7 @@ Vous avez été déconnecté d’ailleurs, ou la session n’a pas servi depuis 
 
 ### Pas de connexion
 
-Rien n’est envoyé, et rien ne partira plus tard tout seul : une réponse en cours reste dans son champ ; relancez l’envoi une fois en ligne.
+Rien n’est envoyé, ni maintenant ni plus tard : une réponse en cours reste dans son champ ; relancez l’envoi une fois en ligne.
 
 ## Quoi nous envoyer
 

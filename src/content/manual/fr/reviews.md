@@ -57,7 +57,7 @@ Le menu d’une revue propose :
 
 - **Copier le lien**, **Renommer…**, **Modifier le mot pour les relecteurs…** ;
 - **Mettre en lecture seule** (vos relecteurs lisent sans commenter ; vous pouvez encore répondre), puis **Rouvrir aux commentaires** ;
-- **Fermer la revue** : le lien n’ouvre plus rien, les commentaires restent lisibles ici pendant un an, et **Rouvrir la revue** reste possible ;
+- **Fermer la revue** : le lien n’ouvre plus le module, les commentaires restent lisibles ici pendant un an, et **Rouvrir la revue** reste possible ;
 - **Retirer une ancienne version…** pour libérer de la place (ses commentaires restent) ;
 - **Créer un nouveau lien…** : l’ancien cesse de marcher aussitôt ;
 - **Supprimer la revue…** : pour tout le monde, relecteurs compris.

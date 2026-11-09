@@ -84,7 +84,7 @@ You were signed out from elsewhere, or the session had not been used for 90 days
 
 ### No connection
 
-Nothing is sent, and nothing will go out later on its own: a reply you were writing stays in its field; send it again once you are online.
+Nothing is sent, now or later: a reply you were writing stays in its field; send it again once you are online.
 
 ## What to send us
 

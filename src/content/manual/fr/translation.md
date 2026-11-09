@@ -23,11 +23,11 @@ Trois façons, que vous pouvez mélanger :
   > Traduis le module en anglais, en gardant le ton et les termes du métier.
 
 - Avec un traducteur : **Fichier pour un traducteur**, dans le menu des langues, vous donne le fichier de la langue au format XLIFF (.xlf), que lisent les outils de traduction.
-- Vous-même, dans le **Tableau** : le module, son plan validé et chaque écran, la source à gauche et la traduction à droite, écrite sur place. Chaque traduction est un pas que ⌘Z annule.
+- Vous-même, dans le **Tableau** : le module, son plan validé et chaque écran, la source à gauche et la traduction à droite, écrite sur place. ⌘Z annule chaque traduction.
 
 ## Ce que le tableau vous signale
 
-Le tableau ne montre en couleur que ce qui demande quelque chose :
+Le tableau ne met en couleur que ce qui demande votre attention :
 
 - **À relire** : une traduction écrite ailleurs (par un traducteur ou par votre IA). **C’est bon** la confirme.
 - **Modifié depuis** : la source a changé depuis la traduction. Ses anciens mots s’affichent au survol ; **Garder cette traduction** la confirme telle quelle.
@@ -61,4 +61,4 @@ Pour livrer plusieurs langues à la fois, dans un paquet ou un paquet par langue
 
 Les répliques se traduisent comme les autres textes. Chaque locuteur peut avoir une voix par langue (**Distribution des voix…**) ; une réplique attend sa traduction pour avoir sa voix dans cette langue. Voir [voix et narration](/fr/docs/voix-et-narration/).
 
-La langue de l’interface d’Elabora ne change rien à vos modules : une interface en français peut très bien éditer un module en anglais.
+Vous pouvez éditer un module en anglais dans une interface en français : la langue de l’interface ne change jamais vos modules.

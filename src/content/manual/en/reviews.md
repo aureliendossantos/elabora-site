@@ -57,7 +57,7 @@ A review’s menu offers:
 
 - **Copy the link**, **Rename…**, **Edit the note for reviewers…**;
 - **Make read-only** (your reviewers read without commenting; you can still reply), then **Reopen to comments**;
-- **Close the review**: the link opens nothing any more, the comments stay readable here for a year, and **Reopen the review** remains possible;
+- **Close the review**: the link no longer opens the course, the comments stay readable here for a year, and **Reopen the review** remains possible;
 - **Withdraw an older version…** to free some room (its comments stay);
 - **Create a new link…**: the old one stops working at once;
 - **Delete the review…**: for everyone, reviewers included.

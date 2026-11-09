@@ -23,11 +23,11 @@ Three ways, which you can mix:
   > Translate the course into French, keeping the tone and the trade’s terms.
 
 - With a translator: **File for a translator**, in the language menu, gives you the language’s file in XLIFF format (.xlf), which translation tools read.
-- Yourself, in the **Table**: the course, its approved plan and each screen, the source on the left and the translation on the right, written in place. Each translation is one step ⌘Z undoes.
+- Yourself, in the **Table**: the course, its approved plan and each screen, the source on the left and the translation on the right, written in place. ⌘Z undoes each translation.
 
 ## What the table points out
 
-The table only highlights what asks for something:
+The table highlights only what needs your attention:
 
 - **To review**: a translation written elsewhere (by a translator or your AI). **Looks good** confirms it.
 - **Changed since**: the source changed since the translation. Its old words show on hover; **Keep this translation** confirms it as it is.
@@ -61,4 +61,4 @@ To deliver several languages at once, in one package or one package per language
 
 Narration lines are translated like any other text. Each speaker can have one voice per language (**Voice cast…**); a line waits for its translation before getting its voice in that language. See [voices and narration](/en/docs/voices-and-narration/).
 
-Elabora’s interface language changes nothing in your courses: an English interface can perfectly well edit a French course.
+You can edit a French course in an English interface: the interface language never changes your courses.
