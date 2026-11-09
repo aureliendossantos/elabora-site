@@ -7,7 +7,7 @@ kind: versus
 tool: easygenerator
 summary: Easygenerator est un outil web fait pour les experts métier, avec la co-édition, des liens de relecture et un agent IA qui montre son plan avant de changer quoi que ce soit. Elabora est une app de bureau gratuite où votre IA réalise le module à partir d’un plan que vous validez, avec des médias plus riches. Prenez Easygenerator pour faire écrire de nombreux experts ensemble ; prenez Elabora pour la 3D, les dialogues et les voix, sans rien payer.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 8
 chooseOther:
   - De nombreux experts de votre organisation écrivent leurs propres modules, et co-éditent en temps réel.
@@ -33,6 +33,8 @@ Elabora est pour le concepteur qui façonne le module : une app de bureau où v
 - **La traduction à grande échelle** avec l’option EasyTranslate : un module en 75 langues.
 
 ## Ce qu’Elabora fait autrement
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, où votre IA se charge de la construction.
 
 - **Gratuit sur votre ordinateur**, avec vos modules en fichiers dans un format ouvert.
 - **Un design sur mesure, et du temps gagné.** Votre IA conçoit chaque module pour son public, son apparence, ses illustrations et ses mises en page compris, puis réalise les écrans à partir d’un plan que vous validez. Votre temps va au contenu et aux choix. Claude, ChatGPT ou le chat gratuit d’Elabora fait le travail, et chaque retouche se relit et s’annule.

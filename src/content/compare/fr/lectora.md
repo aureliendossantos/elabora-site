@@ -7,7 +7,7 @@ kind: versus
 tool: lectora
 summary: Lectora, d’ELB Learning, existe en app de bureau pour Windows et en version navigateur, avec des relecteurs gratuits dans ReviewLink et une sortie vers toutes les grandes normes de LMS. Elabora est une app gratuite pour Mac et Windows où votre IA réalise le module à partir d’un plan. Prenez Lectora pour sa grande banque d’éléments ; prenez Elabora pour écrire avec l’IA sans rien payer.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 6
 chooseOther:
   - Vous voulez des relecteurs gratuits et illimités, avec des statuts et des priorités sur les commentaires.
@@ -35,6 +35,8 @@ Elabora part d’une demande. Votre IA propose un plan, vous le validez, puis el
 - **Deux façons de travailler** : l’app de bureau sur Windows, et Lectora Online dans un navigateur.
 
 ## Ce qu’Elabora fait autrement
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, où votre IA se charge de la construction.
 
 - **Un design sur mesure, et du temps gagné.** Votre IA conçoit chaque module pour son public, son apparence, ses illustrations et ses mises en page compris, puis réalise les écrans à partir d’un plan que vous validez. Votre temps va au contenu et aux choix. Chaque retouche se relit et s’annule.
 - **Une app de bureau sur Mac et Windows**, gratuite, avec vos modules en dossiers dans un format ouvert.

@@ -7,7 +7,7 @@ kind: versus
 tool: genially
 summary: Genially makes interactive visuals, games and presentations in the browser, with a free plan and real-time co-editing; its SCORM export is on the Author plan. Elabora is a free desktop app that builds structured courses with your AI and exports SCORM, cmi5 and xAPI at no cost. Pick Genially for playful visuals made together; pick Elabora for full courses with objectives, quizzes and dialogues.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 9
 chooseOther:
   - You make interactive presentations, infographics, games or escape rooms.
@@ -35,6 +35,8 @@ Elabora starts from what learners must be able to do. The AI proposes a plan of 
 - **LTI 1.3** on the Author plan, to connect a course to several LMSs.
 
 ## Where Elabora differs
+
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
 
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices.
 - **Peace of mind.** After each change, your AI reads Elabora’s checks, on accessibility, learning design and your client’s LMS, and fixes what they find on its own, often before you notice.

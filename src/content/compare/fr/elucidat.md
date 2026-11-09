@@ -7,7 +7,7 @@ kind: versus
 tool: elucidat
 summary: Elucidat est devenu Create, chez Confirm, un outil dans le cloud pour les grandes équipes de formation qui produisent et traduisent de nombreux cours sous une même charte. Elabora est une app de bureau gratuite où un auteur réalise le module avec son IA. Prenez Create pour le volume et la traduction ; prenez Elabora pour un concepteur ou une petite équipe qui veut commencer aujourd’hui, sans rien payer.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 10
 chooseOther:
   - Vous produisez de nombreux cours pour une grande organisation, avec une charte et des styles verrouillés pour chaque auteur.
@@ -35,6 +35,8 @@ Elabora est une app de bureau pour un auteur et son IA : l’IA propose un plan
 - **Les mises à jour en place.** Les changements arrivent aux apprenants sans renvoyer le paquet SCORM.
 
 ## Ce qu’Elabora fait autrement
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, où votre IA se charge de la construction.
 
 - **Un design sur mesure, et du temps gagné.** Votre IA conçoit chaque module pour son public, son apparence, ses illustrations et ses mises en page compris, puis réalise les écrans à partir d’un plan que vous validez. Votre temps va au contenu et aux choix.
 - **L’esprit tranquille.** Après chaque retouche, votre IA lit les contrôles d’Elabora, sur l’accessibilité, la pédagogie et le LMS du client, et corrige d’elle-même ce qu’ils trouvent, souvent avant que vous le remarquiez.

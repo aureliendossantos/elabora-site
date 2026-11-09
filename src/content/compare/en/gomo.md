@@ -7,7 +7,7 @@ kind: versus
 tool: gomo
 summary: Gomo is a cloud authoring tool for global training teams, with roles, review tasks, live delivery and 250+ languages. Elabora is a free desktop app where one author builds the course with their AI. Pick Gomo for a multi-language team with a production workflow; pick Elabora for one designer who wants to go fast, at no cost.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 11
 chooseOther:
   - A team produces courses together, with Administrator, Editor and Reviewer roles.
@@ -31,6 +31,8 @@ Elabora is a desktop app for one author and their AI: the AI proposes a plan, bu
 - **Live delivery**: updates reach the LMS without uploading the course again.
 
 ## Where Elabora differs
+
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
 
 - **Free**, and installed in minutes.
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices. The Claude app, the ChatGPT app or a free chat does the work.

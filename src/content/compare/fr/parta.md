@@ -7,7 +7,7 @@ kind: versus
 tool: parta
 summary: Parta est une plateforme web pour les équipes de formation client, où des agents IA connectés par MCP rédigent, traduisent, auditent et migrent les cours. Elabora est une app de bureau gratuite où un auteur réalise le module avec sa propre IA, dans des fichiers qu’il garde. Prenez Parta pour gérer des contenus pour de nombreux clients et langues ; prenez Elabora pour un concepteur qui veut des modules riches sans rien payer.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 13
 chooseOther:
   - Vous gérez la formation de vos clients ou des contenus d’expérience client pour de nombreux publics et langues.
@@ -19,12 +19,12 @@ chooseElabora:
   - Vous voulez des scènes en 3D et des dialogues avec des personnages qui parlent.
 faq:
   - q: Le MCP de Parta est-il inclus ?
-    a: Parta présente son MCP comme une option sur devis ; MCP 3.0, d’octobre 2026, est disponible sur ses offres CMS. La commande et le serveur MCP d’Elabora sont inclus dans l’app gratuite.
+    a: Parta présente son MCP comme une option sur devis ; MCP 3.0, d’octobre 2026, est disponible sur ses offres CMS. L’outil en ligne de commande et le serveur MCP d’Elabora sont inclus dans l’app gratuite.
 ---
 
 ## La différence en une minute
 
-Parta se présente comme une plateforme d’orchestration de contenus. Les cours vivent dans son cloud ; des agents connectés par son MCP les rédigent et les modifient, les traduisent en versions de langue liées, auditent l’accessibilité et reprennent des paquets SCORM d’autres outils.
+Parta se présente comme une plateforme d’orchestration de contenus. Les cours sont stockés dans son cloud ; des agents connectés par son MCP les rédigent et les modifient, les traduisent en versions de langue liées, auditent l’accessibilité et reprennent des paquets SCORM d’autres outils.
 
 Elabora est une app de bureau pour un auteur et son IA. L’IA propose un plan, réalise les écrans dans un dossier sur votre ordinateur, et chaque retouche se relit et s’annule.
 
@@ -35,6 +35,8 @@ Elabora est une app de bureau pour un auteur et son IA. L’IA propose un plan, 
 - **Les mises en page** : plus de 150 mises en page de contenu et de quiz, et vos propres modèles.
 
 ## Ce qu’Elabora fait autrement
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, où votre IA se charge de la construction.
 
 - **Votre propre IA fait le travail, sur vos fichiers.** Les agents de Parta rédigent, modifient, traduisent et auditent l’accessibilité dans sa plateforme (MCP 3.0, octobre 2026). Dans Elabora, votre propre IA fait ce travail sur des dossiers que vous gardez, et après chaque retouche elle lit les contrôles d’Elabora, sur l’accessibilité, la pédagogie et le LMS du client, et corrige d’elle-même ce qu’ils trouvent.
 - **Un design sur mesure, et du temps gagné.** Votre IA conçoit chaque module pour son public, son apparence, ses illustrations et ses mises en page compris, puis réalise les écrans à partir d’un plan que vous validez. Votre temps va au contenu et aux choix.

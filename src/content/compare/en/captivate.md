@@ -7,7 +7,7 @@ kind: versus
 tool: captivate
 summary: Captivate is Adobe’s desktop authoring tool for Windows and macOS, strong on responsive courses and software simulations, with a WCAG 2.2 AA certification. Elabora is a free desktop app where your AI builds the course from a plan you approve. Pick Captivate for simulations and certified accessibility; pick Elabora to write faster with AI and pay nothing.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 4
 chooseOther:
   - You record software simulations from the screen.
@@ -19,7 +19,7 @@ chooseElabora:
   - You want a tool that costs nothing on your computer.
 faq:
   - q: Can Elabora import Captivate projects?
-    a: Not today. Elabora imports Storyline and Rise courses, in beta. An AI that runs commands, such as Claude Code or Codex, can still test a SCORM package published by Captivate in Elabora’s LMS emulator.
+    a: Not today. Elabora imports Storyline and Rise courses, in beta. Your AI can still test a SCORM package published by Captivate in Elabora’s LMS emulator.
   - q: Does Captivate run on a Mac?
     a: Yes. Adobe’s all-new Captivate (version 13) runs on Windows and macOS.
 ---
@@ -37,6 +37,8 @@ Elabora works from what your learners must be able to do. The AI proposes a plan
 - **Adobe’s ecosystem**: Firefly images, and team licences managed in Adobe’s admin console.
 
 ## Where Elabora differs
+
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
 
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices. Each change becomes a card you review, and one click undoes it.
 - **Your own AI subscription.** Elabora works with the Claude or ChatGPT plan you already have, so you use AI as much as that plan allows, well beyond the generative credits Adobe includes. It does ask you to have that subscription; Elabora’s free chat covers smaller edits.

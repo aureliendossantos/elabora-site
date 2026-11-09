@@ -7,7 +7,7 @@ kind: versus
 tool: easygenerator
 summary: Easygenerator is a web tool made for subject-matter experts, with co-authoring, review links and an AI agent that shows its plan before it changes anything. Elabora is a free desktop app where your AI builds the course from a plan you approve, with richer media. Pick Easygenerator to get many experts writing together; pick Elabora for 3D, dialogues and voices, at no cost.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 8
 chooseOther:
   - Many experts in your organisation write their own courses, and co-author in real time.
@@ -34,8 +34,10 @@ Elabora is for the designer who shapes the course: a desktop app where your AI d
 
 ## Where Elabora differs
 
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
+
 - **Free on your computer**, with your courses as files in an open format.
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices. Claude, ChatGPT or Elabora’s free chat does the work, and every change can be reviewed and undone.
 - **Peace of mind.** After each change, your AI reads Elabora’s checks, on accessibility, learning design and your client’s LMS, and fixes what they find on its own, often before you notice.
-- **Reviews down to the word.** As in Easygenerator, your reviewers comment from a link, without an account. In Elabora, their comments land on the block or the word of narration, and you can hand them to your AI.
+- **Reviews down to the word.** As in Easygenerator, your reviewers comment from a link, without an account. In Elabora, their comments are placed on the block or the word of narration, and you can hand them to your AI.
 - **Richer screens**: 3D objects learners operate, dialogues where characters speak, narration timed to the screen.

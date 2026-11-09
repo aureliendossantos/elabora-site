@@ -7,7 +7,7 @@ kind: versus
 tool: genially
 summary: Genially fait des visuels interactifs, des jeux et des présentations dans le navigateur, avec une offre gratuite et la co-édition en temps réel ; son export SCORM est sur l’offre Author. Elabora est une app de bureau gratuite qui réalise des modules structurés avec votre IA et exporte en SCORM, cmi5 et xAPI sans rien payer. Prenez Genially pour des visuels ludiques faits à plusieurs ; prenez Elabora pour des modules complets avec objectifs, quiz et dialogues.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 9
 chooseOther:
   - Vous faites des présentations interactives, des infographies, des jeux ou des escape games.
@@ -35,6 +35,8 @@ Elabora part de ce que les apprenants doivent savoir faire. L’IA propose un pl
 - **LTI 1.3** sur l’offre Author, pour relier un module à plusieurs LMS.
 
 ## Ce qu’Elabora fait autrement
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, où votre IA se charge de la construction.
 
 - **Un design sur mesure, et du temps gagné.** Votre IA conçoit chaque module pour son public, son apparence, ses illustrations et ses mises en page compris, puis réalise les écrans à partir d’un plan que vous validez. Votre temps va au contenu et aux choix.
 - **L’esprit tranquille.** Après chaque retouche, votre IA lit les contrôles d’Elabora, sur l’accessibilité, la pédagogie et le LMS du client, et corrige d’elle-même ce qu’ils trouvent, souvent avant que vous le remarquiez.

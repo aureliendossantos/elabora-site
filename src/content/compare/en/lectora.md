@@ -7,7 +7,7 @@ kind: versus
 tool: lectora
 summary: Lectora, from ELB Learning, comes as a Windows desktop app and a browser version, with free reviewers in ReviewLink and output to every major LMS standard. Elabora is a free Mac and Windows app where your AI builds the course from a plan. Pick Lectora for its large asset library; pick Elabora to write with AI at no cost.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 6
 chooseOther:
   - You want unlimited free reviewers with comment statuses and priorities.
@@ -35,6 +35,8 @@ Elabora starts from a brief. Your AI proposes a plan, you approve it, then it bu
 - **Two ways to work**: the desktop app on Windows, and Lectora Online in a browser.
 
 ## Where Elabora differs
+
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
 
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices. Each change can be reviewed and undone.
 - **A desktop app on Mac and Windows**, free, with your courses as folders in an open format.

@@ -7,7 +7,7 @@ kind: versus
 tool: gomo
 summary: Gomo est un outil auteur dans le cloud pour les équipes de formation internationales, avec des rôles, des tâches de relecture, la diffusion en direct et plus de 250 langues. Elabora est une app de bureau gratuite où un auteur réalise le module avec son IA. Prenez Gomo pour une équipe multilingue avec un circuit de production ; prenez Elabora pour un concepteur qui veut aller vite, sans rien payer.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 11
 chooseOther:
   - Une équipe produit les modules ensemble, avec des rôles Administrateur, Éditeur et Relecteur.
@@ -31,6 +31,8 @@ Elabora est une app de bureau pour un auteur et son IA : l’IA propose un plan
 - **La diffusion en direct** : les mises à jour arrivent dans le LMS sans renvoyer le module.
 
 ## Ce qu’Elabora fait autrement
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, où votre IA se charge de la construction.
 
 - **Gratuit**, et installé en quelques minutes.
 - **Un design sur mesure, et du temps gagné.** Votre IA conçoit chaque module pour son public, son apparence, ses illustrations et ses mises en page compris, puis réalise les écrans à partir d’un plan que vous validez. Votre temps va au contenu et aux choix. L’app Claude, l’app ChatGPT ou un chat gratuit fait le travail.

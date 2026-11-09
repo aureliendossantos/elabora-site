@@ -7,7 +7,7 @@ kind: versus
 tool: dominknow
 summary: dominKnow | ONE est une plateforme web pour les équipes qui réutilisent leurs contenus dans de nombreux cours, avec des rôles, la relecture et toutes les normes de LMS. Elabora est une app de bureau gratuite où un auteur réalise le module avec son IA. Prenez dominKnow pour une équipe qui partage et réutilise ses contenus ; prenez Elabora pour un concepteur qui veut aller vite, sans rien payer.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 7
 chooseOther:
   - Plusieurs auteurs, experts et relecteurs travaillent dans les mêmes projets, avec des rôles et des droits.
@@ -36,6 +36,8 @@ Elabora est une app de bureau pour un auteur et son IA. L’IA propose un plan, 
 - **L’hébergement sur vos serveurs** en Enterprise.
 
 ## Ce qu’Elabora fait autrement
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, où votre IA se charge de la construction.
 
 - **Gratuit sur votre ordinateur**, là où dominKnow se vend sur devis, par auteur.
 - **Un design sur mesure, et du temps gagné.** Votre IA conçoit chaque module pour son public, son apparence, ses illustrations et ses mises en page compris, puis réalise les écrans à partir d’un plan que vous validez. Votre temps va au contenu et aux choix. Claude, ChatGPT ou le chat gratuit d’Elabora fait le travail, sur vos fichiers.

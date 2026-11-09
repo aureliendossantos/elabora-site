@@ -5,9 +5,9 @@ description: Elabora and iSpring Suite compared on price, Mac and Windows, Power
 slug: ispring
 kind: versus
 tool: ispring
-summary: iSpring Suite turns PowerPoint into e-learning, on Windows, and delivers SCORM, xAPI and cmi5. Elabora is a free Mac and Windows app where your AI builds the course from a plan. Pick iSpring if your content lives in PowerPoint; pick Elabora to work on a Mac or to start from a brief.
+summary: iSpring Suite turns PowerPoint into e-learning, on Windows, and delivers SCORM, xAPI and cmi5. Elabora is a free Mac and Windows app where your AI builds the course from a plan. Pick iSpring if your content is in PowerPoint; pick Elabora to work on a Mac or to start from a brief.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 5
 chooseOther:
   - Your courses start as PowerPoint presentations, and your authors know PowerPoint well.
@@ -39,6 +39,8 @@ Elabora is a separate app. You describe the course and attach your documents, Po
 - **Languages.** AI translation into more than 70 languages and text-to-speech in 53 (Suite AI and Cloud AI).
 
 ## Where Elabora differs
+
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
 
 - **On Mac and Windows**, as a desktop app, with no PowerPoint to install.
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices. The Claude app, the ChatGPT app on your computer or Elabora’s free chat does the work. Each change can be reviewed and undone.

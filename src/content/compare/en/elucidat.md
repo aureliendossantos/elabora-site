@@ -7,7 +7,7 @@ kind: versus
 tool: elucidat
 summary: Elucidat is now Create, part of Confirm, a cloud tool for large L&D teams that produce and translate many courses under one brand. Elabora is a free desktop app where one author builds the course with their AI. Pick Create for scale and translation; pick Elabora for a designer or small team who wants to start today, at no cost.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 10
 chooseOther:
   - You produce many courses for a large organisation, with brand and style locked for every author.
@@ -35,6 +35,8 @@ Elabora is a desktop app for one author and their AI: the AI proposes a plan, bu
 - **Updates in place.** Changes reach learners without uploading the SCORM package again.
 
 ## Where Elabora differs
+
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
 
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices.
 - **Peace of mind.** After each change, your AI reads Elabora’s checks, on accessibility, learning design and your client’s LMS, and fixes what they find on its own, often before you notice.

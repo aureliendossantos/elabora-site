@@ -7,7 +7,7 @@ kind: versus
 tool: dominknow
 summary: dominKnow | ONE is a web platform for teams that reuse content across many courses, with roles, review and every LMS standard. Elabora is a free desktop app where one author builds the course with their AI. Pick dominKnow for a team that shares and reuses content; pick Elabora for one designer who wants to go fast, at no cost.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 7
 chooseOther:
   - Several authors, experts and reviewers work in the same projects, with roles and permissions.
@@ -36,6 +36,8 @@ Elabora is a desktop app for one author and their AI. The AI proposes a plan, bu
 - **On-premises hosting** for Enterprise.
 
 ## Where Elabora differs
+
+Elabora was designed from the start for a reliable and pleasant experience, with your AI doing the building.
 
 - **Free on your computer**, where dominKnow is sold on quote, per author.
 - **Designed to measure, in less of your time.** Your AI designs each course for its audience, its look, illustrations and layouts included, then builds the screens from a plan you approve. Your time goes to the content and the choices. Claude, ChatGPT or Elabora’s free chat does the work, on your files.

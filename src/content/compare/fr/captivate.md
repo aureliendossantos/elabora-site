@@ -7,7 +7,7 @@ kind: versus
 tool: captivate
 summary: Captivate est l’outil auteur de bureau d’Adobe, pour Windows et macOS, solide sur les cours responsive et les simulations logicielles, avec une certification WCAG 2.2 AA. Elabora est une app de bureau gratuite où votre IA réalise le module à partir d’un plan que vous validez. Prenez Captivate pour les simulations et une accessibilité certifiée ; prenez Elabora pour écrire plus vite avec l’IA, sans rien payer.
 published: 2026-11-05
-updated: 2026-11-06
+updated: 2026-11-09
 order: 4
 chooseOther:
   - Vous enregistrez des simulations logicielles à partir de l’écran.
@@ -19,7 +19,7 @@ chooseElabora:
   - Vous voulez un outil gratuit sur votre ordinateur.
 faq:
   - q: Elabora importe-t-il les projets Captivate ?
-    a: Pas aujourd’hui. Elabora importe les cours Storyline et Rise, en bêta. Une IA qui lance des commandes, comme Claude Code ou Codex, peut quand même tester un paquet SCORM publié par Captivate dans l’émulateur de LMS d’Elabora.
+    a: Pas aujourd’hui. Elabora importe les cours Storyline et Rise, en bêta. Votre IA peut quand même tester un paquet SCORM publié par Captivate dans l’émulateur de LMS d’Elabora.
   - q: Captivate fonctionne-t-il sur Mac ?
     a: Oui. Le nouveau Captivate d’Adobe (version 13) tourne sur Windows et macOS.
 ---
@@ -37,6 +37,8 @@ Elabora part de ce que vos apprenants doivent savoir faire. L’IA propose un pl
 - **L’écosystème d’Adobe** : les images de Firefly, et des licences d’équipe gérées dans la console d’administration d’Adobe.
 
 ## Ce qu’Elabora fait autrement
+
+Elabora a été pensé dès le départ pour une expérience fiable et agréable, où votre IA se charge de la construction.
 
 - **Un design sur mesure, et du temps gagné.** Votre IA conçoit chaque module pour son public, son apparence, ses illustrations et ses mises en page compris, puis réalise les écrans à partir d’un plan que vous validez. Votre temps va au contenu et aux choix. Chaque retouche devient une carte que vous relisez, et un clic l’annule.
 - **Votre propre abonnement IA.** Elabora fonctionne avec l’offre Claude ou ChatGPT que vous avez déjà : vous utilisez l’IA autant que cette offre le permet, bien au-delà des crédits génératifs qu’inclut Adobe. Il faut donc cet abonnement ; le chat gratuit d’Elabora suffit pour les petites retouches.
