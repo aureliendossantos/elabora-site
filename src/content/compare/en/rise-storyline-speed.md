@@ -6,9 +6,9 @@ slug: rise-storyline-slow-to-load
 kind: study
 tools: [rise, storyline]
 checked: 2026-11-06
-summary: "On a slow 4G connection, three public Storyline courses showed their main content after 14.6 to 24.3 s, three public Rise courses after 14.5 to 23.6 s, and four Elabora examples after 2.8 to 3.6 s. Most of the gap is a fixed cost of each tool: before the first picture, Rise loads 10 font files and 1.5 to 1.7 MB of JavaScript, Storyline 0.8 to 1.2 MB of JavaScript, Elabora 0.14 to 0.38 MB. The same small module made in all three tools confirms it: Elabora showed its first screen in 2.3 to 2.4 s, Storyline in 9.8 s, and Rise its first text in 9.9 s. On fast fibre, every course showed within 5 s."
+summary: "Mostly because of a fixed cost of each tool: before the first picture, Rise loads 10 font files and 1.5 to 1.7 MB of JavaScript, Storyline 0.8 to 1.2 MB of JavaScript, Elabora 0.14 to 0.38 MB. On a slow 4G connection, three public Storyline courses showed their main content after 14.6 to 24.3 s, three public Rise courses after 14.5 to 23.6 s, and four Elabora examples after 2.8 to 3.6 s. The same small module made in all three tools confirms it: Elabora showed its first screen in 2.3 to 2.4 s, Storyline in 9.8 s, and Rise its first text in 9.9 s. On fast fibre, every course showed within 5 s."
 published: 2026-11-06
-updated: 2026-11-06
+updated: 2026-11-09
 order: 10
 faq:
   - q: How heavy is a Rise course?
@@ -100,9 +100,8 @@ What differs between the three modules, and weighs little:
 - **Captions**: Storyline adds captions to the narration (2 KB); Elabora makes its own (0.8 KB).
 - **The media**: each tool re-encodes them its own way. Rise turns the narration into a 160 kb/s stereo MP3 (607 KB), Storyline into a 56 kb/s MP3 (213 KB); Elabora keeps the 64 kb/s track. Storyline keeps the picture as it is (102 KB), Rise recompresses it (37 KB).
 - **Fonts**: Elabora’s default theme uses the system’s fonts; a course with its own fonts adds them, 70 to 100 KB in our examples. Its player also carries its interface sounds (69 KB).
-- **The questions**: in Storyline and Rise, the first answer was marked correct in questions 2 and 3, which changes nothing in the weight.
 
-This measurement adds to the one of real published courses; it does not replace it. Both point the same way.
+This measurement completes the one of real published courses, and both point the same way.
 
 ## On a fast connection
 
@@ -116,7 +115,7 @@ Unthrottled, the first paint varies by 0.1 to 0.3 s with the network of the mome
 
 ## How to make a Rise course lighter
 
-1. **Break long lessons with Continue blocks.** Authors report that Rise loads a whole lesson at once, and that a Continue block splits what loads first ([Optimize Rise 360 lesson size](https://community.articulate.com/discussions/discuss/optimize-rise-360-lesson-size/1240235), October 2025; an author’s finding, not Articulate’s documentation).
+1. **Break long lessons with Continue blocks.** Authors report that Rise loads a whole lesson at once, and that a Continue block splits what loads first ([Optimize Rise 360 lesson size](https://community.articulate.com/discussions/discuss/optimize-rise-360-lesson-size/1240235), October 2025, an author’s finding).
 2. **Compress pictures and videos before you add them.** Export photos as JPEG or WebP at the size they show, and videos at a bitrate made for the web.
 3. **Duplicate the course to drop old media.** A SCORM package can keep the media of earlier versions of a course; duplicating the course leaves them behind ([October 2026 thread](https://community.articulate.com/discussions/discuss/rise-courseware---lms-publishing---scorm-file-contains-media-from-snapshots/1274136)).
 4. **Check the package after a translation.** One author’s package reached 741 MB after translating the course, and the LMS refused it ([August 2026 thread](https://community.articulate.com/discussions/discuss/scorm-file-upload---lms/1270122)).
@@ -127,10 +126,12 @@ The fonts and the JavaScript of Rise’s player stay: they are its fixed cost.
 ## How to make a Storyline course lighter
 
 1. **Lighten the first slides’ media.** Storyline preloads the next slides: the Career profile course transferred 8.4 MB of pictures before the page was quiet.
-2. **Lower the publishing quality.** In the publish settings, choose the video quality, the audio bitrate and the JPEG quality that fit your learners’ connection.
+2. **Lower the publishing quality.** In the publish settings, choose the video quality, the audio bitrate and the JPEG quality that fit your learners’ connection ([Best Practices for High Quality Images and Videos](https://www.articulatesupport.com/article/Storyline-360-Best-Practices-for-High-Quality-Images-and-Videos)).
 3. **Test outside your LMS**, in SCORM Cloud or Review 360, to see what comes from the LMS.
 
 ## What to know about Elabora’s figures
+
+Elabora was designed from the start for a fast first screen: its player is small, and it loads the course as the learner goes.
 
 - **A course weighs what its media weigh.** Elabora loads it progressively: the first screen first, then the pictures and narration of what follows as the learner goes on. So learners see their content quickly, even with heavy media.
 - **One example keeps the processor busy in this measurement.** Clockwork’s animated clock, drawn with WebGL, blocks the page for 295 ms on the slowed processor: Chrome without a GPU reads every WebGL frame back to the processor. With a Mac’s GPU, no long task comes after 1.3 s.
@@ -158,8 +159,4 @@ What this study leaves out:
 
 ## The script and the raw numbers
 
-The script, the list of courses and every run are public, in [research/load-speed](https://github.com/aureliendossantos/elabora-site/tree/main/research/load-speed) of this site’s repository. The shared module’s runs and film strips are there too; its Storyline and Rise exports stay unpublished, since they carry Articulate’s code and details of the author’s account. Run the script again, on your courses too:
-
-```bash
-node research/load-speed/measure.ts --mode live --runs 3
-```
+The script, the list of courses and every run are public, in [research/load-speed](https://github.com/aureliendossantos/elabora-site/tree/main/research/load-speed) of this site’s repository. The shared module’s runs and film strips are there too; its Storyline and Rise exports stay unpublished, since they carry Articulate’s code and details of the author’s account. Its README says how to run the script again, on your courses too.

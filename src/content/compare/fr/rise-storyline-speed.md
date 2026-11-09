@@ -6,9 +6,9 @@ slug: rise-storyline-lents-a-charger
 kind: study
 tools: [rise, storyline]
 checked: 2026-11-06
-summary: "En 4G lente, trois cours Storyline publics affichent leur contenu principal en 14,6 à 24,3 s, trois cours Rise publics en 14,5 à 23,6 s, et quatre exemples d’Elabora en 2,8 à 3,6 s. L’essentiel de l’écart est un coût fixe de chaque outil : avant la première image, Rise charge 10 fichiers de polices et 1,5 à 1,7 Mo de JavaScript, Storyline 0,8 à 1,2 Mo de JavaScript, Elabora 0,14 à 0,38 Mo. Le même petit module fait dans les trois outils le confirme : Elabora affiche son premier écran en 2,3 à 2,4 s, Storyline en 9,8 s, et Rise son premier texte en 9,9 s. Sur une fibre rapide, chaque cours s’affiche en moins de 5 s."
+summary: "Surtout à cause d’un coût fixe de chaque outil : avant la première image, Rise charge 10 fichiers de polices et 1,5 à 1,7 Mo de JavaScript, Storyline 0,8 à 1,2 Mo de JavaScript, Elabora 0,14 à 0,38 Mo. En 4G lente, trois cours Storyline publics affichent leur contenu principal en 14,6 à 24,3 s, trois cours Rise publics en 14,5 à 23,6 s, et quatre exemples d’Elabora en 2,8 à 3,6 s. Le même petit module fait dans les trois outils le confirme : Elabora affiche son premier écran en 2,3 à 2,4 s, Storyline en 9,8 s, et Rise son premier texte en 9,9 s. Sur une fibre rapide, chaque cours s’affiche en moins de 5 s."
 published: 2026-11-06
-updated: 2026-11-06
+updated: 2026-11-09
 order: 10
 faq:
   - q: "Combien pèse un cours Rise ?"
@@ -100,9 +100,8 @@ Ce qui diffère entre les trois modules, et pèse peu :
 - **Les sous-titres** : Storyline en ajoute à la narration (2 Ko) ; Elabora fait les siens (0,8 Ko).
 - **Les médias** : chaque outil les réencode à sa façon. Rise fait de la narration un MP3 stéréo à 160 kb/s (607 Ko), Storyline un MP3 à 56 kb/s (213 Ko) ; Elabora garde la piste à 64 kb/s. Storyline garde l’image telle quelle (102 Ko), Rise la recompresse (37 Ko).
 - **Les polices** : le thème par défaut d’Elabora utilise les polices du système ; un module avec ses propres polices les ajoute, 70 à 100 Ko dans nos exemples. Son lecteur emporte aussi ses sons d’interface (69 Ko).
-- **Les questions** : dans Storyline et Rise, la première réponse a été cochée comme bonne aux questions 2 et 3, ce qui ne change rien au poids.
 
-Cette mesure complète celle des cours réels publiés ; elle ne la remplace pas. Les deux vont dans le même sens.
+Cette mesure complète celle des cours réels publiés, et les deux vont dans le même sens.
 
 ## Sur une connexion rapide
 
@@ -116,7 +115,7 @@ Sans bridage, le premier affichage varie de 0,1 à 0,3 s selon le réseau du mo
 
 ## Alléger un cours Rise
 
-1. **Coupez les longues leçons avec des blocs Continuer.** Des auteurs constatent que Rise charge une leçon entière d’un coup, et qu’un bloc Continuer coupe ce qui se charge d’abord ([Optimize Rise 360 lesson size](https://community.articulate.com/discussions/discuss/optimize-rise-360-lesson-size/1240235), octobre 2025 ; le constat d’un auteur, pas une documentation d’Articulate).
+1. **Coupez les longues leçons avec des blocs Continuer.** Des auteurs constatent que Rise charge une leçon entière d’un coup, et qu’un bloc Continuer coupe ce qui se charge d’abord ([Optimize Rise 360 lesson size](https://community.articulate.com/discussions/discuss/optimize-rise-360-lesson-size/1240235), octobre 2025, le constat d’un auteur).
 2. **Compressez les images et les vidéos avant de les ajouter.** Exportez les photos en JPEG ou en WebP à la taille où elles s’affichent, et les vidéos à un débit fait pour le web.
 3. **Dupliquez le cours pour laisser les anciens médias.** Un paquet SCORM peut garder les médias des versions précédentes d’un cours ; dupliquer le cours les laisse de côté ([fil d’octobre 2026](https://community.articulate.com/discussions/discuss/rise-courseware---lms-publishing---scorm-file-contains-media-from-snapshots/1274136)).
 4. **Vérifiez le paquet après une traduction.** Le paquet d’un auteur a atteint 741 Mo après la traduction du cours, et le LMS l’a refusé ([fil d’août 2026](https://community.articulate.com/discussions/discuss/scorm-file-upload---lms/1270122)).
@@ -127,10 +126,12 @@ Les polices et le JavaScript du lecteur de Rise restent : c’est son coût fix
 ## Alléger un cours Storyline
 
 1. **Allégez les médias des premières diapositives.** Storyline précharge les diapositives suivantes : le cours Career profile transfère 8,4 Mo d’images avant que la page soit calme.
-2. **Baissez la qualité de publication.** Dans les réglages de publication, choisissez la qualité vidéo, le débit audio et la qualité JPEG qui conviennent à la connexion de vos apprenants.
+2. **Baissez la qualité de publication.** Dans les réglages de publication, choisissez la qualité vidéo, le débit audio et la qualité JPEG qui conviennent à la connexion de vos apprenants ([Best Practices for High Quality Images and Videos](https://www.articulatesupport.com/article/Storyline-360-Best-Practices-for-High-Quality-Images-and-Videos)).
 3. **Testez hors de votre LMS**, dans SCORM Cloud ou Review 360, pour voir ce qui vient du LMS.
 
 ## Ce qu’il faut savoir des chiffres d’Elabora
+
+Elabora a été pensé dès le départ pour un premier écran rapide : son lecteur est léger, et il charge le module au fil de la lecture.
 
 - **Un module pèse ce que pèsent ses médias.** Elabora le charge progressivement : le premier écran d’abord, puis les images et la narration de la suite au fil de la lecture. L’apprenant voit donc vite son contenu, même avec des médias lourds.
 - **Un exemple occupe le processeur dans cette mesure.** L’horloge animée de Clockwork, dessinée en WebGL, bloque la page 295 ms sur le processeur ralenti : Chrome sans GPU relit chaque image WebGL vers le processeur. Avec le GPU d’un Mac, plus aucune tâche longue après 1,3 s.
@@ -145,7 +146,7 @@ Les polices et le JavaScript du lecteur de Rise restent : c’est son coût fix
 - **Un cache vide** à chaque passage, après un chargement non compté qui réveille chaque CDN. Trois passages par cours et par condition, cours après cours ; nous gardons la médiane.
 - **La fin d’un passage** : 5 s sans tâche longue et au plus 2 requêtes en cours, comme Lighthouse, puis 1 s de plus ; au plus 60 s sans bridage, 180 s bridé. Les octets comptent jusque-là : le premier écran et ce que l’outil charge d’avance, pas le cours entier.
 - **Les mesures** : les octets transférés par type (protocole DevTools de Chrome), FCP et LCP (l’API du navigateur), le moment où la page est utilisable (TTI, calculé comme Lighthouse), le temps de blocage total, le temps du thread principal.
-- **L’ordinateur** : un Mac Apple M5 de 10 cœurs et 16 Go, occupé par d’autres travaux pendant les passages (sa charge est notée à chaque passage). Les temps bridés varient de 0,4 s au plus d’un passage à l’autre : le réseau domine.
+- **L’ordinateur** : un Mac Apple M5 de 10 cœurs et 16 Go, occupé par d’autres travaux pendant les passages (sa charge est notée à chaque passage). Les temps bridés varient de 0,4 s au plus d’un passage à l’autre : le réseau domine.
 - **Le même module dans les trois outils** a été servi par le script depuis ce même ordinateur, en HTTP/1.1 avec gzip (sa charge allait de 8 à 16), le 6 novembre 2026 à 14 h 56 UTC : les exports web de Storyline 360 3.129.38633.0 et de Rise 360 avec leurs réglages proposés, et Elabora construit depuis elabora-core bb4ce638.
 
 Ce que l’étude laisse de côté :
@@ -158,8 +159,4 @@ Ce que l’étude laisse de côté :
 
 ## Le script et les chiffres bruts
 
-Le script, la liste des cours et chaque passage sont publics, dans [research/load-speed](https://github.com/aureliendossantos/elabora-site/tree/main/research/load-speed) du dépôt de ce site. Les passages et les pellicules du module commun y sont aussi ; ses exports Storyline et Rise restent non publiés, car ils portent le code d’Articulate et des détails du compte de l’auteur. Relancez le script, sur vos cours aussi :
-
-```bash
-node research/load-speed/measure.ts --mode live --runs 3
-```
+Le script, la liste des cours et chaque passage sont publics, dans [research/load-speed](https://github.com/aureliendossantos/elabora-site/tree/main/research/load-speed) du dépôt de ce site. Les passages et les pellicules du module commun y sont aussi ; ses exports Storyline et Rise restent non publiés, car ils portent le code d’Articulate et des détails du compte de l’auteur. Son README explique comment relancer le script, sur vos cours aussi.
