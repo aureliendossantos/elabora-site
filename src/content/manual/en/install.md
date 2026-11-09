@@ -54,7 +54,7 @@ Nothing is chosen in advance. Pick one, then **Get started**. You can change you
 
 ## What Elabora downloads, and when
 
-The installer holds the essentials. A few large items, useful only for some courses, are downloaded once per computer, the first time you need them, and Elabora offers them first with a button:
+The installer holds the essentials. A few large items, useful only for some courses, are downloaded once per computer, the first time you need them. Elabora first offers each with a button:
 
 - **Local voices**, to have narration spoken for free on your computer: per language, 354 MB for French, 126 MB for English.
 - **Words timed to the voice**, to know exactly when each word is said.

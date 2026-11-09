@@ -16,7 +16,7 @@ Elabora shows them to you as sentences, which you can read, correct or complete 
 
 An event reads like a sentence: “When clicking the Check button: show layer Hint”. You find them in **Properties**, in the **Events** section, for a block, for the screen or for a layer. **See all** opens the screen’s events page in place of the canvas, grouped by what triggers them; **Canvas**, in the toolbar, brings the slide back.
 
-Every word underlined with dots opens a menu when clicked: another block, another layer, another screen, another value. The menus only offer what is possible in that place.
+Click a word underlined with dots to open a menu: another block, another layer, another screen, another value. The menus only offer what is possible in that place.
 
 <!-- capture: a screen’s events page, with one event selected and its menu open -->
 
@@ -34,7 +34,7 @@ A layer shows over the screen: feedback, a hint, a window of details.
 
 - The tabs above the canvas show **Base** and the screen’s layers; **+** adds one, with a first text ready to type over.
 - Double-click a tab to rename it. Right-click to choose **Modal** (over the dimmed screen; learners close it to continue) or **Panel** (over part of the screen, which stays usable), to add an event that shows it, or to delete it with its blocks (⌘Z brings it back).
-- Shown with nothing selected, a layer has its own **Properties**: its name, **Display as**, **Opened by** (the events that show it; if none, Elabora warns that learners will never see it) and **Add an event to show it**.
+- With a layer shown and nothing selected, **Properties** shows the layer’s settings: its name, **Display as**, **Opened by** (the events that show it; if none, Elabora warns that learners will never see it) and **Add an event to show it**.
 - A block moves into a layer, or back to the base, from its menu. Blocks added while a layer is shown go into that layer.
 - A layer can speak: its voice explains, its blocks come in on the word that names them, and it can close once its voice has finished. See [a layer that speaks](/en/docs/voices-and-narration/#a-layer-that-speaks).
 
@@ -56,4 +56,4 @@ A variable remembers something while the learner goes through the course (a choi
 - Select one to rename it (the events follow), change its type, its initial value, its **Possible values** or its **Max. length**, and say what it is for (**Purpose**). Below, the events that change it (**Changed by**) and read it (**Read by**), each opening its event.
 - **New variable** creates one; event menus also offer **New variable…** wherever you choose a variable. A variable that is “never read” makes no difference to learners; a variable still in use cannot be deleted.
 
-You will find interaction problems (an event without an action, a layer that is never shown) in the [checks](/en/docs/preview-and-checks/).
+The [checks](/en/docs/preview-and-checks/) list interaction problems (an event without an action, a layer that is never shown).

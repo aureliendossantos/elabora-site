@@ -27,7 +27,7 @@ Les modèles gratuits suffisent pour retoucher un écran, ajouter une question o
 2. Écrivez votre demande dans le champ **Demander à l’agent…**. Une étiquette montre l’écran affiché : l’agent saura ce que vous regardez (l’écran et, s’il y en a un, le bloc sélectionné), et dans quelle langue est le module.
 3. Le menu à côté du bouton d’envoi montre l’IA qui recevra la demande, votre IA préférée au départ. Chaque ligne dit où elle travaille : **OpenCode** « Dans Elabora · gratuit », **Claude** et **ChatGPT** « Dans l’app Claude » ou « Dans l’app ChatGPT », avec votre offre. Viennent ensuite **Copier la demande**, pour la coller dans une autre IA, et **Votre IA préférée…**.
 4. Envoyez avec la flèche, ou Entrée (Maj+Entrée va à la ligne ; pour envoyer avec ⌘Entrée, voir [les réglages](/fr/docs/reglages/)).
-5. Avec OpenCode, la réponse s’écrit dans le panneau. Avec Claude ou ChatGPT, l’app de votre IA s’ouvre sur le module : votre agent vous demandera sans doute la permission de lancer la commande `elabora`, acceptez.
+5. Avec OpenCode, la réponse s’écrit dans le panneau. Avec Claude ou ChatGPT, l’app de votre IA s’ouvre sur le module : votre agent vous demandera sans doute la permission de lancer la commande `elabora` : acceptez.
 
 Quelques exemples de demandes :
 
@@ -45,7 +45,7 @@ D’autres boutons envoient aussi une demande à votre agent, déjà rédigée :
 
 Elabora télécharge OpenCode une seule fois par ordinateur, un peu plus de 100 Mo, et affiche « Elabora prépare OpenCode… » avec sa progression. Hors ligne, le téléchargement reprend de lui-même à la reconnexion. OpenCode est ensuite dans **Réglages** › **Éléments téléchargés**, sous **IA dans Elabora**, et se met à jour avec Elabora.
 
-L’OpenCode d’Elabora a ses propres dossiers : si vous utilisez déjà OpenCode, Elabora ne voit ni ne change ses réglages, ses clés ou ses sessions.
+L’OpenCode d’Elabora a ses propres dossiers : si vous utilisez déjà OpenCode, Elabora ne voit pas et ne change pas ses réglages, ses clés ni ses sessions.
 
 ### La conversation
 
@@ -73,7 +73,7 @@ Ces modèles ont une limite d’usage, fixée par OpenCode. Le chat de tous vos 
 
 ### Les boutons ✨
 
-À côté d’un champ vide qu’une IA sait remplir, le texte alternatif d’une image ou une traduction manquante, un ✨ demande à OpenCode de l’écrire (**Décrire l’image avec OpenCode**, **Traduire avec OpenCode**), quelle que soit votre IA préférée. Vous continuez à travailler pendant ce temps. La première fois, si vous n’avez pas choisi OpenCode, Elabora vous demande votre accord. Le texte s’écrit dans le champ comme un travail de l’IA : ⌘Z l’annule.
+Certains champs vides qu’une IA sait remplir, comme le texte alternatif d’une image ou une traduction manquante, ont un ✨ à côté. Il demande à OpenCode d’écrire le texte (**Décrire l’image avec OpenCode**, **Traduire avec OpenCode**), quelle que soit votre IA préférée. Vous continuez à travailler pendant ce temps. La première fois, si vous n’avez pas choisi OpenCode, Elabora vous demande votre accord. Le texte s’écrit dans le champ comme un travail de l’IA : ⌘Z l’annule.
 
 ## Suivre ce que fait l’agent
 

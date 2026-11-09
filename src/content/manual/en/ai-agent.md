@@ -27,7 +27,7 @@ The free models are enough to retouch a screen, add a question or translate a te
 2. Write your request in the **Ask the agent…** field. A tag shows the screen on display: the agent will know what you are looking at (the screen and, if there is one, the selected block), and which language the course is in.
 3. The menu next to the send button shows the AI that will get the request, your preferred AI to begin with. Each line says where it works: **OpenCode** “In Elabora · free”, **Claude** and **ChatGPT** “In the Claude app” or “In the ChatGPT app”, with your plan. Then come **Copy request**, to paste it into another AI, and **Your preferred AI…**.
 4. Send with the arrow, or Enter (Shift+Enter starts a new line; to send with ⌘Enter, see [settings](/en/docs/settings/)).
-5. With OpenCode, the answer is written in the panel. With Claude or ChatGPT, your AI’s app opens on the course: your agent will probably ask permission to run the `elabora` command, allow it.
+5. With OpenCode, the answer is written in the panel. With Claude or ChatGPT, your AI’s app opens on the course: your agent will probably ask permission to run the `elabora` command: allow it.
 
 A few example requests:
 
@@ -45,7 +45,7 @@ Other buttons also send a ready-made request to your agent: **Create with** (and
 
 Elabora downloads OpenCode once per computer, a little over 100 MB, and shows “Elabora is preparing OpenCode…” with its progress. Offline, the download resumes by itself when you are back online. OpenCode is then in **Settings** › **Downloaded items**, under **AI in Elabora**, and updates with Elabora.
 
-Elabora’s OpenCode has folders of its own: if you already use OpenCode, Elabora neither sees nor changes its settings, keys or sessions.
+Elabora’s OpenCode has folders of its own: if you already use OpenCode, Elabora does not see or change its settings, keys or sessions.
 
 ### The conversation
 
@@ -73,7 +73,7 @@ These models have a usage limit, set by OpenCode. The chat of all your courses a
 
 ### The ✨ buttons
 
-Next to an empty field an AI can fill, an image’s text alternative or a missing translation, a ✨ asks OpenCode to write it (**Describe the image with OpenCode**, **Translate with OpenCode**), whatever your preferred AI. You keep working meanwhile. The first time, if you haven’t chosen OpenCode, Elabora asks for your approval. The text is written in the field as the AI’s work: ⌘Z undoes it.
+Some empty fields an AI can fill, such as an image’s text alternative or a missing translation, have a ✨ next to them. It asks OpenCode to write the text (**Describe the image with OpenCode**, **Translate with OpenCode**), whatever your preferred AI. You keep working meanwhile. The first time, if you haven’t chosen OpenCode, Elabora asks for your approval. The text is written in the field as the AI’s work: ⌘Z undoes it.
 
 ## Following what the agent does
 

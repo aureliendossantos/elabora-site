@@ -23,7 +23,7 @@ Under the courses, a note reminds you that Elabora is in beta, and the **Coming 
 
 At the top, the course’s bar:
 
-- the house goes back **Home**;
+- the house icon goes back **Home**;
 - the course title opens a menu: **Course settings**, **Theme**, **Translation**, **Export…** (and **Import report** for a course imported from Storyline or Rise);
 - the check mark next to the title says “Saved on this computer”: Elabora saves as you go, there is no save button. Clicking it opens the **Course history**;
 - in the middle, the five views;
