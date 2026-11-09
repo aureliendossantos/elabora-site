@@ -40,14 +40,14 @@ The steps below go from the quickest to the most thorough.
    Closing the tab matters more since Chrome 155 (6 October 2026). Chrome no longer runs `unload` handlers on any site, and recommends saving when the page becomes hidden ([Deprecating the unload event](https://developer.chrome.com/docs/web-platform/deprecating-unload), updated 16 October 2026). A course that saves progress only on unload now loses everything after its last save.
 5. **Finish in the client’s LMS.** Each LMS adds its own rules: how it launches courses, the package size it accepts, how much progress data it keeps. Ask for a test learner account and run the hard moments there once, before learners arrive. Our [LMS profiles](/en/docs/developers/lms-profiles/) list these rules for ten LMSs, with their sources.
 
-## What Elabora does
+## Or let Elabora test it for you
 
-Elabora runs the same kind of checks on your computer.
+Elabora was designed around these problems, and it can run these checks for you:
 
 - **Preview** plays the course in a simulated LMS, as learners will see it once delivered ([Preview and checks](/en/docs/preview-and-checks/)).
-- `elabora test` builds the package and plays it in Elabora’s LMS emulator, with the client’s LMS profile (or every profile with `--profile all`) and each launch mode, frame or pop-up. Each run moves to the second screen, closes the window abruptly, and relaunches the course to check that it resumes on that screen. It also checks the status and score the LMS keeps, the end of the session when the learner quits, and that a review session leaves the status unchanged ([command line](/en/docs/developers/cli/)).
-- The emulator has 11 profiles: SuccessFactors, Workday, Cornerstone, Docebo, Moodle, Totara, 360Learning, Rise Up, SCORM Cloud, Teach Up, and an unknown LMS with the strictest documented rules ([LMS profiles](/en/docs/developers/lms-profiles/)).
-- `elabora test --package course.zip` plays a package from another tool, such as Storyline or Rise, in the same emulator. It checks that the course finds the LMS, opens a session, and saves progress before the window closes. It also lists the values the LMS refuses and any `unload` handlers that would lose progress in Chrome and Edge. To check resume and completion inside that course, use SCORM Cloud and the client’s LMS.
-- `elabora inspect course.zip` reads any SCORM package and reports its manifest, SCORM version, launch file, mastery score, the file names some servers refuse, and its five largest files.
+- **Elabora can test the package before delivery** in its LMS emulator, with the client’s LMS or all of them at once, in each launch mode, frame or pop-up. Each run moves to the second screen, closes the window abruptly, and relaunches the course to check that it resumes on that screen. It also checks the status and score the LMS keeps, the end of the session when the learner quits, and that a review session leaves the status unchanged.
+- **The emulator knows 11 LMSs**: SuccessFactors, Workday, Cornerstone, Docebo, Moodle, Totara, 360Learning, Rise Up, SCORM Cloud, Teach Up, and an unknown LMS with the strictest documented rules ([LMS profiles](/en/docs/developers/lms-profiles/)).
+- **It tests packages from other tools too.** Elabora can run a Storyline or Rise package in the same emulator. It checks that the course finds the LMS, opens a session, and saves progress before the window closes, and lists the values the LMS refuses and any `unload` handlers that would lose progress in Chrome and Edge. To check resume and completion inside that course, use SCORM Cloud and the client’s LMS.
+- **It shows what a package holds**: its SCORM version, launch file and mastery score, the file names some servers refuse, and its five largest files.
 
-The `elabora` command comes with Elabora, and your AI can run it for you ([Working with your AI](/en/docs/working-with-your-ai/)).
+To run these checks, ask your AI in Elabora to test the package ([Working with your AI](/en/docs/working-with-your-ai/)).

@@ -39,12 +39,13 @@ After a recovery, check each slide’s audio and captions: one author found that
 
 To protect the next project: work on a local disk, outside OneDrive, Dropbox and network drives, as Articulate’s staff advise ([2023 answer](https://community.articulate.com/discussions/discuss/storyline-file-loading-too-long-and-cannot-open/872775)); save a numbered copy with **Save As** at each milestone; and publish to Review 360 with the project file.
 
-## How Elabora keeps a course
+## Or keep your courses in Elabora
 
-An Elabora course is a folder of plain files: `course.json`, one file per screen, and its media. It lives in Elabora’s library, a folder that no sync service touches ([Library, archives and history](/en/docs/library/)).
+Elabora was designed so that a crash or a bad save costs you little:
 
-- Elabora saves as you go and keeps backups: all of them for 24 hours, then one per hour up to 7 days, one per day up to 30 days, and one per week after that. Each published package leaves a named version.
-- In the **Course history**, **Undo this change** undoes one change, and **Revert to this point** puts the whole course back as it was then. Going back is itself a change, which you can undo.
-- To send a course to someone, Elabora writes a `.elabora` archive.
+- **A course is a folder of plain files**, one per screen, with its media. It lives in Elabora’s library, a folder that no sync service touches ([Library, archives and history](/en/docs/library/)).
+- **Elabora saves as you go and keeps backups**: all of them for 24 hours, then one per hour up to 7 days, one per day up to 30 days, and one per week after that. Each published package leaves a named version.
+- **The Course history takes you back.** **Undo this change** undoes one change, and **Revert to this point** puts the whole course back as it was then. Going back is itself a change, which you can undo.
+- **To send a course to someone**, Elabora writes a single `.elabora` archive.
 
 Coming from Storyline? The import, in Beta, takes a Storyline project (`.story`) or a published Storyline course, as a folder or a ZIP, and its report lists what it could not bring over ([Bringing in a Storyline or Rise course](/en/docs/import-storyline-rise/)).

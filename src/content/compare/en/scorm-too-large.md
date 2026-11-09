@@ -39,10 +39,12 @@ Video usually makes most of the weight, then audio and large images. Two things 
 6. **Split the course.** Publish two or three modules, each under the limit, and group them in the LMS as one program.
 7. **Ask the LMS administrator.** Some limits are settings: Workday raises its 2 GB default with **Increase Maximum Upload Size**, and SuccessFactors uses a maximum its administrator sets ([LMS profiles](/en/docs/developers/lms-profiles/)).
 
-## What Elabora does
+## Or let Elabora keep the package light
+
+Elabora was designed to keep packages small, and to warn you before the LMS refuses one:
 
 - **The weight before publishing.** In **Publish**, Elabora shows the course’s weight at the chosen media quality: **Standard**, **Lighter** or **Lightest**. A click lists its media, the heaviest first, each with its screen and its weight ([Publishing](/en/docs/publishing/#the-weight-of-media)).
 - **The limit of the client’s LMS.** Once you choose the client’s LMS, Elabora checks the package against the size that LMS accepts. When the package is too heavy, Elabora says so with the figures, such as “The package size is 130.2 MB, too large for Teach Up (up to 100 MB)”, then gives the quality that fits, its estimated size, and the largest files. When even the lightest quality is too heavy, it suggests shortening the video or hosting it elsewhere. With no LMS chosen, it names the LMSs that would refuse the package.
 - **Light copies, made for you.** For a photo saved as PNG, a video exported at too high a bitrate, or a HEIC or ProRes file, the package gets an optimized copy at every quality, and your files stay as they are. An animated image shows its weight in orange, because as a video it would weigh several times less.
-- **Only the media the course uses.** The package holds the media the course shows; other files in the course folder stay out of it ([build code](https://github.com/aureliendossantos/elabora-core/blob/main/packages/node/src/build.ts)).
-- **Any package, read.** `elabora inspect course.zip` lists the five largest files of any SCORM package, from Storyline or Rise too. The `elabora` command comes with Elabora, and your AI can run it for you.
+- **Only the media the course uses.** The package holds the media the course shows; other files in the course folder stay out of it.
+- **Any package, opened.** Your AI can open a SCORM package from Storyline or Rise in Elabora and list its five largest files ([Working with your AI](/en/docs/working-with-your-ai/)).
