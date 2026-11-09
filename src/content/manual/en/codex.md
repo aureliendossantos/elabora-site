@@ -11,7 +11,7 @@ Yes. Elabora is made to work with Codex, in the ChatGPT desktop app or in a term
 ## How it works
 
 - **From Elabora.** In a course, **Agent** › choose **ChatGPT** › write your request. Elabora opens Codex in the ChatGPT app, in the course’s folder, with your request already written. See [Working with your AI](/en/docs/working-with-your-ai/).
-- **On its own.** You can also start Codex yourself in a course’s folder (its path is at the bottom of **Course settings**): in the ChatGPT app, start a Codex conversation on that folder; in a terminal, run `codex` there.
+- **On its own.** You can also start Codex yourself in a course’s folder (its path is at the bottom of **Course settings**): in the ChatGPT app, start a Codex conversation on that folder; in a terminal, start Codex there.
 - **What Codex reads.** Every course holds an `AGENTS.md` file, which Codex reads by itself: Elabora’s rules for agents, and how to load its guides for each task (writing the plan, the screens, the design, quizzes, dialogues, narration, translation).
 - **What Codex runs.** The `elabora` command, which comes with the app: it reads and writes the plan, the screens and their blocks, checks the course, looks at a screen as a learner sees it and builds the SCORM package. Elabora shows what Codex changes as it happens, and undoes it in one step.
 

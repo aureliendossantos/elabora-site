@@ -45,7 +45,7 @@ ElevenLabs voices are more expressive than local voices (emotions, laughter, whi
 
 From then on, the **Voices** section shows the masked key, where it is kept, the share of the quota used **This month** (**Show the quota** when the key is in the keychain), the switch for your AI, **Change key…** and **Remove**.
 
-Elabora always speaks in shares of your monthly quota, never in credits. Under 1%, a generation starts on your click; from 1%, Elabora (or your AI) asks for your approval first. Commercial use of the voices needs a paid ElevenLabs plan.
+Elabora always gives costs as a share of your monthly quota. Under 1%, a generation starts on your click; from 1%, Elabora (or your AI) asks for your approval first. Commercial use of the voices needs a paid ElevenLabs plan.
 
 <!-- capture: the Voices section of the settings, with a masked key, the quota bar and the “Your AI” switch -->
 
@@ -58,7 +58,7 @@ What Elabora downloads once per computer, outside your courses, with what it is 
 - **Transcription**, to transcribe your recordings on your computer;
 - **AI in Elabora**: OpenCode, the chat’s agent, downloaded at your first message. Uninstalling it keeps your conversations; it downloads again at your next message.
 
-Each row gives its size. **Install** downloads it; the **…** menu offers **Reinstall** and **Uninstall**. Uninstalling asks for no confirmation and touches no course: what they contain stays, and the item downloads again the next time it is needed. Elabora refuses to uninstall an item while it is in use.
+Each row gives its size. **Install** downloads it; the **…** menu offers **Reinstall** and **Uninstall**. Uninstalling takes effect at once and leaves every course as it is: what they contain stays, and the item downloads again the next time it is needed. Elabora refuses to uninstall an item while it is in use.
 
 ## Personalization, Usage and Updates
 

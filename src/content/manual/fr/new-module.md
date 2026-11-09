@@ -35,7 +35,7 @@ Une maquette, un storyboard ou une vidéo ajoute sa propre question : pour une m
 
 Ils sont copiés dans le dossier `sources` du module. À l’ouverture du module, Elabora en fait, en arrière-plan, une version que l’agent lit facilement : un document Word avec ses commentaires et ses modifications suivies, une présentation diapositive par diapositive avec ses notes, un enregistrement transcrit sur votre ordinateur. Si un enregistrement attend le modèle de transcription, un message le dit, avec **Télécharger le modèle (…)** et **Plus tard**.
 
-Les sources ne vont jamais dans un paquet ni dans une publication, ni dans une archive exportée, sauf si vous cochez **Inclure les sources** (un brief contient souvent des données personnelles). Elabora ne les modifie pas et ne les met pas dans ses sauvegardes : gardez vos originaux.
+Les sources ne vont jamais dans un paquet ni dans une publication. Elles ne vont dans une archive exportée que si vous cochez **Inclure les sources** (un brief contient souvent des données personnelles). Elabora ne les modifie pas et ne les met pas dans ses sauvegardes : gardez vos originaux.
 
 ## Préciser votre demande
 

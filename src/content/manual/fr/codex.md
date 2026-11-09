@@ -11,7 +11,7 @@ Oui. Elabora est fait pour marcher avec Codex, dans l’app de bureau ChatGPT ou
 ## Comment ça marche
 
 - **Depuis Elabora.** Dans un module, **Agent** › choisissez **ChatGPT** › écrivez votre demande. Elabora ouvre Codex dans l’app ChatGPT, dans le dossier du module, avec votre demande déjà écrite. Voyez [Travailler avec votre IA](/fr/docs/travailler-avec-votre-ia/).
-- **Seul.** Vous pouvez aussi lancer Codex vous-même dans le dossier d’un module (son chemin est en bas des **Réglages du module**) : dans l’app ChatGPT, ouvrez une conversation Codex sur ce dossier ; dans un terminal, lancez `codex` dans ce dossier.
+- **Seul.** Vous pouvez aussi lancer Codex vous-même dans le dossier d’un module (son chemin est en bas des **Réglages du module**) : dans l’app ChatGPT, ouvrez une conversation Codex sur ce dossier ; dans un terminal, lancez Codex dans ce dossier.
 - **Ce que lit Codex.** Chaque module contient un fichier `AGENTS.md`, que Codex lit de lui-même : les règles d’Elabora pour les agents, et comment charger ses guides pour chaque tâche (écrire le plan, les écrans, le design, les quiz, les dialogues, la narration, la traduction).
 - **Ce que lance Codex.** La commande `elabora`, qui vient avec l’app : elle lit et écrit le plan, les écrans et leurs blocs, vérifie le module, regarde un écran comme l’apprenant le voit et construit le paquet SCORM. Elabora montre à mesure ce que Codex change, et l’annule en une fois.
 

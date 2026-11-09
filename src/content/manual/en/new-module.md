@@ -35,7 +35,7 @@ A mockup, a storyboard or a video adds a question of its own: for a mockup, **Fo
 
 They are copied into the course’s `sources` folder. When the course opens, Elabora makes, in the background, a version of each that the agent reads easily: a Word document with its comments and tracked changes, a deck slide by slide with its notes, a recording transcribed on your computer. If a recording is waiting for the transcription model, a message says so, with **Download the model (…)** and **Later**.
 
-Sources never go into a package or a publication, nor into an exported archive unless you tick **Include the sources** (a brief often holds personal data). Elabora does not change them and does not include them in its backups: keep your originals.
+Sources never go into a package or a publication. They go into an exported archive only if you tick **Include the sources** (a brief often holds personal data). Elabora does not change them and does not include them in its backups: keep your originals.
 
 ## Refining your request
 

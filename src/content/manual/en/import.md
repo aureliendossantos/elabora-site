@@ -41,7 +41,7 @@ When you are done, **Close the report** (⌘Z brings it back). While the report 
 
 ## What changes when moving to Elabora
 
-A Storyline slide is not copied pixel for pixel: Elabora reads it and makes blocks in reading order, so the screen adapts to the window and to phones, and stays readable by a screen reader. Storyline slides become slides, Rise lessons become scrolling pages. Layers stay layers, simple triggers become events, choice questions become questions.
+Elabora reads each Storyline slide and makes blocks in reading order, so the screen adapts to the window and to phones, and stays readable by a screen reader. Storyline slides become slides, Rise lessons become scrolling pages. Layers stay layers, simple triggers become events, choice questions become questions.
 
 What Elabora cannot do yet (drag and drop, hotspots, fill-in-the-blank…) becomes text, with a note for you. Fonts Elabora does not know are replaced by a similar font from its selection, and Content Library media are not copied from a `.story`.
 
