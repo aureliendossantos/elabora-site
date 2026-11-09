@@ -2,7 +2,7 @@
 export const fr = {
   htmlLang: 'fr',
   name: 'Elabora',
-  siteTitle: 'Elabora : outil auteur e-learning',
+  siteTitle: 'Elabora : outil auteur e-learning',
   siteDescription:
     'Elabora conçoit avec vous des modules e-learning soignés\u202f: 3D, dialogues, voix et quiz, exportés en SCORM ou publiés sur le web. Gratuit, sur macOS et Windows.',
   skip: 'Aller au contenu',
@@ -104,7 +104,7 @@ export const fr = {
       items: [
         { title: 'Décrire', text: 'Décrivez votre public et ce qu’il doit savoir faire. Joignez vos documents, choisissez une charte.' },
         { title: 'Valider le plan', text: 'L’IA propose un plan : objectifs, parties, écrans. Vous le validez, puis elle réalise les écrans.' },
-        { title: 'Affiner', text: 'Demandez une retouche à l’agent, ou changez chaque bloc vous-même, comme dans un logiciel de diapositives.' },
+        { title: 'Affiner', text: 'Demandez une retouche à votre IA, ou changez chaque bloc vous-même, comme dans un logiciel de diapositives.' },
         { title: 'Livrer', text: 'Faites relire par un simple lien, puis publiez sur le web ou exportez le paquet SCORM pour votre LMS.' },
       ],
     },
@@ -112,12 +112,12 @@ export const fr = {
       title: 'Prêt pour votre entreprise.',
       lead: 'Vos contenus restent à vous, vos modules partent dans votre LMS, et chacun peut les relire.',
       items: [
-        { title: 'Gratuit, et il le restera.', text: 'Elabora est gratuit sur votre ordinateur. En ligne, vous avez des quotas gratuits pour créer plusieurs liens de relecture en même temps et publier des modules sur le web.' },
-        { title: 'Vos fichiers, dans un format ouvert.', text: 'Chaque module est un dossier sur votre ordinateur, et le cœur d’Elabora est open source. Vos modules restent lisibles, même sans l’application.' },
-        { title: 'L’IA que vous préférez.', text: 'Utilisez l’app Claude, l’app ChatGPT ou le chat gratuit d’Elabora. Avec votre abonnement actuel, vous allez bien plus loin qu’avec les crédits d’IA que d’autres outils revendent d’ordinaire.' },
+        { title: 'Gratuit, et il le restera.', text: 'Elabora est gratuit sur votre ordinateur. En ligne, vous avez des quotas gratuits pour ouvrir plusieurs revues en même temps et publier des modules sur le web.' },
+        { title: 'Vos fichiers, dans un format ouvert.', text: 'Chaque module est un dossier sur votre ordinateur, et le cœur d’Elabora est open source : vos modules se lisent aussi hors de l’application.' },
+        { title: 'L’IA que vous préférez.', text: 'Utilisez l’app Claude, l’app ChatGPT ou le chat gratuit d’Elabora. Avec votre abonnement actuel, vous allez bien plus loin qu’avec les crédits d’IA revendus par d’autres outils.' },
         { title: 'SCORM, cmi5, xAPI et web.', text: 'Un paquet pour votre LMS, ou un lien à partager. Plusieurs langues dans un même module.' },
-        { title: 'Accessible dès l’écriture.', text: 'Contrastes, textes alternatifs, clavier, sous-titres : chaque écran est vérifié par votre agent avant la livraison.' },
-        { title: 'Relu par vos experts.', text: 'Ils commentent dans le module, depuis un simple lien. La relecture est hébergée en Europe.' },
+        { title: 'Accessible dès l’écriture.', text: 'Contrastes, textes alternatifs, clavier, sous-titres : chaque écran est vérifié par votre IA avant la livraison.' },
+        { title: 'Relu par vos experts.', text: 'Ils commentent dans le module, depuis un simple lien. Les revues sont hébergées en Europe.' },
       ],
       lms: 'Chaque paquet est vérifié selon les règles de votre LMS :',
       beta: 'Une bêta qui évolue vite. L’import de vos modules Storyline et Rise est en bêta, lui aussi.',
@@ -153,11 +153,11 @@ export const fr = {
     legal: 'Informations légales',
     language: 'Langue',
     copyright: '© 2026 Elabora',
-    /** The line under the footer: the site's texts, its code, its repository (README, « Licences »). */
+    /** The line under the footer: the site's texts, its code, its repository (README, « Licences »). */
     licence: { texts: 'Textes sous', code: 'code sous', source: 'source sur GitHub', deed: 'https://creativecommons.org/licenses/by/4.0/deed.fr' },
   },
   legal: {
-    updated: 'Dernière mise à jour :',
+    updated: 'Dernière mise à jour :',
     toc: 'Sommaire',
     names: {
       legalNotice: 'Mentions légales',
@@ -169,12 +169,12 @@ export const fr = {
   docs: {
     nav: 'Documentation',
     title: 'Documentation',
-    description: 'Le manuel d’Elabora : créer un module avec votre IA, le faire valider, le relire et le livrer.',
+    description: 'Le manuel d’Elabora : créer un module avec votre IA, le faire valider, le relire et le livrer.',
     manual: 'Manuel',
     groups: { start: 'Bien démarrer', create: 'Créer un module', deliver: 'Relire et livrer', more: 'Réglages et aide' },
     developers: 'Pour les développeurs',
     developersNote:
-      'Le format ouvert, la ligne de commande elabora, les outils des agents IA et la livraison SCORM : la documentation du cœur open source.',
+      'Le format ouvert, la ligne de commande elabora, les outils des agents IA et la livraison SCORM : la documentation du cœur open source.',
     developersLink: 'Documentation développeur',
     inEnglish: 'en anglais',
     backToManual: 'Manuel de l’app',
@@ -186,18 +186,18 @@ export const fr = {
     search: 'Rechercher dans la documentation',
     searchPlaceholder: 'Rechercher…',
     searchEmpty: 'Aucun résultat.',
-    searchError: 'La recherche n’a pas pu se charger.',
+    searchError: 'Impossible de charger la recherche. Rechargez la page.',
     source: 'Source sur GitHub',
     markdown: 'Markdown',
     markdownTitle: 'Cette page en Markdown, pour les agents IA',
-    generated: 'Générée depuis le code : on la modifie dans sa source, pas ici.',
+    generated: 'Générée depuis le code : modifiez sa source.',
     decisions: 'Décisions',
     devTitle: 'Documentation développeur',
     devIntro:
-      'Elabora core est open source (Apache-2.0). Ces pages sont celles de son dépôt, rendues telles quelles ; les agents les lisent en Markdown, ou par elabora docs.',
+      'Elabora core est open source (Apache-2.0). Ces pages sont celles de son dépôt, rendues telles quelles ; les agents les lisent en Markdown, ou par elabora docs.',
     agentsTitle: 'Pour les agents IA',
     agentsText:
-      'llms.txt liste chaque page en Markdown ; un agent qui a Elabora lit les mêmes pages par la commande elabora docs ou l’outil MCP elabora_docs.',
+      'llms.txt liste chaque page en Markdown ; un agent qui a Elabora lit les mêmes pages par la commande elabora docs ou l’outil MCP elabora_docs.',
     revision: 'Révision du cœur',
   },
   compare: {

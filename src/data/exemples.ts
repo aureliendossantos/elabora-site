@@ -25,7 +25,7 @@ export const EXEMPLES: Exemple[] = [
     title: { fr: 'L’hameçonnage en chiffres', en: 'Phishing by numbers' },
     kind: { fr: 'Dialogue et graphiques', en: 'Dialogue and charts' },
     phrase: { fr: 'S’entraîner à déjouer l’hameçonnage, jusqu’au faux appel.', en: 'Practise spotting phishing, right up to the fake phone call.' },
-    demande: { fr: 'Un module de dix minutes sur l’hameçonnage, pour nos 1200 salariés.', en: 'A ten-minute module on phishing for our 1,200 employees.' },
+    demande: { fr: 'Un module de dix minutes sur l’hameçonnage, pour nos 1200 salariés.', en: 'A ten-minute course on phishing for our 1,200 employees.' },
   },
   {
     id: 'canal-locks', langs: ['fr', 'en'], video: true,
