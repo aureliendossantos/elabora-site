@@ -31,7 +31,7 @@ Elabora est en bêta : l’app évolue vite, et certaines fonctions sont marqu�
 
 Chaque page répond à une question pratique (« comment je fais pour… »). Les noms en gras sont ceux que vous voyez dans l’app. Quand une chose se fait en demandant à votre agent plutôt qu’avec un bouton, la page le dit et donne un exemple de demande.
 
-L’interface d’Elabora est en français ou en anglais, selon les préférences de langue de votre système. Le manuel existe dans les deux langues.
+L’interface d’Elabora est en français ou en anglais. Elle suit les préférences de langue de votre système, ou la langue que vous choisissez dans les **Réglages**. Le manuel existe dans les deux langues.
 
 ## Pour les développeurs
 

@@ -62,7 +62,7 @@ Each row gives its size. **Install** downloads it; the **…** menu offers **Rei
 
 ## Personalization, Usage and Updates
 
-- **Personalization**: the **Appearance** (**Automatic**, **Light** or **Dark**), and the key that sends a message to the agent (**Enter** or **⌘ Enter**, Ctrl+Enter on Windows).
+- **Personalization**: the **Appearance** (**Automatic**, **Light** or **Dark**), the interface **Language** (**Automatic**, **English** or **Français**: the change applies at once), and the key that sends a message to the agent (**Enter** or **⌘ Enter**, Ctrl+Enter on Windows).
 - **Usage**: the share used of your ElevenLabs quota and, if you use ChatGPT, of its limits, with when they renew.
 - **Updates**: **Update automatically**, for Elabora and what it downloaded, and **Check for updates** (see [installing Elabora](/en/docs/install/)).
 
@@ -71,7 +71,3 @@ Each row gives its size. **Install** downloads it; the **…** menu offers **Rei
 - **Command**: the `elabora` command in the terminal, installed in one click on a Mac, included with Elabora on Windows. Your AI works faster, and developers can type it themselves.
 - **Extension for Claude**: **Install in Claude**, so that Claude’s chat works on your courses (see [Elabora in Claude](/en/docs/claude/)).
 - **Web pages the agent reads**: the sites the chat’s agent reads without asking you, or **Every site**. **Remove** takes one away, **Remove all** takes them all away.
-
-## What is not set here
-
-The interface language follows your system (see [installing Elabora](/en/docs/install/)).

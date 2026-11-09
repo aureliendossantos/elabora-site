@@ -65,7 +65,7 @@ These items stay out of your courses. You find them, with their size, in [Elabor
 
 ## Language and appearance
 
-The interface is in English or French, following your system’s language preferences (English for any other language). There is no language switch: change your system’s language, then restart Elabora. A new course takes the interface language; an existing course keeps its own. The light or dark theme follows your system too, unless you choose it in Settings › Personalization › Appearance (Automatic, Light or Dark).
+The interface is in English or French. By default it follows your system’s language preferences (English for any other language). To choose, open Settings › Personalization › Language (Automatic, English or Français): the change applies at once. A new course takes the interface language; an existing course keeps its own. The light or dark theme follows your system too, unless you choose it in Settings › Personalization › Appearance (Automatic, Light or Dark).
 
 ## Updating, uninstalling
 

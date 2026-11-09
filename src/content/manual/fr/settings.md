@@ -62,7 +62,7 @@ Chaque ligne dit sa taille. **Installer** le télécharge ; le menu **…** pro
 
 ## Personnalisation, Utilisation et Mises à jour
 
-- **Personnalisation** : l’**Apparence** (**Automatique**, **Clair** ou **Sombre**), et la touche qui envoie un message à l’agent (**Entrée** ou **⌘ Entrée**, Ctrl+Entrée sur Windows).
+- **Personnalisation** : l’**Apparence** (**Automatique**, **Clair** ou **Sombre**), la **Langue** de l’interface (**Automatique**, **English** ou **Français** : le changement s’applique aussitôt), et la touche qui envoie un message à l’agent (**Entrée** ou **⌘ Entrée**, Ctrl+Entrée sur Windows).
 - **Utilisation** : la part utilisée de votre quota ElevenLabs et, si vous utilisez ChatGPT, de ses limites, avec leur date de renouvellement.
 - **Mises à jour** : **Mettre à jour automatiquement**, pour Elabora et ce qu’il a téléchargé, et **Rechercher les mises à jour** (voir [installer Elabora](/fr/docs/installer/)).
 
@@ -71,7 +71,3 @@ Chaque ligne dit sa taille. **Installer** le télécharge ; le menu **…** pro
 - **Commande** : la commande `elabora` dans le terminal, à installer d’un clic sur Mac, fournie avec Elabora sur Windows. Votre IA travaille plus vite, et les développeurs peuvent la taper eux-mêmes.
 - **Extension pour Claude** : **Installer dans Claude**, pour que la conversation de Claude travaille sur vos modules (voir [Elabora dans Claude](/fr/docs/claude/)).
 - **Pages web lues par l’agent** : les sites que l’agent du chat lit sans vous demander, ou **Tous les sites**. **Retirer** en enlève un, **Tout retirer** les enlève tous.
-
-## Ce qui ne se règle pas ici
-
-La langue de l’interface suit votre système (voir [installer Elabora](/fr/docs/installer/)).

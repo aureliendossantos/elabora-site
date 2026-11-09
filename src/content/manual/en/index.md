@@ -31,7 +31,7 @@ Elabora is in beta: the app changes quickly, and some features are marked **Beta
 
 Each page answers a practical question (“how do I…”). Names in bold are the ones you see in the app. When something is done by asking your agent rather than with a button, the page says so and gives an example request.
 
-Elabora’s interface is in English or French, following your system’s language preferences. This manual exists in both languages.
+Elabora’s interface is in English or French. It follows your system’s language preferences, or the language you choose in **Settings**. This manual exists in both languages.
 
 ## For developers
 

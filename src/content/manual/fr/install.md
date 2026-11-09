@@ -65,7 +65,7 @@ Ces éléments restent hors de vos modules. Vous les retrouvez, avec leur taille
 
 ## Langue et apparence
 
-L’interface est en français ou en anglais, selon les préférences de langue de votre système (en anglais pour toute autre langue). Il n’y a pas de sélecteur : changez la langue du système, puis relancez Elabora. Un nouveau module prend la langue de l’interface ; un module existant garde la sienne. Le thème clair ou sombre suit aussi le système, sauf si vous le choisissez dans Réglages › Personnalisation › Apparence (Automatique, Clair ou Sombre).
+L’interface est en français ou en anglais. Par défaut, elle suit les préférences de langue de votre système (en anglais pour toute autre langue). Pour choisir, ouvrez Réglages › Personnalisation › Langue (Automatique, English ou Français) : le changement s’applique aussitôt. Un nouveau module prend la langue de l’interface ; un module existant garde la sienne. Le thème clair ou sombre suit aussi le système, sauf si vous le choisissez dans Réglages › Personnalisation › Apparence (Automatique, Clair ou Sombre).
 
 ## Mettre à jour, désinstaller
 
