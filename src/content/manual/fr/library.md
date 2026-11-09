@@ -13,7 +13,7 @@ Elabora range vos modules dans sa bibliothèque, un dossier de votre ordinateur 
 - Mac : `~/Library/Application Support/Elabora/Library` (dans le Finder : menu Aller › Aller au dossier…, puis collez ce chemin) ;
 - Windows : `%LOCALAPPDATA%\Elabora\Library` (collez-le dans la barre d’adresse de l’Explorateur).
 
-Chaque module y est un dossier ordinaire, que votre IA modifie avec la commande `elabora`. Pour échanger un module, on ne copie pas ce dossier : on s’envoie une archive `.elabora`.
+Chaque module y est un dossier ordinaire, que votre IA modifie. Pour échanger un module, envoyez une archive `.elabora`.
 
 ## Importer un module
 
@@ -38,7 +38,7 @@ Une archive sans historique, c’est ce que vous envoyez à un collègue, ou à 
 
 ## Les exemples
 
-Sous **Exemples**, sur l’accueil, des modules livrés avec Elabora. Un clic en ouvre votre copie (faite la première fois, puis rouverte les fois suivantes). **Repartir de l’exemple**, dans son menu **…**, en fait une copie neuve ; la précédente reste dans la bibliothèque.
+Sous **Exemples**, sur l’accueil, des modules livrés avec Elabora. Un clic en ouvre votre copie (faite la première fois, rouverte ensuite). **Repartir de l’exemple**, dans son menu **…**, en fait une copie neuve ; la précédente reste dans la bibliothèque.
 
 ## Supprimer, restaurer
 

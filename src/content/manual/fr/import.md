@@ -41,7 +41,7 @@ Quand vous avez fini, **Fermer le rapport** (⌘Z le rouvre). Tant que le rappor
 
 ## Ce qui change en passant à Elabora
 
-Une diapositive Storyline n’est pas recopiée au pixel près : Elabora la lit et en fait des blocs dans l’ordre de lecture, pour que l’écran s’adapte à la fenêtre et au téléphone, et reste lisible par un lecteur d’écran. Les diapositives Storyline deviennent des diapositives, les leçons Rise des pages qui défilent. Les calques restent des calques, les déclencheurs simples deviennent des événements, les questions à choix des questions.
+Elabora lit chaque diapositive Storyline et en fait des blocs dans l’ordre de lecture, pour que l’écran s’adapte à la fenêtre et au téléphone, et reste lisible par un lecteur d’écran. Les diapositives Storyline deviennent des diapositives, les leçons Rise des pages qui défilent. Les calques restent des calques, les déclencheurs simples deviennent des événements, les questions à choix des questions.
 
 Ce qu’Elabora ne sait pas encore faire (glisser-déposer, zones cliquables, textes à trous…) devient un texte, avec une note pour vous. Les polices qu’Elabora ne connaît pas sont remplacées par une police proche de sa sélection, et les médias de la Content Library ne sont pas copiés depuis un `.story`.
 

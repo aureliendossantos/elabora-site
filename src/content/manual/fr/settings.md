@@ -45,7 +45,7 @@ Les voix ElevenLabs sont plus expressives que les voix locales (émotions, rires
 
 Ensuite, la section **Voix** montre la clé masquée, où elle est rangée, la part du quota utilisée **Ce mois-ci** (**Afficher le quota** quand la clé est dans le trousseau), l’interrupteur pour votre IA, **Changer de clé…** et **Retirer**.
 
-Elabora parle toujours en part de votre quota mensuel, jamais en crédits. Sous 1 %, une génération part sur votre clic ; à partir de 1 %, Elabora (ou votre IA) vous demande d’abord votre accord. L’usage commercial des voix demande une offre payante d’ElevenLabs.
+Elabora donne toujours les coûts en part de votre quota mensuel. Sous 1 %, une génération part sur votre clic ; à partir de 1 %, Elabora (ou votre IA) vous demande d’abord votre accord. L’usage commercial des voix demande une offre payante d’ElevenLabs.
 
 <!-- capture: la section Voix des réglages, avec une clé masquée, la barre du quota et l’interrupteur « Votre IA » -->
 
@@ -58,7 +58,7 @@ Ce qu’Elabora télécharge une fois par ordinateur, hors de vos modules, avec 
 - **Transcription**, pour transcrire vos enregistrements sur votre ordinateur ;
 - **IA dans Elabora** : OpenCode, l’agent du chat, téléchargé à votre premier message. Le désinstaller garde vos conversations ; il se télécharge de nouveau à votre prochain message.
 
-Chaque ligne dit sa taille. **Installer** le télécharge ; le menu **…** propose **Réinstaller** et **Désinstaller**. Désinstaller ne demande pas de confirmation et ne touche à aucun module : ce qu’ils contiennent reste, et l’élément se téléchargera de nouveau à son prochain usage. Elabora refuse de le désinstaller pendant qu’il sert.
+Chaque ligne dit sa taille. **Installer** le télécharge ; le menu **…** propose **Réinstaller** et **Désinstaller**. Désinstaller se fait tout de suite et laisse chaque module tel quel : ce qu’ils contiennent reste, et l’élément se téléchargera de nouveau à son prochain usage. Elabora refuse de le désinstaller pendant qu’il sert.
 
 ## Personnalisation, Utilisation et Mises à jour
 

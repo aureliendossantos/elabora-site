@@ -13,7 +13,7 @@ Elabora keeps your courses in its library, a folder on your computer that no syn
 - Mac: `~/Library/Application Support/Elabora/Library` (in the Finder: Go menu › Go to Folder…, then paste this path);
 - Windows: `%LOCALAPPDATA%\Elabora\Library` (paste it into File Explorer’s address bar).
 
-Each course is a plain folder there, which your AI edits with the `elabora` command. To exchange a course, you do not copy that folder: you send each other a `.elabora` archive.
+Each course is a plain folder there, which your AI edits. To exchange a course, send a `.elabora` archive.
 
 ## Importing a course
 
@@ -38,7 +38,7 @@ An archive without history is what you send to a colleague, or to your client as
 
 ## Examples
 
-Under **Examples**, on the home page, courses that come with Elabora. A click opens your copy (made the first time, then reopened the next times). **Start again from the example**, in its **…** menu, makes a fresh copy; the previous one stays in the library.
+Under **Examples**, on the home page, courses that come with Elabora. A click opens your copy (made the first time, reopened afterwards). **Start again from the example**, in its **…** menu, makes a fresh copy; the previous one stays in the library.
 
 ## Deleting, restoring
 
