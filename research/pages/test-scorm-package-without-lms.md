@@ -1,6 +1,6 @@
 # Notes: How to test a SCORM package without an LMS
 
-Page: `src/content/compare/en/test-scorm-without-lms.md`. Researched on 8 November 2026.
+Pages: `src/content/compare/en/test-scorm-without-lms.md` and `src/content/compare/fr/test-scorm-without-lms.md` (`/fr/comparatif/tester-package-scorm-sans-lms/`). Researched on 8 November 2026.
 
 ## Sources, with the day they were read
 
@@ -22,3 +22,7 @@ Page: `src/content/compare/en/test-scorm-without-lms.md`. Researched on 8 Novemb
 
 - The Trial plan's limits and the Moodle version.
 - Whether Chrome's unload change reached Edge too.
+
+## The French version
+
+- **French version (9 Nov 2026).** Slug `tester-package-scorm-sans-lms`: French authors type « package SCORM » more than « paquet SCORM »; the page says « paquet » like the rest of the site, and the description says « package » once. Moodle's menu and setting names stay as in the English interface: we have not read the French labels.

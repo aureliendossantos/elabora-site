@@ -35,10 +35,13 @@ Il convient à un concepteur ou à une petite équipe qui livre des modules à u
 
 ## Études et solutions
 
-Ce que nous avons mesuré, avec le script et les chiffres bruts, et les solutions aux problèmes fréquents de Storyline. Chaque solution donne d’abord la réponse dans Storyline, puis ce qu’Elabora fait autrement.
+Ce que nous avons mesuré, avec le script et les chiffres bruts, et les solutions aux problèmes fréquents de Storyline, de Rise et des paquets SCORM. Chaque solution donne d’abord la réponse dans les outils d’aujourd’hui, puis la façon de faire d’Elabora.
 
 - [Pourquoi les cours Rise et Storyline sont-ils lents à charger ?](/fr/comparatif/rise-storyline-lents-a-charger/)
 - [Audio décalé dans Storyline : causes et solutions](/fr/comparatif/storyline-audio-decale/)
 - [Parcourir la chronologie de Storyline : calques, déclencheurs et ce qu’on voit](/fr/comparatif/storyline-chronologie-calques-declencheurs/)
 - [Storyline lent à ouvrir ou à enregistrer un projet : ce qui aide](/fr/comparatif/storyline-lent-a-ouvrir/)
 - [Storyline 360 flou sur un écran haute résolution ou à 150 % : la solution](/fr/comparatif/storyline-flou-haute-resolution/)
+- [Tester un paquet SCORM sans LMS](/fr/comparatif/tester-package-scorm-sans-lms/)
+- [Projet Storyline corrompu ou qui refuse de s’ouvrir : comment le récupérer](/fr/comparatif/storyline-projet-corrompu/)
+- [Paquet SCORM trop lourd pour le LMS : comment l’alléger](/fr/comparatif/package-scorm-trop-lourd/)

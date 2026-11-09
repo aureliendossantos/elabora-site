@@ -35,10 +35,13 @@ It suits a designer or a small team who delivers courses to an LMS or on the web
 
 ## Studies and fixes
 
-What we measured, with the script and the raw numbers, and the fixes for common Storyline problems. Each fix gives the solution in Storyline first, then what Elabora does differently.
+What we measured, with the script and the raw numbers, and the fixes for common problems with Storyline, Rise and SCORM packages. Each fix gives the solution in today’s tools first, then Elabora’s way.
 
 - [Why are Rise and Storyline courses slow to load?](/en/compare/rise-storyline-slow-to-load/)
 - [Storyline audio out of sync: causes and fixes](/en/compare/storyline-audio-out-of-sync/)
 - [Scrubbing the Storyline timeline: layers, triggers and what you see](/en/compare/storyline-timeline-scrubbing-layers-triggers/)
 - [Storyline slow to open or save a project: what helps](/en/compare/storyline-slow-to-open/)
 - [Storyline 360 blurry on a high-DPI screen or at 150%: the fix](/en/compare/storyline-blurry-high-dpi/)
+- [How to test a SCORM package without an LMS](/en/compare/test-scorm-package-without-lms/)
+- [Storyline “This project is invalid or corrupt”: how to recover it](/en/compare/storyline-project-invalid-or-corrupt/)
+- [SCORM package too large for your LMS: how to make it smaller](/en/compare/scorm-package-too-large/)

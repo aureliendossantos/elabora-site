@@ -7,10 +7,9 @@ kind: fix
 tools: [storyline, rise]
 checked: 2026-11-08
 summary: "Upload the package to SCORM Cloud’s free plan and read its debug log. Then close the tab mid-screen and reopen the course to check that it resumes, and finish with one run in the client’s LMS."
-published: 2026-11-08
+published: 2026-11-09
 updated: 2026-11-09
 order: 24
-draft: true
 faq:
   - q: Can I test a SCORM package for free?
     a: "Yes. SCORM Cloud’s Trial plan is free with no time limit: 3 courses, 5 GB and 10 active registrations you can reuse (Rustici’s plans page, read on 8 November 2026). Moodle’s public sandbox is free too, and resets every hour."

@@ -1,6 +1,6 @@
 # Notes: Storyline « This project is invalid or corrupt »
 
-Page: `src/content/compare/en/storyline-corrupt.md`. Researched on 8 November 2026.
+Pages: `src/content/compare/en/storyline-corrupt.md` and `src/content/compare/fr/storyline-corrupt.md` (`/fr/comparatif/storyline-projet-corrompu/`). Researched on 8 November 2026.
 
 ## Sources, with the day they were read (8 Nov 2026)
 
@@ -25,3 +25,7 @@ Page: `src/content/compare/en/storyline-corrupt.md`. Researched on 8 November 20
 
 - New Storyline builds that fix corruption causes.
 - Whether the temporary files folder moved in recent versions.
+
+## The French version
+
+- **French version (9 Nov 2026).** Slug `storyline-projet-corrompu`, the words French authors type. The error message and the button names stay in English, as Articulate's English articles name them: we have not read the French interface's strings.

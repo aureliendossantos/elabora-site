@@ -1,6 +1,6 @@
 # Notes: SCORM package too large for the LMS
 
-Page: `src/content/compare/en/scorm-too-large.md`. Researched on 8 November 2026.
+Pages: `src/content/compare/en/scorm-too-large.md` and `src/content/compare/fr/scorm-too-large.md` (`/fr/comparatif/package-scorm-trop-lourd/`). Researched on 8 November 2026.
 
 ## Sources, with the day they were read (8 Nov 2026)
 
@@ -23,3 +23,7 @@ Page: `src/content/compare/en/scorm-too-large.md`. Researched on 8 November 2026
 ## To check again
 
 - The LMS limits (each LMS changes them in its settings or plans).
+
+## The French version
+
+- **French version (9 Nov 2026).** Slug `package-scorm-trop-lourd`. Storyline's Publish window labels (Quality, Static, JPG Quality, Compression None) stay in English, as Articulate's article names them.

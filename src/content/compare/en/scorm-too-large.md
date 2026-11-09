@@ -7,10 +7,9 @@ kind: fix
 tools: [storyline, rise]
 checked: 2026-11-08
 summary: "Open the package as a ZIP to find its largest files, usually video, then audio and images. Compress them before import, lower Storyline’s publish quality, or host long videos on a video platform. If the package is still too large, split the course or ask the LMS administrator to raise the limit."
-published: 2026-11-08
+published: 2026-11-09
 updated: 2026-11-09
 order: 26
-draft: true
 faq:
   - q: What is the maximum SCORM package size in an LMS?
     a: "It depends on the LMS and its settings. In the documentation we read in September and October 2026: Teach Up 100 MB, Docebo and Rise Up 1 GB, Cornerstone 2 GB, Workday 2 GB by default, 360Learning 4 GB once extracted. SuccessFactors uses a maximum its administrator sets."

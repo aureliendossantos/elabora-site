@@ -7,10 +7,9 @@ kind: fix
 tools: [storyline]
 checked: 2026-11-08
 summary: "Work on a copy of the file. Reopen the project so that AutoRecovery offers its versions. If that fails, open Storyline’s newest temporary file, download the Cloud Backup from Review 360, or go back to an earlier copy. The media inside the .story file can be recovered even when the slides cannot."
-published: 2026-11-08
+published: 2026-11-09
 updated: 2026-11-09
 order: 25
-draft: true
 faq:
   - q: Where are Storyline’s temporary files?
     a: "On Windows, in %appdata%\\Articulate\\Storyline (paste it into File Explorer’s address bar). Copy the newest file whose name starts with the project’s name to the desktop, then change its .tmp extension to .story and open it. Storyline leaves these files there after a crash."
