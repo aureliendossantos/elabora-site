@@ -23,7 +23,7 @@ Sous les modules, une note rappelle qu’Elabora est en bêta, et l’encadré *
 
 En haut, la barre du module :
 
-- la maison ramène à l’**Accueil** ;
+- l’icône de maison ramène à l’**Accueil** ;
 - le titre du module ouvre un menu : **Réglages du module**, **Charte**, **Traduction**, **Exporter…** (et **Rapport d’import** pour un module importé de Storyline ou Rise) ;
 - la coche à côté du titre dit « Enregistré sur cet ordinateur » : Elabora enregistre au fur et à mesure, il n’y a pas de bouton pour enregistrer. Un clic sur cette coche ouvre l’**Historique du module** ;
 - au centre, les cinq vues ;

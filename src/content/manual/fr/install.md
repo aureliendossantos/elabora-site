@@ -54,7 +54,7 @@ Rien n’est choisi d’avance. Choisissez, puis **Commencer**. Vous pourrez cha
 
 ## Ce qu’Elabora télécharge, et quand
 
-L’installeur contient l’essentiel. Certains éléments, gros et utiles seulement pour certains modules, se téléchargent une seule fois par ordinateur, la première fois que vous en avez besoin, et Elabora vous le propose d’abord avec un bouton :
+L’installeur contient l’essentiel. Certains éléments, gros et utiles seulement pour certains modules, se téléchargent une seule fois par ordinateur, la première fois que vous en avez besoin. Elabora vous le propose d’abord avec un bouton :
 
 - **Voix locales**, pour faire dire la narration gratuitement sur votre ordinateur : par langue, 354 Mo pour le français, 126 Mo pour l’anglais.
 - **Mots calés sur la voix**, pour savoir précisément quand chaque mot est dit.
