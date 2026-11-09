@@ -184,6 +184,11 @@ header, the footer: `pnpm run links` fails otherwise). They are signed by Aurél
   `src/components/compare/ComparePage.astro` adds the table, the limits, the corrections (PostHog’s way: write to us,
   or a pull request on the tool’s facts file) and the other comparisons. French follows French typography (no-break
   space before `? ! : ; » %`, `’`), as `typo.mjs` does for the app’s pages.
+- **The notes**: `research/pages/<slug>.md`, optional, one file per page for both languages. They keep what the
+  author found while researching: each source with the day it was read, the facts left out of the page and why, the
+  open questions, and what to check again next time. The page keeps only what serves its reader where it stands; the
+  notes keep the rest, so a later update starts from them. They are public like the rest of the repository: no private
+  file, account or personal detail.
 - **The monthly watch**: [`src/data/comparisons/WATCH.md`](../src/data/comparisons/WATCH.md) is the whole instruction, for
   any AI model: « Follow src/data/comparisons/WATCH.md ». It reads every source again and proposes a branch with the
   proof; a supervisor checks it, the founder reads the prose and merges. Nothing goes live on its own.

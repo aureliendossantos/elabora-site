@@ -9,3 +9,5 @@ Release notes are generated from the public assets repository by `pnpm run relea
 The product release is prepared in the app checkout. Features and highlights have English and French text; technical details and fixes can fall back to English, with `lang="en"`. Small releases marked `announce=false` and pre-releases have detailed version pages but stay out of the main stable feed. Keep the language selector on the same release page.
 
 For local preview before publication, `ELABORA_RELEASES_FILE` can name an absolute fixture/history file. Never deploy that preview data or call it a published release. Site release deployment requires its Cloudflare secret and account variable; report missing names without printing values. Do not silently drop old published releases on sync failures.
+
+A comparison or fix page can have research notes in `research/pages/<slug>.md` (see `docs/maintenance.md` › Comparison pages). Sources with the day you read them, and facts that serve no reader on the page, go there.
