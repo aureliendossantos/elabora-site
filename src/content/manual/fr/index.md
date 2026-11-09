@@ -8,7 +8,7 @@ order: 1
 
 Elabora est une application de bureau, pour Mac et Windows, faite pour celles et ceux qui produisent des modules e-learning : indépendants, petits studios.
 
-Vous y travaillez avec votre propre IA. C’est votre agent (Claude Code dans l’app Claude, Codex dans l’app ChatGPT, ou une autre IA à qui vous collez la demande) qui écrit le plan et les écrans. Elabora, lui, vous montre les écrans exactement comme vos apprenants les verront, vous laisse les retoucher à la main et annuler ce que l’agent a fait, garde la trace du plan que votre client a validé, recueille les commentaires de vos relecteurs par un simple lien, et livre un paquet SCORM 1.2 pour le LMS du client, ou une version web.
+Vous y travaillez avec votre propre IA. C’est votre agent (Claude Code dans l’app Claude, Codex dans l’app ChatGPT, ou une autre IA à qui vous collez la demande) qui écrit le plan et les écrans. Elabora vous montre les écrans exactement comme vos apprenants les verront, et vous laisse les retoucher à la main ou annuler ce que l’agent a fait. Il garde la trace du plan que votre client a validé, recueille les commentaires de vos relecteurs par un simple lien, et livre un paquet SCORM 1.2 pour le LMS du client, ou une version web.
 
 Elabora est en bêta : l’app évolue vite, et certaines fonctions sont marquées **Bêta**. Vos retours sont les bienvenus à contact@elabora.studio.
 

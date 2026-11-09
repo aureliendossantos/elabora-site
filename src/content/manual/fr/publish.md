@@ -15,7 +15,7 @@ Tout part de la vue **Publier**, onglet **Publication**. La page **Publier le mo
 1. Choisissez le LMS. À côté du paquet, **Choisir le LMS** ouvre les **Réglages du module**, section **Diffusion**, **LMS du client**. Elabora connaît SuccessFactors, Workday, Cornerstone, Docebo, Moodle, Totara, 360Learning, Rise Up, SCORM Cloud et Teach Up : il choisit alors le format que ce LMS lit le mieux, et vérifie la taille qu’il accepte. Sans LMS choisi, il livre en SCORM 1.2, que tous les LMS lisent, et signale les LMS qui refuseraient le paquet.
 2. Choisissez la qualité des médias : **Standard**, le choix normal, déjà optimisé pour le web ; **Allégée**, pour un LMS qui limite la taille des paquets ; **Très allégée**, pour une connexion lente. À droite, le poids du module à cette qualité (voir plus bas).
 3. Regardez ce qu’il reste à corriger. Sous **Avant de publier**, les points **À corriger : la publication s’arrête** et **À regarder**, avec **Ouvrir les vérifications** pour le reste. Voir [les vérifications](/fr/docs/apercu-et-verifications/).
-4. Publiez : **Publier le paquet** construit le ZIP. Elabora dit « Le paquet est prêt », avec son poids, et **Afficher dans le Finder** (sur Windows, **Afficher dans le dossier**). Le paquet est dans le dossier `dist` du module ; déposez-le ensuite dans le LMS du client.
+4. Publiez : **Publier le paquet** construit le ZIP. Elabora dit « Le paquet est prêt », avec son poids, et propose **Afficher dans le Finder** (sur Windows, **Afficher dans le dossier**). Le paquet est dans le dossier `dist` du module. Déposez-le dans le LMS du client.
 
 **Le format.** Sous le LMS, **Format** dit ce qu’Elabora choisit, et pourquoi : « Automatique : SCORM 2004 pour Docebo », ou « Automatique : SCORM 1.2, lu par tous les LMS ». Choisissez-en un autre quand votre client le demande :
 
@@ -32,7 +32,7 @@ Chaque paquet publié laisse une version nommée dans l’[historique du module]
 
 ## Plusieurs langues
 
-Quand le module a une traduction, **Publier** affiche **Langues** : la langue du module, toujours incluse, puis chaque traduction. Le paquet contient les langues que vous cochez ; au départ, la langue du module seule. Chaque case est une étape que ⌘Z annule, et le choix est gardé avec le module : votre IA construit ainsi le même paquet.
+Quand le module a une traduction, **Publier** affiche **Langues** : la langue du module, toujours incluse, puis chaque traduction. Le paquet contient les langues que vous cochez ; au départ, la langue du module seule. ⌘Z annule chaque case cochée. Le choix est gardé avec le module, pour que votre IA construise le même paquet.
 
 Une traduction cochée part telle quelle. Quand il lui manque quelque chose, une ligne le dit, avec le moyen d’y remédier :
 
@@ -48,11 +48,11 @@ Avec deux langues ou plus, choisissez comment elles partent :
 
 ## Le poids des médias
 
-À droite du choix de qualité, Elabora donne le poids du module à cette qualité, avant toute publication. Un clic dessus ouvre la liste de ses médias : les plus lourds d’abord, chacun avec son écran, sa durée ou sa taille, et son poids ; les autres sous un pli, puis le lecteur, les polices et les textes. Un clic sur un média ouvre son écran ; le clic droit l’affiche aussi dans le Finder.
+À droite du choix de qualité, Elabora donne le poids du module à cette qualité, avant toute publication. Cliquez dessus pour ouvrir la liste de ses médias : les plus lourds d’abord, chacun avec son écran, sa durée ou sa taille, et son poids ; les autres sous un pli, puis le lecteur, les polices et les textes. Cliquez sur un média pour ouvrir son écran ; le clic droit l’affiche aussi dans le Finder.
 
-Ce qu’Elabora peut alléger seul, il l’allège, à toutes les qualités, Standard comprise. Une photo enregistrée en PNG, une vidéo exportée à un débit trop élevé pour sa taille ou un média hors des formats du web (une photo HEIC, une vidéo ProRes) partent dans le paquet en copie optimisée, faite une fois ; vos fichiers ne changent pas. Une capture d’écran ou un schéma en PNG part tel quel : il est déjà léger, et une compression de photo brouillerait son texte.
+Elabora allège seul tout ce qu’il peut, à toutes les qualités, Standard comprise. Une photo enregistrée en PNG, une vidéo exportée à un débit trop élevé pour sa taille ou un média hors des formats du web (une photo HEIC, une vidéo ProRes) partent dans le paquet en copie optimisée, faite une fois ; vos fichiers ne changent pas. Une capture d’écran ou un schéma en PNG part tel quel : il est déjà léger, et une compression de photo brouillerait son texte.
 
-Le poids passe à l’orange quand un média semble plus lourd que nécessaire pour ce qu’il est et qu’Elabora ne peut pas l’alléger seul : une image animée, qui pèserait plusieurs fois moins en vidéo. Elle vient en tête de la liste, avec la raison. Une fois la liste ouverte, le poids redevient gris ; il ne repasse à l’orange que pour un nouveau cas. Une longue vidéo n’est jamais en tort : vingt minutes de vidéo pèsent naturellement des centaines de mégaoctets.
+Le poids passe à l’orange quand un média semble plus lourd que nécessaire pour ce qu’il est et qu’Elabora ne peut pas l’alléger seul. Exemple : une image animée, qui pèserait plusieurs fois moins en vidéo. Elle vient en tête de la liste, avec la raison. Une fois la liste ouverte, le poids redevient gris ; il ne repasse à l’orange que pour un nouveau cas. Une longue vidéo n’est jamais signalée : vingt minutes de vidéo pèsent naturellement des centaines de mégaoctets.
 
 ## Ce que reçoit le LMS
 

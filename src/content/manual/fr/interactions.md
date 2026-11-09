@@ -16,7 +16,7 @@ Elabora vous les montre en phrases, que vous pouvez lire, corriger ou compléter
 
 Un événement se lit comme une phrase : « Quand on clique sur le bouton Vérifier : afficher le calque Indice ». Vous les trouvez dans **Propriétés**, section **Événements**, pour un bloc, pour l’écran ou pour un calque. **Tout voir** ouvre la page des événements de l’écran à la place du canevas, groupés par ce qui les déclenche ; **Canevas**, dans la barre d’outils, ramène la diapositive.
 
-Chaque mot souligné de pointillés ouvre un menu au clic : un autre bloc, un autre calque, un autre écran, une autre valeur. Les menus ne proposent que ce qui est possible à cet endroit.
+Cliquez sur un mot souligné de pointillés pour ouvrir un menu : un autre bloc, un autre calque, un autre écran, une autre valeur. Les menus ne proposent que ce qui est possible à cet endroit.
 
 <!-- capture: la page des événements d’un écran, avec un événement sélectionné et son menu ouvert -->
 
@@ -34,7 +34,7 @@ Un calque s’affiche par-dessus l’écran : un retour, un indice, une fenêtre
 
 - Les onglets au-dessus du canevas montrent **Base** et les calques de l’écran ; **+** en ajoute un, avec un premier texte prêt à être tapé.
 - Un double clic sur un onglet le renomme. Le clic droit choisit **Fenêtre** (au-dessus de l’écran assombri ; l’apprenant la ferme pour continuer) ou **Panneau** (sur une partie de l’écran, qui reste utilisable), propose un événement qui l’affiche, ou le supprime avec ses blocs (⌘Z le ramène).
-- Affiché sans rien sélectionner, un calque a ses **Propriétés** : son nom, **S’affiche en**, **Ouvert par** (les événements qui l’affichent ; sinon, Elabora prévient que l’apprenant ne le verra jamais) et **Ajouter un événement qui l’affiche**.
+- Avec un calque affiché et rien de sélectionné, les **Propriétés** sont celles du calque : son nom, **S’affiche en**, **Ouvert par** (les événements qui l’affichent ; sinon, Elabora prévient que l’apprenant ne le verra jamais) et **Ajouter un événement qui l’affiche**.
 - Un bloc passe dans un calque, ou revient à la base, depuis son menu. Les blocs ajoutés pendant qu’un calque est affiché vont dans ce calque.
 - Un calque peut parler : sa voix explique, ses blocs arrivent au mot qui les nomme, et il peut se fermer quand sa voix a fini. Voir [un calque qui parle](/fr/docs/voix-et-narration/#un-calque-qui-parle).
 
@@ -56,4 +56,4 @@ Une variable retient quelque chose pendant que l’apprenant suit le module (un 
 - Sélectionnez-en une pour la renommer (les événements suivent), changer son type, sa valeur initiale, ses **Valeurs possibles** ou sa **Longueur max.**, et dire **À quoi elle sert**. En dessous, les événements qui la modifient (**Modifiée par**) et qui la lisent (**Lue par**), chacun ouvrant son événement.
 - **Nouvelle variable** en crée une ; les menus des événements proposent aussi **Nouvelle variable…** là où l’on choisit une variable. Une variable « jamais lue » ne change rien pour l’apprenant ; une variable encore utilisée ne se supprime pas.
 
-Vous retrouvez les problèmes d’interactions (un événement sans action, un calque jamais affiché) dans les [vérifications](/fr/docs/apercu-et-verifications/).
+Les [vérifications](/fr/docs/apercu-et-verifications/) listent les problèmes d’interactions (un événement sans action, un calque jamais affiché).
