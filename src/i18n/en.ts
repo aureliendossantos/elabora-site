@@ -23,7 +23,6 @@ export const en: Dict = {
     facts: 'Free · macOS and Windows · SCORM, cmi5, xAPI and web',
     soon: 'Coming soon for macOS and Windows',
     film: {
-      request: 'Request',
       label: 'Modules made with Elabora, each after the request that started it',
       module: 'The module “{title}”, requested as: {request}',
     },

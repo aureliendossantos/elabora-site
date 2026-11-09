@@ -17,7 +17,6 @@
 .film-request > span.is-on { visibility: visible; opacity: 1; transition: opacity 0.2s ease; }
 .film-request > span.is-on.is-leaving { opacity: 0; transition: opacity 0.3s ease; }
 /* The label sits on the request's baseline. */
-.film-request .label { font: 500 var(--text-caption) / 1 var(--font); font-style: normal; color: var(--ink-3); margin-right: 12px; }
 .film-request .rest { visibility: hidden; }
 /* The caret takes no room and opens no line break: the line stays the whole sentence's. It is as tall as the text,
    from its ascenders to its descenders: the empty span's own box, the font's ascent and descent. */
@@ -27,7 +26,6 @@
 .film-screen > * { opacity: 0; transition: opacity 1s ease; will-change: opacity; }
 .film-screen > .is-on { opacity: 1; }
 .film-relay { display: flex; justify-content: center; margin-top: 26px; min-height: 18px; }
-@media (max-width: 600px) { .film-request .label { display: block; margin: 0 0 8px; } }
 @media (prefers-reduced-motion: reduce) { .film-request .caret { display: none; } }
 
 /* ── The examples: a sentence on top of each card, the module below; the rail scrolls sideways ── */

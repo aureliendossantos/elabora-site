@@ -20,7 +20,7 @@ const t = useT(lang);
   <div class="hero-visual reveal reveal--media reveal--d3" data-film>
     <p class="film-request" aria-hidden="true">
       {EXEMPLES.map((m, i) => (
-        <span class:list={{ 'is-on': i === 0 }}><span class="label">{t.home.film.request}</span><span class="typed">{i === 0 ? m.demande[lang] : ''}</span><span class="caret"></span><span class="rest">{i === 0 ? '' : m.demande[lang]}</span></span>
+        <span class:list={{ 'is-on': i === 0 }}><span class="typed">{i === 0 ? m.demande[lang] : ''}</span><span class="caret"></span><span class="rest">{i === 0 ? '' : m.demande[lang]}</span></span>
       ))}
     </p>
     <div class="frame frame--16x9 film-screen" role="img" aria-label={t.home.film.label}>

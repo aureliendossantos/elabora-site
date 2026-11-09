@@ -22,7 +22,6 @@ export const fr = {
     facts: 'Gratuit · macOS et Windows · SCORM, cmi5, xAPI et web',
     soon: 'Bientôt disponible sur macOS et Windows',
     film: {
-      request: 'Demande',
       label: 'Des modules faits avec Elabora, chacun après la demande qui l’a lancé',
       module: 'Le module « {title} », demandé ainsi : {request}',
     },
