@@ -24,7 +24,7 @@ Le plan dit aussi ce qui manque : un point qu’aucun écran ne couvre, un objec
 
 Cliquez sur un point : il se modifie dans **Propriétés** (**Titre**, **Nature**, **Partie**, **Sources**, **Description**, ses textes validés, sa voix off). Pour réorganiser, glissez un point ou une partie, ou utilisez ⌥↑ et ⌥↓ : les écrans qui le couvrent suivent.
 
-Le plus souvent, vous demanderez plutôt à votre IA :
+Le plus souvent, vous le demanderez à votre IA :
 
 > Ajoute une partie sur les erreurs fréquentes avant l’évaluation finale, avec un objectif et deux points.
 

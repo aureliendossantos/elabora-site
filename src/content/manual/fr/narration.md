@@ -47,7 +47,7 @@ Pour changer la voix d’un locuteur, sélectionnez une de ses répliques : son 
 
 Dans les **Propriétés** d’une réplique : l’écouter, **Régénérer**, la **Prise** (chaque génération en est une, gardez la meilleure), la **Vitesse**, la **Pause avant**, les **Didascalies** et la **Prononciation**. **Importer un enregistrement…** remplace la voix générée par une voix humaine ; **Revenir à la voix générée** fait l’inverse. Si Elabora soupçonne que la voix a avalé un mot, il le dit : **Nouvelle prise**, ou **Ignorer** si le mot est bien là.
 
-Les didascalies (« [chuchote] », « [agacé] ») disent à une voix ElevenLabs comment jouer la réplique ; l’apprenant ne les voit jamais. Quand une voix ElevenLabs parle sur l’écran, l’outil **Jeu**, dans le tiroir, en propose ; il peut aussi demander à votre IA de mettre la réplique ou l’étape en scène. Les voix locales disent le texte seul, sans les didascalies.
+Les didascalies (« [chuchote] », « [agacé] ») disent à une voix ElevenLabs comment jouer la réplique ; l’apprenant ne les voit jamais. Quand une voix ElevenLabs parle sur l’écran, l’outil **Jeu**, dans le tiroir, en propose et peut demander à votre IA de mettre la réplique ou l’étape en scène. Les voix locales disent le texte seul, sans les didascalies.
 
 Un sigle ou un nom propre mal dit ? Dans **Réglages du module**, section **Prononciation**, **Ajouter une prononciation** : « P-12 » se dit « pé douze ».
 

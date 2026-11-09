@@ -36,7 +36,7 @@ The right-hand panel follows what you select: an option (its quality, text, **Bu
 
 A few rules worth knowing:
 
-- **An option without its own way goes on with the passage**: after its reaction and note, the conversation carries on where it was going anyway. There is nothing to wire for a decision that joins back at once. An option can also open a short branch (another passage), which then comes back to the trunk.
+- **An option without its own way goes on with the passage**: after its reaction and note, the conversation carries on where it was going anyway. A decision that joins back at once needs no wiring. An option can also open a short branch (another passage), which then comes back to the trunk.
 - **The same options again**, as what follows an option: after its reaction and note, the same options come back, this one greyed out. The first choice counts.
 - **Once only**: the option disappears (or greys out) once taken. That is what an interview needs, where learners pick their questions, with a “Move on” option always there.
 - **Final decision**, on a passage: announced to learners before they choose (“Final choice”); they cannot go back to this choice, nor before it. Once the dialogue has ended, **Start over** stays possible: it is a new run, which leaves the scored run as it was.
@@ -61,7 +61,7 @@ In the dialogue’s **Properties** (with nothing selected in the editor), **Lear
 
 ## Option quality and modes
 
-Each option is marked **Good**, **Fair** or **Poor**. Learners never see this mark before they choose. It colours the editor, and it is enough for the score, the debrief and tracking in the LMS: you have no number to write. The checks flag a decision with more than four options, and options of very different lengths, because learners spot the longest one without thinking.
+Each option is marked **Good**, **Fair** or **Poor**. Learners never see this mark before they choose. It colours the editor, and it is enough for the score, the debrief and tracking in the LMS, with no number to write. The checks flag a decision with more than four options, and options of very different lengths, because learners spot the longest one without thinking.
 
 The dialogue’s **Mode**, in its **Properties**, sets going back, the timing of notes and the score at once. The buttons named are those learners see:
 

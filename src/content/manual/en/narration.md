@@ -47,7 +47,7 @@ To change a speaker’s voice, select one of their lines: its voice menu is in *
 
 In a line’s **Properties**: listen to it, **Regenerate**, the **Take** (each generation is one, keep the best), the **Speed**, the **Pause before**, the **Stage directions** and the **Pronunciation**. **Import a recording…** replaces the generated voice with a human one; **Back to the generated voice** does the reverse. If Elabora suspects the voice swallowed a word, it says so: **Another take**, or **Ignore** if the word is there.
 
-Stage directions (“[whispers]”, “[annoyed]”) tell an ElevenLabs voice how to act the line; learners never see them. When an ElevenLabs voice speaks on the screen, the **Acting** tool in the drawer suggests some; it can also ask your AI to stage the line or the step. Local voices say the text alone, without the directions.
+Stage directions (“[whispers]”, “[annoyed]”) tell an ElevenLabs voice how to act the line; learners never see them. When an ElevenLabs voice speaks on the screen, the **Acting** tool in the drawer suggests some and can ask your AI to stage the line or the step. Local voices say the text alone, without the directions.
 
 An acronym or a name said wrong? In **Course settings**, **Pronunciation** section, **Add a pronunciation**: “P-12” is said “pee twelve”.
 

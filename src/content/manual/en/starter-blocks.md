@@ -6,7 +6,7 @@ group: create
 order: 5
 ---
 
-Elabora has few blocks, and each one comes in several forms. A block stands for one learner action and one shape of data: opening panels, following steps, exploring a picture, answering a question. Presentations only change the look: going from **Tabs** to **Cards** does not touch a single word.
+Elabora has few blocks, and each one comes in several forms. A block stands for one learner action and one shape of data: opening panels, following steps, exploring a picture, answering a question. Presentations only change the look: going from **Tabs** to **Cards** keeps every word.
 
 This page follows the block list, family by family, with the entries as you see them: **Text**, **Media**, **Layout**, **Interaction** and **Questions**. It also says what ties them together: **Transform into…**, **After exploring** and the **Opening** layout. To add a block, see [screens and blocks](/en/docs/screens-and-blocks/#adding-a-block). The reasons behind these choices are in [the learning science behind Elabora](/en/docs/learning-science/#revealing-is-not-practice).
 
@@ -14,7 +14,7 @@ This page follows the block list, family by family, with the entries as you see 
 
 ## How they work
 
-- **Each entry is one thing you have in mind.** You are looking for flip cards, a timeline, a matching exercise: each has its own entry in the list, with no indentation and no submenu. Entries marked with an ellipsis (**Image…**, **Gallery…**, **Scrolling…**) ask for your images first.
+- **Each entry is one thing you have in mind.** You are looking for flip cards, a timeline, a matching exercise: each has its own entry in the list, at the same level as the others. Entries marked with an ellipsis (**Image…**, **Gallery…**, **Scrolling…**) ask for your images first.
 - **The variants beside the preview are styles of that thing.** **Flip cards** come as a **Grid** or **One at a time**; a **Callout** as **Information**, **Tip**, **Warning** or **Important**. Click the one you want and the block arrives that way.
 - **The inspector offers every presentation.** Once the block is inserted, it keeps the block’s name (**Panels**, **Sort**, **Steps**…) and **Presentation** is the first setting in **Properties**, a choice in buttons. You go from **Cards** to **Tabs**, or from **Pairs** to **Categories**, whenever you like.
 - **Only the settings that apply show.** A setting used by one presentation only (the title of an image with **Text beside**, the date of a **Timeline**) is shown for that presentation alone.
@@ -49,13 +49,13 @@ The family holds **Image…**, **Gallery…**, **Compare two images…**, **Vide
 - **Focal point**: click the picture where its subject is. Crops (the band, a phone) keep it in view. **Centre** puts it back in the middle.
 - **Opens full size**: a click enlarges the image in the player, with its caption.
 - **Text beside**: **Image side** (**Left** or **Right**) and **Image width** (**Half**, **A third**, **Two thirds**), with a title and a text. **Text over it** and **Band** have a **Height** (**Short**, **Medium**, **Tall**). Keep the text over an image to a sentence or two.
-- **Band** is an **Edge to edge** block: a block’s **Width** has four choices, **Full**, **Wide**, **Half** and **Edge to edge**. On a slide, the edge is the slide’s.
+- **Band** is an **Edge to edge** block: a block’s **Width** has four choices, **Standard**, **Wide**, **Half** and **Edge to edge**. On a slide, the edge is the slide’s.
 
 **Gallery…** (*gallery* in Rise) asks for your images, then lays them out as a **Grid**, a **Mosaic** or **One at a time**. Each image has its caption; **Columns** and **Shape** set the grid; **Opens full size** opens images large, with previous and next. **One at a time** never turns by itself.
 
 **Compare two images…** is a slider that wipes from one image to the other, before and after. In the inspector it is the **Gallery**, and its **Presentation** offers all four: **Grid**, **Mosaic**, **One at a time** and **Before and after**.
 
-**Video…** and **Audio…** have not changed: see [images, video and audio](/en/docs/screens-and-blocks/#images-video-and-audio).
+**Video…** and **Audio…** are described in [images, video and audio](/en/docs/screens-and-blocks/#images-video-and-audio).
 
 ## Layout
 
@@ -84,7 +84,7 @@ The family holds **Accordion**, **Tabs**, **Flip cards**, **Myth or fact?**, **S
 
 ### Steps
 
-**Steps**, **Timeline** and **Scrolling…** are three entries of one block, **Steps** in the inspector (*process* and *timeline* in Rise). It reads a procedure or a series of events step by step. Do not confuse it with the **Process** chart, which is read at a glance, with short labels.
+**Steps**, **Timeline** and **Scrolling…** are three entries of one block, **Steps** in the inspector (*process* and *timeline* in Rise). It reads a procedure or a series of events step by step. The **Process** chart is different: it is read at a glance, with short labels.
 
 - **Steps**: “Step 2 of 5”, previous and next, the keyboard’s arrows and a swipe; a step that has been shown counts as seen. **Introduction** and **Summary** open and close the series. It never moves on by itself. In the inspector, this is **One at a time**.
 - **Timeline**: a vertical timeline, with a **Date** per event. Each event comes in as it reaches the screen.
@@ -106,7 +106,7 @@ The family holds **Accordion**, **Tabs**, **Flip cards**, **Myth or fact?**, **S
 
 **Character** shows a character of the course who says or thinks a sentence or two: **Speech** or **Thought**. Choose one among the course’s characters, or let Elabora create one. **Bubbles** for the sentences; **Portrait** left or right. For a real conversation with choices, use the [dialogue](/en/docs/dialogues/).
 
-**Dialogue**, **Decision** and **Button** (**Primary** or **Secondary**) have not changed: see [events](/en/docs/interactions/) and [dialogues](/en/docs/dialogues/).
+**Dialogue**, **Decision** and **Button** (**Primary** or **Secondary**) are described in [events](/en/docs/interactions/) and [dialogues](/en/docs/dialogues/).
 
 ## Questions
 
@@ -155,14 +155,14 @@ These three entries are one block, **Sort** in the inspector (*matching* and *so
 
 ## Recipes
 
-Recipes are Rise’s ready-made designs: blocks already filled in, where all that is left is to write. Here they are entries like any other, with no indentation and no mark: you find them next to what they are made of.
+Recipes are Rise’s ready-made designs: blocks already filled in, where all that is left is to write. Here they are entries like any other, with no mark of their own: you find them next to what they are made of.
 
 - **Do / Don’t**, after **Columns**: two columns, what to do and what to avoid.
 - **Myth or fact?**, after **Flip cards**: cards whose front asks and whose back answers.
 - **Lesson introduction**, after **Title**: the screen opens with its title, a lead and the reading time.
 - **Persona**, last in **Text**: a picture, who they are and what they say.
 
-They are not new blocks: once inserted, a recipe is retouched like any other blocks. Your AI can add recipes of your course’s own.
+They are not new blocks: once inserted, a recipe is retouched like any other block. Your AI can add recipes of your course’s own.
 
 ## Transform into…
 

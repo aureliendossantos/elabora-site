@@ -24,7 +24,7 @@ The plan also says what is missing: an item no screen covers, an objective neith
 
 Click an item: it is edited in **Properties** (**Title**, **Kind**, **Part**, **Sources**, **Description**, its approved text, its voice-over). To reorganise, drag an item or a part, or use ⌥↑ and ⌥↓: the screens that cover it follow.
 
-Most of the time, you will rather ask your AI:
+You will usually ask your AI instead:
 
 > Add a part on common mistakes before the final assessment, with one objective and two items.
 
