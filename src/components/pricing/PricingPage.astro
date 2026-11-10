@@ -25,26 +25,21 @@ const check = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 
     </header>
     <ol class="plans">
       <li class="plan">
-        <h2>{p.plans.app.name}</h2>
-        <p class="plan-price">{p.plans.app.price}</p>
+        <h2>{p.plans.app.name} <span class="plan-tag">{p.beta}</span></h2>
         <p class="plan-for">{p.plans.app.for}</p>
         <div class="plan-action"><DownloadButton lang={lang} more={false} light /></div>
         <ul>{p.plans.app.features.map((f) => <li><Fragment set:html={check} />{f}</li>)}</ul>
       </li>
       <li class="plan plan--teams">
-        <h2>{p.plans.teams.name} <span class="plan-soon">{p.soon}</span></h2>
-        <p class="plan-price">{p.plans.teams.price}</p>
+        <h2>{p.plans.teams.name} <span class="plan-tag">{p.soon}</span></h2>
         <p class="plan-for">{p.plans.teams.for}</p>
         <div class="plan-action"><a class="button" href={early}><Fragment set:html={envelope} />{p.plans.teams.cta}</a></div>
-        <p class="plan-includes">{p.plans.teams.includes}</p>
         <ul>{p.plans.teams.features.map((f) => <li><Fragment set:html={check} />{f}</li>)}</ul>
       </li>
       <li class="plan">
-        <h2>{p.plans.business.name} <span class="plan-soon">{p.soon}</span></h2>
-        <p class="plan-price">{p.plans.business.price}</p>
+        <h2>{p.plans.business.name} <span class="plan-tag">{p.soon}</span></h2>
         <p class="plan-for">{p.plans.business.for}</p>
         <div class="plan-action"><DemoButton lang={lang} icon /></div>
-        <p class="plan-includes">{p.plans.business.includes}</p>
         <ul>{p.plans.business.features.map((f) => <li><Fragment set:html={check} />{f}</li>)}</ul>
       </li>
     </ol>

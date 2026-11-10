@@ -134,29 +134,27 @@ export const en: Dict = {
     heading: 'Start on your own, grow as a team.',
     lead: 'The app is complete on your computer. Teams and Enterprise add the cloud, collaboration and what your organization needs.',
     soon: 'Soon',
+    beta: 'In beta',
     plans: {
       app: {
-        name: 'Elabora',
-        price: 'Free',
+        name: 'Free',
         for: 'For freelancers, and to try it',
         features: [
           'The complete app, for Mac and Windows',
           'Unlimited courses, on your computer',
           'Your AI: Claude, ChatGPT or the Elabora chat',
           'SCORM, cmi5, xAPI and web export',
-          'Reviews by link, within quotas',
+          '3 review links at once',
         ],
       },
       teams: {
         name: 'Teams',
-        price: 'Subscription',
         for: 'For studios and learning teams',
-        includes: 'Everything in the app, plus:',
         features: [
           'Unlimited cloud projects',
+          'Live collaboration in the cloud',
           '200 GB of storage',
-          'Live collaboration between authors and agents',
-          'Much higher review and publishing limits',
+          'Many reviews and publications at once',
           'Shared themes and templates',
         ],
         cta: 'Request early access',
@@ -164,9 +162,7 @@ export const en: Dict = {
       },
       business: {
         name: 'Enterprise',
-        price: 'Custom pricing',
         for: 'For large organizations',
-        includes: 'Everything in Teams, plus:',
         features: [
           'SSO (SAML, OIDC) and SCIM',
           'AI governance: allowed models, agent activity log',

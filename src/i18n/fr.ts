@@ -134,29 +134,27 @@ export const fr = {
     heading: 'Commencez seul, grandissez en équipe.',
     lead: 'L’app est complète sur votre ordinateur. Teams et Entreprise ajoutent le cloud, la collaboration et ce que demande votre organisation.',
     soon: 'Bientôt',
+    beta: 'En bêta',
     plans: {
       app: {
-        name: 'Elabora',
-        price: 'Gratuit',
+        name: 'Gratuit',
         for: 'Pour les indépendants, et pour essayer',
         features: [
           'L’app complète, sur Mac et Windows',
           'Modules illimités, sur votre ordinateur',
           'Votre IA : Claude, ChatGPT ou le chat d’Elabora',
           'Export SCORM, cmi5, xAPI et web',
-          'Relectures par lien, dans des quotas',
+          '3 liens de relecture en simultané',
         ],
       },
       teams: {
         name: 'Teams',
-        price: 'Abonnement',
         for: 'Pour les studios et les équipes formation',
-        includes: 'Tout ce que fait l’app, plus :',
         features: [
           'Projets illimités dans le cloud',
+          'Collaboration en direct dans le cloud',
           '200 Go de stockage',
-          'Collaboration en direct entre auteurs et agents',
-          'Limites de relecture et de publication bien plus hautes',
+          'Nombreuses relectures et publications en simultané',
           'Chartes et modèles partagés',
         ],
         cta: 'Demander un accès anticipé',
@@ -164,9 +162,7 @@ export const fr = {
       },
       business: {
         name: 'Entreprise',
-        price: 'Sur devis',
         for: 'Pour les grandes organisations',
-        includes: 'Tout ce que fait Teams, plus :',
         features: [
           'SSO (SAML, OIDC) et SCIM',
           'Gouvernance de l’IA : modèles autorisés, journal des agents',

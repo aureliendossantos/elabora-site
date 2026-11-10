@@ -5,17 +5,14 @@
 .plan { display: flex; flex-direction: column; padding: 40px 36px 44px; }
 .plan + .plan { border-left: 1px solid var(--line-soft); }
 .plan--teams { background: linear-gradient(180deg, var(--violet-soft), rgba(238, 234, 251, 0.25) 70%); }
-.plan h2 { display: flex; align-items: center; gap: 10px; font: 600 1.0625rem / 1.2 var(--font); margin: 0; }
-.plan-soon { font: 600 0.75rem / 1 var(--font); color: var(--violet); background: var(--violet-soft); border-radius: var(--radius-pill); padding: 5px 9px; }
-.plan--teams .plan-soon { background: var(--paper-white); }
+.plan h2 { display: flex; align-items: center; gap: 12px; font: 400 2.375rem / 1.1 var(--serif); letter-spacing: -0.01em; margin: 0; }
+.plan-tag { font: 600 0.75rem / 1 var(--font); color: var(--violet); background: var(--violet-soft); border-radius: var(--radius-pill); padding: 5px 9px; }
+.plan--teams .plan-tag { background: var(--paper-white); }
 .plan-action .button svg { width: 18px; height: 18px; }
-.plan-price { font: 400 2.375rem / 1.1 var(--serif); letter-spacing: -0.01em; margin: 18px 0 0; }
-.plan-for { color: var(--ink-2); margin: 8px 0 0; font-size: 0.96875rem; }
+.plan-for { color: var(--ink-2); margin: 10px 0 0; font-size: 0.96875rem; }
 .plan-action { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin: 28px 0 0; }
 .plan-action .button { width: 100%; justify-content: center; }
-.plan-includes { margin: 32px 0 0; font-size: var(--text-small); font-weight: 600; color: var(--ink-2); }
-.plan ul { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 12px; font-size: 0.96875rem; color: var(--ink-2); }
-.plan-action + ul { margin-top: 32px; }
+.plan ul { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 12px; font-size: 0.96875rem; color: var(--ink-2); }
 .plan ul li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; }
 .plan ul svg { width: 20px; height: 20px; color: var(--violet); margin-top: 1px; }
 .pricing-note { max-width: 36em; margin: 56px auto 0; text-align: center; color: var(--ink-3); font-size: 0.9375rem; text-wrap: balance; }
