@@ -50,7 +50,7 @@ export const EXEMPLES: Exemple[] = [
   },
   {
     id: 'clockwork', langs: ['fr', 'en'], video: true,
-    title: { fr: 'Pourquoi l’aiguille des heures va-t-elle 12 fois moins vite ?', en: 'Why is the hour hand 12 times slower?' },
+    title: { fr: 'Pourquoi l’aiguille des heures va-t-elle 12 fois moins vite ?', en: 'Why is the hour hand 12 times slower?' },
     kind: { fr: 'Explication interactive', en: 'Interactive explanation' },
     phrase: { fr: 'Ouvrir une horloge et comprendre ses engrenages, un à un.', en: 'Open a clock and understand its gears, one at a time.' },
     demande: { fr: 'Expliquer comment l’aiguille des heures fonctionne, avec un mécanisme qu’on manipule.', en: 'Explain how the hour hand works, with a mechanism people can handle.' },

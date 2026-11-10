@@ -80,9 +80,9 @@ export const fr = {
       poster: 'Deux personnages au téléphone : un fournisseur et un employé de la comptabilité.',
       frame: 'Phishing by numbers : l’appel du faux fournisseur',
       points: [
-        { title: 'Des voix expressives', text: 'Elles jouent la joie, la surprise ou l’hésitation, pour des scènes immersives.' },
+        { title: 'Des voix expressives', text: 'Elles jouent une grande variété d’émotions, pour des scènes immersives.' },
         { title: 'Des personnages sur mesure', text: 'Votre IA les dessine pour correspondre à votre situation. Leur visage suit la voix et l’émotion.' },
-        { title: 'Pensés pour apprendre', text: 'Réaction du personnage, feedback du formateur, puis bilan des choix : le processus recommandé par les spécialistes.' },
+        { title: 'Pensés pour apprendre', text: 'Réaction du personnage, feedback du formateur, puis bilan des choix : le processus recommandé par les spécialistes.' },
       ],
     },
     templates: {
@@ -114,7 +114,7 @@ export const fr = {
       title: 'Prêt pour votre entreprise.',
       lead: 'Vos contenus restent à vous, vos modules partent dans votre LMS, et chacun peut les relire.',
       items: [
-        { title: 'La pédagogie, vérifiée à chaque écran.', text: 'Objectifs observables, activités régulières, retours qui expliquent : votre IA relit chaque écran selon la recherche sur l’apprentissage, et complète ce qui manque.' },
+        { title: 'La pédagogie, vérifiée à chaque écran.', text: 'Objectifs observables, activités régulières, retours qui expliquent : votre IA relit chaque écran selon la recherche sur l’apprentissage, et complète ce qui manque.' },
         { title: 'Vos fichiers, dans un format ouvert.', text: 'Chaque module est un dossier sur votre ordinateur, et le cœur d’Elabora est open source : vos modules se lisent aussi hors de l’application.' },
         { title: 'L’IA que vous préférez.', text: 'Utilisez l’app Claude, l’app ChatGPT ou le chat d’Elabora. Avec votre abonnement actuel, vous allez bien plus loin qu’avec les crédits d’IA revendus par d’autres outils.' },
         { title: 'SCORM, cmi5, xAPI et web.', text: 'Un paquet pour votre LMS, ou un lien à partager. Plusieurs langues dans un même module.' },
@@ -142,7 +142,7 @@ export const fr = {
         features: [
           'L’app complète sur Mac et Windows',
           'Modules illimités sur votre ordinateur',
-          'Votre IA : Claude, ChatGPT ou le chat d’Elabora',
+          'Votre IA : Claude, ChatGPT ou le chat d’Elabora',
           'Export SCORM, cmi5, xAPI et web',
           '3 liens de relecture en simultané',
         ],
@@ -165,7 +165,7 @@ export const fr = {
         for: 'Pour les grandes organisations',
         features: [
           'SSO (SAML, OIDC) et SCIM',
-          'Gouvernance de l’IA : modèles autorisés, journal des agents',
+          'Gouvernance de l’IA : modèles autorisés, journal des agents',
           'Rôles, permissions et journal d’audit',
           'Données en Europe, DPA, revue de sécurité',
           'Stockage et limites sur mesure',
@@ -174,7 +174,7 @@ export const fr = {
         ],
       },
     },
-    note: 'Teams et Entreprise arrivent bientôt. Demandez un accès : nous vous prévenons à l’ouverture, et vos besoins guident ce que nous construisons.',
+    note: 'Teams et Entreprise arrivent bientôt. Demandez un accès : nous vous prévenons à l’ouverture, et vos besoins guident ce que nous construisons.',
   },
   download: {
     mac: 'Télécharger pour Mac',

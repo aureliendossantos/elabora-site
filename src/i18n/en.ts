@@ -80,7 +80,7 @@ export const en: Dict = {
       poster: 'Two characters on the phone: a supplier and someone from the finance team.',
       frame: 'Phishing by numbers: the fake supplier’s call',
       points: [
-        { title: 'Expressive voices', text: 'They play joy, surprise or hesitation, for immersive scenes.' },
+        { title: 'Expressive voices', text: 'They play a wide range of emotions, for immersive scenes.' },
         { title: 'Custom characters', text: 'Your AI draws them to fit your situation. Their faces follow the voice and the emotion.' },
         { title: 'Built for learning', text: 'The character’s reaction, the trainer’s feedback, then a debrief of the choices: the process experts recommend.' },
       ],
