@@ -184,7 +184,6 @@
 .reasons p { font-size: 0.96875rem; color: var(--ink-2); }
 .lms { text-align: center; margin: 96px auto 0; color: var(--ink-3); font-size: 0.9375rem; }
 .lms b { font-weight: 500; color: var(--ink-2); }
-.beta-note { text-align: center; margin: 12px auto 0; color: var(--ink-3); font-size: 0.9375rem; max-width: 40em; text-wrap: balance; }
 @media (max-width: 900px) { .reasons, .points { grid-template-columns: 1fr; } .reasons { gap: 52px; max-width: 34rem; } .lms { margin-top: 64px; } }
 
 /* ── The end: the anchor printed in ink, the current along the edges ── */
