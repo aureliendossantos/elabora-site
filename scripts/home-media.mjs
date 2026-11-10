@@ -46,9 +46,9 @@ const BILINGUAL = ['canal-locks', 'clockwork', 'diagnostic-reseau', 'orbital-ren
 const VIDEOS = {
   'phishing-by-numbers': 'reports/accueil-retouches-6-nov/videos/phishing-by-numbers-{lang}',
   'canal-locks': 'reports/accueil-retouches-6-nov/videos/canal-locks-{lang}',
-  'orbital-rendezvous': 'reports/accueil-retouches-6-nov/videos/orbital-rendezvous-{lang}',
+  'orbital-rendezvous': 'reports/prose-modules-9-nov/videos/orbital-rendezvous-{lang}',
   'medieval-charts': 'reports/elabora-identite/vitrine/medias/elabora/medieval-charts-video-chart-table',
-  'clockwork': 'reports/accueil-retouches-6-nov/videos/clockwork-{lang}',
+  'clockwork': 'reports/prose-modules-9-nov/videos/clockwork-{lang}',
   'diagnostic-reseau': 'reports/accueil-retouches-6-nov/videos/diagnostic-reseau-{lang}',
 };
 const TEMPLATES = ['organic', 'editorial', 'clear', 'flow', 'shapes', 'paper', 'watercolor'];

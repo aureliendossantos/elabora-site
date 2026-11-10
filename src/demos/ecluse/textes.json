@@ -63,10 +63,10 @@
    "refuseMoving": "Le bateau est déjà en mouvement.",
    "resetDone": "L’écluse est revenue à son état de départ.",
    "hintLabel": "Indice {i} sur 3",
-   "nudgeGates": "Une paire de portes ne s’ouvre que lorsque l’eau est au même niveau des deux côtés.",
+   "nudgeGates": "Une paire de portes s’ouvre seulement quand l’eau est au même niveau des deux côtés.",
    "nudgeEnter": "La voie est libre. Que doit faire le bateau maintenant ?",
-   "nudgeSeal": "Pour changer le niveau dans le sas, il faut le fermer aux deux extrémités.",
-   "nudgeWater": "L’eau ne fait que descendre. D’où peut venir l’eau qui remplit le sas, ou vers où peut-elle s’écouler ?",
+   "nudgeSeal": "Pour changer le niveau de l’eau, il faut fermer le sas à ses deux extrémités.",
+   "nudgeWater": "L’eau coule toujours vers le bas. D’où peut venir l’eau qui remplit le sas, ou vers où peut-elle s’écouler ?",
    "nudgeWait": "L’eau met un peu de temps à se déplacer. Observez le niveau.",
    "doOpenLowerGates": "Le sas est au niveau du canal inférieur : ouvrez les portes aval.",
    "doOpenUpperGates": "Le sas est au niveau du canal supérieur : ouvrez les portes amont.",
@@ -95,7 +95,7 @@
    {
     "phase": "close",
     "title": "Les portes se ferment derrière elle",
-    "caption": "Une fois les portes aval fermées, le sas devient un bassin clos : son eau ne peut plus s’échapper vers l’aval."
+    "caption": "Une fois les portes aval fermées, le sas devient un bassin clos : son eau reste à l’intérieur."
    },
    {
     "phase": "flow",
@@ -183,10 +183,10 @@
    "refuseMoving": "The boat is already on its way.",
    "resetDone": "The lock is back as it was at the start.",
    "hintLabel": "Hint {i} of 3",
-   "nudgeGates": "A pair of gates only opens when the water is at the same level on both sides.",
+   "nudgeGates": "A pair of gates opens only when the water is level on both sides.",
    "nudgeEnter": "The way is clear. What does the boat need to do now?",
-   "nudgeSeal": "To change the level in the chamber, it must be closed off at both ends.",
-   "nudgeWater": "Water only flows downhill. Where can the chamber get water from, or send it to?",
+   "nudgeSeal": "To change the water level, close the chamber off at both ends.",
+   "nudgeWater": "Water always flows downhill. Where can the chamber get water from, or send it to?",
    "nudgeWait": "Moving water takes a little time. Watch the level.",
    "doOpenLowerGates": "The chamber is level with the lower canal: open the lower gates.",
    "doOpenUpperGates": "The chamber is level with the upper canal: open the upper gates.",
@@ -215,7 +215,7 @@
    {
     "phase": "close",
     "title": "The gates close behind it",
-    "caption": "With the lower gates shut, the chamber becomes a closed basin: its water can no longer run away downstream."
+    "caption": "With the lower gates shut, the chamber becomes a closed basin: its water stays inside."
    },
    {
     "phase": "flow",
@@ -225,7 +225,7 @@
    {
     "phase": "level",
     "title": "The boat floats up",
-    "caption": "As the chamber fills, its surface rises, and the barge floats up with it. Nothing pushes it but the water beneath."
+    "caption": "As the chamber fills, its surface rises, and the barge floats up with it. Only the water beneath pushes it."
    },
    {
     "phase": "open",

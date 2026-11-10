@@ -119,6 +119,26 @@ dialog .t-block[data-t-concealed] { display: none; } /* layers scroll inside: no
 .t-w-half { grid-column: span 1; max-width: none; }
 @media (max-width: 760px) { .t-w-half { grid-column: 1 / -1; } .t-main { padding: 1.25rem 0.875rem 2rem; } }
 
+/* Placed by hand (D72): out of the flow, in the placement frame where placement.ts puts it (custom
+   properties in px of its containing block), drawn over the flow. Its place in the page stays its
+   anchor: what it is read after, where the focus goes, where it reads on phones. A slot that holds
+   only placed blocks says so ([data-t-placed-only]): a layout may fold it. */
+.t-block[data-t-place] {
+  position: absolute !important; z-index: calc(2 + var(--t-place-z, 0)); left: var(--t-place-left, 0px); top: var(--t-place-top, 0px);
+  width: var(--t-place-width, auto) !important; max-width: none !important; margin: 0 !important; justify-self: auto !important; grid-column: auto !important;
+}
+.t-block[data-t-place-height] { height: var(--t-place-height); }
+/* A picture placed with a height fills it, cropped around its focal point. */
+.t-block[data-t-place-height] > .t-figure { display: flex; flex-direction: column; height: 100%; }
+.t-block[data-t-place-height] > .t-figure > :is(.t-media, .t-zoom) { display: block; flex: 1; min-height: 0; }
+.t-block[data-t-place-height] > .t-figure img { width: 100%; height: 100%; max-height: none; object-fit: cover; object-position: calc(var(--focus-x, .5) * 100%) calc(var(--focus-y, .5) * 100%); }
+/* The editor's canvas lifts the block it drags (canvas.ts): over everything, under the pointer. */
+.t-block[data-t-lifted] { z-index: 60; pointer-events: none; }
+/* The block dragged, seen through: what lies under it stays readable (the founder, 9 Nov 2026). */
+.t-block[data-t-dragged] { opacity: .6; }
+/* The editor's drag: the room of a block lifted from the flow, kept until it is let go (its trace is the editor's). */
+.t-lift-trace { display: block; pointer-events: none; }
+
 /* Layouts: the template places the slots; inside a slot, blocks stack and fill its width. */
 .t-layout { position: relative; }
 .t-slot { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
@@ -145,6 +165,12 @@ math { font-family: "STIX Two Math", "Cambria Math", "Latin Modern Math", math; 
 .t-math figcaption { margin-top: 0.375rem; color: var(--t-muted); font-size: 0.9375rem; text-align: center; }
 .t-text > :last-child { margin-bottom: 0; }
 .t-figure { margin: 0; }
+/* A picture the build sized (width and height of its file, core/render/image-sizes.ts) keeps its room
+   before it arrives; its height follows the width the page gives it, as an unsized one's does. */
+:where(img[data-t-sized]) { height: auto; }
+/* A picture held until the learner comes near (held-pictures.ts): its room only, its text alternative
+   unseen (an image without its address shows it, and a long one would grow the room). */
+img[data-t-src] { overflow: hidden; color: transparent; }
 .t-figure img, .t-figure video, .t-figure .t-figure-svg { display: block; max-width: 100%; height: auto; border-radius: var(--t-radius); }
 .t-figure figcaption { margin-top: 0.375rem; color: var(--t-muted); font-size: 0.9375rem; }
 .t-genmark { margin: 0.25rem 0 0; font-size: 0.8125rem; color: var(--t-muted); }
@@ -2473,7 +2499,7 @@ details[data-t-details][open]::details-content { opacity: 1; }
 .t-dialogue-start-btn .t-icon svg { width: 1.125rem; height: 1.125rem; }
 .t-dialogue-options .t-dialogue-start { position: static; height: auto; }
 
-/* ── A panel over the dialogue (modal.ts): the History, the debrief ──────── */
+/* ── A panel over the dialogue (modal.ts): the History ───────────────────── */
 /* The rest of the dialogue under a veil, dark on any theme; a click on it closes the panel. */
 .t-dialogue-veil { position: absolute; z-index: 4; inset: 0; border-radius: var(--t-dl-radius); background: rgb(10 13 18 / 0.42); transition: opacity 220ms ease; }
 @starting-style { .t-dialogue-veil { opacity: 0; } }
@@ -2484,19 +2510,21 @@ details[data-t-details][open]::details-content { opacity: 1; }
 .t-dialogue-history-close { display: none; }
 
 /* ── The debrief ────────────────────────────────────────────────────────── */
-.t-dialogue-debrief { transition: opacity 240ms var(--t-ease-out); }
-@starting-style { .t-dialogue-debrief { opacity: 0; } }
-/* Slides (and scenes): a panel over the thread, its box. */
-.t-dialogue-root[data-t-debrief-open] > .t-dialogue-debrief {
-  position: absolute; z-index: 5; inset-inline: 0; top: var(--t-dl-log-top, 0px); height: var(--t-dl-log-height, 24rem);
-  overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--t-dl-line); border-radius: var(--t-dl-radius); background: var(--t-surface);
-  box-shadow: 0 18px 48px rgb(10 13 18 / 0.22);
+/* In scroll pages, under the thread: it comes in a fade (the modal one moves as the player's dialogs). */
+.t-dialogue-debrief:not(dialog) { transition: opacity 240ms var(--t-ease-out); }
+@starting-style { .t-dialogue-debrief:not(dialog) { opacity: 0; } }
+/* Slides (and scenes): a modal dialog over the screen (the player's .t-dialog: its backdrop, corners,
+   shadow and motion), centred, as tall as what it says within the window, then scrolling. */
+.t-dialogue-debrief--modal {
+  box-sizing: border-box; width: min(42rem, calc(100vw - 2rem)); max-width: none; max-height: calc(100dvh - 2rem);
+  padding: 0; overflow-y: auto; overscroll-behavior: contain; color: var(--t-dl-text);
 }
 /* Its close button stays in its corner while it scrolls. */
-.t-dialogue-debrief > .t-dialogue-close { position: sticky; z-index: 1; top: 0.625rem; display: grid; margin: 0.625rem 0.625rem -2.875rem auto; }
-.t-dialogue-root[data-t-debrief-open] .t-dialogue-debrief-title { padding-inline-end: 2.5rem; }
+.t-dialogue-debrief > .t-dialogue-close { position: sticky; z-index: 1; top: 0.75rem; display: grid; margin: 0.75rem 0.75rem -3rem auto; }
+.t-dialogue-debrief--modal .t-dialogue-debrief-title { padding-inline-end: 2.5rem; }
 .t-dialogue-debrief-card { padding: 1.375rem 1.5rem 1.5rem; border: 1px solid var(--t-dl-line); border-radius: var(--t-dl-radius); background: var(--t-surface); }
-.t-dialogue-root[data-t-debrief-open] .t-dialogue-debrief-card { border: 0; border-radius: 0; background: none; }
+.t-dialogue-debrief--modal .t-dialogue-debrief-card { padding: 1.75rem 2rem 2rem; border: 0; border-radius: 0; background: none; }
+@media (max-width: 480px) { .t-dialogue-debrief--modal .t-dialogue-debrief-card { padding: 1.375rem 1.25rem 1.5rem; } }
 .t-dialogue-debrief-title { margin: 0 0 0.375rem; font-family: var(--t-font-heading); font-size: 1.375rem; font-weight: 650; line-height: 1.25; }
 .t-dialogue-debrief-text { margin: 0 0 0.75rem; }
 .t-dialogue-debrief-text > :last-child { margin-bottom: 0; }
@@ -2629,7 +2657,6 @@ details[data-t-details][open]::details-content { opacity: 1; }
   .t-dialogue-root[data-t-look="scene"] .t-dialogue-new { display: none; }
   .t-dialogue-root[data-t-look="scene"] .t-dialogue-start { inset: 0; top: 0; height: auto; z-index: 2; background: color-mix(in srgb, var(--t-surface) 30%, transparent); }
   .t-dialogue-root[data-t-look="scene"] .t-dialogue-start-title { padding: 0.5rem 1.25rem; border-radius: 999px; background: color-mix(in srgb, var(--t-surface) 92%, transparent); }
-  .t-dialogue-root[data-t-look="scene"][data-t-debrief-open] > .t-dialogue-debrief { inset: 4% 14% 16%; height: auto; }
 }
 
 /* The learner asks for less motion: the dots rest, rows and options come in a fade only (--t-move). */
