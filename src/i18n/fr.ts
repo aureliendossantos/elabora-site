@@ -80,8 +80,8 @@ export const fr = {
       poster: 'Deux personnages au téléphone : un fournisseur et un employé de la comptabilité.',
       frame: 'Phishing by numbers : l’appel du faux fournisseur',
       points: [
-        { title: 'Des voix naturelles', text: 'ElevenLabs, ou des voix qui tournent sur votre ordinateur. Une voix par personnage, dans chaque langue.' },
-        { title: 'Des personnages sur mesure', text: 'Votre IA dessine ceux que vous décrivez. Lèvres, visage et gestes suivent la voix et la scène.' },
+        { title: 'Des voix expressives', text: 'Elles jouent le doute, l’agacement ou le soulagement, pour des scènes immersives.' },
+        { title: 'Des personnages sur mesure', text: 'Votre IA les dessine selon vos envies. Leur visage suit la voix et l’émotion.' },
         { title: 'Pensés pour apprendre', text: 'Réaction, note du formateur, puis bilan : l’ordre que recommandent les spécialistes du scénario.' },
       ],
     },
@@ -140,8 +140,8 @@ export const fr = {
         name: 'Gratuit',
         for: 'Pour les indépendants, et pour essayer',
         features: [
-          'L’app complète, sur Mac et Windows',
-          'Modules illimités, sur votre ordinateur',
+          'L’app complète sur Mac et Windows',
+          'Modules illimités sur votre ordinateur',
           'Votre IA : Claude, ChatGPT ou le chat d’Elabora',
           'Export SCORM, cmi5, xAPI et web',
           '3 liens de relecture en simultané',
@@ -152,7 +152,7 @@ export const fr = {
         for: 'Pour les studios et les équipes formation',
         features: [
           'Projets illimités dans le cloud',
-          'Collaboration en direct dans le cloud',
+          'Collaboration en direct',
           '200 Go de stockage',
           'Nombreuses relectures et publications en simultané',
           'Chartes et modèles partagés',

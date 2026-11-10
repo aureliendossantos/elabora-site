@@ -80,8 +80,8 @@ export const en: Dict = {
       poster: 'Two characters on the phone: a supplier and someone from the finance team.',
       frame: 'Phishing by numbers: the fake supplier’s call',
       points: [
-        { title: 'Natural voices', text: 'ElevenLabs, or voices that run on your computer. One voice per character, in every language.' },
-        { title: 'Custom characters', text: 'Your AI draws the ones you describe. Lips, face and gestures follow the voice and the scene.' },
+        { title: 'Expressive voices', text: 'They play doubt, annoyance or relief, for immersive scenes.' },
+        { title: 'Custom characters', text: 'Your AI draws them as you wish. Their faces follow the voice and the emotion.' },
         { title: 'Built for learning', text: 'Reaction, trainer’s note, then debrief: the order scenario experts recommend.' },
       ],
     },
@@ -140,8 +140,8 @@ export const en: Dict = {
         name: 'Free',
         for: 'For freelancers, and to try it',
         features: [
-          'The complete app, for Mac and Windows',
-          'Unlimited courses, on your computer',
+          'The complete app for Mac and Windows',
+          'Unlimited courses on your computer',
           'Your AI: Claude, ChatGPT or the Elabora chat',
           'SCORM, cmi5, xAPI and web export',
           '3 review links at once',
@@ -152,7 +152,7 @@ export const en: Dict = {
         for: 'For studios and learning teams',
         features: [
           'Unlimited cloud projects',
-          'Live collaboration in the cloud',
+          'Live collaboration',
           '200 GB of storage',
           'Many reviews and publications at once',
           'Shared themes and templates',
