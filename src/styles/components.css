@@ -61,7 +61,7 @@
 
 /* ── The footer: the logo, three columns of links, the language ── */
 .site-footer { border-top: 1px solid var(--line); font-size: 0.84375rem; color: var(--ink-3); }
-.site-footer-in { max-width: var(--page); margin: 0 auto; padding: 56px var(--gutter) 40px; display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 32px; }
+.site-footer-in { max-width: var(--page); margin: 0 auto; padding: 56px var(--gutter) 40px; display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 32px; }
 .site-footer .logo { color: var(--ink); }
 .site-footer-brand p { margin-top: 14px; max-width: 22em; text-wrap: balance; }
 .site-footer h2 { font: 600 0.8125rem var(--font); color: var(--ink); letter-spacing: 0; margin: 0 0 12px; }

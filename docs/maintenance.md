@@ -167,8 +167,9 @@ an AI the author has not chosen (the short tasks).
 
 `/en/compare/` and `/fr/comparatif/` compare Elabora with other authoring tools: an overview, one page per tool
 (« Elabora vs Storyline 360 »…) and « A Storyline alternative for Mac ». They are made for search engines and AI agents:
-the sitemap, `/llms.txt` and their links to each other lead to them, and **no other page links to them** (the home, the
-header, the footer: `pnpm run links` fails otherwise). They are signed by Aurélien Dos Santos, who reads each one.
+the sitemap, `/llms.txt`, their links to each other and the footer (the overview, Storyline and Rise, since 10 Nov 2026)
+lead to them, and **no other page links to them** (the home's content, the header, the manual: `pnpm run links` fails
+otherwise). They are signed by Aurélien Dos Santos, who reads each one.
 
 - **The facts**: `src/data/comparisons/<tool>.json`, one file per tool (`elabora.json` for Elabora, with its **gaps**,
   shown on every page). Each fact: `en`, `fr`, its official `source`, the day it was `checked`. The tables are made
@@ -318,7 +319,7 @@ template previews, the identity's recordings. Each change there has one way in:
 | A release | nothing: the download links and the version come from `src/data/releases.json` | — |
 | A text | `src/i18n/fr.ts` (the reference) and `en.ts` | — |
 | What visitors search for (once a month) | `pnpm run search-console` (« Search Console ») | write the page or the words that answer it |
-| A point of comparison (the trust section: free, your files in an open format, the AI of your choice, the beta line) | `home.trust` in `src/i18n/fr.ts` and `en.ts` | the same fact in `src/data/comparisons/elabora.json` (« Comparison pages »); the home never links to the comparisons |
+| A point of comparison (the trust section: learning design checks, your files in an open format, the AI of your choice) | `home.trust` in `src/i18n/fr.ts` and `en.ts` | the same fact in `src/data/comparisons/elabora.json` (« Comparison pages »); the home's content never links to the comparisons |
 
 Then `pnpm run check`, `pnpm test`, `pnpm run build`, `pnpm run links` and `pnpm run check:home`, and look at the captures
 it writes (`../reports/site-elabora/accueil/`). `home-media.mjs` needs the sibling checkouts on the versions to show

@@ -1,9 +1,11 @@
 ---
-// The footer of every page: what Elabora is in a line, then the product, the resources, the company and the law,
+// The footer of every page: what Elabora is in a line, then the product, the resources, the main comparisons (the only
+// links to them outside their own pages: scripts/check-links.mjs), the company and the law,
 // and the language (the same page in the other language). Its last line gives the licences and the site's source.
 import Logo from '../brand/Logo.astro';
 import { CONTACT_EMAIL, CORE_REPO_URL, DEMO_URL, SITE_REPO_URL } from '../../site.config';
-import { LEGAL_KEYS, LOCALES, PRICING_PATHS, docsPath, homePath, legalPath, useT, type Lang } from '../../i18n';
+import { LEGAL_KEYS, LOCALES, PRICING_PATHS, docsPath, fill, homePath, legalPath, useT, type Lang } from '../../i18n';
+import { comparePath } from '../../lib/comparisons';
 import { changelogPath } from '../../lib/releases';
 
 interface Props { lang: Lang; paths: Record<Lang, string> }
@@ -20,11 +22,9 @@ const home = homePath(lang);
     <nav aria-labelledby="pied-produit">
       <h2 id="pied-produit">{t.footer.product}</h2>
       <ul>
-        <li><a href={`${home}#exemples`}>{t.nav.examples}</a></li>
-        <li><a href={`${home}#modeles`}>{t.nav.templates}</a></li>
+        <li><a href={home}>{t.footer.home}</a></li>
         <li><a href={PRICING_PATHS[lang]}>{t.nav.pricing}</a></li>
         <li><a href={changelogPath(lang)}>{t.footer.whatsNew}</a></li>
-        <li><a href={`${home}#telecharger`}>{t.nav.download}</a></li>
         <li><a href={DEMO_URL}>{t.nav.demo}</a></li>
       </ul>
     </nav>
@@ -34,6 +34,14 @@ const home = homePath(lang);
         <li><a href={docsPath(lang)}>{t.nav.docs}</a></li>
         <li><a href="/en/docs/developers/" hreflang="en">{t.footer.developers}</a></li>
         <li><a href={CORE_REPO_URL}>{t.footer.source}</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="pied-comparatifs">
+      <h2 id="pied-comparatifs">{t.footer.compare}</h2>
+      <ul>
+        <li><a href={comparePath(lang, 'storyline')}>{fill(t.compare.readMore, { tool: 'Storyline' })}</a></li>
+        <li><a href={comparePath(lang, 'rise')}>{fill(t.compare.readMore, { tool: 'Rise' })}</a></li>
+        <li><a href={comparePath(lang)}>{t.footer.compareAll}</a></li>
       </ul>
     </nav>
     <nav aria-labelledby="pied-elabora">

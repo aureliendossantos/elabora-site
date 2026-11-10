@@ -73,13 +73,14 @@ for (const file of htmlFiles) {
   if (drafts.has(page) && !/<meta name="robots" content="noindex"/.test(html)) errors.push(`${page}: a draft without noindex`);
   if (!html.includes('rel="canonical"')) errors.push(`${page}: no canonical`);
 }
-// The comparison pages are found through search and agents (the sitemap, llms.txt, their links to each other), never
-// from the rest of the site: no page outside them links to them (docs/maintenance.md, « Comparison pages »).
+// The comparison pages are found through search and agents (the sitemap, llms.txt, their links to each other) and the
+// footer's few links, never from the rest of a page: outside them and the footer, no link leads to them
+// (docs/maintenance.md, « Comparison pages »).
 const comparisons = /^\/(en\/compare|fr\/comparatif)\//;
 for (const file of htmlFiles) {
   const page = '/' + file.slice(dist.length + 1).replace(/index\.html$/, '');
   if (comparisons.test(page)) continue;
-  const markup = readFileSync(file, 'utf8').replace(/<pre[\s>][\s\S]*?<\/pre>|<code[\s>][\s\S]*?<\/code>/g, '');
+  const markup = readFileSync(file, 'utf8').replace(/<pre[\s>][\s\S]*?<\/pre>|<code[\s>][\s\S]*?<\/code>|<footer class="site-footer">[\s\S]*?<\/footer>/g, '');
   for (const m of markup.matchAll(/\shref="([^"]*)"/g)) {
     const url = URL.parse(m[1], origin + page);
     if (url && url.origin === origin && comparisons.test(url.pathname)) errors.push(`${page}: links to the comparison ${m[1]}`);
