@@ -10,8 +10,8 @@ export const INDEXING = true;
 
 export const SITE_URL = 'https://elabora.studio';
 export const CONTACT_EMAIL = 'contact@elabora.studio';
-/** Where « Réserver une démo » leads: a message to the team, with its subject. A booking page can replace it here. */
-export const DEMO_URL = (subject: string) => `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;
+/** Where « Réserver une démo » leads: the team's booking page. */
+export const DEMO_URL = 'https://cal.com/elabora-studio';
 /** Where the sample modules are published (the home's cards open them there); the CSP's only external origin. */
 export const VITRINE_ORIGIN = 'https://vitrine.elabora.page';
 /** The core's repository: the developer docs link to its code at the commit they were synced from. */

@@ -1,18 +1,19 @@
 ---
 // The pricing page: the free app, Teams (a subscription, soon: early access by e-mail) and Enterprise (a demo). Three
-// soft cards, Teams set forward; no price is shown for Teams yet. /fr/tarifs/ and /en/pricing/ (PRICING_PATHS).
+// columns joined in one soft panel, Teams set forward; no price is shown for Teams yet. /fr/tarifs/ and /en/pricing/ (PRICING_PATHS).
 import '../../styles/pricing.css';
 import Base from '../../layouts/Base.astro';
 import DemoButton from '../site/DemoButton.astro';
 import DownloadButton from '../site/DownloadButton.astro';
 import { CONTACT_EMAIL } from '../../site.config';
-import { PRICING_PATHS, homePath, useT, type Lang } from '../../i18n';
+import { PRICING_PATHS, useT, type Lang } from '../../i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useT(lang);
 const p = t.pricing;
 const early = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(p.plans.teams.subject)}`;
+const envelope = '<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.8" y="4.5" width="14.4" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 6l6.5 4.8L16.5 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const check = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 6.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 ---
 <Base lang={lang} title={`${p.title} · ${t.name}`} description={p.lead} paths={PRICING_PATHS} path={PRICING_PATHS[lang]}>
@@ -27,14 +28,14 @@ const check = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 
         <h2>{p.plans.app.name}</h2>
         <p class="plan-price">{p.plans.app.price}</p>
         <p class="plan-for">{p.plans.app.for}</p>
-        <div class="plan-action"><DownloadButton lang={lang} more={`${homePath(lang)}#telecharger`} /></div>
+        <div class="plan-action"><DownloadButton lang={lang} more={false} light /></div>
         <ul>{p.plans.app.features.map((f) => <li><Fragment set:html={check} />{f}</li>)}</ul>
       </li>
       <li class="plan plan--teams">
         <h2>{p.plans.teams.name} <span class="plan-soon">{p.soon}</span></h2>
         <p class="plan-price">{p.plans.teams.price}</p>
         <p class="plan-for">{p.plans.teams.for}</p>
-        <div class="plan-action"><a class="button" href={early}>{p.plans.teams.cta}</a></div>
+        <div class="plan-action"><a class="button" href={early}><Fragment set:html={envelope} />{p.plans.teams.cta}</a></div>
         <p class="plan-includes">{p.plans.teams.includes}</p>
         <ul>{p.plans.teams.features.map((f) => <li><Fragment set:html={check} />{f}</li>)}</ul>
       </li>
@@ -42,7 +43,7 @@ const check = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3.2 
         <h2>{p.plans.business.name} <span class="plan-soon">{p.soon}</span></h2>
         <p class="plan-price">{p.plans.business.price}</p>
         <p class="plan-for">{p.plans.business.for}</p>
-        <div class="plan-action"><DemoButton lang={lang} /></div>
+        <div class="plan-action"><DemoButton lang={lang} icon /></div>
         <p class="plan-includes">{p.plans.business.includes}</p>
         <ul>{p.plans.business.features.map((f) => <li><Fragment set:html={check} />{f}</li>)}</ul>
       </li>

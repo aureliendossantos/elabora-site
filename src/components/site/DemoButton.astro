@@ -1,11 +1,12 @@
 ---
-// « Réserver une démo », the action for organisations: a message to the team for now, in the page's language. A button,
-// a small one (the header), or a link beside the download (the end of the home).
+// « Réserver une démo », the action for organisations: the team's booking page. A button, a small one (the header), or
+// a link beside the download (the end of the home); `icon` adds a calendar (the pricing page).
 import { DEMO_URL } from '../../site.config';
 import { useT, type Lang } from '../../i18n';
 
-interface Props { lang: Lang; look?: 'button' | 'small' | 'link'; label?: string }
-const { lang, look = 'button', label } = Astro.props;
+interface Props { lang: Lang; look?: 'button' | 'small' | 'link'; icon?: boolean }
+const { lang, look = 'button', icon = false } = Astro.props;
 const t = useT(lang);
+const calendar = '<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 8.5h14M7 2.8v3.4M13 2.8v3.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>';
 ---
-<a class:list={look === 'link' ? 'more' : ['button', { 'button--small': look === 'small' }]} href={DEMO_URL(t.footer.demoSubject)}>{label ?? t.nav.demo}</a>
+<a class:list={look === 'link' ? 'more' : ['button', { 'button--small': look === 'small' }]} href={DEMO_URL}>{icon && <Fragment set:html={calendar} />}{t.nav.demo}</a>
