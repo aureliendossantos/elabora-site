@@ -1,7 +1,10 @@
 ---
-// The bar at the top of every page: the logo, four links, « Télécharger ». The docs put their own links and
+// The bar at the top of every page: the logo, four links (the last two lead to the manual and the developer docs),
+// « Réserver une démo ». The docs put their own links and
 // search in its slot, in place of the four links.
 import Logo from '../brand/Logo.astro';
+import DemoButton from './DemoButton.astro';
+import { DEV_BASE } from '../../lib/core-docs';
 import { docsPath, homePath, useT, type Lang } from '../../i18n';
 
 interface Props { lang: Lang; wide?: boolean }
@@ -18,11 +21,11 @@ const hasSlot = Astro.slots.has('default');
         <ul>
           <li><a href={`${home}#exemples`}>{t.nav.examples}</a></li>
           <li><a href={`${home}#modeles`}>{t.nav.templates}</a></li>
-          <li><a href={`${home}#comment`}>{t.nav.how}</a></li>
-          <li><a href={docsPath(lang)}>{t.nav.docs}</a></li>
+          <li><a href={docsPath(lang)}>{t.nav.guide}</a></li>
+          <li><a href={DEV_BASE} hreflang="en">{t.nav.developers}</a></li>
         </ul>
       </nav>
     )}
-    <a class="button button--small" href={`${home}#telecharger`}>{t.nav.download}</a>
+    <DemoButton lang={lang} small />
   </div>
 </header>

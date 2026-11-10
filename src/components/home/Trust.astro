@@ -1,16 +1,17 @@
 ---
-// Ready for your organisation: six reasons, said simply, the LMS whose rules each package is checked against (the
-// core's LMS profiles, docs/lms-profiles.md: documented rules, not field tests), and where the beta stands. The first
-// three reasons and the beta line are the home's points of comparison (free, your files in an open format, the AI of
-// your choice): the same facts as src/data/comparisons/elabora.json, which the comparison pages show. The home never
-// links to those pages (docs/maintenance.md, « Comparison pages »).
+// Ready for your organisation: six reasons, said simply and set apart by space alone, the LMS whose rules each package
+// is checked against (the core's LMS profiles, docs/lms-profiles.md: documented rules, not field tests), and where the
+// beta stands. Reasons two and three and the beta line are points of comparison (your files in an open format, the AI
+// of your choice): the same facts as src/data/comparisons/elabora.json, which the comparison pages show. The home never
+// links to those pages (docs/maintenance.md, « Comparison pages »). The home never sells the app as free: the price is
+// a fact of the comparison pages only.
 import { useT, type Lang } from '../../i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useT(lang);
 const icons = [
-  '<path d="M4.5 12h21v4h-21zM6.5 16h17v10h-17zM15 12v14"/><path d="M15 12c-1.6-3.6-6.5-5-6.5-2.2C8.5 12 12.4 12 15 12zm0 0c1.6-3.6 6.5-5 6.5-2.2 0 2.2-3.9 2.2-6.5 2.2z"/>',
+  '<path d="M15 3.5a11.5 11.5 0 100 23c1.6 0 2.4-1 2.4-2.2 0-1.5-1.3-2-1.3-3.4 0-1.3 1-2.2 2.4-2.2h3a5 5 0 005-5C26.5 8 21.3 3.5 15 3.5z"/><circle cx="9.5" cy="14" r="1.5" fill="currentColor" stroke="none"/><circle cx="12.5" cy="9" r="1.5" fill="currentColor" stroke="none"/><circle cx="18.5" cy="9" r="1.5" fill="currentColor" stroke="none"/>',
   '<path d="M3 8.5A2.5 2.5 0 015.5 6H11l2.5 2.5h11A2.5 2.5 0 0127 11v12.5a2.5 2.5 0 01-2.5 2.5h-19A2.5 2.5 0 013 23.5z"/>',
   '<circle cx="15" cy="15" r="11"/><circle cx="15" cy="15" r="3.2" fill="currentColor" stroke="none"/><circle cx="23" cy="9.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="7.5" cy="20.5" r="1.4" fill="currentColor" stroke="none"/>',
   '<path d="M15 3l11 5.5v13L15 27 4 21.5v-13z"/><path d="M4 8.5L15 14l11-5.5M15 14v13"/>',

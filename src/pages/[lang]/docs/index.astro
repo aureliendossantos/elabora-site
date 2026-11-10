@@ -14,14 +14,14 @@ const t = useT(lang);
 const pages = await manualPages(lang);
 const home = pages.find((page) => page.data.slug === '');
 if (!home) throw new Error(`src/content/manual/${lang}/index.md is missing (slug '')`);
-const { Content, headings } = await render(home);
+const { Content } = await render(home);
 const path = docsPath(lang);
 const paths = { fr: docsPath('fr'), en: docsPath('en') };
 const nav = manualNav(pages, lang, path);
 const first = pages.find((page) => page !== home);
 const starts = devMap().sections.slice(0, 2).flatMap((section) => section.pages).slice(0, 4);
 ---
-<Docs lang={lang} kind="manual" title={home.data.title} description={home.data.description} path={path} paths={paths} nav={nav} headings={headings} heading={home.data.title} lead={home.data.description} next={first && { title: first.data.title, href: docsPath(lang, first.data.slug) }}>
+<Docs lang={lang} kind="manual" title={home.data.title} description={home.data.description} path={path} paths={paths} nav={nav} heading={home.data.title} lead={home.data.description} next={first && { title: first.data.title, href: docsPath(lang, first.data.slug) }}>
   <Content />
   <div class="docs-groups">
     {MANUAL_GROUPS.map((group) => {

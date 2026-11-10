@@ -1,0 +1,10 @@
+---
+// « Réserver une démo », the site's main action: a message to the team for now, in the page's language.
+import { DEMO_URL } from '../../site.config';
+import { useT, type Lang } from '../../i18n';
+
+interface Props { lang: Lang; small?: boolean }
+const { lang, small = false } = Astro.props;
+const t = useT(lang);
+---
+<a class:list={['button', { 'button--small': small }]} href={DEMO_URL(t.footer.demoSubject)}>{t.nav.demo}</a>

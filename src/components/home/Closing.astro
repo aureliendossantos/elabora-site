@@ -1,6 +1,7 @@
 ---
 // The end: the anchor printed in ink and the brand's current along the edges (the riso press, src/brand/presse.js,
-// loaded as the section nears: scripts/fin.ts), the promise, the download, then the other installers and the version.
+// loaded as the section nears: scripts/fin.ts), the promise, the demo and the download, then the other installers and the version.
+import DemoButton from '../site/DemoButton.astro';
 import DownloadButton from '../site/DownloadButton.astro';
 import affiche from '../../assets/brand/ancre-affiche.svg?raw';
 import { useT, fill, type Lang } from '../../i18n';
@@ -21,7 +22,7 @@ const ancre = { d: affiche.match(/ d="([^"]+)"/)?.[1] ?? '', x, y, w, h };
   <canvas class="anchor reveal" aria-hidden="true"></canvas>
   <h2 id="closing-title" class="reveal reveal--d1">{t.home.final.title}</h2>
   <p class="lead reveal reveal--d2">{t.home.final.lead}</p>
-  <div class="actions reveal reveal--d2"><DownloadButton lang={lang} more={false} /></div>
+  <div class="actions reveal reveal--d2"><DemoButton lang={lang} /><DownloadButton lang={lang} more={false} label={t.home.try} /></div>
   {release && (
     <ul class="downloads reveal reveal--d3">
       {files.map((f) => <li data-platform={f.platform} hidden={f.platform === 'mac-arm64'}><a href={f.url}>{names[f.platform]}</a></li>)}

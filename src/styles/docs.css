@@ -111,6 +111,8 @@ html { scroll-padding-top: calc(var(--docs-header) + 20px); }
 .docs-article { min-width: 0; max-width: 48rem; padding: 28px 0 88px; }
 .docs-toc { padding: 36px 0 48px; }
 .docs-menu, .docs-toc-inline { display: none; }
+/* The manual's pages stay short: no « On this page », two columns, the article centred with its sidebar. */
+.docs-manual { grid-template-columns: 236px minmax(0, 48rem); justify-content: center; }
 
 /* ---- Sidebar ---- */
 .docs-nav-inner { display: flex; flex-direction: column; gap: 22px; font-size: 0.9063rem; }
@@ -256,12 +258,12 @@ html { scroll-padding-top: calc(var(--docs-header) + 20px); }
 
 /* ---- Narrower windows ---- */
 @media (max-width: 1200px) {
-  .docs { grid-template-columns: 220px minmax(0, 1fr); gap: 0 44px; }
+  .docs, .docs-manual { grid-template-columns: 220px minmax(0, 1fr); gap: 0 44px; }
   .docs-toc { display: none; }
   .docs-toc-inline { display: block; }
 }
 @media (max-width: 880px) {
-  .docs { grid-template-columns: minmax(0, 1fr); }
+  .docs, .docs-manual { grid-template-columns: minmax(0, 1fr); }
   .docs-sidebar { display: none; }
   .docs-menu { display: block; margin-top: 16px; }
   .docs-article { padding-top: 20px; }

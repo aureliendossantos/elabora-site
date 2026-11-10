@@ -126,7 +126,9 @@
 .play svg { width: 22px; height: 22px; }
 .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 960px; margin: 56px auto 0; text-align: center; list-style: none; padding: 0; }
 .points b { display: block; font: 400 1.375rem / 1.25 var(--serif); color: var(--on-night); margin-bottom: 6px; }
-.points span { display: block; font-size: 0.9375rem; color: var(--on-night-3); text-wrap: balance; }
+.points span { display: block; font-size: 0.9375rem; color: var(--on-night-3); text-wrap: pretty; }
+.points-more { text-align: center; margin-top: 40px; }
+.points-more .more { color: var(--violet-on-night); }
 
 /* ── The templates: a large animated preview, seven thumbnails to change it ── */
 .template-screen { max-width: 1120px; margin: 56px auto 0; }
@@ -177,15 +179,15 @@
 @media (max-width: 900px) { .steps canvas { display: none; } .steps { gap: 4px 14px; } }
 
 /* ── Ready for your organisation ── */
-.reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: var(--page); margin: 64px auto 0; padding: 0; list-style: none; }
-.reasons li { background: var(--paper-white); border-radius: 24px; padding: 32px 30px 34px; box-shadow: 0 0 0 1px var(--line-soft); }
+/* Six reasons set apart by space alone: two rows of three, wide gutters, no boxes. */
+.reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px 56px; max-width: var(--page); margin: 72px auto 0; padding: 0; list-style: none; }
 .reasons svg { width: 30px; height: 30px; color: var(--violet); }
-.reasons h3 { font: 400 1.5rem / 1.2 var(--serif); margin: 20px 0 8px; letter-spacing: -0.01em; text-wrap: pretty; }
+.reasons h3 { font: 400 1.5rem / 1.2 var(--serif); margin: 18px 0 8px; letter-spacing: -0.01em; text-wrap: pretty; }
 .reasons p { font-size: 0.96875rem; color: var(--ink-2); }
 .lms { text-align: center; margin: 48px auto 0; color: var(--ink-3); font-size: 0.9375rem; }
 .lms b { font-weight: 500; color: var(--ink-2); }
 .beta-note { text-align: center; margin: 12px auto 0; color: var(--ink-3); font-size: 0.9375rem; max-width: 40em; text-wrap: balance; }
-@media (max-width: 900px) { .reasons, .points { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .reasons, .points { grid-template-columns: 1fr; } .reasons { gap: 44px; max-width: 34rem; } }
 
 /* ── The end: the anchor printed in ink, the current along the edges ── */
 .closing { position: relative; background: var(--paper-creme); text-align: center; overflow: hidden; padding: clamp(120px, 14vw, 190px) var(--gutter); }

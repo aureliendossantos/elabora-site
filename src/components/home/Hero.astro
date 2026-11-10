@@ -1,6 +1,7 @@
 ---
-// The hero: the promise, the download, then the film. A request writes itself, then the module it gave appears in
+// The hero: the promise, the demo and the download, then the film. A request writes itself, then the module it gave appears in
 // a window, one module at a time; the stepping agent counts them below (scripts/film.ts).
+import DemoButton from '../site/DemoButton.astro';
 import DownloadButton from '../site/DownloadButton.astro';
 import { EXEMPLES } from '../../data/exemples';
 import { useT, type Lang } from '../../i18n';
@@ -13,10 +14,9 @@ const t = useT(lang);
   <h1 id="hero-title" class="reveal">{t.home.title}</h1>
   <p class="lead reveal reveal--d1">{t.home.lead}</p>
   <div class="actions reveal reveal--d2">
-    <DownloadButton lang={lang} more={false} />
-    <a class="more" href="#exemples">{t.home.seeExamples}</a>
+    <DemoButton lang={lang} />
+    <DownloadButton lang={lang} more={false} label={t.home.try} />
   </div>
-  <p class="fine reveal reveal--d2">{t.home.facts}</p>
   <div class="hero-visual reveal reveal--media reveal--d3" data-film>
     <p class="film-request" aria-hidden="true">
       {EXEMPLES.map((m, i) => (

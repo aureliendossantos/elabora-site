@@ -3,7 +3,8 @@ import '../styles/docs.css';
 import Base from './Base.astro';
 import DocsNav from '../components/docs/DocsNav.astro';
 import DocsSearch from '../components/docs/DocsSearch.astro';
-import { docsPath, useT, type Lang } from '../i18n';
+import { LEGAL_KEYS, docsPath, homePath, legalPath, useT, type Lang } from '../i18n';
+import { changelogPath } from '../lib/releases';
 import type { NavGroup, NavItem } from '../lib/docs-nav';
 
 interface Props {
@@ -15,7 +16,8 @@ interface Props {
   alternates?: readonly Lang[] | undefined;
   kind: 'manual' | 'dev';
   nav: NavGroup[];
-  /** The page's headings, for « On this page » (h2, and h3 on pages that have few). */
+  /** The page's headings, for « On this page » (h2, and h3 on pages that have few): the developer docs only, the
+   *  manual's pages stay short enough without it. */
   headings?: { depth: number; slug: string; text: string }[] | undefined;
   prev?: NavItem | undefined;
   next?: NavItem | undefined;
@@ -33,13 +35,21 @@ const t = useT(lang);
 const sections = headings.filter((h) => h.depth === 2 || h.depth === 3);
 const toc = sections.length <= 40 ? sections : sections.filter((h) => h.depth === 2);
 const docsTitle = kind === 'dev' ? t.docs.developers : t.docs.manual;
+// The developer docs, in English only, send a visitor from the French site back to it (scripts/langue.ts): the pages
+// of the frame, English path → French path.
+const frLinks = kind === 'dev' ? JSON.stringify(Object.fromEntries([
+  [homePath('en'), homePath('fr')],
+  [docsPath('en'), docsPath('fr')],
+  [changelogPath('en'), changelogPath('fr')],
+  ...LEGAL_KEYS.map((key) => [legalPath('en', key), legalPath('fr', key)]),
+])) : undefined;
 ---
 <Base lang={lang} title={`${title} · ${docsTitle} · ${t.name}`} description={description} paths={paths} path={path} alternates={alternates} wide>
   <Fragment slot="header">
     <a class="docs-home" href={docsPath(lang)}>{t.docs.nav}</a>
     <DocsSearch lang={lang} />
   </Fragment>
-  <div class:list={['docs', `docs-${kind}`]}>
+  <div class:list={['docs', `docs-${kind}`]} data-fr-links={frLinks}>
     <details class="docs-menu">
       <summary>{t.docs.menu}</summary>
       <nav aria-label={t.docs.menu}><DocsNav lang={lang} groups={nav} kind={kind} /></nav>
@@ -88,5 +98,6 @@ const docsTitle = kind === 'dev' ? t.docs.developers : t.docs.manual;
         <ul>{toc.map((h) => <li class={`depth-${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
       </nav>
     )}
+    {kind === 'dev' && <script>import '../scripts/langue.ts';</script>}
   </div>
 </Base>
