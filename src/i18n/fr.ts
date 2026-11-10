@@ -80,9 +80,9 @@ export const fr = {
       poster: 'Deux personnages au téléphone : un fournisseur et un employé de la comptabilité.',
       frame: 'Phishing by numbers : l’appel du faux fournisseur',
       points: [
-        { title: 'Des voix expressives', text: 'Elles jouent le doute, l’agacement ou le soulagement, pour des scènes immersives.' },
-        { title: 'Des personnages sur mesure', text: 'Votre IA les dessine selon vos envies. Leur visage suit la voix et l’émotion.' },
-        { title: 'Pensés pour apprendre', text: 'Réaction, note du formateur, puis bilan : l’ordre que recommandent les spécialistes du scénario.' },
+        { title: 'Des voix expressives', text: 'Elles jouent la joie, la surprise ou l’hésitation, pour des scènes immersives.' },
+        { title: 'Des personnages sur mesure', text: 'Votre IA les dessine pour correspondre à votre situation. Leur visage suit la voix et l’émotion.' },
+        { title: 'Pensés pour apprendre', text: 'Réaction du personnage, feedback du formateur, puis bilan des choix : le processus recommandé par les spécialistes.' },
       ],
     },
     templates: {

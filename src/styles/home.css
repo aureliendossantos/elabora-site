@@ -178,7 +178,7 @@
 
 /* ── Ready for your organisation ── */
 /* Six reasons set apart by space alone: two rows of three, wide gutters, no boxes. */
-.reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 84px 72px; max-width: var(--page); margin: 80px auto 0; padding: 0; list-style: none; }
+.reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 76px 64px; max-width: 1000px; margin: 80px auto 0; padding: 0; list-style: none; }
 .reasons svg { width: 30px; height: 30px; color: var(--violet); }
 .reasons h3 { font: 400 1.5rem / 1.2 var(--serif); margin: 18px 0 8px; letter-spacing: -0.01em; text-wrap: pretty; }
 .reasons p { font-size: 0.96875rem; color: var(--ink-2); }
