@@ -1,8 +1,8 @@
 import type { AstroIntegration } from 'astro';
 import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { DOCS_CSP, HOME_CSP, SECURITY_HEADERS, demoCsp } from '../lib/security-headers';
-import { LOCALES } from '../i18n';
+import { DOCS_CSP, HOME_CSP, PRICING_CSP, SECURITY_HEADERS, demoCsp } from '../lib/security-headers';
+import { LOCALES, PRICING_PATHS } from '../i18n';
 
 /** Writes `dist/_headers` (Cloudflare static assets) from `SECURITY_HEADERS` and `INDEXING`. */
 export function headersFile(): AstroIntegration {
@@ -22,6 +22,7 @@ export function headersFile(): AstroIntegration {
           ...[...LOCALES.map((lang) => `/${lang}/docs/*`), '/pagefind/*'].map((path) => block(path, { '! Content-Security-Policy': '', 'Content-Security-Policy': DOCS_CSP })),
           // The home (its scripts, videos and frames) and its demos (framed by it only, never indexed).
           ...LOCALES.map((lang) => block(`/${lang}/`, { '! Content-Security-Policy': '', 'Content-Security-Policy': HOME_CSP })),
+          ...LOCALES.map((lang) => block(PRICING_PATHS[lang], { '! Content-Security-Policy': '', 'Content-Security-Policy': PRICING_CSP })),
           block('/demo/*', { '! Content-Security-Policy': '', 'Content-Security-Policy': demoCsp(), 'X-Robots-Tag': 'noindex' }),
           block('/demo/phishing/*', { '! Content-Security-Policy': '', 'Content-Security-Policy': demoCsp({ inlineStyles: true }) }),
           block('/en/docs/developers/*.md', { 'Content-Type': 'text/markdown; charset=utf-8' }),

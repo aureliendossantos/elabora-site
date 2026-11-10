@@ -1,12 +1,12 @@
 ---
 // The download: one button for the visitor's system (macOS by default; Windows when the script sees it), the
-// other system as a link to the download section. With a `label`, a lighter button that says it, beside the demo. The installers come from the newest public stable release
+// other system as a link to the download section. The installers come from the newest public stable release
 // (src/lib/releases.ts); before the first one, « Bientôt disponible ».
 import { useT, type Lang } from '../../i18n';
 import { downloads, latestRelease } from '../../lib/releases';
 
-interface Props { lang: Lang; /** The link to the other system leads here; false: no such link. */ more?: string | false; label?: string }
-const { lang, more = '#telecharger', label } = Astro.props;
+interface Props { lang: Lang; /** The link to the other system leads here; false: no such link. */ more?: string | false }
+const { lang, more = '#telecharger' } = Astro.props;
 const t = useT(lang);
 const release = latestRelease();
 const files = release ? Object.fromEntries(downloads(release).map((f) => [f.platform, f.url])) : null;
@@ -14,8 +14,8 @@ const arrow = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0
 ---
 {files ? (
   <>
-    <a class:list={['button', { 'button--light': label }]} href={files['mac-arm64']} data-download data-mac={files['mac-arm64']} data-windows={files['windows']}>
-      <Fragment set:html={arrow} />{label ? <span>{label}</span> : <><span data-os="mac">{t.download.mac}</span><span data-os="windows" hidden>{t.download.windows}</span></>}
+    <a class="button" href={files['mac-arm64']} data-download data-mac={files['mac-arm64']} data-windows={files['windows']}>
+      <Fragment set:html={arrow} /><span data-os="mac">{t.download.mac}</span><span data-os="windows" hidden>{t.download.windows}</span>
     </a>
     {more && <a class="more" href={more} data-download-other><span data-os="mac">{t.download.alsoWindows}</span><span data-os="windows" hidden>{t.download.alsoMac}</span></a>}
   </>

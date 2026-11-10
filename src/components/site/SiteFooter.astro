@@ -3,7 +3,7 @@
 // and the language (the same page in the other language). Its last line gives the licences and the site's source.
 import Logo from '../brand/Logo.astro';
 import { CONTACT_EMAIL, CORE_REPO_URL, DEMO_URL, SITE_REPO_URL } from '../../site.config';
-import { LEGAL_KEYS, LOCALES, docsPath, homePath, legalPath, useT, type Lang } from '../../i18n';
+import { LEGAL_KEYS, LOCALES, PRICING_PATHS, docsPath, homePath, legalPath, useT, type Lang } from '../../i18n';
 import { changelogPath } from '../../lib/releases';
 
 interface Props { lang: Lang; paths: Record<Lang, string> }
@@ -22,6 +22,7 @@ const home = homePath(lang);
       <ul>
         <li><a href={`${home}#exemples`}>{t.nav.examples}</a></li>
         <li><a href={`${home}#modeles`}>{t.nav.templates}</a></li>
+        <li><a href={PRICING_PATHS[lang]}>{t.nav.pricing}</a></li>
         <li><a href={changelogPath(lang)}>{t.footer.whatsNew}</a></li>
         <li><a href={`${home}#telecharger`}>{t.nav.download}</a></li>
         <li><a href={DEMO_URL(t.footer.demoSubject)}>{t.nav.demo}</a></li>

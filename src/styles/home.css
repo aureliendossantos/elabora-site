@@ -6,7 +6,7 @@
 /* ── The hero ── */
 .hero { padding: clamp(76px, 10vw, 124px) var(--gutter) 24px; text-align: center; }
 .hero h1 { font-family: var(--serif); font-weight: 400; font-size: var(--text-display); line-height: 1; letter-spacing: var(--tracking-display); text-wrap: balance; max-width: 14em; margin: 0 auto; }
-.hero-visual { max-width: 1120px; margin: clamp(52px, 6vw, 84px) auto 0; }
+.hero-visual { max-width: 1120px; margin: clamp(72px, 8vw, 116px) auto 0; }
 
 /* The film: a request is set down whole (what is not typed yet invisible), so that it is centred before its first
    letter; all requests share one cell, so the window below never moves. Before the next one types itself, the request
@@ -180,14 +180,14 @@
 
 /* ── Ready for your organisation ── */
 /* Six reasons set apart by space alone: two rows of three, wide gutters, no boxes. */
-.reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px 56px; max-width: var(--page); margin: 72px auto 0; padding: 0; list-style: none; }
+.reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 84px 72px; max-width: var(--page); margin: 80px auto 0; padding: 0; list-style: none; }
 .reasons svg { width: 30px; height: 30px; color: var(--violet); }
 .reasons h3 { font: 400 1.5rem / 1.2 var(--serif); margin: 18px 0 8px; letter-spacing: -0.01em; text-wrap: pretty; }
 .reasons p { font-size: 0.96875rem; color: var(--ink-2); }
-.lms { text-align: center; margin: 48px auto 0; color: var(--ink-3); font-size: 0.9375rem; }
+.lms { text-align: center; margin: 96px auto 0; color: var(--ink-3); font-size: 0.9375rem; }
 .lms b { font-weight: 500; color: var(--ink-2); }
 .beta-note { text-align: center; margin: 12px auto 0; color: var(--ink-3); font-size: 0.9375rem; max-width: 40em; text-wrap: balance; }
-@media (max-width: 900px) { .reasons, .points { grid-template-columns: 1fr; } .reasons { gap: 44px; max-width: 34rem; } }
+@media (max-width: 900px) { .reasons, .points { grid-template-columns: 1fr; } .reasons { gap: 52px; max-width: 34rem; } .lms { margin-top: 64px; } }
 
 /* ── The end: the anchor printed in ink, the current along the edges ── */
 .closing { position: relative; background: var(--paper-creme); text-align: center; overflow: hidden; padding: clamp(120px, 14vw, 190px) var(--gutter); }

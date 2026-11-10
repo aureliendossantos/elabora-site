@@ -16,6 +16,9 @@ const CSP = [
  */
 export const DOCS_CSP = [...CSP, "script-src 'self' 'wasm-unsafe-eval'", "connect-src 'self'"].join('; ');
 
+/** The pricing page runs one script of the site: the download button's choice of the visitor's system. */
+export const PRICING_CSP = [...CSP, "script-src 'self'"].join('; ');
+
 /**
  * The home runs the site's own scripts (the film, the lock's inspector, the sheets, the press of the last section),
  * plays its videos, and frames the lock and the dialogue (/demo/*) and the published samples (vitrine.elabora.page).

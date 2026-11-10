@@ -32,6 +32,8 @@ export function legalKeyOf(lang: Lang, slug: string): LegalKey | undefined {
 }
 
 export const homePath = (lang: Lang) => `/${lang}/`;
+/** The pricing page, its slug in each language. */
+export const PRICING_PATHS = { fr: '/fr/tarifs/', en: '/en/pricing/' } as const satisfies Record<Lang, string>;
 export const legalPath = (lang: Lang, key: LegalKey) => `/${lang}/${LEGAL_PAGES[key][lang]}/`;
 /** A page of the manual by its slug in that language ('' is the docs' home). */
 export const docsPath = (lang: Lang, slug = '') => (slug ? `/${lang}/docs/${slug}/` : `/${lang}/docs/`);
