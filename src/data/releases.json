@@ -1,6 +1,164 @@
 [
   {
     "schemaVersion": 1,
+    "version": "0.7.0",
+    "date": "2026-11-27",
+    "core": {
+      "revision": "92cbea3816c052672f5630304f84caf5b6148049",
+      "version": "0.2.0"
+    },
+    "title": {
+      "en": "Elabora 0.7.0: team projects, the editor in a browser",
+      "fr": "Elabora 0.7.0 : projets d’équipe, l’éditeur dans un navigateur"
+    },
+    "highlights": {
+      "en": [
+        "Team projects: work together, live",
+        "The editor also opens in your browser",
+        "Elabora in Claude and ChatGPT on the web"
+      ],
+      "fr": [
+        "Projets d’équipe : travaillez à plusieurs, en direct",
+        "L’éditeur s’ouvre aussi dans votre navigateur",
+        "Elabora dans Claude et ChatGPT, sur le web"
+      ]
+    },
+    "entries": [
+      {
+        "id": "team-projects",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Share a module with your team from its menu or its card (« Partager avec l’équipe »). Everyone works in the same module at once: you see who is there and on which screen, their mark on the block they chose, and « Rejoindre » takes you to their screen. Owners, editors and viewers each have their role. Offline, you keep working on this computer, and your changes go as soon as you are back.",
+          "fr": "Partagez un module avec votre équipe depuis son menu ou sa carte (« Partager avec l’équipe »). Tout le monde travaille dans le même module en même temps : vous voyez qui est là et sur quel écran, sa marque sur le bloc qu’il a choisi, et « Rejoindre » vous mène à son écran. Propriétaires, éditeurs et lecteurs ont chacun leur rôle. Hors ligne, vous continuez sur cet ordinateur, et vos changements partent dès votre retour."
+        }
+      },
+      {
+        "id": "editor-in-a-browser",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Elabora’s editor opens in a browser, at app.elabora.studio: your team’s projects, the canvas and the free voices, with nothing to install. After a first visit, the canvas opens even without a connection. « Ouvrir dans l’app de bureau » opens the same project in the desktop app, downloaded first if it is not on this computer.",
+          "fr": "L’éditeur d’Elabora s’ouvre dans un navigateur, sur app.elabora.studio : les projets de votre équipe, le canevas et les voix gratuites, sans rien installer. Après une première visite, le canevas s’ouvre même sans connexion. « Ouvrir dans l’app de bureau » ouvre le même projet dans l’app, téléchargé d’abord s’il n’est pas sur cet ordinateur."
+        }
+      },
+      {
+        "id": "claude-chatgpt-connector",
+        "kind": "feature",
+        "source": "app",
+        "text": {
+          "en": "Add Elabora to Claude or ChatGPT on the web: Compte gives an address to paste in claude.ai or chatgpt.com, and your AI reads and edits your team’s projects from the conversation.",
+          "fr": "Ajoutez Elabora à Claude ou ChatGPT sur le web : Compte donne une adresse à coller dans claude.ai ou chatgpt.com, et votre IA lit et modifie les projets de votre équipe depuis la conversation."
+        }
+      },
+      {
+        "id": "privacy-policy",
+        "kind": "technical",
+        "source": "app",
+        "text": {
+          "en": "The privacy policy is updated for team projects, the editor in a browser and the connector for Claude and ChatGPT.",
+          "fr": "La politique de confidentialité est mise à jour pour les projets d’équipe, l’éditeur dans un navigateur et le connecteur pour Claude et ChatGPT."
+        }
+      },
+      {
+        "id": "properties-panel",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "The properties panel reads more clearly: each section starts with a band (its icon, its title, its chevron), every row has the same height, sliders are bands you press anywhere to set, and a dropdown opens right on its field.",
+          "fr": "Le panneau des propriétés se lit plus clairement : chaque section commence par une bande (son icône, son titre, son chevron), chaque ligne a la même hauteur, un curseur est une bande où l’on appuie n’importe où pour le régler, et une liste s’ouvre juste sur son champ."
+        }
+      },
+      {
+        "id": "drag-on-a-spring",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Dragging a block is smoother, on slower computers too: the block moves on a spring, waits at the place it will take, and the zones that accept it show their names. A block’s widths have one set of words: Half, Standard, Wide, Edge to edge.",
+          "fr": "Glisser un bloc est plus doux, même sur un ordinateur lent : le bloc suit un ressort, attend à la place qu’il prendra, et les zones qui l’acceptent montrent leur nom. Les largeurs d’un bloc ont un seul jeu de mots : Moitié, Standard, Large, Bord à bord."
+        }
+      },
+      {
+        "id": "glossary-links",
+        "kind": "improvement",
+        "source": "core",
+        "text": {
+          "en": "Glossary terms are linked by Elabora itself, the first time each appears in a screen, in every language, and follow every change of the texts. A right click on a linked word offers « Retirer ce lien ».",
+          "fr": "Les termes du glossaire sont liés par Elabora, la première fois que chacun apparaît dans un écran, dans chaque langue, et suivent chaque changement des textes. Un clic droit sur un mot lié propose « Retirer ce lien »."
+        }
+      },
+      {
+        "id": "easier-texts",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "Elabora’s texts and the learner’s are easier to read, in English and French: direct sentences, one word for each idea, and French typography.",
+          "fr": "Les textes d’Elabora et ceux de l’apprenant se lisent plus facilement, en anglais et en français : des phrases directes, un mot pour chaque idée, et la typographie française."
+        }
+      },
+      {
+        "id": "first-run-and-chapters",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "The first launch’s pages each have a small drawing. A chapter is renamed in place, from its menu in the list of screens or with a click on its title in the storyboard.",
+          "fr": "Les pages du premier lancement ont chacune un petit dessin. Un chapitre se renomme sur place, depuis son menu dans la liste des écrans ou d’un clic sur son titre dans le storyboard."
+        }
+      },
+      {
+        "id": "windows-session",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "On Windows, Elabora reads your session at launch: your account, your reviews and your teams are there as soon as it opens. Tooltips and menus write their shortcuts as Windows and Linux do (Ctrl+Z).",
+          "fr": "Sous Windows, Elabora lit votre session au lancement : votre compte, vos relectures et vos équipes sont là dès l’ouverture. Les infobulles et les menus écrivent leurs raccourcis comme Windows et Linux (Ctrl+Z)."
+        }
+      },
+      {
+        "id": "edits-kept",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "Your work is kept in more cases: settings changed one after the other all stay, ⌘Z follows the order of your gestures, a module left for the home keeps its last version when you quit or trash it, and Elabora’s settings and keys survive a crash or a full disk.",
+          "fr": "Votre travail est gardé dans plus de cas : des réglages changés coup sur coup restent tous, ⌘Z suit l’ordre de vos gestes, un module quitté pour l’accueil garde sa dernière version quand vous quittez ou le mettez à la corbeille, et les réglages et clés d’Elabora tiennent après un plantage ou un disque plein."
+        }
+      },
+      {
+        "id": "blocks-where-asked",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "A block goes where you asked: added with nothing selected, it takes a zone of the layout that accepts it, and an image still importing lands on the screen you chose it from. A screen’s thumbnail always shows that screen.",
+          "fr": "Un bloc va où vous l’avez demandé : ajouté sans rien de sélectionné, il prend une zone de la mise en page qui l’accepte, et une image encore en cours d’import arrive sur l’écran d’où vous l’avez choisie. La miniature d’un écran montre toujours cet écran."
+        }
+      },
+      {
+        "id": "quieter",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "Elabora stays quiet in the background: back home, nothing of the module you left keeps running, and thumbnails and previews use no processor between captures.",
+          "fr": "Elabora reste discret en arrière-plan : de retour à l’accueil, rien du module quitté ne continue de tourner, et les miniatures et aperçus n’utilisent pas le processeur entre deux captures."
+        }
+      },
+      {
+        "id": "module-files-only",
+        "kind": "security",
+        "source": "app",
+        "text": {
+          "en": "A module’s images, sounds and faces are read only from its own folder: a link to another file of your computer is never followed. Requests to your AI quote what others wrote (comments, translations) as data, never as instructions.",
+          "fr": "Les images, sons et visages d’un module ne sont lus que dans son propre dossier : un lien vers un autre fichier de votre ordinateur n’est jamais suivi. Les demandes à votre IA citent ce que d’autres ont écrit (commentaires, traductions) comme des données, jamais comme des consignes."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
     "version": "0.6.1",
     "date": "2026-11-06",
     "core": {
