@@ -60,9 +60,11 @@ It ends when you unpublish or delete your account, except for backup copies, whi
 
 **If you hand comments to an AI assistant**, you do so under your own responsibility and its provider's terms.
 
-### Personal data in reviews
+### Personal data in reviews and team projects
 
 **The roles.** When you organise a review as a controller under the GDPR, you determine its purpose, the people invited and the legal basis for processing their data. Elabora acts as your **processor** to host and make that review's data accessible. Elabora remains controller for processing whose purposes it determines itself: accounts, service security, handling requests and legal obligations. These roles are distinct; strictly personal use is assessed under the rules applicable to it.
+
+**Team projects.** For its teams' projects, the organisation is the controller: it determines why personal data is in them, who has access and on what legal basis. Elabora acts as its **processor** to host these projects and make them accessible to its teams' members. The data concerned is the projects' files, media and log, and the teams' members and invitations; data subjects are the members and the people mentioned or represented in the projects. The rest of this section applies to this data as it does to a review's. The organisation's instructions are the actions, in the service, of its owner, its administrators and its teams' members.
 
 **Scope of processing.** While hosting the review, Elabora collects, records, organises, stores, displays, transmits to authorised recipients, returns and deletes, on your instructions, reviewers' names or nicknames, access tokens, comments and metadata, your replies and module files containing personal data. Data subjects are authors, reviewers and people mentioned or represented in that content. Retention periods are those of the [privacy policy](/en/privacy/); processing ends when data is deleted or returned, subject to statutory retention.
 

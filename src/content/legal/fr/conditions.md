@@ -60,9 +60,11 @@ Elle prend fin quand vous retirez la publication ou supprimez votre compte, sauf
 
 **Si vous confiez des commentaires à un assistant d'IA**, vous le faites sous votre responsabilité et selon les conditions de son fournisseur.
 
-### Les données personnelles des revues
+### Les données personnelles des revues et des projets d'équipe
 
 **Les rôles.** Lorsque vous organisez une revue en tant que responsable de traitement au sens du RGPD, vous déterminez sa finalité, les personnes invitées et la base légale du traitement de leurs données. Elabora agit comme votre **sous-traitant** pour héberger et rendre accessibles les données de cette revue. Elabora reste responsable des traitements dont il détermine lui-même les finalités : comptes, sécurité du service, gestion des demandes et obligations légales. Ces rôles sont distincts ; un usage strictement personnel s'apprécie selon les règles qui lui sont applicables.
+
+**Les projets d'équipe.** Pour les projets de ses équipes, l'organisation est responsable de traitement : elle détermine pourquoi des données personnelles y figurent, qui y a accès et sur quelle base légale. Elabora agit comme son **sous-traitant** pour héberger ces projets et les rendre accessibles aux membres de ses équipes. Les données concernées sont les fichiers, les médias et le journal des projets, ainsi que les membres des équipes et leurs invitations ; les personnes concernées sont les membres et les personnes citées ou représentées dans les projets. Le reste de cette section s'applique à ces données comme à celles d'une revue. Les instructions de l'organisation sont les actions, dans le service, de son propriétaire, de ses administrateurs et des membres de ses équipes.
 
 **L'objet de la sous-traitance.** Pendant l'hébergement de la revue, Elabora collecte, enregistre, organise, conserve, affiche, transmet aux destinataires autorisés, restitue et supprime, sur vos instructions, les noms ou pseudonymes des relecteurs, leurs jetons d'accès, commentaires et métadonnées, vos réponses et les fichiers du module contenant des données personnelles. Les personnes concernées sont les auteurs, relecteurs et personnes citées ou représentées dans ces contenus. Les durées sont celles de la [politique de confidentialité](/fr/confidentialite/) ; la sous-traitance prend fin avec la suppression ou la restitution des données, sous réserve des conservations légales.
 
