@@ -9,7 +9,7 @@ This page says what data Elabora processes, why, on what basis, for how long, an
 
 **In short:**
 
-- The service's data (accounts, publications, reviews, team projects) is stored in the European Union.
+- The service's data is stored in the European Union.
 - Elabora runs no advertising and no audience measurement, and keeps no log of visits to courses.
 - Only a team's members read its projects. Elabora does not read their content (section 3).
 - Published courses set a single technical cookie, which identifies nobody: it is used to clear what a course kept in your browser after a year, or when the address changes hands (section 5).
@@ -165,7 +165,7 @@ On your computer stay your projects (and the copy of the team projects you open 
 - **When a member connects their AI**, it reads their teams' projects, including what the other members wrote there.
 - **To revoke its access**, remove its device from your account.
 
-**What the connector keeps.** Your consent (your account, the AI's name, the rights given, the tokens as hashes), for up to **30 days** without use, or until the device is removed. For **7 days**: the state of each project at the AI's last read (a version number and identifiers, not the text), so that it does not overwrite what changed since, and its refused writes (the account, the AI, the project, the tool, the error code, never the text). For each call, a log line (the tool, the project, the outcome, the time taken), which our host keeps for **7 days**. Your e-mail address is not there. **Legal basis:** performance of the contract; our legitimate interest for the log and the refused writes, which serve to fix the connector.
+**What the connector keeps.** Your consent (your account, the AI's name, the rights given, the tokens as hashes), for up to **30 days** without use, or until the device is removed. For **7 days**: the state of each project at the AI's last read (a version number and identifiers, not the text), so that it does not overwrite what changed since, and its refused writes (the account, the AI, the project, the tool, the error code, never the text). Your e-mail address is not there. **Legal basis:** performance of the contract; our legitimate interest for the refused writes, which serve to fix the connector.
 
 ## 9. Your rights
 

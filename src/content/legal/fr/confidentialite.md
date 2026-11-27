@@ -9,7 +9,7 @@ Cette page dit quelles données Elabora traite, pourquoi, sur quelle base, combi
 
 **En bref :**
 
-- Les données du service (comptes, publications, revues, projets d'équipe) sont stockées dans l'Union européenne.
+- Les données du service sont stockées dans l'Union européenne.
 - Elabora ne fait ni publicité ni mesure d'audience, et ne garde pas de journal des visites des modules.
 - Seuls les membres d'une équipe lisent ses projets. Elabora n'en lit pas le contenu (section 3).
 - Les modules publiés déposent un seul cookie technique, qui n'identifie personne : il sert à effacer ce qu'un module a gardé dans votre navigateur au bout d'un an, ou quand l'adresse change de propriétaire (section 5).
@@ -165,7 +165,7 @@ Sur votre ordinateur restent vos projets (et la copie des projets d'équipe que 
 - **Quand un membre relie son IA**, elle lit les projets de ses équipes, y compris ce que les autres membres y ont écrit.
 - **Pour lui couper l'accès**, retirez son appareil de votre compte.
 
-**Ce que le connecteur garde.** Votre accord (votre compte, le nom de l'IA, les droits donnés, les jetons sous forme d'empreinte), jusqu'à **30 jours** sans usage, ou jusqu'au retrait de l'appareil. Pendant **7 jours** : l'état de chaque projet à la dernière lecture de l'IA (un numéro de version et des identifiants, sans le texte), pour qu'elle n'écrase pas ce qui a changé depuis, et ses écritures refusées (le compte, l'IA, le projet, l'outil, le code d'erreur, jamais le texte). Pour chaque appel, une ligne de journal (l'outil, le projet, le résultat, la durée), que notre hébergeur garde **7 jours**. Votre adresse e-mail n'y figure pas. **Base légale :** l'exécution du contrat ; notre intérêt légitime pour le journal et les écritures refusées, qui servent à corriger le connecteur.
+**Ce que le connecteur garde.** Votre accord (votre compte, le nom de l'IA, les droits donnés, les jetons sous forme d'empreinte), jusqu'à **30 jours** sans usage, ou jusqu'au retrait de l'appareil. Pendant **7 jours** : l'état de chaque projet à la dernière lecture de l'IA (un numéro de version et des identifiants, sans le texte), pour qu'elle n'écrase pas ce qui a changé depuis, et ses écritures refusées (le compte, l'IA, le projet, l'outil, le code d'erreur, jamais le texte). Votre adresse e-mail n'y figure pas. **Base légale :** l'exécution du contrat ; notre intérêt légitime pour les écritures refusées, qui servent à corriger le connecteur.
 
 ## 9. Vos droits
 
