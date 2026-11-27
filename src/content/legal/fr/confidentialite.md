@@ -2,17 +2,20 @@
 title: "Politique de confidentialité"
 lang: fr
 slug: confidentialite
-updated: 2026-11-03
+updated: 2026-11-27
 ---
 
-Cette page dit quelles données Elabora traite, pourquoi, sur quelle base, combien de temps, et comment exercer vos droits. Elle couvre le site `elabora.studio`, les comptes d'auteur, la publication et la relecture (`api.elabora.studio`, `revue.elabora.studio`), les modules publiés sur `<poignée>.elabora.page` et l'application de bureau.
+Cette page dit quelles données Elabora traite, pourquoi, sur quelle base, combien de temps, et comment exercer vos droits. Elle couvre le site `elabora.studio`, les comptes d'auteur et le tableau de bord des organisations (`account.elabora.studio`), la publication et la relecture (`api.elabora.studio`, `revue.elabora.studio`), les projets d'équipe, l'éditeur en ligne (`app.elabora.studio`), le connecteur pour les IA (`mcp.elabora.studio`), les modules publiés sur `<poignée>.elabora.page` et l'application de bureau.
 
 **En bref :**
 
-- Les données du service sont stockées dans l'Union européenne.
+- Les données du service (comptes, publications, revues, projets d'équipe) sont stockées dans l'Union européenne.
 - Elabora ne fait ni publicité ni mesure d'audience, et ne garde pas de journal des visites des modules.
+- Seuls les membres d'une équipe lisent ses projets. Elabora n'en lit pas le contenu (section 3).
 - Les modules publiés déposent un seul cookie technique, qui n'identifie personne : il sert à effacer ce qu'un module a gardé dans votre navigateur au bout d'un an, ou quand l'adresse change de propriétaire (section 5).
-- L'application de bureau n'envoie pas de statistiques d'usage. Un texte de votre module ne part vers un service d'IA ou de voix que si vous le demandez (section 8).
+- Dans un navigateur, « Se déconnecter » efface de l'appareil ce que l'éditeur en ligne y gardait (section 5).
+- L'application de bureau et l'éditeur en ligne n'envoient pas de statistiques d'usage. Un texte de votre module ne part vers un service d'IA ou de voix que si vous le demandez (section 8).
+- Une IA comme Claude ou ChatGPT ne lit vos projets d'équipe que si vous l'y autorisez, sur une page d'Elabora (section 8).
 - Le chat de l'application et ses tâches courtes n'utilisent que des modèles dont les fournisseurs ne gardent pas vos textes et ne s'en servent pas pour entraîner leurs modèles (section 8).
 
 ## 1. Qui est responsable
@@ -21,21 +24,23 @@ Cette page dit quelles données Elabora traite, pourquoi, sur quelle base, combi
 
 **Les données des modules et des revues** sont celles de leur auteur. Quand un auteur traite des données personnelles dans un module ou une revue, il en est responsable ; Elabora les héberge pour lui, comme sous-traitant (section 4 des [conditions d'utilisation](/fr/conditions/)). Pour une question sur un module ou une revue, adressez-vous à son auteur. Vous pouvez aussi nous écrire : nous lui transmettons votre demande.
 
+**Les projets d'équipe** sont ceux de l'organisation de l'équipe. Elle est responsable des données personnelles qu'elle y met ; Elabora les héberge pour elle, comme sous-traitant. Pour une question sur un projet d'équipe, adressez-vous à l'équipe, ou écrivez-nous : nous transmettons votre demande à son organisation.
+
 ## 2. Les comptes d'auteur
 
 Un auteur se connecte avec son adresse e-mail et un code à 8 chiffres reçu par e-mail. L'inscription est aujourd'hui sur invitation.
 
 | Données | Pourquoi | Base légale | Durée |
 |---|---|---|---|
-| Adresse e-mail, langue, dates (création, modification, dernière connexion), état du compte, quotas | Faire fonctionner le compte, vous écrire au sujet du service | Exécution du contrat | Tant que le compte existe. Après **24 mois** sans connexion ni utilisation (l'app et la ligne de commande comptent), nous vous écrivons ; sans connexion dans les **30 jours**, le compte est supprimé |
+| Adresse e-mail, langue, dates (création, modification, dernière connexion), état du compte, quotas | Faire fonctionner le compte, vous écrire au sujet du service | Exécution du contrat | Tant que le compte existe. Après **24 mois** sans connexion ni utilisation (l'app, l'éditeur en ligne et la ligne de commande comptent), nous vous écrivons ; sans connexion dans les **30 jours**, le compte est supprimé. Un compte qui est seul propriétaire d'une équipe, ou propriétaire d'une organisation, où d'autres personnes travaillent n'est pas supprimé ainsi |
 | Poignée (l'adresse de votre espace) et nom affiché | Nommer votre espace et signer vos réponses aux relecteurs | Exécution du contrat | Tant que le compte existe. Pour l'ancienne poignée, voir section 4 |
 | Adresse invitée et note de l'éditeur | Ouvrir le service progressivement | Intérêt légitime | Jusqu'à l'inscription ou au retrait ; une invitation inutilisée est effacée après **6 mois** |
 | Codes de connexion (sous forme d'empreinte) | Vérifier le code, limiter les essais | Exécution du contrat ; intérêt légitime (sécurité) | Environ **24 heures** |
-| Sessions : empreinte du jeton, nom d'appareil donné par l'application, dates | Vous garder connecté et vous laisser déconnecter vos appareils | Exécution du contrat | **90 jours** après le dernier usage, ou jusqu'à la déconnexion |
+| Sessions : empreinte du jeton, nom d'appareil donné par l'application, le navigateur ou l'IA reliée, dates. Pour une IA reliée : son nom, son domaine, les droits que vous lui avez donnés et la date de votre accord | Vous garder connecté et vous laisser déconnecter vos appareils | Exécution du contrat | **90 jours** après le dernier usage (**30 jours** pour le tableau de bord des organisations), ou jusqu'à la déconnexion |
 
 Les codes, jetons et liens secrets ne sont gardés que sous forme d'empreinte. Le service répond de la même façon à toutes les adresses e-mail, pour ne pas révéler qui a un compte : une adresse non invitée ne reçoit pas d'e-mail.
 
-## 3. Les publications et les revues
+## 3. Les publications, les revues et les projets d'équipe
 
 **Les publications.** Un auteur publie ses modules sur son espace, en public ou en privé (visible seulement par une revue). Nous hébergeons les fichiers du module, ses métadonnées (titre, description, langues, version) et mesurons l'espace occupé. Base légale : celle que l'auteur détermine pour les données qu'il nous confie, l'exécution du contrat pour la gestion de l'hébergement. Durée : jusqu'à ce que l'auteur retire la publication ou supprime son compte ; un envoi inachevé expire après 24 heures. Un module public est lisible par quiconque connaît son adresse.
 
@@ -48,6 +53,19 @@ Les codes, jetons et liens secrets ne sont gardés que sous forme d'empreinte. L
 | La revue : titre, état, versions envoyées | Faire fonctionner la revue | Jusqu'à sa suppression, ou **12 mois** après sa fermeture |
 
 Vos commentaires sont vus par l'auteur et par les personnes qui ont le lien. L'auteur peut les confier à son assistant d'IA : il doit alors vous en informer. N'écrivez pas d'informations sensibles dans un commentaire. Vous pouvez modifier ou supprimer les vôtres tant que la revue est ouverte ; ensuite, demandez-le à l'auteur ou à nous.
+
+**Les organisations et les équipes.** Une organisation regroupe des équipes, leurs sièges et l'espace de leurs médias. Nous gardons son nom, son propriétaire, ses administrateurs, ses sièges et ses limites. Pour une équipe, nous gardons son nom, ses membres (leur compte, leur rôle, la date de leur arrivée) et ses invitations. Une invitation garde une empreinte de l'adresse invitée, jamais l'adresse elle-même, avec le rôle proposé, qui a invité et les dates. Elle expire après **14 jours**. Elabora n'envoie pas d'e-mail pour une invitation : vous prévenez vous-même la personne.
+
+**Les projets d'équipe.** Un projet partagé avec une équipe est stocké sur nos serveurs, dans l'Union européenne : ses fichiers, ses médias, son image de couverture, son titre, sa taille et le journal de ses changements. Le journal dit qui a fait chaque changement et quand. Pour un changement fait par une IA, il dit le nom de l'IA et la personne pour qui elle travaille. Pendant que vous travaillez dans un projet, les autres membres connectés voient que vous êtes là, sur quel écran ou quelle vue, et ce que vous avez sélectionné. Le serveur garde seulement la liste des personnes connectées, remplacée à chaque arrivée et à chaque départ.
+
+**Qui voit quoi.**
+
+- Les membres d'une équipe voient ses projets et le nom affiché des autres membres, jamais leur adresse e-mail.
+- Le propriétaire d'une équipe voit les invitations en attente, sans l'adresse. Personne n'apprend si une adresse a un compte.
+- Le propriétaire et les administrateurs d'une organisation gèrent ses équipes et leurs membres. Ils ne lisent pas les projets d'une équipe dont ils ne sont pas membres.
+- Elabora ne lit pas le contenu des projets : ni les fichiers, ni les médias, ni ce que les changements contiennent. Pour faire fonctionner le service, nous voyons le titre et la taille d'un projet, les dates et les auteurs de ses changements, et qui y est connecté. Pour vous aider dans un projet, nous demandons à être invités dans l'équipe, avec un compte que l'équipe voit parmi ses membres.
+
+**Combien de temps.** Un projet reste tant que son équipe ne le supprime pas, une équipe tant qu'elle a un membre, une organisation jusqu'à ce que son propriétaire la supprime. Quand vous quittez une équipe, vos changements restent à votre nom dans ses projets, jusqu'à la suppression de votre compte. Supprimer un projet efface ses fichiers, son journal, sa couverture et les médias que plus rien n'utilise. Supprimer une équipe efface tous ses projets. Les copies de sauvegarde gardent les fichiers et le journal d'un projet effacé **30 jours** (section 7). **Base légale :** celle que l'organisation détermine pour le contenu des projets ; l'exécution du contrat pour les organisations, les équipes, leurs membres et le journal.
 
 ## 4. L'adresse d'un espace
 
@@ -67,7 +85,17 @@ Pour cela, nous gardons une empreinte de la poignée pendant l'année de réserv
 
 **Sur la page de relecture (`revue.elabora.studio`)**, le navigateur garde le jeton du lien de revue, votre jeton de relecteur et deux préférences d'affichage. Ils restent jusqu'à ce que vous les effaciez (« Oublier cette revue sur cet appareil », ou les réglages du navigateur) ; le jeton d'un lien qui n'est plus valable est oublié.
 
-**Pas de bannière de consentement.** La loi (article 82 de la loi Informatique et Libertés) dispense de consentement ce qui est strictement nécessaire au service que vous demandez. C'est le cas ici : la reprise d'un module là où vous l'avez laissé, l'accès à une revue par son lien, et le cookie d'Elabora, qui protège ce que le module garde sur votre appareil et en limite la durée. Aucun de ces éléments ne sert à la publicité ni à la mesure d'audience. Vous pouvez tout effacer dans les réglages de votre navigateur.
+**Dans l'éditeur en ligne (`app.elabora.studio`).**
+
+- **Des cookies techniques** vous gardent connecté. Les scripts des pages ne peuvent pas les lire.
+- **Pour travailler hors ligne**, le navigateur garde une copie des projets que vous ouvrez, avec leurs médias et les changements pas encore envoyés, ainsi que vos préférences. Une copie ne s'ouvre que pour le compte qui l'a faite.
+- **Votre clé ElevenLabs**, si vous en donnez une, est gardée par une page à part, `keys.elabora.studio`, que l'éditeur ne peut pas lire. Elle reste en mémoire le temps de la visite, ou dans le navigateur si vous cochez « Garder la clé dans ce navigateur ». Elle est oubliée dès qu'un autre compte se connecte dans ce navigateur.
+- **Le lecteur** garde vos réglages d'affichage et la progression d'un aperçu, sur les adresses qui montrent vos modules (`canvas.elabora.page` et `frames.elabora.page`).
+- **Les fichiers de l'éditeur et les modèles** de voix et d'alignement qu'il télécharge restent aussi dans le navigateur, pour ne pas les télécharger à nouveau. Ils ne contiennent rien de vous.
+
+**« Se déconnecter » efface tout cela**, sauf les fichiers de l'éditeur et les modèles : les copies des projets, vos préférences, votre clé ElevenLabs et ce que garde le lecteur. Si le navigateur n'a pas tout effacé, l'éditeur termine au démarrage suivant, avant d'ouvrir un module. Une session qui prend fin autrement (expirée, ou retirée depuis un autre appareil) n'efface rien. Sur un ordinateur partagé, pensez donc à vous déconnecter.
+
+**Pas de bannière de consentement.** La loi (article 82 de la loi Informatique et Libertés) dispense de consentement ce qui est strictement nécessaire au service que vous demandez. C'est le cas ici : la reprise d'un module là où vous l'avez laissé, l'accès à une revue par son lien, la connexion à l'éditeur en ligne et la copie de vos projets pour travailler hors ligne, et le cookie d'Elabora sur les modules, qui protège ce que le module garde sur votre appareil et en limite la durée. Aucun de ces éléments ne sert à la publicité ni à la mesure d'audience. Vous pouvez tout effacer dans les réglages de votre navigateur.
 
 ## 6. Obligations légales et prévention des abus
 
@@ -91,15 +119,15 @@ Ces données servent à cette seule fin et ne sont communiquées qu'aux autorit�
 
 | Prestataire | Rôle | Où | Encadrement |
 |---|---|---|---|
-| Cloudflare (société américaine) | Hébergement du site, de l'API, de la page de relecture et des modules ; stockage ; réception des e-mails | Stockage dans l'UE ; les requêtes passent par le centre de données le plus proche du visiteur, dans le monde entier | Accord de traitement ; Data Privacy Framework ; clauses contractuelles types |
+| Cloudflare (société américaine) | Hébergement du site, de l'API, de l'éditeur en ligne, du connecteur, de la page de relecture et des modules ; stockage, dont les projets d'équipe ; réception des e-mails | Stockage dans l'UE ; les requêtes passent par le centre de données le plus proche du visiteur, dans le monde entier | Accord de traitement ; Data Privacy Framework ; clauses contractuelles types |
 | Service d'envoi d'e-mails (société américaine) | Envoi des codes et des avertissements | Envoi depuis l'UE ; société et outils aux États-Unis | Accord de traitement ; Data Privacy Framework ; clauses contractuelles types |
 | Prestataire de messagerie de l'éditeur | Boîte de réception | Europe | Contrat conforme au RGPD |
 
-Nous ne confions des données qu'à des prestataires qui nous lient par un accord de traitement et, hors de l'Union européenne, par l'une de ces garanties. Cloudflare traite aussi certaines données pour son propre compte, pour protéger son réseau. Une copie de sauvegarde de la base garde les données effacées **7 jours**. Le Data Privacy Framework est la décision d'adéquation de la Commission européenne du 10 juillet 2023 pour les entreprises américaines certifiées.
+Nous ne confions des données qu'à des prestataires qui nous lient par un accord de traitement et, hors de l'Union européenne, par l'une de ces garanties. Cloudflare traite aussi certaines données pour son propre compte, pour protéger son réseau. Les copies de sauvegarde de la base et de chaque projet d'équipe gardent les données effacées **30 jours**. Le Data Privacy Framework est la décision d'adéquation de la Commission européenne du 10 juillet 2023 pour les entreprises américaines certifiées.
 
-## 8. L'application de bureau
+## 8. L'application de bureau, l'éditeur en ligne et le connecteur
 
-Vos projets restent sur votre ordinateur. L'application n'envoie ni statistiques d'usage, ni rapport de plantage.
+Vos modules restent sur votre ordinateur, sauf les projets que vous partagez avec une équipe (section 3). L'application n'envoie ni statistiques d'usage, ni rapport de plantage.
 
 **Nos garanties.**
 
@@ -117,13 +145,25 @@ Vos projets restent sur votre ordinateur. L'application n'envoie ni statistiques
 | Le chat : votre demande, les textes et fichiers du module que l'agent lit, les résultats des outils d'Elabora et ses consignes à l'agent. Une tâche courte : le texte à traduire, ou l'image à décrire et les mots de son écran | Un service d'IA gratuit, sans compte ni clé | À chaque demande, tant que l'agent y travaille ; à chaque tâche que vous lancez |
 | Les pages web que l'agent lit pour votre demande | Le site de chaque page, depuis votre ordinateur | Quand l'agent en a besoin et que vous avez autorisé ce site. Le chat ne fait pas de recherche sur le web |
 | Les programmes et modèles que l'application télécharge (l'agent du chat, voix, alignement, transcription) | Des dépôts publics de logiciels et de modèles | Quand vous les téléchargez, que vous écrivez au chat ou que vous lancez une tâche courte pour la première fois ; pour les mettre à jour, si les mises à jour automatiques sont activées |
-| La publication et la revue (sections 2 à 4) | `api.elabora.studio` | Quand vous vous connectez, publiez ou gérez une revue |
+| La publication, la revue et les projets d'équipe (sections 2 à 4) | `api.elabora.studio` | Quand vous vous connectez, publiez, gérez une revue ou travaillez dans un projet d'équipe |
 | La recherche et le téléchargement des mises à jour | Le dépôt public des versions d'Elabora | Au lancement, puis toutes les quatre heures ; le téléchargement, si les mises à jour automatiques sont activées |
 | La liste des modèles que propose le chat | `elabora.studio` | Au début d'une conversation ou d'une tâche, au plus une fois toutes les dix minutes |
 
 Ces services peuvent se trouver hors de l'Union européenne. Le service d'IA du chat et de ses tâches traite vos requêtes, avec votre adresse IP, pour son propre compte et sous ses conditions. Les demandes de fichiers ne transmettent que l'adresse IP et le logiciel, et la version d'Elabora pour les téléchargements ; ceux qui les hébergent les traitent pour leur propre compte. La liste des modèles est demandée sans paramètre ni cookie, et Elabora n'en garde pas de journal. **Base légale des vérifications de version :** notre intérêt légitime à vous informer des nouvelles versions et à la sécurité de l'application. Réglages › Mises à jour arrête les téléchargements automatiques, pas les vérifications.
 
-Sur votre ordinateur restent vos projets, leur historique et leurs sauvegardes, votre clé ElevenLabs et votre session Elabora (dans un fichier lisible par vous seul, ou dans le trousseau du système), les voix générées, les modèles téléchargés, les conversations du chat (dans le dossier du module, `.elabora/chats/`), les données de l'agent du chat et un journal de l'application. Le journal peut contenir des chemins de fichiers et des titres de cours ; il n'est jamais envoyé automatiquement.
+Sur votre ordinateur restent vos projets (et la copie des projets d'équipe que vous y ouvrez), leur historique et leurs sauvegardes, votre clé ElevenLabs et votre session Elabora (dans un fichier lisible par vous seul, ou dans le trousseau du système), les voix générées, les modèles téléchargés, les conversations du chat (dans le dossier du module, `.elabora/chats/`), les données de l'agent du chat et un journal de l'application. Le journal peut contenir des chemins de fichiers et des titres de cours ; il n'est jamais envoyé automatiquement.
+
+**L'éditeur en ligne.** Dans un navigateur, l'éditeur ne parle qu'à Elabora : à `api.elabora.studio` pour votre compte et vos projets, et à `models.elabora.studio` pour les modèles de voix et d'alignement. Elabora sert ces modèles lui-même et n'en garde pas de journal. L'éditeur en ligne n'envoie ni statistiques d'usage, ni rapport de plantage. Il n'a pas de chat : dans un navigateur, votre IA passe par le connecteur. Les voix d'ElevenLabs passent par la page de la clé, `keys.elabora.studio`, la seule à parler à ElevenLabs : elle lui envoie votre clé, les textes à dire et les réglages, et seulement quand vous vous servez de ses voix ou de ses sons.
+
+**Le connecteur pour Claude et ChatGPT.** Le connecteur (`mcp.elabora.studio`) permet à une IA sur le web, comme Claude ou ChatGPT, de lire et de modifier les projets de vos équipes.
+
+- **Rien ne se passe sans votre accord.** La première fois, l'IA vous envoie sur une page d'Elabora. Vous vous y connectez avec un code, puis vous voyez le nom de l'IA, vos équipes et ce qu'elle pourra faire. Elle peut toujours lire. Elle ne modifie que si vous le laissez coché, et seulement là où vous êtes éditeur ou propriétaire.
+- **Elle ne peut ni publier, ni partager, ni inviter, ni supprimer.** Chaque changement porte son nom et le vôtre, et peut s'annuler.
+- **Ce qu'elle lit part chez le fournisseur de cette IA**, sous votre compte et ses conditions : les textes, le plan et les images des projets, le nom de vos équipes, et, dans l'historique, le nom affiché de qui a fait chaque changement. Elabora ne choisit pas ce service. Il reçoit les demandes de l'IA à ses outils, jamais vos conversations avec elle.
+- **Quand un membre relie son IA**, elle lit les projets de ses équipes, y compris ce que les autres membres y ont écrit.
+- **Pour lui couper l'accès**, retirez son appareil de votre compte.
+
+**Ce que le connecteur garde.** Votre accord (votre compte, le nom de l'IA, les droits donnés, les jetons sous forme d'empreinte), jusqu'à **30 jours** sans usage, ou jusqu'au retrait de l'appareil. Pendant **7 jours** : le point du projet où l'IA a lu en dernier, pour qu'elle n'écrase pas ce qui a changé depuis, et ses écritures refusées (le compte, l'IA, le projet, l'outil, le code d'erreur, jamais le texte). Pour chaque appel, une ligne de journal (l'outil, le projet, le résultat, la durée), que notre hébergeur garde **7 jours**. Votre adresse e-mail n'y figure pas. **Base légale :** l'exécution du contrat ; notre intérêt légitime pour le journal et les écritures refusées, qui servent à corriger le connecteur.
 
 ## 9. Vos droits
 
@@ -131,7 +171,7 @@ Vous pouvez demander l'accès à vos données, leur rectification, leur effaceme
 
 Écrivez à **contact@elabora.studio**, depuis l'adresse de votre compte si vous en avez un ; un relecteur indique la revue et le nom utilisé. Nous répondons dans un délai d'un mois, prolongeable de deux mois si la demande le justifie. Pour les données d'une revue ou d'un module, nous transmettons la demande à l'auteur.
 
-**Supprimer votre compte** : Réglages › Compte › Supprimer mon compte…, avec un code envoyé à votre adresse ; ou écrivez-nous. Votre espace, ses publications, vos revues et leurs commentaires, vos sessions et votre invitation sont supprimés. Restent, pour les durées dites plus haut : les données d'identification exigées par la loi, la copie de sauvegarde de la base (7 jours), les e-mails gardés par le service d'envoi (30 jours), la réservation de votre poignée pendant un an et les empreintes des noms de vos publications. Vos projets restent sur votre ordinateur.
+**Supprimer votre compte** : Réglages › Compte › Supprimer mon compte…, avec un code envoyé à votre adresse ; ou écrivez-nous. Votre espace, ses publications, vos revues et leurs commentaires, vos sessions et votre invitation sont supprimés, ainsi que les équipes et l'organisation dont vous êtes le seul membre. Si vous êtes le seul propriétaire d'une équipe où d'autres personnes travaillent, ou le propriétaire d'une organisation qui en compte, la suppression attend : transmettez-la d'abord à quelqu'un d'autre, ou supprimez-la. Dans les projets des équipes où vous avez travaillé, votre nom quitte le journal ; vos changements y restent, sans votre nom. Restent, pour les durées dites plus haut : les données d'identification exigées par la loi, les copies de sauvegarde (30 jours), les e-mails gardés par le service d'envoi (30 jours), la réservation de votre poignée pendant un an et les empreintes des noms de vos publications. Les modules de votre ordinateur y restent.
 
 **Réclamation** : vous pouvez saisir la CNIL (https://www.cnil.fr/fr/plaintes ; 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07).
 

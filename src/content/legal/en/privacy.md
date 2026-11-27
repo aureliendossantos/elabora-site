@@ -2,17 +2,20 @@
 title: "Privacy policy"
 lang: en
 slug: privacy
-updated: 2026-11-03
+updated: 2026-11-27
 ---
 
-This page says what data Elabora processes, why, on what basis, for how long, and how to exercise your rights. It covers the `elabora.studio` site, author accounts, publishing and review (`api.elabora.studio`, `revue.elabora.studio`), the courses published on `<handle>.elabora.page` and the desktop app.
+This page says what data Elabora processes, why, on what basis, for how long, and how to exercise your rights. It covers the `elabora.studio` site, author accounts and the organisations' dashboard (`account.elabora.studio`), publishing and review (`api.elabora.studio`, `revue.elabora.studio`), team projects, the online editor (`app.elabora.studio`), the connector for AI (`mcp.elabora.studio`), the courses published on `<handle>.elabora.page` and the desktop app.
 
 **In short:**
 
-- The service's data is stored in the European Union.
+- The service's data (accounts, publications, reviews, team projects) is stored in the European Union.
 - Elabora runs no advertising and no audience measurement, and keeps no log of visits to courses.
+- Only a team's members read its projects. Elabora does not read their content (section 3).
 - Published courses set a single technical cookie, which identifies nobody: it is used to clear what a course kept in your browser after a year, or when the address changes hands (section 5).
-- The desktop app sends no usage statistics. A text of your course goes to an AI or voice service only if you ask for it (section 8).
+- In a browser, « Sign out » erases from the device what the online editor kept there (section 5).
+- The desktop app and the online editor send no usage statistics. A text of your course goes to an AI or voice service only if you ask for it (section 8).
+- An AI such as Claude or ChatGPT reads your team projects only if you allow it, on an Elabora page (section 8).
 - The app's chat and its short tasks only use models whose providers do not keep your texts and do not use them to train their models (section 8).
 
 ## 1. Who is responsible
@@ -21,21 +24,23 @@ This page says what data Elabora processes, why, on what basis, for how long, an
 
 **The data in courses and reviews** belongs to their author. When an author processes personal data in a course or a review, the author is the controller; Elabora hosts it for them as a processor (section 4 of the [terms of use](/en/terms/)). For a question about a course or a review, contact its author. You can also write to us: we pass your request on to them.
 
+**Team projects** belong to the team's organisation. It is the controller for the personal data it puts in them; Elabora hosts that data for it as a processor. For a question about a team project, contact the team, or write to us: we pass your request on to its organisation.
+
 ## 2. Author accounts
 
 An author signs in with their e-mail address and an 8-digit code received by e-mail. Sign-up is by invitation for now.
 
 | Data | Why | Legal basis | How long |
 |---|---|---|---|
-| E-mail address, language, dates (creation, update, last sign-in), account state, quotas | Running the account, writing to you about the service | Performance of the contract | As long as the account exists. After **24 months** without a sign-in or use (the app and the command line count), we write to you; without a sign-in within **30 days**, the account is deleted |
+| E-mail address, language, dates (creation, update, last sign-in), account state, quotas | Running the account, writing to you about the service | Performance of the contract | As long as the account exists. After **24 months** without a sign-in or use (the app, the online editor and the command line count), we write to you; without a sign-in within **30 days**, the account is deleted. An account that is the only owner of a team, or the owner of an organisation, where other people work is not deleted this way |
 | Handle (your space's address) and display name | Naming your space and signing your replies to reviewers | Performance of the contract | As long as the account exists. For a former handle, see section 4 |
 | Invited address and the publisher's note | Opening the service gradually | Legitimate interest | Until sign-up or removal; an unused invitation is erased after **6 months** |
 | Sign-in codes (as a hash) | Checking the code, limiting attempts | Performance of the contract; legitimate interest (security) | About **24 hours** |
-| Sessions: a hash of the token, a device name given by the app, dates | Keeping you signed in and letting you sign out your devices | Performance of the contract | **90 days** after last use, or until signed out |
+| Sessions: a hash of the token, a device name given by the app, the browser or the connected AI, dates. For a connected AI: its name, its domain, the rights you gave it and the date you agreed | Keeping you signed in and letting you sign out your devices | Performance of the contract | **90 days** after last use (**30 days** for the organisations' dashboard), or until signed out |
 
 Codes, tokens and secret links are kept only as hashes. The service answers every e-mail address the same way, so as not to reveal who has an account: an address that is not invited receives no e-mail.
 
-## 3. Publications and reviews
+## 3. Publications, reviews and team projects
 
 **Publications.** An author publishes courses on their space, publicly or privately (visible only through a review). We host the course's files and metadata (title, description, languages, version) and measure the space used. Legal basis: the one the author determines for the data they entrust to us, and performance of the contract for running the hosting. How long: until the author takes the publication down or deletes their account; an unfinished upload expires after 24 hours. A public course can be read by anyone who knows its address.
 
@@ -48,6 +53,19 @@ Codes, tokens and secret links are kept only as hashes. The service answers ever
 | The review: title, state, versions sent | Running the review | Until it is deleted, or **12 months** after it is closed |
 
 Your comments are seen by the author and by the people who have the link. The author may give them to their AI assistant: they must then tell you so. Do not write sensitive information in a comment. You can edit or delete your own while the review is open; after that, ask the author or us.
+
+**Organisations and teams.** An organisation groups teams, their seats and the room for their media. We keep its name, its owner, its administrators, its seats and its limits. For a team, we keep its name, its members (their account, their role, when they joined) and its invitations. An invitation keeps a hash of the invited address, never the address itself, with the role offered, who invited and the dates. It expires after **14 days**. Elabora sends no e-mail for an invitation: you tell the person yourself.
+
+**Team projects.** A project shared with a team is stored on our servers, in the European Union: its files, its media, its cover picture, its title, its size and the log of its changes. The log says who made each change and when. For a change made by an AI, it says the AI's name and the person it works for. While you work in a project, the other members connected see that you are there, on which screen or view, and what you selected. The server keeps only the list of the people connected, replaced at every arrival and departure.
+
+**Who sees what.**
+
+- A team's members see its projects and the other members' display names, never their e-mail address.
+- A team's owner sees pending invitations, without the address. Nobody learns whether an address has an account.
+- An organisation's owner and administrators manage its teams and their members. They do not read the projects of a team they are not a member of.
+- Elabora does not read the projects' content: not the files, not the media, not what the changes contain. To run the service, we see a project's title and size, the dates and authors of its changes, and who is connected. To help you in a project, we ask to be invited into the team, with an account the team sees among its members.
+
+**How long.** A project stays until its team deletes it, a team as long as it has a member, an organisation until its owner deletes it. When you leave a team, your changes stay under your name in its projects until your account is deleted. Deleting a project erases its files, its log, its cover and the media nothing else uses. Deleting a team erases all its projects. The backup copies keep the files and log of an erased project for **30 days** (section 7). **Legal basis:** the one the organisation determines for the projects' content; performance of the contract for organisations, teams, their members and the log.
 
 ## 4. A space's address
 
@@ -67,7 +85,17 @@ For this we keep a hash of the handle during its year of reservation, and a hash
 
 **On the review page (`revue.elabora.studio`)**, the browser keeps the review link's token, your reviewer token and two display preferences. They stay until you erase them (« Forget this review on this device », or the browser's settings); the token of a link that is no longer valid is forgotten.
 
-**No consent banner.** The law (article 82 of the French Data Protection Act, implementing article 5(3) of the ePrivacy directive) exempts from consent what is strictly necessary for the service you ask for. That is the case here: resuming a course where you left it, reaching a review by its link, and Elabora's cookie, which protects what the course keeps on your device and limits how long. None of them is used for advertising or audience measurement. You can erase all of it in your browser's settings.
+**In the online editor (`app.elabora.studio`).**
+
+- **Technical cookies** keep you signed in. The pages' scripts cannot read them.
+- **To work offline**, the browser keeps a copy of the projects you open, with their media and the changes not sent yet, and your preferences. A copy opens only for the account that made it.
+- **Your ElevenLabs key**, if you give one, is kept by a page of its own, `keys.elabora.studio`, which the editor cannot read. It stays in memory for the visit, or in the browser if you tick « Keep the key in this browser ». It is forgotten as soon as another account signs in in this browser.
+- **The player** keeps your display settings and a preview's progress, on the addresses that show your courses (`canvas.elabora.page` and `frames.elabora.page`).
+- **The editor's files and the models** for voice and alignment it downloads also stay in the browser, so they need not be downloaded again. They hold nothing of yours.
+
+**« Sign out » erases all of this**, except the editor's files and the models: the copies of the projects, your preferences, your ElevenLabs key and what the player keeps. If the browser did not erase everything, the editor finishes at the next start, before opening a course. A session that ends another way (expired, or removed from another device) erases nothing. On a shared computer, remember to sign out.
+
+**No consent banner.** The law (article 82 of the French Data Protection Act, implementing article 5(3) of the ePrivacy directive) exempts from consent what is strictly necessary for the service you ask for. That is the case here: resuming a course where you left it, reaching a review by its link, signing in to the online editor and the copy of your projects for working offline, and Elabora's cookie on courses, which protects what the course keeps on your device and limits how long. None of them is used for advertising or audience measurement. You can erase all of it in your browser's settings.
 
 ## 6. Legal obligations and preventing abuse
 
@@ -91,15 +119,15 @@ This data serves that purpose only and is disclosed only to authorised authoriti
 
 | Provider | Role | Where | Safeguards |
 |---|---|---|---|
-| Cloudflare (a US company) | Hosting the site, the API, the review page and the courses; storage; receiving e-mail | Storage in the EU; requests go through the data centre nearest the visitor, worldwide | Data processing agreement; Data Privacy Framework; standard contractual clauses |
+| Cloudflare (a US company) | Hosting the site, the API, the online editor, the connector, the review page and the courses; storage, team projects included; receiving e-mail | Storage in the EU; requests go through the data centre nearest the visitor, worldwide | Data processing agreement; Data Privacy Framework; standard contractual clauses |
 | E-mail sending service (a US company) | Sending sign-in codes and warnings | Sent from the EU; company and tools in the United States | Data processing agreement; Data Privacy Framework; standard contractual clauses |
 | The publisher's e-mail provider | Mailbox | Europe | GDPR-compliant contract |
 
-We only entrust data to providers bound to us by a data processing agreement and, outside the European Union, by one of these safeguards. Cloudflare also processes some data on its own account, to protect its network. A backup copy of the database keeps erased data for **7 days**. The Data Privacy Framework is the European Commission's adequacy decision of 10 July 2023 for certified US companies.
+We only entrust data to providers bound to us by a data processing agreement and, outside the European Union, by one of these safeguards. Cloudflare also processes some data on its own account, to protect its network. The backup copies of the database and of each team project keep erased data for **30 days**. The Data Privacy Framework is the European Commission's adequacy decision of 10 July 2023 for certified US companies.
 
-## 8. The desktop app
+## 8. The desktop app, the online editor and the connector
 
-Your projects stay on your computer. The app sends no usage statistics and no crash reports.
+Your courses stay on your computer, except the projects you share with a team (section 3). The app sends no usage statistics and no crash reports.
 
 **Our guarantees.**
 
@@ -117,13 +145,25 @@ Your projects stay on your computer. The app sends no usage statistics and no cr
 | The chat: your request, the course's texts and files the agent reads, the results of Elabora's tools and its instructions to the agent. A short task: the text to translate, or the image to describe and the words of its screen | A free AI service, with no account or key | At each request, while the agent works on it; at each task you start |
 | Web pages the agent reads for your request | Each page's site, from your computer | When the agent needs them and you have allowed that site. The chat does no web search |
 | The programs and models the app downloads (the chat's agent, voice, alignment, transcription) | Public software and model repositories | When you download them, write to the chat or start a short task for the first time; to update them, if automatic updates are on |
-| Publishing and review (sections 2 to 4) | `api.elabora.studio` | When you sign in, publish or manage a review |
+| Publishing, review and team projects (sections 2 to 4) | `api.elabora.studio` | When you sign in, publish, manage a review or work in a team project |
 | Checking for and downloading updates | The public repository of Elabora's versions | At launch, then every four hours; the download, if automatic updates are on |
 | The list of models the chat offers | `elabora.studio` | When a conversation or a task starts, at most once every ten minutes |
 
 These services may be outside the European Union. The AI service of the chat and its tasks processes your requests, with your IP address, on its own account and under its own terms. File requests carry only the IP address and the software, and Elabora's version for downloads; those who host them process them on their own account. The models list is asked for with no parameter and no cookie, and Elabora keeps no log of it. **Legal basis for version checks:** our legitimate interest in telling you about new versions and in the app's security. Settings › Updates stops automatic downloads, not the checks.
 
-On your computer stay your projects, their history and backups, your ElevenLabs key and your Elabora session (in a file readable by you only, or in the system keychain), generated voices, downloaded models, the chat's conversations (in the course's folder, `.elabora/chats/`), the chat agent's data and an app log. The log may contain file paths and course titles; it is never sent automatically.
+On your computer stay your projects (and the copy of the team projects you open there), their history and backups, your ElevenLabs key and your Elabora session (in a file readable by you only, or in the system keychain), generated voices, downloaded models, the chat's conversations (in the course's folder, `.elabora/chats/`), the chat agent's data and an app log. The log may contain file paths and course titles; it is never sent automatically.
+
+**The online editor.** In a browser, the editor talks to Elabora only: to `api.elabora.studio` for your account and your projects, and to `models.elabora.studio` for the voice and alignment models. Elabora serves these models itself and keeps no log of them. The online editor sends no usage statistics and no crash reports. It has no chat: in a browser, your AI goes through the connector. ElevenLabs voices go through the key's page, `keys.elabora.studio`, the only one that talks to ElevenLabs: it sends it your key, the texts to say and the settings, and only when you use its voices or sounds.
+
+**The connector for Claude and ChatGPT.** The connector (`mcp.elabora.studio`) lets an AI on the web, such as Claude or ChatGPT, read and change your teams' projects.
+
+- **Nothing happens without your consent.** The first time, the AI sends you to an Elabora page. You sign in there with a code, then you see the AI's name, your teams and what it will be able to do. It can always read. It changes things only if you leave that ticked, and only where you are an editor or an owner.
+- **It can neither publish, share, invite nor delete.** Each change carries its name and yours, and can be undone.
+- **What it reads goes to the provider of that AI**, under your account and its terms: the projects' texts, plan and images, your teams' names, and, in the history, the display name of whoever made each change. Elabora does not choose that service. It receives the AI's requests to its tools, never your conversations with it.
+- **When a member connects their AI**, it reads their teams' projects, including what the other members wrote there.
+- **To cut its access**, remove its device from your account.
+
+**What the connector keeps.** Your consent (your account, the AI's name, the rights given, the tokens as hashes), for up to **30 days** without use, or until the device is removed. For **7 days**: the point of the project where the AI last read, so that it does not overwrite what changed since, and its refused writes (the account, the AI, the project, the tool, the error code, never the text). For each call, a log line (the tool, the project, the outcome, the time taken), which our host keeps for **7 days**. Your e-mail address is not there. **Legal basis:** performance of the contract; our legitimate interest for the log and the refused writes, which serve to fix the connector.
 
 ## 9. Your rights
 
@@ -131,7 +171,7 @@ You can ask for access to your data, its rectification, its erasure, the restric
 
 Write to **contact@elabora.studio**, from your account's address if you have one; a reviewer gives the review and the name used. We answer within a month, which may be extended by two months if the request warrants it. For data in a review or a course, we pass the request on to the author.
 
-**Deleting your account**: Settings › Account › Delete my account…, with a code sent to your address; or write to us. Your space, its publications, your reviews and their comments, your sessions and your invitation are deleted. What remains, for the periods given above: identification data the law requires, the database's backup copy (7 days), the e-mails kept by the sending service (30 days), your handle's reservation for a year and the hashes of your publications' names. Your projects stay on your computer.
+**Deleting your account**: Settings › Account › Delete my account…, with a code sent to your address; or write to us. Your space, its publications, your reviews and their comments, your sessions and your invitation are deleted, and so are the teams and the organisation you are the only member of. If you are the only owner of a team where other people work, or the owner of an organisation that has some, the deletion waits: first hand it over to someone else, or delete it. In the projects of the teams you worked in, your name leaves the log; your changes stay there, without your name. What remains, for the periods given above: identification data the law requires, the backup copies (30 days), the e-mails kept by the sending service (30 days), your handle's reservation for a year and the hashes of your publications' names. The courses on your computer stay there.
 
 **Complaints**: you can contact the CNIL (https://www.cnil.fr/fr/plaintes; 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, France) or your own data protection authority.
 
