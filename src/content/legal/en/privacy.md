@@ -32,7 +32,7 @@ An author signs in with their e-mail address and an 8-digit code received by e-m
 
 | Data | Why | Legal basis | How long |
 |---|---|---|---|
-| E-mail address, language, dates (creation, update, last sign-in), account state, quotas | Running the account, writing to you about the service | Performance of the contract | As long as the account exists. After **24 months** without a sign-in or use (the app, the online editor and the command line count), we write to you; without a sign-in within **30 days**, the account is deleted. If you are the only owner of a team, or the owner of an organisation, where other people work, the account is not deleted |
+| E-mail address, language, dates (creation, update, last sign-in), account state, quotas | Running the account, writing to you about the service | Performance of the contract | As long as the account exists. After **24 months** without a sign-in or use (the app, the online editor, the command line and an AI connected through the connector count), we write to you; without a sign-in within **30 days**, the account is deleted. If you are the only owner of a team, or the owner of an organisation, where other people work, the account is not deleted |
 | Handle (your space's address) and display name | Naming your space and signing your replies to reviewers | Performance of the contract | As long as the account exists. For a former handle, see section 4 |
 | Invited address and the publisher's note | Opening the service gradually | Legitimate interest | Until sign-up or removal; an unused invitation is erased after **6 months** |
 | Sign-in codes (as a hash) | Checking the code, limiting attempts | Performance of the contract; legitimate interest (security) | About **24 hours** |
