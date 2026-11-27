@@ -13,7 +13,7 @@ This page says what data Elabora processes, why, on what basis, for how long, an
 - Elabora runs no advertising and no audience measurement, and keeps no log of visits to courses.
 - Only a team's members read its projects. Elabora does not read their content (section 3).
 - Published courses set a single technical cookie, which identifies nobody: it is used to clear what a course kept in your browser after a year, or when the address changes hands (section 5).
-- In a browser, « Sign out » erases from the device what the online editor kept there (section 5).
+- In a browser, « Sign out » erases from the device the copy of your projects and your ElevenLabs key (section 5).
 - The desktop app and the online editor send no usage statistics. A text of your course goes to an AI or voice service only if you ask for it (section 8).
 - An AI such as Claude or ChatGPT reads your team projects only if you allow it, on an Elabora page (section 8).
 - The app's chat and its short tasks only use models whose providers do not keep your texts and do not use them to train their models (section 8).
@@ -54,13 +54,13 @@ Codes, tokens and secret links are kept only as hashes. The service answers ever
 
 Your comments are seen by the author and by the people who have the link. The author may give them to their AI assistant: they must then tell you so. Do not write sensitive information in a comment. You can edit or delete your own while the review is open; after that, ask the author or us.
 
-**Organisations and teams.** An organisation groups teams, their seats and the room for their media. We keep its name, its owner, its administrators, its seats and its limits. For a team, we keep its name, its members (their account, their role, when they joined) and its invitations. An invitation keeps a hash of the invited address, never the address itself, with the role offered, who invited and the dates. It expires after **14 days**. Elabora sends no e-mail for an invitation: you tell the person yourself.
+**Organisations and teams.** An organisation groups teams, their seats and their media storage. We keep its name, its owner, its administrators, its seats and its limits. For a team, we keep its name, its members (their account, their role, when they joined) and its invitations. An invitation keeps a hash of the invited address, never the address itself, with the role offered, who invited and the dates. It expires after **14 days**. Elabora sends no e-mail for an invitation: you tell the person yourself.
 
-**Team projects.** A project shared with a team is stored on our servers, in the European Union: its files, its media, its cover picture, its title, its size and the log of its changes. The log says who made each change and when. For a change made by an AI, it says the AI's name and the person it works for. While you work in a project, the other members connected see that you are there, on which screen or view, and what you selected. The server keeps only the list of the people connected, replaced at every arrival and departure.
+**Team projects.** A project shared with a team is stored on our servers, in the European Union: its files, its media, its cover picture, its title, its size and the log of its changes. The log says who made each change and when. For a change made by an AI, it says the AI's name and the person it works for. While you work in a project, the other members who are online see that you are there, on which screen or view, and what you selected. The server keeps only the list of who is online, replaced each time someone arrives or leaves.
 
 **Who sees what.**
 
-- A team's members see its projects and the other members' display names, never their e-mail address.
+- A team's members see its projects and the other members' display names (or handles), never their e-mail address.
 - A team's owner sees pending invitations, without the address. Nobody learns whether an address has an account.
 - An organisation's owner and administrators manage its teams and their members. They do not read the projects of a team they are not a member of.
 - Elabora does not read the projects' content: not the files, not the media, not what the changes contain. To run the service, we see a project's title and size, the dates and authors of its changes, and who is connected. To help you in a project, we ask to be invited into the team, with an account the team sees among its members.
@@ -89,13 +89,15 @@ For this we keep a hash of the handle during its year of reservation, and a hash
 
 - **Technical cookies** keep you signed in. The pages' scripts cannot read them.
 - **To work offline**, the browser keeps a copy of the projects you open, with their media and the changes not sent yet, and your preferences. A copy opens only for the account that made it.
-- **Your ElevenLabs key**, if you give one, is kept by a page of its own, `keys.elabora.studio`, which the editor cannot read. It stays in memory for the visit, or in the browser if you tick « Keep the key in this browser ». It is forgotten as soon as another account signs in in this browser.
+- **Your ElevenLabs key**, if you give one, is kept by a page of its own, `keys.elabora.studio`, which the editor cannot read. It stays in memory for the visit, or in the browser if you tick « Keep the key in this browser ». It is forgotten when you sign out, when your session ends, or when another account signs in in this browser.
 - **The player** keeps your display settings and a preview's progress, on the addresses that show your courses (`canvas.elabora.page` and `frames.elabora.page`).
 - **The editor's files and the models** for voice and alignment it downloads also stay in the browser, so they need not be downloaded again. They hold nothing of yours.
 
-**« Sign out » erases all of this**, except the editor's files and the models: the copies of the projects, your preferences, your ElevenLabs key and what the player keeps. If the browser did not erase everything, the editor finishes erasing at the next start, before opening a course. If your session ends another way (it expires, or you remove it from another device), nothing is erased. On a shared computer, remember to sign out.
+**« Sign out » erases all of this**, except the editor's files and the models: the copies of the projects, your preferences, your ElevenLabs key and what the player keeps. If the browser did not erase everything, the editor finishes erasing at the next start, before opening a course. If your session ends another way (it expires, or you remove it from another device), the copies of the projects stay in the browser; they do not open for another account. On a shared computer, remember to sign out.
 
-**No consent banner.** The law (article 82 of the French Data Protection Act, implementing article 5(3) of the ePrivacy directive) exempts from consent what is strictly necessary for the service you ask for. That is the case here: resuming a course where you left it, reaching a review by its link, signing in to the online editor and the copy of your projects for working offline, and Elabora's cookie on courses, which protects what the course keeps on your device and limits how long. None of them is used for advertising or audience measurement. You can erase all of it in your browser's settings.
+**On the organisations' dashboard (`account.elabora.studio`) and on the connector's consent page (`mcp.elabora.studio`)**, technical cookies keep you signed in, or tie the consent form to your browser while you fill it in.
+
+**No consent banner.** The law (article 82 of the French Data Protection Act, implementing article 5(3) of the ePrivacy directive) exempts from consent what is strictly necessary for the service you ask for. That is the case here: resuming a course where you left it, reaching a review by its link, signing in to the online editor, the dashboard and the connector, the copy of your projects for working offline, and Elabora's cookie on courses, which protects what the course keeps on your device and limits how long. None of them is used for advertising or audience measurement. You can erase all of it in your browser's settings.
 
 ## 6. Legal obligations and preventing abuse
 
@@ -158,10 +160,10 @@ On your computer stay your projects (and the copy of the team projects you open 
 **The connector for Claude and ChatGPT.** The connector (`mcp.elabora.studio`) lets an AI on the web, such as Claude or ChatGPT, read and change your teams' projects.
 
 - **Nothing happens without your consent.** The first time, the AI sends you to an Elabora page. You sign in there with a code, then you see the AI's name, your teams and what it will be able to do. It can always read. It can change things only if you leave that box ticked, and only where you are an editor or an owner.
-- **It can neither publish, share, invite nor delete.** Each change carries its name and yours, and can be undone.
+- **It can neither publish, share, invite nor delete a project.** Each change carries its name and yours, and can be undone.
 - **What it reads goes to the provider of that AI**, under your account and its terms: the projects' texts, plan and images, your teams' names, and, in the history, the display name of whoever made each change. You choose that service. Elabora receives only what the AI asks of its tools, never your conversations with it.
 - **When a member connects their AI**, it reads their teams' projects, including what the other members wrote there.
-- **To cut its access**, remove its device from your account.
+- **To revoke its access**, remove its device from your account.
 
 **What the connector keeps.** Your consent (your account, the AI's name, the rights given, the tokens as hashes), for up to **30 days** without use, or until the device is removed. For **7 days**: the state of each project at the AI's last read (a version number and identifiers, not the text), so that it does not overwrite what changed since, and its refused writes (the account, the AI, the project, the tool, the error code, never the text). For each call, a log line (the tool, the project, the outcome, the time taken), which our host keeps for **7 days**. Your e-mail address is not there. **Legal basis:** performance of the contract; our legitimate interest for the log and the refused writes, which serve to fix the connector.
 
@@ -169,7 +171,7 @@ On your computer stay your projects (and the copy of the team projects you open 
 
 You can ask for access to your data, its rectification, its erasure, the restriction of a processing, its portability, and object to processing based on our legitimate interest (sections 2, 4, 6, 7 and 8). You can also give instructions about your data after your death.
 
-Write to **contact@elabora.studio**, from your account's address if you have one; a reviewer gives the review and the name used. We answer within a month, which may be extended by two months if the request warrants it. For data in a review or a course, we pass the request on to the author.
+Write to **contact@elabora.studio**, from your account's address if you have one; a reviewer gives the review and the name used. We answer within a month, which may be extended by two months if the request warrants it. For data in a review or a course, we pass the request on to the author; for data in a team project, to its organisation.
 
 **Deleting your account**: Settings › Account › Delete my account…, with a code sent to your address; or write to us. Your space, its publications, your reviews and their comments, your sessions and your invitation are deleted, and so are the teams and the organisation you are the only member of. If you are the only owner of a team where other people work, or the owner of an organisation where other people work, the deletion waits: first hand the team or the organisation over to someone else, or delete it. In the projects of the teams you worked in, your name leaves the log; your changes stay there, without your name. What remains, for the periods given above: identification data the law requires, the backup copies (30 days), the e-mails kept by the sending service (30 days), your handle's reservation for a year and the hashes of your publications' names. The courses on your computer stay there.
 

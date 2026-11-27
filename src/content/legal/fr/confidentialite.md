@@ -13,7 +13,7 @@ Cette page dit quelles données Elabora traite, pourquoi, sur quelle base, combi
 - Elabora ne fait ni publicité ni mesure d'audience, et ne garde pas de journal des visites des modules.
 - Seuls les membres d'une équipe lisent ses projets. Elabora n'en lit pas le contenu (section 3).
 - Les modules publiés déposent un seul cookie technique, qui n'identifie personne : il sert à effacer ce qu'un module a gardé dans votre navigateur au bout d'un an, ou quand l'adresse change de propriétaire (section 5).
-- Dans un navigateur, « Se déconnecter » efface de l'appareil ce que l'éditeur en ligne y gardait (section 5).
+- Dans un navigateur, « Se déconnecter » efface de l'appareil la copie de vos projets et votre clé ElevenLabs (section 5).
 - L'application de bureau et l'éditeur en ligne n'envoient pas de statistiques d'usage. Un texte de votre module ne part vers un service d'IA ou de voix que si vous le demandez (section 8).
 - Une IA comme Claude ou ChatGPT ne lit vos projets d'équipe que si vous l'y autorisez, sur une page d'Elabora (section 8).
 - Le chat de l'application et ses tâches courtes n'utilisent que des modèles dont les fournisseurs ne gardent pas vos textes et ne s'en servent pas pour entraîner leurs modèles (section 8).
@@ -60,7 +60,7 @@ Vos commentaires sont vus par l'auteur et par les personnes qui ont le lien. L'a
 
 **Qui voit quoi.**
 
-- Les membres d'une équipe voient ses projets et le nom affiché des autres membres, jamais leur adresse e-mail.
+- Les membres d'une équipe voient ses projets et le nom affiché (ou la poignée) des autres membres, jamais leur adresse e-mail.
 - Le propriétaire d'une équipe voit les invitations en attente, sans l'adresse. Personne n'apprend si une adresse a un compte.
 - Le propriétaire et les administrateurs d'une organisation gèrent ses équipes et leurs membres. Ils ne lisent pas les projets d'une équipe dont ils ne sont pas membres.
 - Elabora ne lit pas le contenu des projets : ni les fichiers, ni les médias, ni ce que les changements contiennent. Pour faire fonctionner le service, nous voyons le titre et la taille d'un projet, les dates et les auteurs de ses changements, et qui y est connecté. Pour vous aider dans un projet, nous demandons à être invités dans l'équipe, avec un compte que l'équipe voit parmi ses membres.
@@ -89,13 +89,15 @@ Pour cela, nous gardons une empreinte de la poignée pendant l'année de réserv
 
 - **Des cookies techniques** vous gardent connecté. Les scripts des pages ne peuvent pas les lire.
 - **Pour travailler hors ligne**, le navigateur garde une copie des projets que vous ouvrez, avec leurs médias et les changements pas encore envoyés, ainsi que vos préférences. Une copie ne s'ouvre que pour le compte qui l'a faite.
-- **Votre clé ElevenLabs**, si vous en donnez une, est gardée par une page à part, `keys.elabora.studio`, que l'éditeur ne peut pas lire. Elle reste en mémoire le temps de la visite, ou dans le navigateur si vous cochez « Garder la clé dans ce navigateur ». Elle est oubliée dès qu'un autre compte se connecte dans ce navigateur.
+- **Votre clé ElevenLabs**, si vous en donnez une, est gardée par une page à part, `keys.elabora.studio`, que l'éditeur ne peut pas lire. Elle reste en mémoire le temps de la visite, ou dans le navigateur si vous cochez « Garder la clé dans ce navigateur ». Elle est oubliée quand vous vous déconnectez, quand votre session prend fin ou quand un autre compte se connecte dans ce navigateur.
 - **Le lecteur** garde vos réglages d'affichage et la progression d'un aperçu, sur les adresses qui montrent vos modules (`canvas.elabora.page` et `frames.elabora.page`).
 - **Les fichiers de l'éditeur et les modèles** de voix et d'alignement qu'il télécharge restent aussi dans le navigateur, pour ne pas les télécharger à nouveau. Ils ne contiennent rien de vous.
 
-**« Se déconnecter » efface tout cela**, sauf les fichiers de l'éditeur et les modèles : les copies des projets, vos préférences, votre clé ElevenLabs et ce que garde le lecteur. Si le navigateur n'a pas tout effacé, l'éditeur finit l'effacement au démarrage suivant, avant d'ouvrir un module. Si votre session prend fin autrement (elle expire, ou vous la retirez depuis un autre appareil), rien n'est effacé. Sur un ordinateur partagé, pensez donc à vous déconnecter.
+**« Se déconnecter » efface tout cela**, sauf les fichiers de l'éditeur et les modèles : les copies des projets, vos préférences, votre clé ElevenLabs et ce que garde le lecteur. Si le navigateur n'a pas tout effacé, l'éditeur finit l'effacement au démarrage suivant, avant d'ouvrir un module. Si votre session prend fin autrement (elle expire, ou vous la retirez depuis un autre appareil), les copies des projets restent dans le navigateur ; elles ne s'ouvrent pas pour un autre compte. Sur un ordinateur partagé, pensez donc à vous déconnecter.
 
-**Pas de bannière de consentement.** La loi (article 82 de la loi Informatique et Libertés) dispense de consentement ce qui est strictement nécessaire au service que vous demandez. C'est le cas ici : la reprise d'un module là où vous l'avez laissé, l'accès à une revue par son lien, la connexion à l'éditeur en ligne et la copie de vos projets pour travailler hors ligne, et le cookie d'Elabora sur les modules, qui protège ce que le module garde sur votre appareil et en limite la durée. Aucun de ces éléments ne sert à la publicité ni à la mesure d'audience. Vous pouvez tout effacer dans les réglages de votre navigateur.
+**Sur le tableau de bord des organisations (`account.elabora.studio`) et sur la page d'accord du connecteur (`mcp.elabora.studio`)**, des cookies techniques vous gardent connecté, ou relient le formulaire d'accord à votre navigateur le temps de le remplir.
+
+**Pas de bannière de consentement.** La loi (article 82 de la loi Informatique et Libertés) dispense de consentement ce qui est strictement nécessaire au service que vous demandez. C'est le cas ici : la reprise d'un module là où vous l'avez laissé, l'accès à une revue par son lien, la connexion à l'éditeur en ligne, au tableau de bord et au connecteur, la copie de vos projets pour travailler hors ligne, et le cookie d'Elabora sur les modules, qui protège ce que le module garde sur votre appareil et en limite la durée. Aucun de ces éléments ne sert à la publicité ni à la mesure d'audience. Vous pouvez tout effacer dans les réglages de votre navigateur.
 
 ## 6. Obligations légales et prévention des abus
 
@@ -158,7 +160,7 @@ Sur votre ordinateur restent vos projets (et la copie des projets d'équipe que 
 **Le connecteur pour Claude et ChatGPT.** Le connecteur (`mcp.elabora.studio`) permet à une IA sur le web, comme Claude ou ChatGPT, de lire et de modifier les projets de vos équipes.
 
 - **Rien ne se passe sans votre accord.** La première fois, l'IA vous envoie sur une page d'Elabora. Vous vous y connectez avec un code, puis vous voyez le nom de l'IA, vos équipes et ce qu'elle pourra faire. Elle peut toujours lire. Elle ne peut modifier que si vous laissez cette case cochée, et seulement là où vous êtes éditeur ou propriétaire.
-- **Elle ne peut ni publier, ni partager, ni inviter, ni supprimer.** Chaque changement porte son nom et le vôtre, et peut s'annuler.
+- **Elle ne peut ni publier, ni partager, ni inviter, ni supprimer de projet.** Chaque changement porte son nom et le vôtre, et peut s'annuler.
 - **Ce qu'elle lit part chez le fournisseur de cette IA**, sous votre compte et ses conditions : les textes, le plan et les images des projets, le nom de vos équipes, et, dans l'historique, le nom affiché de qui a fait chaque changement. C'est vous qui choisissez ce service. Elabora reçoit seulement ce que l'IA demande à ses outils, jamais vos conversations avec elle.
 - **Quand un membre relie son IA**, elle lit les projets de ses équipes, y compris ce que les autres membres y ont écrit.
 - **Pour lui couper l'accès**, retirez son appareil de votre compte.
@@ -169,7 +171,7 @@ Sur votre ordinateur restent vos projets (et la copie des projets d'équipe que 
 
 Vous pouvez demander l'accès à vos données, leur rectification, leur effacement, la limitation d'un traitement, leur portabilité, et vous opposer aux traitements fondés sur notre intérêt légitime (sections 2, 4, 6, 7 et 8). Vous pouvez aussi donner des directives sur le sort de vos données après votre décès.
 
-Écrivez à **contact@elabora.studio**, depuis l'adresse de votre compte si vous en avez un ; un relecteur indique la revue et le nom utilisé. Nous répondons dans un délai d'un mois, prolongeable de deux mois si la demande le justifie. Pour les données d'une revue ou d'un module, nous transmettons la demande à l'auteur.
+Écrivez à **contact@elabora.studio**, depuis l'adresse de votre compte si vous en avez un ; un relecteur indique la revue et le nom utilisé. Nous répondons dans un délai d'un mois, prolongeable de deux mois si la demande le justifie. Pour les données d'une revue ou d'un module, nous transmettons la demande à l'auteur ; pour celles d'un projet d'équipe, à son organisation.
 
 **Supprimer votre compte** : Réglages › Compte › Supprimer mon compte…, avec un code envoyé à votre adresse ; ou écrivez-nous. Votre espace, ses publications, vos revues et leurs commentaires, vos sessions et votre invitation sont supprimés, ainsi que les équipes et l'organisation dont vous êtes le seul membre. Si vous êtes le seul propriétaire d'une équipe où d'autres personnes travaillent, ou le propriétaire d'une organisation où d'autres personnes travaillent, la suppression attend : transmettez d'abord l'équipe ou l'organisation à quelqu'un d'autre, ou supprimez-la. Dans les projets des équipes où vous avez travaillé, votre nom quitte le journal ; vos changements y restent, sans votre nom. Restent, pour les durées dites plus haut : les données d'identification exigées par la loi, les copies de sauvegarde (30 jours), les e-mails gardés par le service d'envoi (30 jours), la réservation de votre poignée pendant un an et les empreintes des noms de vos publications. Les modules de votre ordinateur y restent.
 
