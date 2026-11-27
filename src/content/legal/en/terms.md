@@ -2,7 +2,7 @@
 title: "Terms of use"
 lang: en
 slug: terms
-updated: 2026-10-29
+updated: 2026-11-27
 ---
 
 These terms apply to Elabora's online services:

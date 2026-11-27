@@ -2,7 +2,7 @@
 title: "Conditions d'utilisation"
 lang: fr
 slug: conditions
-updated: 2026-10-29
+updated: 2026-11-27
 ---
 
 Ces conditions s'appliquent aux services en ligne d'Elabora :
