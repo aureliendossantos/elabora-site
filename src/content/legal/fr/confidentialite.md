@@ -2,7 +2,7 @@
 title: "Politique de confidentialité"
 lang: fr
 slug: confidentialite
-updated: 2026-11-27
+updated: 2026-11-28
 ---
 
 Cette page dit quelles données Elabora traite, pourquoi, sur quelle base, combien de temps, et comment exercer vos droits. Elle couvre le site `elabora.studio`, les comptes d'auteur et le tableau de bord des organisations (`account.elabora.studio`), la publication et la relecture (`api.elabora.studio`, `revue.elabora.studio`), les projets d'équipe, l'éditeur en ligne (`app.elabora.studio`), le connecteur pour les IA (`mcp.elabora.studio`), les modules publiés sur `<poignée>.elabora.page` et l'application de bureau.
@@ -89,7 +89,7 @@ Pour cela, nous gardons une empreinte de la poignée pendant l'année de réserv
 
 - **Des cookies techniques** vous gardent connecté. Les scripts des pages ne peuvent pas les lire.
 - **Pour travailler hors ligne**, le navigateur garde une copie des projets que vous ouvrez, avec leurs médias et les changements pas encore envoyés, ainsi que vos préférences. Une copie ne s'ouvre que pour le compte qui l'a faite.
-- **Votre clé ElevenLabs**, si vous en donnez une, est gardée par une page à part, `keys.elabora.studio`, que l'éditeur ne peut pas lire. Elle reste en mémoire le temps de la visite, ou dans le navigateur si vous cochez « Garder la clé dans ce navigateur ». Elle est oubliée quand vous vous déconnectez, quand votre session prend fin ou quand un autre compte se connecte dans ce navigateur.
+- **Votre clé ElevenLabs**, si vous en donnez une, est gardée par une page à part, `keys.elabora.studio`, que l'éditeur ne peut pas lire. Tant que « Garder la clé dans ce navigateur » est coché, ce qui est le cas par défaut, elle est gardée chiffrée dans le navigateur. Si vous décochez la case, elle reste seulement en mémoire, jusqu'à ce que vous fermiez ou rechargiez la page. « Retirer » l'efface. Elle est aussi oubliée quand vous vous déconnectez, quand votre session prend fin ou quand un autre compte se connecte dans ce navigateur.
 - **Le lecteur** garde vos réglages d'affichage et la progression d'un aperçu, sur les adresses qui montrent vos modules (`canvas.elabora.page` et `frames.elabora.page`).
 - **Les fichiers de l'éditeur et les modèles** de voix et d'alignement qu'il télécharge restent aussi dans le navigateur, pour ne pas les télécharger à nouveau. Ils ne contiennent rien de vous.
 

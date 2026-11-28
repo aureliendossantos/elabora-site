@@ -2,7 +2,7 @@
 title: "Privacy policy"
 lang: en
 slug: privacy
-updated: 2026-11-27
+updated: 2026-11-28
 ---
 
 This page says what data Elabora processes, why, on what basis, for how long, and how to exercise your rights. It covers the `elabora.studio` site, author accounts and the organisations' dashboard (`account.elabora.studio`), publishing and review (`api.elabora.studio`, `revue.elabora.studio`), team projects, the online editor (`app.elabora.studio`), the connector for AI (`mcp.elabora.studio`), the courses published on `<handle>.elabora.page` and the desktop app.
@@ -89,7 +89,7 @@ For this we keep a hash of the handle during its year of reservation, and a hash
 
 - **Technical cookies** keep you signed in. The pages' scripts cannot read them.
 - **To work offline**, the browser keeps a copy of the projects you open, with their media and the changes not sent yet, and your preferences. A copy opens only for the account that made it.
-- **Your ElevenLabs key**, if you give one, is kept by a page of its own, `keys.elabora.studio`, which the editor cannot read. It stays in memory for the visit, or in the browser if you tick « Keep the key in this browser ». It is forgotten when you sign out, when your session ends, or when another account signs in in this browser.
+- **Your ElevenLabs key**, if you give one, is kept by a page of its own, `keys.elabora.studio`, which the editor cannot read. While « Keep the key in this browser » is ticked, which it is by default, it is kept encrypted in the browser. If you untick the box, it stays in memory only, until you close or reload the page. « Remove » erases it. It is also forgotten when you sign out, when your session ends, or when another account signs in in this browser.
 - **The player** keeps your display settings and a preview's progress, on the addresses that show your courses (`canvas.elabora.page` and `frames.elabora.page`).
 - **The editor's files and the models** for voice and alignment it downloads also stay in the browser, so they need not be downloaded again. They hold nothing of yours.
 
