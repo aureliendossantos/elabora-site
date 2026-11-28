@@ -36,7 +36,7 @@ The service is published on a non-professional basis by Aurélien Dos Santos (se
 - **Signing in** uses a code sent to your address. Never share it.
 - **Your space carries your handle**: `<handle>.elabora.page`. You can change it **once every 30 days**, with no redirect: the old address stops serving your courses at once, and links to it no longer lead to them. A handle that is left, by a change or by deleting the account, is reserved for a year, then someone else may take it; your publications' names will never be used there by anyone else ([privacy policy](/en/privacy/), section 4).
 - **You are responsible** for what is done from your sessions. Sign out a lost device from your device list, or write to us.
-- **You can delete your account** at any time in Settings › Account › Delete my account… You can also write to contact@elabora.studio, particularly if you cannot sign in. Deletion removes your space, publications, reviews and their comments; data subject to statutory retention and residual copies follow the periods in the [privacy policy](/en/privacy/). Projects on your computer stay there.
+- **You can delete your account** at any time from your account's settings. You can also write to contact@elabora.studio, particularly if you cannot sign in. Deletion removes your space, publications, reviews and their comments; data subject to statutory retention and residual copies follow the periods in the [privacy policy](/en/privacy/). The courses on your computer stay there.
 
 ## 4. Your content
 
