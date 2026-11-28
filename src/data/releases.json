@@ -1,6 +1,83 @@
 [
   {
     "schemaVersion": 1,
+    "version": "0.7.1",
+    "date": "2026-11-28",
+    "core": {
+      "revision": "92cbea3816c052672f5630304f84caf5b6148049",
+      "version": "0.2.0"
+    },
+    "title": {
+      "en": "Elabora 0.7.1: sound and pictures in the browser",
+      "fr": "Elabora 0.7.1 : le son et les images dans le navigateur"
+    },
+    "highlights": {
+      "en": [
+        "Sound and pictures work again in the browser",
+        "Your ElevenLabs quota, shown in the browser",
+        "« Create a team… » no longer opens an empty tab"
+      ],
+      "fr": [
+        "Le son et les images reviennent dans le navigateur",
+        "Votre quota ElevenLabs, affiché dans le navigateur",
+        "« Créer une équipe… » n’ouvre plus d’onglet vide"
+      ]
+    },
+    "entries": [
+      {
+        "id": "browser-media",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "In a browser, a picture’s preview in the inspector, a video’s poster, a character’s face, and the lines and sounds you play in the editor show and play again.",
+          "fr": "Dans un navigateur, l’aperçu d’une image dans l’inspecteur, l’affiche d’une vidéo, le visage d’un personnage, et les répliques et les sons écoutés dans l’éditeur s’affichent et se jouent de nouveau."
+        }
+      },
+      {
+        "id": "browser-voice-quota",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "In a browser, Settings › Usage shows your ElevenLabs quota instead of loading forever. Without a key, it offers to add one. If the key’s page does not answer, it says so, with « Retry ». « Keep the key in this browser » is now ticked for a new key.",
+          "fr": "Dans un navigateur, Réglages › Utilisation affiche votre quota ElevenLabs au lieu de chercher sans fin. Sans clé, vous pouvez en ajouter une. Si la page de la clé ne répond pas, il le dit, avec « Réessayer ». « Garder la clé dans ce navigateur » est désormais coché pour une nouvelle clé."
+        }
+      },
+      {
+        "id": "browser-create-team",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "In a browser, « Create a team… » no longer opens your mail app, which could be another browser on an empty tab: it shows Elabora’s address for you to copy. A click on the beta note’s address copies it.",
+          "fr": "Dans un navigateur, « Créer une équipe… » n’ouvre plus votre messagerie, qui pouvait être un autre navigateur sur un onglet vide : il affiche l’adresse d’Elabora à copier. Un clic sur l’adresse de la note de bêta la copie."
+        }
+      },
+      {
+        "id": "browser-needs-the-app",
+        "kind": "improvement",
+        "source": "app",
+        "text": {
+          "en": "In a browser, what Elabora cannot do there yet says it requires downloading the app, with a « Download the app » link.",
+          "fr": "Dans un navigateur, ce qu’Elabora n’y fait pas encore dit que cela nécessite de télécharger l’application, avec un lien « Télécharger l’application »."
+        }
+      },
+      {
+        "id": "new-module-menus",
+        "kind": "fix",
+        "source": "app",
+        "text": {
+          "en": "In « New course », the menus that open under the request while the page is still appearing (« Attach documents », the AI’s menu) no longer hide under the charter’s cards.",
+          "fr": "Dans « Nouveau module », les menus qui s’ouvrent sous la demande pendant que la page apparaît encore (« Joindre des documents », le menu de l’IA) ne passent plus sous les cartes de la charte."
+        }
+      }
+    ],
+    "announce": true,
+    "signed": {
+      "windows": false,
+      "mac": false
+    }
+  },
+  {
+    "schemaVersion": 1,
     "version": "0.7.0",
     "date": "2026-11-27",
     "core": {
